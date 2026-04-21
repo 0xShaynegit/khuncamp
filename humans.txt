@@ -1,0 +1,53 @@
+/* KHUN CAMP - HUMANS.TXT */
+/* Learn about the people and tools behind this site */
+
+/* TEAM */
+Creator: Shayne (KhunShawn)
+Role: Content Systems Engineer, YouTube Growth Strategist
+Location: Bangkok, Thailand
+Website: https://khuncamp.com
+
+/* SITE */
+Name: Khun Camp
+URL: https://khuncamp.com
+Description: Done-for-you YouTube growth systems and team building for serious creators
+Built: March 2026
+Updated: 30/03/2026
+
+/* TECHNOLOGY STACK */
+Frontend: HTML5, CSS3, JavaScript (ES6+)
+Animation: GSAP, ScrollTrigger, Lenis, Three.js
+Images: WebP, Sharp (image optimization)
+Fonts: Inter (Google Fonts)
+Hosting: Cloudflare Workers, Vercel
+Infrastructure: Wrangler (Cloudflare Workers CLI)
+
+/* TOOLS & SERVICES */
+Code Editor: Claude Code (AI Assistant)
+Version Control: Git, GitHub
+Design: Custom design system (Gold/Black/Charcoal palette)
+Development: Node.js, npm
+Analytics: Google Analytics 4, Google Search Console
+
+/* CONTACT */
+Email: contact@khuncamp.com
+Security: https://khuncamp.com/.well-known/security.txt
+
+/* STANDARDS */
+HTML5, CSS3, ES6+, WAI-ARIA accessibility
+Core Web Vitals optimised
+SEO best practices implemented
+Progressive Web App (PWA) ready
+
+/* INSPIRATION & RESOURCES */
+Inspiration: YouTube creator economics, system thinking
+Research: Modern web performance, accessibility standards
+Community: Khun Camp community members and volunteers
+
+/* THANKS */
+Thanks to all supporters, volunteers, and the creator community
+Special thanks to advanced AI tools for code assistance and optimization
+
+---
+Built with care in Bangkok, Thailand
+Last updated: 30 March 2026

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(magick --version)",
+      "Bash(npm list:*)",
+      "Bash(node convert-images.js)",
+      "Bash(npm install:*)",
+      "Bash(ls -lh KhunCamp-Logo*.webp)",
+      "Bash(node convert-transparent.js)",
+      "Bash(for file:*)",
+      "Bash(do mv:*)",
+      "Bash(node -e \":*)"
+    ]
+  }
+}

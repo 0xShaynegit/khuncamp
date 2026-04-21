@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khun Camp | Engineer Your YouTube Growth</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <style>
+        :root {
+            --bg-deep: #0a0a0a;
+            --bg-charcoal: #121212;
+            --gold-primary: #D4AF37;
+            --gold-glow: rgba(212, 175, 55, 0.3);
+            --text-main: #e0e0e0;
+            --text-dim: #a0a0a0;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(212, 175, 55, 0.15);
+            --ease-smooth: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg-deep); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* --- UI Elements --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 100px 0; position: relative; z-index: 2; }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fff 0%, var(--gold-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-primary {
+            background: var(--gold-primary);
+            color: #000;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.4s var(--ease-smooth);
+        }
+
+        .system-card, .bento-item {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            transition: 0.4s ease;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        /* --- Three.js Canvas --- */
+        #threejs-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* --- Preloader --- */
+        .preloader {
+            position: fixed;
+            inset: 0;
+            background: var(--bg-deep);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .percentage-counter { font-size: 4rem; font-weight: 900; color: var(--gold-primary); }
+
+        /* --- Mobile Optimization --- */
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2.5rem !important; }
+            .hero-wrapper { grid-template-columns: 1fr !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="percentage-counter">000</div>
+        <p style="letter-spacing: 5px; color: var(--text-dim);">INITIALIZING SYSTEM</p>
+    </div>
+
+    <div id="threejs-container"></div>
+
+    <header class="container" style="position: relative; z-index: 10;">
+        <nav style="display: flex; justify-content: space-between; align-items: center; padding: 30px 0;">
+            <div class="logo" style="font-weight: 900; font-size: 1.5rem; letter-spacing: 2px;">KHUN CAMP</div>
+            <a href="#audit" class="btn-primary" style="padding: 0.8rem 1.5rem; font-size: 0.8rem;">Get $500 Audit</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="container">
+            <div class="hero-wrapper" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
+                <div class="hero-content">
+                    <h1 class="gold-gradient-text" style="font-size: 4.5rem; line-height: 1.1;">STILL STUCK UNDER 50K?</h1>
+                    <p style="font-size: 1.2rem; margin: 25px 0; color: var(--text-dim); max-width: 500px;">
+                        We build your YouTube team for you. Khun Camp turns creators into scalable brands by engineering the systems behind the content.
+                    </p>
+                    <a href="#audit" class="btn-primary magnetic-item">Get Your $500 Audit</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="problem" style="background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 50px;">The Solo Grind is a System Problem.</h2>
+                <div class="bento-grid">
+                    <div class="system-card reveal-up"><h3>The Stall</h3><p>Videos go live and plateau. You're guessing instead of growing.</p></div>
+                    <div class="system-card reveal-up"><h3>The Burnout</h3><p>Scripting, filming, and editing alone is a job, not a business.</p></div>
+                    <div class="system-card reveal-up"><h3>The Mystery</h3><p>You don't know why videos fail. We make growth a math equation.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="deliverables" class="container">
+            <h2 class="gold-gradient-text" style="margin-bottom: 40px;">Engineering Your Scale</h2>
+            <div class="bento-grid">
+                <div class="bento-item reveal-up" style="grid-column: span 2;">
+                    <h4>Full Content Infrastructure</h4>
+                    <p>Meticulous strategy focused on Title/Thumbnail psychology before you ever hit record.</p>
+                </div>
+                <div class="bento-item reveal-up">
+                    <h4>Done-For-You Team</h4>
+                    <p>We source, vet, and manage your editors and designers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="final-cta" style="text-align: center; padding: 150px 0;">
+            <div class="container reveal-up">
+                <h2 style="font-size: 3rem; margin-bottom: 30px;">Stop Guessing. <br>Start Compounding.</h2>
+                <a href="#audit" class="btn-primary" style="font-size: 1.5rem;">Begin Your Audit</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // --- PRELOADER LOGIC ---
+        let count = 0;
+        const counter = document.querySelector('.percentage-counter');
+        const loader = setInterval(() => {
+            count += Math.floor(Math.random() * 10) + 1;
+            if (count >= 100) {
+                count = 100;
+                clearInterval(loader);
+                gsap.to('.preloader', { opacity: 0, display: 'none', duration: 1 });
+            }
+            counter.innerText = count.toString().padStart(3, '0');
+        }, 50);
+
+        // --- THREE.JS BACKGROUND ---
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('threejs-container').appendChild(renderer.domElement);
+
+        const geometry = new THREE.BufferGeometry();
+        const vertices = [];
+        for (let i = 0; i < 2000; i++) {
+            vertices.push(THREE.MathUtils.randFloatSpread(10), THREE.MathUtils.randFloatSpread(10), THREE.MathUtils.randFloatSpread(10));
+        }
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+        const particles = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0xD4AF37, size: 0.005 }));
+        scene.add(particles);
+        camera.position.z = 3;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            particles.rotation.y += 0.001;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // --- GSAP REVEALS ---
+        gsap.registerPlugin(ScrollTrigger);
+        document.querySelectorAll('.reveal-up').forEach(el => {
+            gsap.from(el, {
+                scrollTrigger: { trigger: el, start: "top 90%" },
+                y: 50, opacity: 0, duration: 1, ease: "power4.out"
+            });
+        });
+    </script>
+</body>
+</html>

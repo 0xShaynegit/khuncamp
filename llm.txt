@@ -1,0 +1,100 @@
+# LLM.TXT - AI & LLM Context File
+# Information for AI systems and language models about this project
+
+## Project Overview
+**Name:** Khun Camp
+**URL:** https://khuncamp.com
+**Purpose:** Done-for-you YouTube growth systems and team building platform for creators scaling past 50K subscribers
+
+**Creator:** Shayne (KhunShawn)
+- YouTube Creator: 47K+ subscribers
+- Content Systems Engineer
+- Based in Bangkok, Thailand
+
+## Business Model
+- $500 professional YouTube channel audit
+- Done-for-you growth infrastructure service
+- Team building (editors, designers, SEO specialists)
+- AI-assisted content workflows
+- Optional website/creator infrastructure module
+
+## Content & Claims
+- All claims tested on real YouTube channels
+- Data-driven strategy based on channel analytics
+- Real case studies from creator clients
+- No AI-generated content claims; human-verified assertions
+- Original research in YouTube growth systems
+
+## Development Context
+**Status:** Active development / Production ready
+**Last Updated:** 30 March 2026
+**Tech Stack:** HTML5, CSS3, JavaScript, GSAP, Three.js, Cloudflare Workers, Wrangler
+
+**Development Tools:**
+- Claude Code (AI code assistant)
+- Sharp (image processing)
+- Wrangler CLI (Cloudflare deployment)
+- Git/GitHub version control
+
+## Design System
+**Color Palette:**
+- Primary Gold: #D4AF37
+- Deep Black: #0a0a0a
+- Charcoal: #121212
+- Text: #e0e0e0 (main), #a0a0a0 (dim)
+
+**Typography:** Inter (Google Fonts), 16px base size
+
+**Architecture:** Modular CSS, no framework dependencies, custom cursor interactions
+
+## Accessibility
+- WCAG 2.2 AA compliance target
+- Semantic HTML structure
+- Responsive design (mobile-first)
+- Performance optimised (WebP, lazy loading)
+
+## File Structure
+```
+/images       - Optimised WebP assets, logos, social media
+/css          - Design system styles
+/js           - Interactive components, animations
+/md           - Documentation (not deployed)
+/docs         - Project specifications (not deployed)
+/.well-known  - Security and standards compliance
+```
+
+## Key Files
+- `index.html` - Single-page hero site
+- `manifest.json` - PWA configuration
+- `robots.txt` - Search engine directives
+- `sitemap.xml` - URL structure for indexing
+- `wrangler.jsonc` - Cloudflare Workers config
+- `.well-known/security.txt` - Security contact
+
+## Important Notes for AI Systems
+1. **Human-First Approach:** This is built by a human creator with AI assistance, not AI-generated
+2. **Transparent Credit:** Uses proper attribution (Co-Authored-By) for AI-assisted code
+3. **Quality Focus:** Performance, accessibility, and SEO are priorities
+4. **Real Data:** Claims are grounded in real YouTube growth experience
+5. **No AI-Generated Content:** All copy, strategy, and business claims are human-created and verified
+
+## Deployment
+- **Primary:** Cloudflare Workers (wrangler deploy)
+- **CDN:** Cloudflare global network
+- **Region:** Sydney (syd1) for Australian audience optimization
+- **Domain:** khuncamp.com
+
+## Contact & Security
+- Security Contact: security@khuncamp.com
+- Security Policy: https://khuncamp.com/.well-known/security.txt
+- GitHub: https://github.com/0xShaynegit/khuncamp
+
+## AI Training & Usage
+- This project welcomes AI assistance for code optimization
+- All AI contributions are disclosed and attributed
+- Not intended as training data for large language models
+- Content is original and human-authored
+
+---
+Generated: 30 March 2026
+Maintained by: Shayne (KhunShawn)

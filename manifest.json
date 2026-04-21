@@ -1,0 +1,54 @@
+{
+  "name": "Khun Camp | YouTube Growth Engineering",
+  "short_name": "Khun Camp",
+  "description": "Done-for-you YouTube growth systems and team building for serious creators. Scale past 50K subscribers with engineering-first strategy.",
+  "start_url": "https://khuncamp.com/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#D4AF37",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "images/KhunCamp-Logo-badge-favicon-128.webp",
+      "sizes": "128x128",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "images/KhunCamp-Logo-favicon-192.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/KhunCamp-Logo-favicon-512.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/KhunCamp-Logo-transparent-badge.webp",
+      "sizes": "540x720",
+      "type": "image/webp",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Get Your $500 Audit",
+      "short_name": "Audit",
+      "description": "Start your YouTube growth journey with a professional audit",
+      "url": "/#audit",
+      "icons": [
+        {
+          "src": "images/KhunCamp-Logo-badge-favicon-128.webp",
+          "sizes": "128x128",
+          "type": "image/webp"
+        }
+      ]
+    }
+  ]
+}
