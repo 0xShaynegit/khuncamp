@@ -2645,3 +2645,228 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ============================================================
+   KHUN CAMP — EXPANSION UPDATE STYLES
+============================================================ */
+
+/* HERO FULL WIDTH */
+.hero-full {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 160px 0 100px;
+}
+
+.hero-full-content {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-full-content h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  margin: 1rem 0 1.5rem;
+  line-height: 1;
+}
+
+.hero-full-content .hero-subtext {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+.hero-full-content .hero-cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.btn-lg {
+  padding: 1.3rem 3rem;
+  font-size: 1rem;
+}
+
+.btn-ghost {
+  display: inline-block;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--gold-primary);
+  padding: 1.3rem 2.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold-primary);
+  background: rgba(212,175,55,0.07);
+}
+
+.hero-full-content .hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* SECTION SUBTEXT */
+.section-subtext {
+  max-width: 580px;
+  margin: 1rem auto 0;
+  color: var(--text-dim);
+  font-size: 1.05rem;
+}
+
+/* WHO WE SERVE — TWO LANES */
+#who-we-serve {
+  background: var(--bg-charcoal);
+}
+
+.lanes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.lane-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  transition: border-color 0.3s;
+}
+
+.lane-card:hover {
+  border-color: rgba(212,175,55,0.4);
+}
+
+.lane-card--accent {
+  border-color: rgba(212,175,55,0.3);
+  background: rgba(212,175,55,0.04);
+}
+
+.lane-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.lane-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem !important;
+}
+
+.lane-card h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: #fff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.lane-card > p {
+  color: var(--text-dim);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.lane-list {
+  list-style: none;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lane-list li {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.btn-ghost-gold {
+  display: inline-block;
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+  padding: 0.85rem 1.75rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-ghost-gold:hover {
+  background: var(--gold-primary);
+  color: #000;
+}
+
+/* FINAL CTA BODY TEXT */
+.cta-body {
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-full {
+    padding: 140px 0 80px;
+  }
+
+  .hero-full-content h1 {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+  }
+
+  .hero-full-content .hero-cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-ghost,
+  .btn-primary.btn-lg {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-full-content .hero-stats {
+    gap: 1.25rem;
+  }
+
+  .lanes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .lane-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-full-content .hero-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-stat-divider {
+    display: none;
+  }
+}
