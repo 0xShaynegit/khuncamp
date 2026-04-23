@@ -368,9 +368,11 @@ section {
  
 .hero-cta-group {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.75rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
 }
  
 .hero-cta-sub {
@@ -2679,11 +2681,9 @@ body {
 
 .hero-full-content .hero-cta-group {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
-  flex-wrap: nowrap;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 3rem;
 }
 
@@ -2693,9 +2693,7 @@ body {
 }
 
 .btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   border: 1px solid rgba(212, 175, 55, 0.4);
   color: var(--gold-primary);
   padding: 1.3rem 2.5rem;
@@ -2705,7 +2703,6 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   transition: border-color 0.2s, background 0.2s;
-  white-space: nowrap;
 }
 
 .btn-ghost:hover {
@@ -2842,15 +2839,12 @@ body {
   .hero-full-content .hero-cta-group {
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
   }
 
   .btn-ghost,
   .btn-primary.btn-lg {
     width: 100%;
-    max-width: 300px;
     text-align: center;
-    justify-content: center;
   }
 
   .hero-full-content .hero-stats {
