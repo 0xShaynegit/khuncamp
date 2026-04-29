@@ -2904,3 +2904,171 @@ body {
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
+/* ── PAID DIAGNOSTIC / AUDIT SECTION ──────────────────────────── */
+#audit {
+  padding: var(--section-pad) 0;
+}
+
+.audit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 940px;
+  margin: 0 auto 48px;
+  padding-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .audit-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+}
+
+.audit-card {
+  background: #1e1e1e;
+  border: 1px solid #2e2e2e;
+  border-radius: 4px;
+  padding: 32px 26px;
+  position: relative;
+  transition: border-color 0.25s ease;
+}
+
+.audit-card:hover {
+  border-color: #444;
+}
+
+.audit-card--featured {
+  border-color: #c9a84c;
+  background: #1f1d14;
+}
+
+.audit-card--featured:hover {
+  border-color: #e0bc6a;
+}
+
+.audit-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #c9a84c;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-shadow: 0 0 20px rgba(201,168,76,0.6), 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.audit-tier-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
+  margin: 0 0 10px;
+}
+
+.audit-price {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin: 0 0 4px;
+}
+
+.audit-card--featured .audit-price {
+  color: #c9a84c;
+}
+
+.audit-price-range {
+  font-size: 22px;
+  font-weight: 700;
+  color: #888;
+}
+
+.audit-card--featured .audit-price-range {
+  color: #a07e38;
+}
+
+.audit-price-sub {
+  font-size: 12px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+.audit-divider {
+  height: 1px;
+  background: #2e2e2e;
+  margin: 0 0 20px;
+}
+
+.audit-card--featured .audit-divider {
+  background: #3a3218;
+}
+
+.audit-product-name {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #e0e0e0;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.audit-card--featured .audit-product-name {
+  color: #f0d98a;
+}
+
+.audit-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.audit-features li {
+  font-size: 13px;
+  color: #777;
+  padding: 6px 0 6px 18px;
+  position: relative;
+  line-height: 1.4;
+  border-bottom: 1px solid #252525;
+}
+
+.audit-features li:last-child {
+  border-bottom: none;
+}
+
+.audit-features li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #444;
+  font-size: 11px;
+  top: 7px;
+}
+
+.audit-card--featured .audit-features li {
+  color: #b09a5e;
+  border-bottom-color: #2e2810;
+}
+
+.audit-card--featured .audit-features li::before {
+  color: #c9a84c;
+}
+
+.audit-cta {
+  text-align: center;
+}
+
+.audit-cta-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #555;
+}
+/* ── END AUDIT SECTION ─────────────────────────────────────────── */
