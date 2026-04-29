@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Khun Camp — Content Growth Company</title>
+  <meta name="description" content="Strategy, case studies, and takes on content growth — for creators and businesses serious about turning content into customers.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khuncamp.com/blog">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khuncamp.com/blog" />
+  <meta property="og:title" content="Blog | Khun Camp" />
+  <meta property="og:description" content="Strategy, case studies, and takes on content growth — for creators and businesses." />
+  <meta property="og:image" content="https://khuncamp.com/images/og-preview.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/webp" sizes="128x128" href="images/KhunCamp-Logo-badge-favicon-128.webp">
+  <link rel="apple-touch-icon" href="images/KhunCamp-Logo-badge-favicon-128.webp">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="loader-logo">
+        <img src="images/KhunCamp-Logo-transparent-badge.webp" alt="Khun Camp">
+      </div>
+      <div class="loader-ring"></div>
+      <div class="loader-progress">
+        <span id="percentage-counter">000</span>
+      </div>
+      <p class="loader-label">LOADING THE PLAYBOOK</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header id="site-header">
+    <nav class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/KhunCamp-Logo-nav.webp" alt="Khun Camp Logo" height="46">
+      </a>
+      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary btn-sm magnetic-item nav-desktop-cta">Book a Call</a>
+      <button class="ham-btn" id="ham-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- SUB NAV -->
+    <div id="sub-nav">
+      <div class="sub-nav-inner">
+        <a href="index.html"                                        class="sub-nav-link">Home</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#who-we-serve"                           class="sub-nav-link">Who We Serve</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#problem"                                class="sub-nav-link">Problem</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#solution"                               class="sub-nav-link">System</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#how-it-works"                           class="sub-nav-link">Processes</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#deliverables"                           class="sub-nav-link">Deliverables</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#proof"                                  class="sub-nav-link">Proof</a>
+        <span class="sub-nav-div"></span>
+        <a href="blog.html"                                         class="sub-nav-link active">Blog</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#faq"                                    class="sub-nav-link">FAQ</a>
+        <span class="sub-nav-div"></span>
+        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7"    class="sub-nav-link">Book a Call</a>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-links">
+        <a href="index.html"              class="mob-menu-link"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
+        <a href="index.html#who-we-serve" class="mob-menu-link"><span class="mob-num">02</span><span class="mob-name">Who We Serve</span><div class="mob-bar"></div></a>
+        <a href="index.html#problem"      class="mob-menu-link"><span class="mob-num">03</span><span class="mob-name">Problem</span><div class="mob-bar"></div></a>
+        <a href="index.html#solution"     class="mob-menu-link"><span class="mob-num">04</span><span class="mob-name">System</span><div class="mob-bar"></div></a>
+        <a href="index.html#how-it-works" class="mob-menu-link"><span class="mob-num">05</span><span class="mob-name">Process</span><div class="mob-bar"></div></a>
+        <a href="index.html#deliverables" class="mob-menu-link"><span class="mob-num">06</span><span class="mob-name">Deliverables</span><div class="mob-bar"></div></a>
+        <a href="index.html#proof"        class="mob-menu-link"><span class="mob-num">07</span><span class="mob-name">Proof</span><div class="mob-bar"></div></a>
+        <a href="blog.html"               class="mob-menu-link"><span class="mob-num">08</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
+        <a href="index.html#faq"          class="mob-menu-link"><span class="mob-num">09</span><span class="mob-name">FAQ</span><div class="mob-bar"></div></a>
+      </div>
+      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="mob-menu-cta">Book a Call →</a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+      <div class="container blog-hero-inner reveal-up">
+        <p class="section-eyebrow">THE KHUN CAMP BLOG</p>
+        <h1>Insights From<br><span class="gold-gradient-text">The Growth Engine</span></h1>
+        <p class="blog-hero-sub">Strategy, case studies, and takes — for creators and businesses serious about content that converts.</p>
+      </div>
+    </section>
+
+    <!-- BLOG BODY -->
+    <section class="blog-index">
+      <div class="container">
+
+        <!-- FILTER ROW -->
+        <div class="blog-filters reveal-up">
+          <button class="blog-filter-btn active" data-filter="all">All</button>
+          <button class="blog-filter-btn" data-filter="creators">For Creators</button>
+          <button class="blog-filter-btn" data-filter="businesses">For Businesses</button>
+          <button class="blog-filter-btn" data-filter="case-study">Case Studies</button>
+          <button class="blog-filter-btn" data-filter="the-take">The Take</button>
+          <button class="blog-filter-btn" data-filter="breakdown">The Breakdown</button>
+        </div>
+
+        <!-- ── FOR CREATORS ───────────────────────────────────────── -->
+        <div class="blog-divider-block" data-section="creators">
+          <div class="blog-divider-label">
+            <span>For Creators</span>
+            <div class="blog-divider-line"></div>
+          </div>
+
+          <!-- Post 1 — Featured -->
+          <article class="blog-card blog-card--featured" data-tags="creators breakdown">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-tag blog-tag--creator">For Creators</span>
+                <span class="blog-tag blog-tag--format">The Breakdown</span>
+                <span class="blog-card-date">Apr 2026</span>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="blog/why-your-youtube-channel-plateaus.html">Why Your YouTube Channel Plateaus at 10K — And Exactly How to Break Through</a>
+              </h2>
+              <p class="blog-card-excerpt">It's not your content. It's not your niche. It's a structural problem most creators never fix because they never know to look for it.</p>
+              <a href="blog/why-your-youtube-channel-plateaus.html" class="blog-read-more">Read the breakdown →</a>
+            </div>
+            <div class="blog-card-arrow">↗</div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="blog-card" data-tags="creators case-study">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-tag blog-tag--creator">For Creators</span>
+                <span class="blog-tag blog-tag--format">Case Study</span>
+                <span class="blog-card-date">Mar 2026</span>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="blog/8k-to-22k-in-10-weeks.html">From 8K to 22K in 10 Weeks: What We Actually Did</a>
+              </h2>
+              <p class="blog-card-excerpt">A real breakdown of the thumbnail framework, title system, and upload cadence that moved the needle fast for a travel creator stuck at a plateau for a year.</p>
+              <a href="blog/8k-to-22k-in-10-weeks.html" class="blog-read-more">Read the case study →</a>
+            </div>
+            <div class="blog-card-arrow">↗</div>
+          </article>
+
+          <!-- CTA — Audit -->
+          <div class="blog-cta blog-cta--audit">
+            <div class="blog-cta-text">
+              <p class="blog-cta-label">Paid Diagnostic</p>
+              <h3 class="blog-cta-headline">Get Your 48-Hour Audit</h3>
+              <p class="blog-cta-body">Find out exactly what's blocking your channel growth — delivered in 48 hours. Starts at $300.</p>
+            </div>
+            <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary magnetic-item">Book a Call</a>
+          </div>
+        </div>
+
+        <!-- ── FOR BUSINESSES ─────────────────────────────────────── -->
+        <div class="blog-divider-block" data-section="businesses">
+          <div class="blog-divider-label">
+            <span>For Businesses</span>
+            <div class="blog-divider-line"></div>
+          </div>
+
+          <!-- Post 3 — Featured -->
+          <article class="blog-card blog-card--featured" data-tags="businesses breakdown">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-tag blog-tag--biz">For Businesses</span>
+                <span class="blog-tag blog-tag--format">The Breakdown</span>
+                <span class="blog-card-date">Apr 2026</span>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="blog/the-funnel-gap-most-businesses-never-see.html">The Funnel Gap Most Businesses Never See — Until They Lose the Sale</a>
+              </h2>
+              <p class="blog-card-excerpt">You're getting traffic. People are watching. But no one's buying. Here's where the leak actually is and what to plug first.</p>
+              <a href="blog/the-funnel-gap-most-businesses-never-see.html" class="blog-read-more">Read the breakdown →</a>
+            </div>
+            <div class="blog-card-arrow">↗</div>
+          </article>
+
+          <!-- Post 4 -->
+          <article class="blog-card" data-tags="businesses the-take">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-tag blog-tag--biz">For Businesses</span>
+                <span class="blog-tag blog-tag--format">The Take</span>
+                <span class="blog-card-date">Feb 2026</span>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="blog/stop-hiring-social-media-manager.html">Stop Hiring a Social Media Manager. Build a Content System Instead.</a>
+              </h2>
+              <p class="blog-card-excerpt">One person posting randomly is not a strategy. Here's what businesses that actually convert through content are doing differently.</p>
+              <a href="blog/stop-hiring-social-media-manager.html" class="blog-read-more">Read the take →</a>
+            </div>
+            <div class="blog-card-arrow">↗</div>
+          </article>
+
+          <!-- CTA — Discovery Call -->
+          <div class="blog-cta blog-cta--call">
+            <div class="blog-cta-text">
+              <p class="blog-cta-label">Let's Talk</p>
+              <h3 class="blog-cta-headline">Ready to Bring the Right Customers In?</h3>
+              <p class="blog-cta-body">No hard pitch. Just a conversation about your growth and whether we're a fit.</p>
+            </div>
+            <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-ghost-gold magnetic-item">Book a Discovery Call</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Khun Camp. All Rights Reserved.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/khunshawn" class="footer-social-link" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/>
+          </svg>
+        </a>
+        <a href="#" class="footer-social-link" aria-label="TikTok">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.6 3.3A4.8 4.8 0 0 1 14.9 0h-3.6v16.4a2.9 2.9 0 0 1-2.9 2.5 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.3 0 .5 0 .8.1V9.5a6.5 6.5 0 0 0-.8 0 6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5V8.1a8.3 8.3 0 0 0 4.8 1.5V6a4.8 4.8 0 0 1-3.1-2.7z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/khun-camp" class="footer-social-link" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.3A1.7 1.7 0 1 1 8.2 6.6 1.7 1.7 0 0 1 6.5 8.3zM19 19h-3v-4.7c0-1.4-.5-2.3-1.7-2.3a1.8 1.8 0 0 0-1.7 1.2 2.3 2.3 0 0 0-.1.9V19h-3v-9h3v1.2a3.3 3.3 0 0 1 3-1.6c2.1 0 3.5 1.4 3.5 4.3z"/>
+          </svg>
+        </a>
+      </div>
+      <p><a href="https://khun-shawn.com/" class="text-gold">Book a Discovery Call</a></p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/639458815792?text=Hello!%20I%20found%20you%20on%20khuncamp.com"
+     target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+     style="position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,0.25);text-decoration:none;transition:transform 0.15s ease;"
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'">
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+      <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.61 1.832 6.5L4 29l7.697-1.812A12.94 12.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="#fff"/>
+      <path d="M22.406 19.594c-.297-.148-1.754-.867-2.027-.965-.273-.098-.472-.148-.672.148-.199.297-.773.965-.946 1.164-.174.199-.348.223-.645.074-.297-.148-1.254-.462-2.387-1.473-.883-.785-1.48-1.754-1.654-2.051-.173-.297-.018-.457.13-.605.135-.133.297-.348.446-.52.149-.173.198-.298.298-.496.099-.199.05-.372-.025-.52-.074-.149-.672-1.617-.921-2.215-.242-.582-.488-.503-.672-.512-.173-.008-.372-.01-.571-.01-.199 0-.522.074-.795.372-.273.297-1.04 1.016-1.04 2.476 0 1.46 1.065 2.871 1.213 3.07.149.198 2.096 3.2 5.077 4.487.71.307 1.263.49 1.695.626.712.227 1.36.195 1.873.118.571-.085 1.754-.718 2.002-1.41.248-.693.248-1.29.174-1.41-.074-.12-.273-.198-.571-.347z" fill="#25D366"/>
+    </svg>
+  </a>
+
+  <!-- CDN SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- BLOG FILTER SCRIPT -->
+  <script>
+    const filterBtns = document.querySelectorAll('.blog-filter-btn');
+    const cards = document.querySelectorAll('.blog-card');
+    const sections = document.querySelectorAll('.blog-divider-block');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        if (filter === 'all') {
+          cards.forEach(c => c.style.display = '');
+          sections.forEach(s => s.style.display = '');
+          return;
+        }
+
+        // Show/hide cards
+        cards.forEach(card => {
+          const tags = card.dataset.tags || '';
+          card.style.display = tags.includes(filter) ? '' : 'none';
+        });
+
+        // Hide entire section if no visible cards in it
+        sections.forEach(section => {
+          const visible = section.querySelectorAll('.blog-card:not([style*="display: none"])');
+          section.style.display = visible.length ? '' : 'none';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

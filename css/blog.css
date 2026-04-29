@@ -1,0 +1,322 @@
+/* ═══════════════════════════════════════════════════════════════
+   KHUN CAMP — BLOG STYLES
+   Drop this file in your css/ folder as blog.css
+   Loaded only on blog.html and blog post pages
+═══════════════════════════════════════════════════════════════ */
+
+/* ── BLOG HERO ─────────────────────────────────────────────────── */
+.blog-hero {
+  padding: 120px 0 64px;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.blog-hero-inner {
+  max-width: 680px;
+}
+
+.blog-hero-inner h1 {
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.blog-hero-sub {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+/* ── BLOG INDEX BODY ───────────────────────────────────────────── */
+.blog-index {
+  padding: 64px 0 100px;
+}
+
+/* ── FILTER ROW ────────────────────────────────────────────────── */
+.blog-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.blog-filter-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  border-radius: 2px;
+  border: 1px solid #2a2a2a;
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.blog-filter-btn:hover {
+  border-color: #444;
+  color: #999;
+}
+
+.blog-filter-btn.active {
+  background: #c9a84c;
+  color: #111;
+  border-color: #c9a84c;
+}
+
+/* ── DIVIDER BLOCK ─────────────────────────────────────────────── */
+.blog-divider-block {
+  margin-bottom: 72px;
+}
+
+.blog-divider-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.blog-divider-label span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  white-space: nowrap;
+}
+
+.blog-divider-line {
+  flex: 1;
+  height: 1px;
+  background: #222;
+}
+
+/* ── POST CARDS ────────────────────────────────────────────────── */
+.blog-card {
+  background: #181818;
+  border: 1px solid #242424;
+  border-radius: 3px;
+  padding: 28px 28px 28px 28px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+}
+
+.blog-card:hover {
+  border-color: #383838;
+  background: #1c1c1c;
+}
+
+.blog-card--featured {
+  border-color: #c9a84c;
+  background: #191710;
+}
+
+.blog-card--featured:hover {
+  border-color: #e0bc6a;
+  background: #1c1a11;
+}
+
+.blog-card-body {
+  min-width: 0;
+}
+
+/* ── POST META ─────────────────────────────────────────────────── */
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.blog-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+.blog-tag--creator {
+  background: #1a2a1a;
+  color: #6aad6a;
+}
+
+.blog-tag--biz {
+  background: #1a2228;
+  color: #5aabcc;
+}
+
+.blog-tag--format {
+  background: #242424;
+  color: #666;
+}
+
+.blog-card-date {
+  font-size: 11px;
+  color: #3a3a3a;
+  margin-left: 2px;
+}
+
+/* ── POST TITLE ────────────────────────────────────────────────── */
+.blog-card-title {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: -0.2px;
+}
+
+.blog-card-title a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.blog-card-title a:hover {
+  color: #c9a84c;
+}
+
+.blog-card--featured .blog-card-title a {
+  color: #f5e8b8;
+}
+
+.blog-card--featured .blog-card-title a:hover {
+  color: #c9a84c;
+}
+
+/* ── POST EXCERPT ──────────────────────────────────────────────── */
+.blog-card-excerpt {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.blog-card--featured .blog-card-excerpt {
+  color: #7a6f46;
+}
+
+/* ── READ MORE ─────────────────────────────────────────────────── */
+.blog-read-more {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  text-decoration: none;
+  transition: letter-spacing 0.2s;
+}
+
+.blog-read-more:hover {
+  letter-spacing: 2.5px;
+}
+
+/* ── ARROW ─────────────────────────────────────────────────────── */
+.blog-card-arrow {
+  font-size: 20px;
+  color: #2e2e2e;
+  transition: color 0.2s, transform 0.2s;
+  align-self: center;
+}
+
+.blog-card:hover .blog-card-arrow {
+  color: #c9a84c;
+  transform: translate(2px, -2px);
+}
+
+.blog-card--featured .blog-card-arrow {
+  color: #5a4e20;
+}
+
+.blog-card--featured:hover .blog-card-arrow {
+  color: #c9a84c;
+}
+
+/* ── INLINE CTAs ───────────────────────────────────────────────── */
+.blog-cta {
+  border-radius: 3px;
+  padding: 32px 36px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.blog-cta--audit {
+  background: #191710;
+  border: 1px solid #c9a84c;
+}
+
+.blog-cta--call {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+}
+
+.blog-cta-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 6px;
+}
+
+.blog-cta--call .blog-cta-label {
+  color: #555;
+}
+
+.blog-cta-headline {
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.blog-cta-body {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+.blog-cta--audit .blog-cta-body {
+  color: #7a6e42;
+}
+
+/* ── MOBILE ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .blog-hero {
+    padding: 100px 0 48px;
+  }
+
+  .blog-card {
+    grid-template-columns: 1fr;
+    padding: 22px 20px;
+  }
+
+  .blog-card-arrow {
+    display: none;
+  }
+
+  .blog-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+  }
+
+  .blog-card-title {
+    font-size: 18px;
+  }
+}
