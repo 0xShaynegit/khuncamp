@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Activities | Khun Camp</title>
+  <meta name="description" content="Khun Camp in the field — industry events, summits, and live activations across Southeast Asia and beyond.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khuncamp.com/events.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://khuncamp.com/events.html">
+  <meta property="og:title" content="Events & Activities | Khun Camp">
+  <meta property="og:description" content="Where Khun Camp shows up — summits, networking socials, and live activations.">
+  <meta property="og:image" content="https://khuncamp.com/images/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/webp" sizes="128x128" href="images/KhunCamp-Logo-badge-favicon-128.webp">
+  <link rel="apple-touch-icon" href="images/KhunCamp-Logo-badge-favicon-128.webp">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ── Events page–specific styles ───────────────────────── */
+
+    /* PAGE HERO */
+    .events-hero {
+      padding: 160px 0 80px;
+      border-bottom: 1px solid var(--glass-border);
+      position: relative;
+      overflow: hidden;
+    }
+    .events-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 55% 70% at 85% 50%, rgba(212,175,55,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .events-hero .section-eyebrow {
+      margin-bottom: 1rem;
+    }
+    .events-hero h1 {
+      margin-bottom: 1.2rem;
+    }
+    .events-hero .hero-subtext {
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+    }
+    .events-stats {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .events-stats .hero-stat-number {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 900;
+      color: var(--gold-primary);
+      display: block;
+      line-height: 1;
+    }
+    .events-stats .hero-stat-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      display: block;
+      margin-top: 4px;
+    }
+    .events-stats .hero-stat-divider {
+      width: 1px;
+      height: 36px;
+      background: var(--glass-border);
+    }
+
+    /* SECTION WRAPPER */
+    .events-section {
+      padding: 80px 0;
+    }
+    .events-section + .events-section {
+      border-top: 1px solid var(--glass-border);
+    }
+
+    /* FEATURED EVENT CARD */
+    .event-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--glass-border);
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: border-color 0.4s ease;
+      margin-bottom: 24px;
+    }
+    .event-featured:hover {
+      border-color: var(--gold-primary);
+    }
+
+    /* PHOTO GRID */
+    .event-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      min-height: 420px;
+    }
+    .photo-cell {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      background: var(--bg-charcoal);
+    }
+    .photo-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s var(--ease-smooth), filter 0.45s ease;
+    }
+    .photo-cell:hover img {
+      transform: scale(1.07);
+      filter: brightness(1.12);
+    }
+    .photo-cell-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.35);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photo-cell:hover .photo-cell-overlay { opacity: 1; }
+    .photo-cell-overlay svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    /* placeholder for missing photos */
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px dashed rgba(212,175,55,.15);
+      background: var(--bg-charcoal);
+    }
+    .photo-placeholder svg { opacity: .25; }
+    .photo-placeholder span {
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      opacity: .5;
+    }
+
+    /* "View all" tile */
+    .photo-cell-all {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(212,175,55,.07);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .photo-cell-all:hover { background: rgba(212,175,55,.14); }
+    .photo-cell-all strong {
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+    }
+    .photo-cell-all small {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    /* EVENT BODY */
+    .event-body {
+      padding: 40px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .event-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.6rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      border: 1px solid rgba(212,175,55,.35);
+      padding: 5px 12px;
+      margin-bottom: 18px;
+      width: fit-content;
+    }
+    .event-badge .pulse {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold-primary);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.25} }
+
+    .event-organiser {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      opacity: .7;
+      margin-bottom: 1rem;
+    }
+
+    .event-desc {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      line-height: 1.75;
+      margin-bottom: 1.6rem;
+    }
+
+    .event-meta-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 1.4rem;
+    }
+    .event-meta-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--text-main);
+    }
+    .event-meta-row svg {
+      width: 14px; height: 14px;
+      stroke: var(--gold-primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .event-meta-row strong { color: #fff; font-weight: 700; }
+
+    .event-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 1.6rem;
+    }
+    .event-tag {
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid var(--glass-border);
+      color: var(--text-dim);
+    }
+
+    .event-ext-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold-primary);
+      border-bottom: 1px solid rgba(212,175,55,.3);
+      padding-bottom: 2px;
+      width: fit-content;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+    .event-ext-link:hover { color: #fff; border-color: #fff; }
+    .event-ext-link svg { width: 11px; height: 11px; stroke: currentColor; }
+
+    /* UPCOMING GRID */
+    .upcoming-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2px;
+    }
+    .upcoming-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      padding: 2rem 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s ease, background 0.4s ease;
+    }
+    .upcoming-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold-primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s var(--ease-smooth);
+    }
+    .upcoming-card:hover { border-color: var(--gold-primary); }
+    .upcoming-card:hover::after { transform: scaleX(1); }
+
+    .ucard-date .month {
+      font-size: 0.58rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      display: block;
+    }
+    .ucard-date .day {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      display: block;
+    }
+    .ucard-date .year {
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      display: block;
+    }
+
+    .ucard-title {
+      font-size: 1rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: #fff;
+      line-height: 1.15;
+    }
+    .ucard-location {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .ucard-location svg { width: 10px; height: 10px; stroke: var(--gold-primary); }
+    .ucard-desc { font-size: 0.82rem; color: var(--text-dim); flex: 1; }
+    .ucard-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1rem;
+      border-top: 1px solid var(--glass-border);
+      margin-top: auto;
+    }
+    .status-upcoming {
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+    }
+    .status-past {
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .ucard-cta {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold-primary);
+      border: 1px solid rgba(212,175,55,.35);
+      padding: 5px 12px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .ucard-cta:hover {
+      background: var(--gold-primary);
+      color: #000;
+    }
+
+    .upcoming-placeholder {
+      border: 1px dashed var(--glass-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 200px;
+      text-align: center;
+      padding: 2rem;
+    }
+    .upcoming-placeholder svg { opacity: .15; }
+    .upcoming-placeholder p {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    /* ── LIGHTBOX ──────────────────────────────── */
+    .lbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(0,0,0,.96);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+    }
+    .lbox.open { opacity: 1; pointer-events: all; }
+    .lbox-inner { position: relative; max-width: 90vw; max-height: 90vh; }
+    .lbox-inner img {
+      max-width: 90vw;
+      max-height: 82vh;
+      object-fit: contain;
+      border: 1px solid var(--glass-border);
+    }
+    .lbox-close {
+      position: absolute;
+      top: -36px; right: 0;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-main);
+      transition: color .25s ease;
+    }
+    .lbox-close:hover { color: var(--gold-primary); }
+    .lbox-nav {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 38px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,.55);
+      border: 1px solid var(--glass-border);
+      color: var(--text-main);
+      font-size: 18px;
+      cursor: pointer;
+      transition: border-color .25s ease, color .25s ease;
+    }
+    .lbox-nav:hover { border-color: var(--gold-primary); color: var(--gold-primary); }
+    .lbox-prev { left: -50px; }
+    .lbox-next { right: -50px; }
+    .lbox-caption {
+      margin-top: 12px;
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-align: center;
+    }
+
+    /* ── GALLERY MODAL ───────────────────────── */
+    .gmodal {
+      position: fixed;
+      inset: 0;
+      z-index: 1999;
+      background: rgba(0,0,0,.97);
+      overflow-y: auto;
+      display: none;
+      flex-direction: column;
+      padding: 60px 40px 40px;
+    }
+    .gmodal.open { display: flex; }
+    .gmodal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+    .gmodal-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: #fff;
+    }
+    .gmodal-close {
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-main);
+      transition: color .25s ease;
+    }
+    .gmodal-close:hover { color: var(--gold-primary); }
+    .gmodal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 4px;
+    }
+    .gmodal-thumb {
+      aspect-ratio: 1;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--bg-charcoal);
+    }
+    .gmodal-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+    .gmodal-thumb:hover img { transform: scale(1.05); }
+
+    /* ── RESPONSIVE ──────────────────────────── */
+    @media (max-width: 900px) {
+      .event-featured { grid-template-columns: 1fr; }
+      .event-photos { min-height: 260px; }
+      .event-body { padding: 28px 24px; }
+    }
+    @media (max-width: 640px) {
+      .events-hero { padding: 120px 0 60px; }
+      .gmodal { padding: 48px 20px 20px; }
+      .lbox-prev { left: -40px; }
+      .lbox-next { right: -40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAV (identical to index.html) -->
+  <header id="site-header">
+    <nav class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/KhunCamp-Logo-nav.webp" alt="Khun Camp Logo" height="46">
+      </a>
+      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary btn-sm magnetic-item nav-desktop-cta">Book a Call</a>
+      <button class="ham-btn" id="ham-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div id="sub-nav">
+      <div class="sub-nav-inner">
+        <a href="index.html#hero"         class="sub-nav-link">Home</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#who-we-serve" class="sub-nav-link">Who We Serve</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#audit"        class="sub-nav-link">Pricing</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#proof"        class="sub-nav-link">Proof</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#testimonials" class="sub-nav-link">Testimonials</a>
+        <span class="sub-nav-div"></span>
+        <a href="index.html#faq"          class="sub-nav-link">FAQ</a>
+        <span class="sub-nav-div"></span>
+        <a href="blog.html"               class="sub-nav-link">Blog</a>
+        <span class="sub-nav-div"></span>
+        <a href="events.html"             class="sub-nav-link active">Events</a>
+        <span class="sub-nav-div"></span>
+        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="sub-nav-link">Book a Call</a>
+      </div>
+    </div>
+
+    <div id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-links">
+        <a href="index.html#hero"         class="mob-menu-link"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
+        <a href="index.html#who-we-serve" class="mob-menu-link"><span class="mob-num">02</span><span class="mob-name">Who We Serve</span><div class="mob-bar"></div></a>
+        <a href="index.html#audit"        class="mob-menu-link"><span class="mob-num">03</span><span class="mob-name">Pricing</span><div class="mob-bar"></div></a>
+        <a href="index.html#proof"        class="mob-menu-link"><span class="mob-num">04</span><span class="mob-name">Proof</span><div class="mob-bar"></div></a>
+        <a href="index.html#testimonials" class="mob-menu-link"><span class="mob-num">05</span><span class="mob-name">Testimonials</span><div class="mob-bar"></div></a>
+        <a href="index.html#faq"          class="mob-menu-link"><span class="mob-num">06</span><span class="mob-name">FAQ</span><div class="mob-bar"></div></a>
+        <a href="blog.html"               class="mob-menu-link"><span class="mob-num">07</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
+        <a href="events.html"             class="mob-menu-link"><span class="mob-num">08</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
+      </div>
+      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="mob-menu-cta">Book a Call →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── PAGE HERO ──────────────────────────── -->
+    <section class="events-hero">
+      <div class="container reveal-up">
+        <p class="section-eyebrow">// Field Operations</p>
+        <h1>Events &amp; <span class="gold-gradient-text">Activities</span></h1>
+        <p class="hero-subtext">Where Khun Camp shows up — industry summits, networking socials, and live activations across Southeast Asia and beyond.</p>
+        <div class="events-stats">
+          <div>
+            <span class="hero-stat-number">2</span>
+            <span class="hero-stat-label">Events Attended</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div>
+            <span class="hero-stat-number">2025–26</span>
+            <span class="hero-stat-label">Active Season</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div>
+            <span class="hero-stat-number">SEA</span>
+            <span class="hero-stat-label">Region</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EVENT 1: DA NANG NOMAD FEST ───────── -->
+    <section class="events-section">
+      <div class="container">
+        <p class="section-eyebrow reveal-up">// Event 01 · Da Nang, Vietnam</p>
+        <h2 class="reveal-up" style="margin-bottom: 2rem;">Da Nang <span class="gold-gradient-text">Nomad Fest</span></h2>
+
+        <div class="event-featured reveal-up">
+
+          <!-- LEFT: Photos -->
+          <div class="event-photos" id="photos-danang">
+            <!--
+              ════════════════════════════════════════════
+              PHOTO INSTRUCTIONS — Da Nang Nomad Fest
+              ────────────────────────────────────────────
+              1. Upload photos to: images/events/danang-2026/
+              2. Replace each <div class="photo-placeholder"> block below with:
+                 <img src="images/events/danang-2026/photo1.jpg" alt="Da Nang Nomad Fest" />
+              3. The 4th cell opens the full gallery modal automatically.
+              ════════════════════════════════════════════
+            -->
+            <div class="photo-cell" onclick="openLightbox('danang', 0)">
+              <div class="photo-placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Photo 1</span>
+              </div>
+              <div class="photo-cell-overlay">
+                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+
+            <div class="photo-cell" onclick="openLightbox('danang', 1)">
+              <div class="photo-placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Photo 2</span>
+              </div>
+              <div class="photo-cell-overlay">
+                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+
+            <div class="photo-cell" onclick="openLightbox('danang', 2)">
+              <div class="photo-placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Photo 3</span>
+              </div>
+              <div class="photo-cell-overlay">
+                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+
+            <div class="photo-cell photo-cell-all" onclick="openGallery('danang')">
+              <strong>View All Photos</strong>
+              <small>+ More from the event</small>
+            </div>
+          </div>
+
+          <!-- RIGHT: Event Details -->
+          <div class="event-body">
+            <div>
+              <div class="event-badge">
+                <span class="pulse"></span>
+                Attended · Content Creation Team
+              </div>
+              <h3 style="margin-bottom:.5rem; font-size: clamp(1.3rem,2.5vw,1.9rem);">Da Nang Nomad Fest 2026</h3>
+              <p class="event-organiser">Presented by Nomad 365 LLC · Da Nang, Vietnam</p>
+              <p class="event-desc">
+                A high-energy, 10-day gathering for digital nomads, solopreneurs, coaches, and creators building location-independent careers. Khunshawn served on the <strong style="color:#fff;">Content Creation &amp; Social Media team</strong> — coordinating video production, directing team members, and delivering dynamic event coverage that captured the energy of the entire festival.
+              </p>
+            </div>
+            <div>
+              <div class="event-meta-list">
+                <div class="event-meta-row">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2" stroke="inherit"/><line x1="3" y1="9" x2="21" y2="9" stroke="inherit"/><line x1="8" y1="2" x2="8" y2="6" stroke="inherit"/><line x1="16" y1="2" x2="16" y2="6" stroke="inherit"/></svg>
+                  <span><strong>March 20–29, 2026</strong> · 10-day festival</span>
+                </div>
+                <div class="event-meta-row">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="inherit"/><circle cx="12" cy="9" r="2.5" stroke="inherit"/></svg>
+                  <span><strong>Furama Resort &amp; The Roof Bar</strong> · Da Nang, Vietnam</span>
+                </div>
+                <div class="event-meta-row">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z" stroke="inherit"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="inherit"/></svg>
+                  <span>Digital nomads, creators &amp; entrepreneurs from <strong>global community</strong></span>
+                </div>
+                <div class="event-meta-row">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="inherit"/></svg>
+                  <span>Role: <strong>Content Creator &amp; Team Coordinator</strong></span>
+                </div>
+              </div>
+
+              <div class="event-tags">
+                <span class="event-tag">Digital Nomads</span>
+                <span class="event-tag">Content Creation</span>
+                <span class="event-tag">Video Production</span>
+                <span class="event-tag">Da Nang</span>
+                <span class="event-tag">Vietnam</span>
+                <span class="event-tag">Team Lead</span>
+                <span class="event-tag">Networking</span>
+              </div>
+
+              <a class="event-ext-link" href="https://www.danangnomadfest.com/index.html" target="_blank" rel="noopener">
+                View Event Website
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="inherit"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── EVENT 2: BANGKOK TRAVEL MASSIVE ────── -->
+    <section class="events-section">
+      <div class="container">
+        <p class="section-eyebrow reveal-up">// Event 02 · Bangkok, Thailand</p>
+        <h2 class="reveal-up" style="margin-bottom: 2rem;">Bangkok <span class="gold-gradient-text">Travel Massive</span></h2>
+
+        <div class="event-featured reveal-up">
+
+          <!-- LEFT: Photos -->
+          <div class="event-photos" id="photos-bangkok">
+            <!--
+              ════════════════════════════════════════════
+              PHOTO INSTRUCTIONS — Bangkok Travel Massive
+              ────────────────────────────────────────────
+              1. Upload photos to: images/events/bangkok-2025/
+              2. Replace each <div class="photo-placeholder"> block with:
+                 <img src="images/events/bangkok-2025/photo1.jpg" alt="Bangkok Travel Massive" />
+              ════════════════════════════════════════════
+            -->
+            <div class="photo-cell" onclick="openLightbox('bangkok', 0)">
+              <div class="photo-placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Photo 1</span>
+              </div>
+              <div class="photo-cell-overlay">
+                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+
+            <div class="photo-cell" onclick="openLightbox('bangkok', 1)">
+              <div class="photo-placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Photo 2</span>
+              </div>
+              <div class="photo-cell-overlay">
+                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+
+            <div class="photo-cell" onclick="openLightbox('bangkok', 2)">
+              <div class="photo-placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Photo 3</span>
+              </div>
+              <div class="photo-cell-overlay">
+                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+
+            <div class="photo-cell photo-cell-all" onclick="openGallery('bangkok')">
+              <strong>View All Photos</strong>
+              <small>+ More from the event</small>
+            </div>
+          </div>
+
+          <!-- RIGHT: Event Details -->
+          <div class="event-body">
+            <div>
+              <div class="event-badge">
+                <span class="pulse"></span>
+                Attended
+              </div>
+              <h3 style="margin-bottom:.5rem; font-size: clamp(1.3rem,2.5vw,1.9rem);">Bangkok Travel Massive<br>+ Airwallex Industry Social</h3>
+              <p class="event-organiser">Presented by Bangkok Travel Massive × Airwallex</p>
+              <p class="event-desc">
+                An exclusive networking evening for travel industry leaders and innovators at Bar.Yard — the award-winning 40th-floor rooftop of Kimpton Maa-Lai Bangkok. Timed alongside the Skift Summit and TDM Summit + TMX Expo, with 115+ attendees from 70+ travel brands worldwide.
+              </p>
+            </div>
+            <div>
+              <div class="event-meta-list">
+                <div class="event-meta-row">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2" stroke="inherit"/><line x1="3" y1="9" x2="21" y2="9" stroke="inherit"/><line x1="8" y1="2" x2="8" y2="6" stroke="inherit"/><line x1="16" y1="2" x2="16" y2="6" stroke="inherit"/></svg>
+                  <span><strong>Wednesday, 29 April 2025</strong> · 7:00 PM – 10:00 PM (GMT+7)</span>
+                </div>
+                <div class="event-meta-row">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="inherit"/><circle cx="12" cy="9" r="2.5" stroke="inherit"/></svg>
+                  <span><strong>Bar.Yard, 40F Kimpton Maa-Lai</strong> · Bangkok, Thailand</span>
+                </div>
+                <div class="event-meta-row">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="inherit"/><circle cx="9" cy="7" r="4" stroke="inherit"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="inherit"/></svg>
+                  <span><strong>115+ attendees</strong> from 70+ travel companies worldwide</span>
+                </div>
+              </div>
+
+              <div class="event-tags">
+                <span class="event-tag">Travel Industry</span>
+                <span class="event-tag">Networking</span>
+                <span class="event-tag">Fintech × Travel</span>
+                <span class="event-tag">Bangkok</span>
+                <span class="event-tag">Rooftop Social</span>
+                <span class="event-tag">Skift Summit Week</span>
+              </div>
+
+              <a class="event-ext-link" href="https://www.travelmassive.com/events/bangkok-travel-massive-airwallex-industry-social-1143452093" target="_blank" rel="noopener">
+                View Event Page
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="inherit"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── UPCOMING ────────────────────────────── -->
+    <section class="events-section">
+      <div class="container">
+        <p class="section-eyebrow reveal-up">// On The Radar</p>
+        <h2 class="reveal-up" style="margin-bottom: 2rem;">Upcoming <span class="gold-gradient-text">Events</span></h2>
+
+        <div class="upcoming-grid">
+          <!--
+            ══════════════════════════════════════════
+            HOW TO ADD A NEW FUTURE EVENT
+            ──────────────────────────────────────────
+            Copy the .upcoming-card block below and fill in:
+            - Month, Day, Year
+            - Event title & location
+            - Short description
+            - Link href & label
+            ══════════════════════════════════════════
+          -->
+
+          <!-- Placeholder: Next Event TBA -->
+          <div class="upcoming-card reveal-up">
+            <div class="ucard-date">
+              <span class="month">TBD</span>
+              <span class="day">—</span>
+              <span class="year">2026</span>
+            </div>
+            <div class="ucard-title">Next Event TBA</div>
+            <div class="ucard-location">
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="inherit"/><circle cx="12" cy="9" r="2.5" stroke="inherit"/></svg>
+              Location TBD
+            </div>
+            <p class="ucard-desc">More events coming soon. Follow Khun Camp for updates on upcoming industry gatherings across Southeast Asia.</p>
+            <div class="ucard-footer">
+              <span class="status-upcoming">Upcoming</span>
+              <a class="ucard-cta" href="https://calendar.app.google/1PVSKsN8UGwQiG3g7">Get in Touch</a>
+            </div>
+          </div>
+
+          <!-- Empty state: more to come -->
+          <div class="upcoming-placeholder reveal-up">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+            <p>More events added as the calendar fills up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FINAL CTA ───────────────────────────── -->
+    <section id="final-cta">
+      <div class="container text-center reveal-up">
+        <p class="section-eyebrow">LET'S TALK</p>
+        <h2>Ready to Turn<br><span class="gold-gradient-text">Content Into Customers?</span></h2>
+        <p class="cta-body">Whether you're a creator stuck on a plateau or a business that wants to reach the right buyers — let's find out if we're a fit.</p>
+        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary btn-final magnetic-item">Book a Discovery Call</a>
+        <p class="cta-footnote">No hard pitch. Just a conversation about your growth.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Khun Camp. All Rights Reserved.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/khunshawn" class="footer-social-link" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/khun-camp" class="footer-social-link" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.3A1.7 1.7 0 1 1 8.2 6.6 1.7 1.7 0 0 1 6.5 8.3zM19 19h-3v-4.7c0-1.4-.5-2.3-1.7-2.3a1.8 1.8 0 0 0-1.7 1.2 2.3 2.3 0 0 0-.1.9V19h-3v-9h3v1.2a3.3 3.3 0 0 1 3-1.6c2.1 0 3.5 1.4 3.5 4.3z"/></svg>
+        </a>
+      </div>
+      <p><a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="text-gold">Book a Discovery Call</a></p>
+    </div>
+  </footer>
+
+  <!-- ── GALLERY MODALS ─────────────────────── -->
+
+  <!-- Da Nang -->
+  <div class="gmodal" id="gmodal-danang">
+    <div class="gmodal-header">
+      <div class="gmodal-title">Da Nang Nomad Fest 2026</div>
+      <button class="gmodal-close" onclick="closeGallery('danang')">✕ Close</button>
+    </div>
+    <div class="gmodal-grid" id="gmodal-grid-danang">
+      <!--
+        Add more photos here by duplicating the .gmodal-thumb block.
+        Example:
+        <div class="gmodal-thumb" onclick="openLightbox('danang', 0)">
+          <img src="images/events/danang-2026/photo1.jpg" alt="Da Nang Nomad Fest" />
+        </div>
+      -->
+      <div class="gmodal-thumb" onclick="openLightbox('danang', 0)"><div class="photo-placeholder" style="height:100%"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Photo</span></div></div>
+      <div class="gmodal-thumb" onclick="openLightbox('danang', 1)"><div class="photo-placeholder" style="height:100%"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Photo</span></div></div>
+      <div class="gmodal-thumb" onclick="openLightbox('danang', 2)"><div class="photo-placeholder" style="height:100%"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Photo</span></div></div>
+      <div class="gmodal-thumb" onclick="openLightbox('danang', 3)"><div class="photo-placeholder" style="height:100%"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Photo</span></div></div>
+    </div>
+  </div>
+
+  <!-- Bangkok -->
+  <div class="gmodal" id="gmodal-bangkok">
+    <div class="gmodal-header">
+      <div class="gmodal-title">Bangkok Travel Massive · April 2025</div>
+      <button class="gmodal-close" onclick="closeGallery('bangkok')">✕ Close</button>
+    </div>
+    <div class="gmodal-grid" id="gmodal-grid-bangkok">
+      <div class="gmodal-thumb" onclick="openLightbox('bangkok', 0)"><div class="photo-placeholder" style="height:100%"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Photo</span></div></div>
+      <div class="gmodal-thumb" onclick="openLightbox('bangkok', 1)"><div class="photo-placeholder" style="height:100%"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Photo</span></div></div>
+      <div class="gmodal-thumb" onclick="openLightbox('bangkok', 2)"><div class="photo-placeholder" style="height:100%"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Photo</span></div></div>
+      <div class="gmodal-thumb" onclick="openLightbox('bangkok', 3)"><div class="photo-placeholder" style="height:100%"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Photo</span></div></div>
+    </div>
+  </div>
+
+  <!-- ── LIGHTBOX ────────────────────────────── -->
+  <div class="lbox" id="lightbox">
+    <div class="lbox-inner">
+      <button class="lbox-close" onclick="closeLightbox()">✕ Close</button>
+      <button class="lbox-nav lbox-prev" onclick="navLightbox(-1)">&#8592;</button>
+      <button class="lbox-nav lbox-next" onclick="navLightbox(1)">&#8594;</button>
+      <img id="lbox-img" src="" alt="">
+      <div class="lbox-caption" id="lbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- CDN SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // ══════════════════════════════════════════════
+    // PHOTOS DATA
+    // ──────────────────────────────────────────────
+    // Add your real photo paths + captions here.
+    // Format: { src: 'images/events/folder/photo.jpg', caption: 'Description' }
+    //
+    // Example for Da Nang:
+    //   { src: 'images/events/danang-2026/photo1.jpg', caption: 'Opening Night at The Roof' },
+    //
+    // Example for Bangkok:
+    //   { src: 'images/events/bangkok-2025/photo1.jpg', caption: 'Bar.Yard rooftop view' },
+    // ══════════════════════════════════════════════
+
+    const photoSets = {
+      danang: [
+        { src: '', caption: 'Da Nang Nomad Fest 2026 — Photo 1' },
+        { src: '', caption: 'Da Nang Nomad Fest 2026 — Photo 2' },
+        { src: '', caption: 'Da Nang Nomad Fest 2026 — Photo 3' },
+        { src: '', caption: 'Da Nang Nomad Fest 2026 — Photo 4' },
+      ],
+      bangkok: [
+        { src: 'images/events/bangkok-2026/photo1.webp', caption: 'Bar.Yard rooftop views' },
+        { src: 'images/events/bangkok-2026/photo2.webp', caption: 'Industry leaders networking' },
+        { src: 'images/events/bangkok-2026/photo3.webp', caption: 'Bangkok Travel Massive crowd' },
+        { src: 'images/events/bangkok-2026/photo4.webp', caption: 'Airwallex Industry Social' },
+      ]
+    };
+
+    const PLACEHOLDER_IMG = 'data:image/svg+xml,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500"><rect width="800" height="500" fill="#111"/>' +
+      '<text x="50%" y="50%" fill="#333" font-family="monospace" font-size="16" text-anchor="middle" dy=".3em">[ Add your photo here ]</text></svg>'
+    );
+
+    let currentSet = 'danang';
+    let currentIdx = 0;
+
+    function openLightbox(set, idx) {
+      currentSet = set;
+      currentIdx = idx;
+      const photos = photoSets[set];
+      const img = document.getElementById('lbox-img');
+      const cap = document.getElementById('lbox-caption');
+      img.src = photos[idx].src || PLACEHOLDER_IMG;
+      cap.textContent = photos[idx].caption;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function navLightbox(dir) {
+      const photos = photoSets[currentSet];
+      currentIdx = (currentIdx + dir + photos.length) % photos.length;
+      openLightbox(currentSet, currentIdx);
+    }
+
+    function openGallery(set) {
+      document.getElementById('gmodal-' + set).classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery(set) {
+      document.getElementById('gmodal-' + set).classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', e => {
+      const lb = document.getElementById('lightbox');
+      if (lb.classList.contains('open')) {
+        if (e.key === 'ArrowRight') navLightbox(1);
+        if (e.key === 'ArrowLeft')  navLightbox(-1);
+        if (e.key === 'Escape')     closeLightbox();
+      }
+      // Close gallery modals with Escape
+      ['danang','bangkok'].forEach(s => {
+        const m = document.getElementById('gmodal-' + s);
+        if (m.classList.contains('open') && e.key === 'Escape') closeGallery(s);
+      });
+    });
+
+    // Close lightbox on backdrop click
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+  </script>
+
+  <script src="//code.tidio.co/foqxe4dlsoqib33eipiiyhoga58t3b1z.js" defer></script>
+</body>
+</html>
