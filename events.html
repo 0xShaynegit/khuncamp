@@ -111,8 +111,7 @@
     .event-photos {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      min-height: 420px;
+      grid-template-rows: 210px 210px;
     }
     .photo-cell {
       overflow: hidden;
@@ -121,9 +120,13 @@
       background: var(--bg-charcoal);
     }
     .photo-cell img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
+      display: block;
       transition: transform 0.45s var(--ease-smooth), filter 0.45s ease;
     }
     .photo-cell:hover img {
@@ -531,6 +534,68 @@
     }
     .gmodal-thumb:hover img { transform: scale(1.05); }
 
+    .event-review-block {
+  margin-top: 2px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.review-quote-wrap {
+  padding: 2.5rem 2.5rem 2rem;
+}
+.review-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.review-quotemark { flex-shrink: 0; margin-top: 4px; }
+.review-body { flex: 1; }
+.review-text {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.85;
+  font-style: italic;
+  margin: 0 0 1.5rem;
+}
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 1rem;
+  border-top: 1px solid var(--glass-border);
+}
+.review-avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--gold-primary);
+  flex-shrink: 0;
+}
+.review-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+.review-role {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin: 0;
+}
+.review-stars {
+  margin-left: auto;
+  color: var(--gold-primary);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
     /* ── RESPONSIVE ──────────────────────────── */
     @media (max-width: 900px) {
       .event-featured { grid-template-columns: 1fr; }
@@ -738,59 +803,43 @@
     </section>
 
     <!-- ── EVENT 2: BANGKOK TRAVEL MASSIVE ────── -->
-    <section class="events-section">
-      <div class="container">
-        <p class="section-eyebrow reveal-up">// Event 02 · Bangkok, Thailand</p>
-        <h2 class="reveal-up" style="margin-bottom: 2rem;">Bangkok <span class="gold-gradient-text">Travel Massive</span></h2>
+ <section class="events-section">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">// Event 02 · Bangkok, Thailand</p>
+    <h2 class="reveal-up" style="margin-bottom: 2rem;">Bangkok <span class="gold-gradient-text">Travel Massive</span></h2>
 
-        <div class="event-featured reveal-up">
+    <div class="event-featured reveal-up">
 
-          <!-- LEFT: Photos -->
-          <div class="event-photos" id="photos-bangkok">
-            <!--
-              ════════════════════════════════════════════
-              PHOTO INSTRUCTIONS — Bangkok Travel Massive
-              ────────────────────────────────────────────
-              1. Upload photos to: images/events/bangkok-2025/
-              2. Replace each <div class="photo-placeholder"> block with:
-                 <img src="images/events/bangkok-2025/photo1.jpg" alt="Bangkok Travel Massive" />
-              ════════════════════════════════════════════
-            -->
-            <div class="photo-cell" onclick="openLightbox('bangkok', 0)">
-              <div class="photo-placeholder">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                <span>Photo 1</span>
-              </div>
-              <div class="photo-cell-overlay">
-                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-              </div>
-            </div>
+      <!-- LEFT: Photos -->
+      <div class="event-photos" id="photos-bangkok">
 
-            <div class="photo-cell" onclick="openLightbox('bangkok', 1)">
-              <div class="photo-placeholder">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                <span>Photo 2</span>
-              </div>
-              <div class="photo-cell-overlay">
-                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-              </div>
-            </div>
-
-            <div class="photo-cell" onclick="openLightbox('bangkok', 2)">
-              <div class="photo-placeholder">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                <span>Photo 3</span>
-              </div>
-              <div class="photo-cell-overlay">
-                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-              </div>
-            </div>
-
-            <div class="photo-cell photo-cell-all" onclick="openGallery('bangkok')">
-              <strong>View All Photos</strong>
-              <small>+ More from the event</small>
-            </div>
+        <div class="photo-cell" onclick="openLightbox('bangkok', 0)">
+          <img src="images/events/bangkok-2026/photo1.webp" alt="Bangkok Travel Massive" />
+          <div class="photo-cell-overlay">
+            <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
           </div>
+        </div>
+
+        <div class="photo-cell" onclick="openLightbox('bangkok', 1)">
+          <img src="images/events/bangkok-2026/photo2.webp" alt="Bangkok Travel Massive" />
+          <div class="photo-cell-overlay">
+            <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+          </div>
+        </div>
+
+        <div class="photo-cell" onclick="openLightbox('bangkok', 2)">
+          <img src="images/events/bangkok-2026/photo3.webp" alt="Bangkok Travel Massive" />
+          <div class="photo-cell-overlay">
+            <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+          </div>
+        </div>
+
+        <div class="photo-cell photo-cell-all" onclick="openGallery('bangkok')">
+          <strong>View All Photos</strong>
+          <small>+ More from the event</small>
+        </div>
+
+      </div>
 
           <!-- RIGHT: Event Details -->
           <div class="event-body">
@@ -839,6 +888,32 @@
         </div>
 
       </div>
+
+<!-- ── KHUNSHAWN'S TAKE ── -->
+<div class="event-review-block reveal-up">
+  <div class="review-quote-wrap">
+    <p class="section-eyebrow" style="margin-bottom: 10px;">// KhunShawn's Take</p>
+    <div class="review-inner">
+      <div class="review-quotemark">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="4" fill="rgba(201,168,76,0.1)"/><text x="18" y="25" text-anchor="middle" font-size="20" fill="#c9a84c" font-family="Georgia,serif">"</text></svg>
+      </div>
+      <div class="review-body">
+        <p class="review-text">
+          "My first Travel Massive event — and it completely exceeded expectations. The room was full of people doing genuinely fascinating things with their careers and their lives. Every conversation sparked something new. The kind of energy you can't manufacture — it has to be earned by the people in it, and the organizers earned it. Already looking forward to the next one."
+        </p>
+        <div class="review-author">
+          <div class="review-avatar">KS</div>
+          <div>
+            <p class="review-name">KhunShawn</p>
+            <p class="review-role">Founder, Khun Camp · Bangkok, April 2026</p>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
     </section>
 
     <!-- ── UPCOMING ────────────────────────────── -->
