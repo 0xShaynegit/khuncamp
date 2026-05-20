@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Content Gap Worksheet · Khun Camp</title>
+  <meta name="description" content="A 7-minute interactive self-audit. See the exact gap between your views and your revenue.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khuncamp.com/worksheet">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khuncamp.com/worksheet" />
+  <meta property="og:title" content="The Content Gap Worksheet · Khun Camp" />
+  <meta property="og:description" content="A 7-minute interactive self-audit. See the exact gap between your views and your revenue." />
+  <meta property="og:image" content="https://khuncamp.com/images/og-preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/webp" sizes="128x128" href="images/KhunCamp-Logo-badge-favicon-128.webp">
+  <link rel="apple-touch-icon" href="images/KhunCamp-Logo-badge-favicon-128.webp">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preload" as="image" href="images/KhunCamp-Logo-nav.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap&font-display=swap" rel="stylesheet">
+
+  <!-- CDN preconnect -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --bg: #0F0F0F;
+      --bg-elev: #1A1A1A;
+      --bg-card: #1F1F1F;
+      --bg-hover: #262624;
+      --border-subtle: #2A2A2A;
+      --border-active: #E5B83A;
+      --gold: #E5B83A;
+      --gold-muted: #D4A537;
+      --gold-light: #C9A961;
+      --teal: #4A9D9C;
+      --purple: #7A4FBF;
+      --slate: #8FA9C9;
+      --green: #6FAD5F;
+      --orange: #D88345;
+      --red: #C56565;
+      --text: #F5F5F0;
+      --text-muted: #A8A8A0;
+      --text-dim: #6E6E68;
+      --max: 880px;
+      /* Site header total height: main nav (~70px) + sub-nav bar (~44px) */
+      --header-h: 114px;
+    }
+
+    /* Override body background so worksheet styles dominate below the nav */
+    body { background: var(--bg); }
+
+    /* Worksheet content wrapper — sits below the site header */
+    .worksheet-wrap {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif;
+      color: var(--text);
+      line-height: 1.55;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      /* Clear the fixed/sticky site header (nav ~70px + sub-nav ~44px) */
+      padding-top: var(--header-h);
+    }
+    .worksheet-wrap .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .worksheet-wrap h1, .worksheet-wrap h2, .worksheet-wrap h3, .worksheet-wrap h4 {
+      font-weight: 700; letter-spacing: -0.02em; line-height: 1.2;
+    }
+
+    /* STICKY SCORE BAR — sticks below the site nav */
+    .scorebar {
+      position: sticky;
+      top: var(--header-h); /* matches the site header + sub-nav height */
+      z-index: 80;
+      background: rgba(15,15,15,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      border-top: 1px solid var(--border-subtle);
+      padding: 12px 0;
+    }
+    .scorebar .container {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .scorebar .brand { font-weight: 800; letter-spacing: -0.02em; font-size: 1rem; }
+    .scorebar .brand .dot { color: var(--gold); }
+    .score-display { display: flex; align-items: center; gap: 12px; }
+    .score-display .label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+    .score-display .value { font-size: 1.4rem; font-weight: 800; color: var(--gold); font-variant-numeric: tabular-nums; }
+    .score-display .value .max { color: var(--text-dim); font-size: 0.85rem; font-weight: 600; }
+    .progress-track { height: 4px; background: var(--bg-elev); border-radius: 2px; overflow: hidden; margin-top: 10px; }
+    .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), var(--gold-muted)); transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+
+    /* HERO */
+    .ws-hero { padding: 56px 0 48px; }
+    .eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+    .ws-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 18px; }
+    .ws-hero h1 .accent { color: var(--gold); }
+    .ws-hero .sub { font-size: 1.1rem; color: var(--text-muted); max-width: 640px; margin-bottom: 24px; }
+    .hero-meta {
+      display: flex; gap: 24px; flex-wrap: wrap;
+      color: var(--text-muted); font-size: 0.9rem;
+      padding: 18px 22px; background: var(--bg-elev); border-radius: 8px;
+      border-left: 3px solid var(--gold);
+    }
+    .hero-meta strong { color: var(--gold-light); font-weight: 600; }
+
+    /* SECTIONS */
+    section.audit-section { padding: 56px 0; border-top: 1px solid var(--border-subtle); }
+    .section-head { margin-bottom: 32px; }
+    .section-num {
+      display: inline-block; padding: 5px 12px; background: var(--bg-elev);
+      border-radius: 999px; font-size: 0.72rem; letter-spacing: 0.16em;
+      text-transform: uppercase; font-weight: 700; color: var(--gold);
+      border: 1px solid var(--border-subtle); margin-bottom: 14px;
+    }
+    .section-head h2 { font-size: 1.8rem; margin-bottom: 10px; }
+    .section-head .audits { color: var(--text-muted); font-size: 1rem; max-width: 600px; }
+    .section-score-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 14px; padding: 8px 14px;
+      background: var(--bg-elev); border-radius: 999px;
+      border: 1px solid var(--border-subtle); font-size: 0.88rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .section-score-pill .num { color: var(--gold); font-weight: 800; }
+    .section-score-pill .max { color: var(--text-dim); }
+
+    /* QUESTIONS */
+    .question { margin-bottom: 28px; }
+    .question-prompt { font-weight: 600; font-size: 1.05rem; margin-bottom: 14px; color: var(--text); }
+    .question-help { font-size: 0.88rem; color: var(--text-muted); margin-top: -8px; margin-bottom: 14px; }
+
+    /* OPTIONS */
+    .options { display: grid; gap: 8px; }
+    .options.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 600px) { .options.cols-2 { grid-template-columns: 1fr; } }
+    .option {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px; background: var(--bg-card);
+      border: 1.5px solid var(--border-subtle); border-radius: 8px;
+      cursor: pointer; transition: all 0.15s ease;
+      font-size: 0.97rem; color: var(--text); user-select: none;
+    }
+    .option:hover { border-color: var(--gold-muted); background: var(--bg-hover); }
+    .option input[type="radio"] { display: none; }
+    .option .pts { color: var(--text-dim); font-size: 0.82rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .option.selected { border-color: var(--gold); background: rgba(229,184,58,0.08); }
+    .option.selected .pts { color: var(--gold); }
+    .option .check { display: inline-flex; align-items: center; gap: 10px; flex: 1; }
+    .option .dot {
+      width: 18px; height: 18px; border-radius: 50%;
+      border: 2px solid var(--text-dim); flex-shrink: 0;
+      display: inline-flex; align-items: center; justify-content: center;
+      transition: all 0.15s ease;
+    }
+    .option.selected .dot { border-color: var(--gold); background: var(--gold); }
+    .option.selected .dot::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #0F0F0F; }
+
+    /* NUMBER INPUTS */
+    .num-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px; }
+    @media (max-width: 600px) { .num-grid { grid-template-columns: 1fr; } }
+    .num-field {
+      background: var(--bg-card); border: 1.5px solid var(--border-subtle);
+      border-radius: 8px; padding: 14px 18px; transition: border-color 0.15s ease;
+    }
+    .num-field:focus-within { border-color: var(--gold); }
+    .num-field label { display: block; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 4px; font-weight: 600; }
+    .num-field input {
+      width: 100%; background: transparent; border: none; outline: none;
+      color: var(--text); font-size: 1.15rem; font-weight: 600;
+      font-variant-numeric: tabular-nums; font-family: inherit;
+    }
+    .num-field input::placeholder { color: var(--text-dim); font-weight: 400; }
+
+    /* COMPUTED */
+    .computed { background: var(--bg-elev); border-radius: 8px; padding: 20px; border-left: 3px solid var(--teal); margin-top: 20px; }
+    .computed h4 { font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+    .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border-subtle); font-size: 0.95rem; }
+    .metric-row:last-child { border-bottom: none; }
+    .metric-row .name { color: var(--text-muted); }
+    .metric-row .val { color: var(--gold); font-weight: 700; font-variant-numeric: tabular-nums; }
+    .metric-row .val.dim { color: var(--text-dim); }
+
+    /* SYNTHESIS */
+    .synthesis { padding: 80px 0; border-top: 1px solid var(--border-subtle); }
+    .synthesis-card {
+      background: linear-gradient(135deg, var(--bg-elev) 0%, #1C1C1C 100%);
+      border-radius: 12px; padding: 48px; margin-bottom: 32px;
+      border: 1px solid var(--border-subtle); position: relative; overflow: hidden;
+    }
+    .synthesis-card::before {
+      content: ''; position: absolute; top: -60px; right: -60px;
+      width: 240px; height: 240px;
+      background: radial-gradient(circle, rgba(229,184,58,0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .total-display { text-align: center; padding: 12px 0 28px; }
+    .total-display .total-num { font-size: 4.5rem; font-weight: 800; color: var(--gold); font-variant-numeric: tabular-nums; line-height: 1; }
+    .total-display .total-num .of { color: var(--text-dim); font-size: 2rem; font-weight: 600; }
+    .total-display .tier-label { margin-top: 12px; font-size: 1.3rem; font-weight: 700; color: var(--text); }
+    .tier-label.tier-aware { color: var(--red); }
+    .tier-label.tier-map { color: var(--orange); }
+    .tier-label.tier-install { color: var(--teal); }
+    .tier-label.tier-operating { color: var(--green); }
+
+    .breakdown-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+    @media (max-width: 600px) { .breakdown-grid { grid-template-columns: repeat(2, 1fr); } }
+    .breakdown-item {
+      background: rgba(255,255,255,0.03); padding: 14px;
+      border-radius: 8px; border: 1px solid var(--border-subtle); text-align: center;
+    }
+    .breakdown-item.lowest { border-color: var(--orange); background: rgba(216,131,69,0.08); }
+    .breakdown-item .bd-name { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+    .breakdown-item .bd-score { font-size: 1.4rem; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+    .breakdown-item .bd-score .bd-max { color: var(--text-dim); font-size: 0.95rem; }
+    .breakdown-item.lowest .bd-score { color: var(--orange); }
+
+    .recommendation {
+      padding: 28px 32px; border-radius: 10px;
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--gold);
+    }
+    .recommendation h3 { font-size: 1.25rem; margin-bottom: 8px; }
+    .recommendation p { color: var(--text-muted); margin-bottom: 18px; font-size: 1rem; }
+    .recommendation .price { color: var(--gold); font-weight: 700; font-size: 1.1rem; }
+    .ws-btn {
+      display: inline-block; padding: 14px 26px; border-radius: 6px;
+      font-weight: 600; font-size: 1rem; transition: all 0.15s ease;
+      text-decoration: none; border: 1.5px solid transparent;
+    }
+    .ws-btn-primary { background: var(--gold); color: #0F0F0F; }
+    .ws-btn-primary:hover { background: #F4C849; transform: translateY(-1px); }
+    .ws-btn-secondary { background: transparent; color: var(--text); border-color: var(--border-subtle); }
+    .ws-btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+
+    .lowest-callout {
+      margin-top: 20px; padding: 16px 22px; background: rgba(216,131,69,0.06);
+      border: 1px solid rgba(216,131,69,0.25); border-radius: 6px; font-size: 0.95rem;
+    }
+    .lowest-callout strong { color: var(--orange); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="site-header">
+  <nav class="container nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="images/KhunCamp-Logo-nav.webp" alt="Khun Camp Logo" width="140" height="46" loading="eager" fetchpriority="high">
+    </a>
+
+    <!-- Desktop CTA -->
+    <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary btn-sm magnetic-item nav-desktop-cta">Book a Call</a>
+
+    <!-- Hamburger -->
+    <button class="ham-btn" id="ham-btn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- SUB NAV -->
+  <div id="sub-nav">
+    <div class="sub-nav-inner">
+      <a href="/"              class="sub-nav-link">Home</a>
+      <span class="sub-nav-div"></span>
+      <a href="/#who-we-serve" class="sub-nav-link">Who We Serve</a>
+      <span class="sub-nav-div"></span>
+      <a href="/#audit"        class="sub-nav-link">Pricing</a>
+      <span class="sub-nav-div"></span>
+      <a href="/#problem"      class="sub-nav-link">Problem</a>
+      <span class="sub-nav-div"></span>
+      <a href="/#solution"     class="sub-nav-link">System</a>
+      <span class="sub-nav-div"></span>
+      <a href="/#how-it-works" class="sub-nav-link">Processes</a>
+      <span class="sub-nav-div"></span>
+      <a href="/#deliverables" class="sub-nav-link">Deliverables</a>
+      <span class="sub-nav-div"></span>
+      <a href="/#proof"        class="sub-nav-link">Proof</a>
+      <span class="sub-nav-div"></span>
+      <a href="/#testimonials" class="sub-nav-link">Testimonials</a>
+      <span class="sub-nav-div"></span>
+      <a href="/#faq"          class="sub-nav-link">FAQ</a>
+      <span class="sub-nav-div"></span>
+      <a href="blog.html"      class="sub-nav-link">Blog</a>
+      <span class="sub-nav-div"></span>
+      <a href="events.html"    class="sub-nav-link">Events</a>
+      <span class="sub-nav-div"></span>
+      <a href="program.html"   class="sub-nav-link">Program</a>
+      <span class="sub-nav-div"></span>
+      <a href="worksheet"      class="sub-nav-link active">Worksheet</a>
+      <span class="sub-nav-div"></span>
+      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="sub-nav-link">Book a Call</a>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-links">
+      <a href="/"              class="mob-menu-link" tabindex="-1"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
+      <a href="/#who-we-serve" class="mob-menu-link" tabindex="-1"><span class="mob-num">02</span><span class="mob-name">Who We Serve</span><div class="mob-bar"></div></a>
+      <a href="/#audit"        class="mob-menu-link" tabindex="-1"><span class="mob-num">03</span><span class="mob-name">Pricing</span><div class="mob-bar"></div></a>
+      <a href="/#problem"      class="mob-menu-link" tabindex="-1"><span class="mob-num">04</span><span class="mob-name">Problem</span><div class="mob-bar"></div></a>
+      <a href="/#solution"     class="mob-menu-link" tabindex="-1"><span class="mob-num">05</span><span class="mob-name">System</span><div class="mob-bar"></div></a>
+      <a href="/#how-it-works" class="mob-menu-link" tabindex="-1"><span class="mob-num">06</span><span class="mob-name">Process</span><div class="mob-bar"></div></a>
+      <a href="/#deliverables" class="mob-menu-link" tabindex="-1"><span class="mob-num">07</span><span class="mob-name">Deliverables</span><div class="mob-bar"></div></a>
+      <a href="/#proof"        class="mob-menu-link" tabindex="-1"><span class="mob-num">08</span><span class="mob-name">Proof</span><div class="mob-bar"></div></a>
+      <a href="/#testimonials" class="mob-menu-link" tabindex="-1"><span class="mob-num">09</span><span class="mob-name">Testimonials</span><div class="mob-bar"></div></a>
+      <a href="/#faq"          class="mob-menu-link" tabindex="-1"><span class="mob-num">10</span><span class="mob-name">FAQ</span><div class="mob-bar"></div></a>
+      <a href="blog.html"      class="mob-menu-link" tabindex="-1"><span class="mob-num">11</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
+      <a href="events.html"    class="mob-menu-link" tabindex="-1"><span class="mob-num">12</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
+      <a href="program.html"   class="mob-menu-link" tabindex="-1"><span class="mob-num">13</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
+      <a href="worksheet"      class="mob-menu-link" tabindex="-1"><span class="mob-num">14</span><span class="mob-name">Worksheet</span><div class="mob-bar"></div></a>
+    </div>
+    <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="mob-menu-cta" tabindex="-1">Book a Call →</a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════
+     WORKSHEET CONTENT
+═══════════════════════════════════════════════ -->
+<div class="worksheet-wrap">
+
+  <!-- STICKY SCORE BAR -->
+  <div class="scorebar">
+    <div class="container">
+      <div class="brand">Khun<span class="dot">·</span>Camp</div>
+      <div class="score-display">
+        <span class="label">Score</span>
+        <span class="value"><span id="liveScore">0</span><span class="max"> / 60</span></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="ws-hero">
+    <div class="container">
+      <div class="eyebrow">Self-audit · ~7 minutes</div>
+      <h1>The Content Gap <span class="accent">Worksheet</span>.</h1>
+      <p class="sub">See the exact gap between your views and your revenue. Then know what to do about it. 21 one-click answers. Live scoring. No typing except 5 numbers.</p>
+      <div class="hero-meta">
+        <span><strong>6</strong> sections</span>
+        <span><strong>21</strong> answers</span>
+        <span><strong>/60</strong> score</span>
+        <span><strong>3</strong> routed tiers</span>
+      </div>
+    </div>
+  </header>
+
+  <form id="worksheet">
+
+  <!-- SECTION 1: AUDIENCE MAP -->
+  <section class="audit-section" data-section="1">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">Section 1 of 6</span>
+        <h2>Audience Map</h2>
+        <p class="audits">Who you are trying to reach vs. who is actually finding you. The gap kills conversion.</p>
+        <span class="section-score-pill"><span class="num" id="s1score">0</span><span class="max">/ 10</span></span>
+      </div>
+
+      <div class="question" data-q="s1q1" data-max="4">
+        <div class="question-prompt">Of your last 10 leads or inquiries, how many match your Ideal Customer Profile?</div>
+        <div class="options">
+          <label class="option" data-v="4"><span class="check"><span class="dot"></span>8 or more match</span><span class="pts">+4</span><input type="radio" name="s1q1" value="4"></label>
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>5 to 7 match</span><span class="pts">+2</span><input type="radio" name="s1q1" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Fewer than 5 match</span><span class="pts">0</span><input type="radio" name="s1q1" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s1q2" data-max="2">
+        <div class="question-prompt">When did you last update your ICP definition?</div>
+        <div class="options">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>This month or quarter</span><span class="pts">+2</span><input type="radio" name="s1q2" value="2"></label>
+          <label class="option" data-v="1"><span class="check"><span class="dot"></span>This year or older</span><span class="pts">+1</span><input type="radio" name="s1q2" value="1"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Never written it down</span><span class="pts">0</span><input type="radio" name="s1q2" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s1q3" data-max="2">
+        <div class="question-prompt">Do you have a written persona document (even a single page)?</div>
+        <div class="options cols-2">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>Yes, current</span><span class="pts">+2</span><input type="radio" name="s1q3" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Outdated or none</span><span class="pts">0</span><input type="radio" name="s1q3" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s1q4" data-max="2">
+        <div class="question-prompt">Is your content targeting a job-to-be-done or an industry/demographic?</div>
+        <div class="options">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>Job-to-be-done (what they are trying to accomplish)</span><span class="pts">+2</span><input type="radio" name="s1q4" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Industry or demographic (who they are)</span><span class="pts">0</span><input type="radio" name="s1q4" value="0"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Not sure</span><span class="pts">0</span><input type="radio" name="s1q4" value="0"></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CONTENT INVENTORY -->
+  <section class="audit-section" data-section="2">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">Section 2 of 6</span>
+        <h2>Content Inventory</h2>
+        <p class="audits">You cannot fix what you cannot see. Inventory comes first.</p>
+        <span class="section-score-pill"><span class="num" id="s2score">0</span><span class="max">/ 10</span></span>
+      </div>
+
+      <div class="question" data-q="s2q1" data-max="4">
+        <div class="question-prompt">How many pieces of content have you published in the last 90 days?</div>
+        <div class="question-help">Count blog posts, podcast episodes, videos, newsletter issues, LinkedIn or X long-form posts.</div>
+        <div class="options">
+          <label class="option" data-v="4"><span class="check"><span class="dot"></span>24 or more</span><span class="pts">+4</span><input type="radio" name="s2q1" value="4"></label>
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>12 to 23</span><span class="pts">+2</span><input type="radio" name="s2q1" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Fewer than 12</span><span class="pts">0</span><input type="radio" name="s2q1" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s2q2" data-max="2">
+        <div class="question-prompt">On how many platforms are you publishing consistently (at least once per week)?</div>
+        <div class="options">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>3 or more platforms</span><span class="pts">+2</span><input type="radio" name="s2q2" value="2"></label>
+          <label class="option" data-v="1"><span class="check"><span class="dot"></span>1 to 2 platforms</span><span class="pts">+1</span><input type="radio" name="s2q2" value="1"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Zero, all sporadic</span><span class="pts">0</span><input type="radio" name="s2q2" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s2q3" data-max="2">
+        <div class="question-prompt">Your top 3 lead-generating pieces from the last 90 days: can you name them and explain why each worked?</div>
+        <div class="options">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>Yes, can name all 3 and explain why</span><span class="pts">+2</span><input type="radio" name="s2q3" value="2"></label>
+          <label class="option" data-v="1"><span class="check"><span class="dot"></span>Can name them but not explain why</span><span class="pts">+1</span><input type="radio" name="s2q3" value="1"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Cannot identify them</span><span class="pts">0</span><input type="radio" name="s2q3" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s2q4" data-max="2">
+        <div class="question-prompt">How many evergreen pieces (still driving traffic or leads 6 months after publishing)?</div>
+        <div class="options cols-2">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>5 or more evergreen pieces</span><span class="pts">+2</span><input type="radio" name="s2q4" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Fewer than 5, or unsure</span><span class="pts">0</span><input type="radio" name="s2q4" value="0"></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: DISTRIBUTION MAP -->
+  <section class="audit-section" data-section="3">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">Section 3 of 6</span>
+        <h2>Distribution Map</h2>
+        <p class="audits">Where does your audience actually live? Where do you publish? The mismatch is the leak.</p>
+        <span class="section-score-pill"><span class="num" id="s3score">0</span><span class="max">/ 10</span></span>
+      </div>
+
+      <div class="question" data-q="s3q1" data-max="4">
+        <div class="question-prompt">How many platforms where you publish overlap with the platforms your ideal customer actually uses?</div>
+        <div class="options">
+          <label class="option" data-v="4"><span class="check"><span class="dot"></span>3 or more right platforms</span><span class="pts">+4</span><input type="radio" name="s3q1" value="4"></label>
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>1 to 2 right platforms</span><span class="pts">+2</span><input type="radio" name="s3q1" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>No overlap, or unsure</span><span class="pts">0</span><input type="radio" name="s3q1" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s3q2" data-max="2">
+        <div class="question-prompt">Where do you see measurable engagement (likes, comments, shares, replies)?</div>
+        <div class="options">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>On 2 or more platforms</span><span class="pts">+2</span><input type="radio" name="s3q2" value="2"></label>
+          <label class="option" data-v="1"><span class="check"><span class="dot"></span>On 1 platform, or unsure</span><span class="pts">+1</span><input type="radio" name="s3q2" value="1"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Nowhere measurable</span><span class="pts">0</span><input type="radio" name="s3q2" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s3q3" data-max="2">
+        <div class="question-prompt">When you publish on multiple platforms, do you write native content for each or cross-post the same?</div>
+        <div class="options">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>Native content per platform</span><span class="pts">+2</span><input type="radio" name="s3q3" value="2"></label>
+          <label class="option" data-v="1"><span class="check"><span class="dot"></span>Cross-post the same, or a mix</span><span class="pts">+1</span><input type="radio" name="s3q3" value="1"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Only publish on one platform</span><span class="pts">0</span><input type="radio" name="s3q3" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s3q4" data-max="2">
+        <div class="question-prompt">Can you name your top 2 traffic sources with rough percentages?</div>
+        <div class="options cols-2">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>Yes, can name with percentages</span><span class="pts">+2</span><input type="radio" name="s3q4" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>No idea, or all direct</span><span class="pts">0</span><input type="radio" name="s3q4" value="0"></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: FUNNEL WALK -->
+  <section class="audit-section" data-section="4">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">Section 4 of 6</span>
+        <h2>Funnel Walk</h2>
+        <p class="audits">Walk the path from content to close. Where does it break?</p>
+        <span class="section-score-pill"><span class="num" id="s4score">0</span><span class="max">/ 10</span></span>
+      </div>
+
+      <div class="question" data-q="s4q1" data-max="4">
+        <div class="question-prompt">A stranger lands on your best content. Can you walk every step they take to become a paying customer?</div>
+        <div class="options">
+          <label class="option" data-v="4"><span class="check"><span class="dot"></span>Yes, with concrete conversion numbers at each step</span><span class="pts">+4</span><input type="radio" name="s4q1" value="4"></label>
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>Yes, can describe the path but no numbers</span><span class="pts">+2</span><input type="radio" name="s4q1" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Cannot describe the path clearly</span><span class="pts">0</span><input type="radio" name="s4q1" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s4q2" data-max="2">
+        <div class="question-prompt">Is the funnel path written down anywhere?</div>
+        <div class="options cols-2">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>Yes, documented and current</span><span class="pts">+2</span><input type="radio" name="s4q2" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>In my head, or outdated</span><span class="pts">0</span><input type="radio" name="s4q2" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s4q3" data-max="2">
+        <div class="question-prompt">What is your average sales cycle length from first content touch to close?</div>
+        <div class="options cols-2">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>I know the average cycle length</span><span class="pts">+2</span><input type="radio" name="s4q3" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Unknown</span><span class="pts">0</span><input type="radio" name="s4q3" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s4q4" data-max="2">
+        <div class="question-prompt">What percent of new customers in the last 90 days came from inbound content?</div>
+        <div class="options">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>50% or more from inbound</span><span class="pts">+2</span><input type="radio" name="s4q4" value="2"></label>
+          <label class="option" data-v="1"><span class="check"><span class="dot"></span>Less than 50% from inbound</span><span class="pts">+1</span><input type="radio" name="s4q4" value="1"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Cannot measure, or all outbound</span><span class="pts">0</span><input type="radio" name="s4q4" value="0"></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CTA AUDIT -->
+  <section class="audit-section" data-section="5">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">Section 5 of 6</span>
+        <h2>CTA Audit</h2>
+        <p class="audits">If you do not ask, they do not act. Where are the asks?</p>
+        <span class="section-score-pill"><span class="num" id="s5score">0</span><span class="max">/ 10</span></span>
+      </div>
+
+      <div class="question" data-q="s5q1" data-max="4">
+        <div class="question-prompt">Open 3 random pieces of your published content. Does every piece have a clear CTA?</div>
+        <div class="options">
+          <label class="option" data-v="4"><span class="check"><span class="dot"></span>Every piece has a clear CTA</span><span class="pts">+4</span><input type="radio" name="s5q1" value="4"></label>
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>Most pieces have a CTA, some do not</span><span class="pts">+2</span><input type="radio" name="s5q1" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>CTAs are missing or inconsistent</span><span class="pts">0</span><input type="radio" name="s5q1" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s5q2" data-max="2">
+        <div class="question-prompt">Are CTAs matched to the topic of the piece, or generic asks?</div>
+        <div class="options">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>Topic-matched to each piece</span><span class="pts">+2</span><input type="radio" name="s5q2" value="2"></label>
+          <label class="option" data-v="1"><span class="check"><span class="dot"></span>Generic (subscribe, follow, book a call)</span><span class="pts">+1</span><input type="radio" name="s5q2" value="1"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>No CTA at all</span><span class="pts">0</span><input type="radio" name="s5q2" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s5q3" data-max="2">
+        <div class="question-prompt">Where do your CTAs send people?</div>
+        <div class="options">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>Email opt-in or booking page (buying intent)</span><span class="pts">+2</span><input type="radio" name="s5q3" value="2"></label>
+          <label class="option" data-v="1"><span class="check"><span class="dot"></span>Product page or social follow</span><span class="pts">+1</span><input type="radio" name="s5q3" value="1"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>No destination or unclear</span><span class="pts">0</span><input type="radio" name="s5q3" value="0"></label>
+        </div>
+      </div>
+
+      <div class="question" data-q="s5q4" data-max="2">
+        <div class="question-prompt">When did you last measure CTA conversion rate?</div>
+        <div class="options cols-2">
+          <label class="option" data-v="2"><span class="check"><span class="dot"></span>This month or quarter</span><span class="pts">+2</span><input type="radio" name="s5q4" value="2"></label>
+          <label class="option" data-v="0"><span class="check"><span class="dot"></span>Longer ago, or never</span><span class="pts">0</span><input type="radio" name="s5q4" value="0"></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CONVERSION MATH -->
+  <section class="audit-section" data-section="6">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num">Section 6 of 6</span>
+        <h2>Conversion Math</h2>
+        <p class="audits">Numbers expose the gap. Estimates are fine. Blanks score zero, so guess.</p>
+        <span class="section-score-pill"><span class="num" id="s6score">0</span><span class="max">/ 10</span></span>
+      </div>
+
+      <div class="num-grid">
+        <div class="num-field">
+          <label>Monthly content views (all channels)</label>
+          <input type="number" id="n_views" placeholder="e.g. 12000" min="0" step="1">
+        </div>
+        <div class="num-field">
+          <label>Monthly new email subscribers</label>
+          <input type="number" id="n_subs" placeholder="e.g. 180" min="0" step="1">
+        </div>
+        <div class="num-field">
+          <label>Monthly trials or calls booked</label>
+          <input type="number" id="n_calls" placeholder="e.g. 20" min="0" step="1">
+        </div>
+        <div class="num-field">
+          <label>Monthly new customers</label>
+          <input type="number" id="n_custs" placeholder="e.g. 4" min="0" step="1">
+        </div>
+        <div class="num-field" style="grid-column: 1 / -1;">
+          <label>Average customer lifetime value</label>
+          <input type="number" id="n_ltv" placeholder="e.g. 3500" min="0" step="1">
+        </div>
+      </div>
+
+      <div class="computed">
+        <h4>Your funnel math (live)</h4>
+        <div class="metric-row"><span class="name">View → email rate</span><span class="val dim" id="m_v2e">—</span></div>
+        <div class="metric-row"><span class="name">Email → trial rate</span><span class="val dim" id="m_e2t">—</span></div>
+        <div class="metric-row"><span class="name">Trial → close rate</span><span class="val dim" id="m_t2c">—</span></div>
+        <div class="metric-row"><span class="name">Revenue per view</span><span class="val dim" id="m_rpv">—</span></div>
+      </div>
+    </div>
+  </section>
+
+  </form>
+
+  <!-- SYNTHESIS -->
+  <section class="synthesis">
+    <div class="container">
+      <span class="section-num" style="margin-bottom: 12px;">Synthesis</span>
+      <h2 style="font-size: 1.9rem; margin-bottom: 8px;">Your result.</h2>
+      <p style="color: var(--text-muted); margin-bottom: 32px;">Updates live as you answer. Lowest-scoring section is your bottleneck. Fix that one first.</p>
+
+      <div class="synthesis-card">
+        <div class="total-display">
+          <div class="total-num"><span id="totalScore">0</span><span class="of"> / 60</span></div>
+          <div class="tier-label" id="tierLabel">Start answering above to see your tier</div>
+        </div>
+
+        <div class="breakdown-grid" id="breakdownGrid">
+          <div class="breakdown-item" data-bd="s1"><div class="bd-name">Audience Map</div><div class="bd-score"><span id="bd_s1">0</span><span class="bd-max"> / 10</span></div></div>
+          <div class="breakdown-item" data-bd="s2"><div class="bd-name">Inventory</div><div class="bd-score"><span id="bd_s2">0</span><span class="bd-max"> / 10</span></div></div>
+          <div class="breakdown-item" data-bd="s3"><div class="bd-name">Distribution</div><div class="bd-score"><span id="bd_s3">0</span><span class="bd-max"> / 10</span></div></div>
+          <div class="breakdown-item" data-bd="s4"><div class="bd-name">Funnel Walk</div><div class="bd-score"><span id="bd_s4">0</span><span class="bd-max"> / 10</span></div></div>
+          <div class="breakdown-item" data-bd="s5"><div class="bd-name">CTA Audit</div><div class="bd-score"><span id="bd_s5">0</span><span class="bd-max"> / 10</span></div></div>
+          <div class="breakdown-item" data-bd="s6"><div class="bd-name">Conversion</div><div class="bd-score"><span id="bd_s6">0</span><span class="bd-max"> / 10</span></div></div>
+        </div>
+
+        <div class="lowest-callout" id="lowestCallout" style="display: none;">
+          <strong>Your bottleneck:</strong> <span id="lowestText"></span>
+        </div>
+      </div>
+
+      <div class="recommendation" id="recommendation">
+        <h3 id="recTitle">Answer a few questions to see your routed recommendation.</h3>
+        <p id="recBody">Your total score maps to one of four routes. Each one is honest about whether Khun Camp is the right fit.</p>
+        <div class="cta-row" id="recCTA"></div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end .worksheet-wrap -->
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Khun Camp. All Rights Reserved.</p>
+    <div class="footer-socials">
+      <a href="#" class="footer-social-link" aria-label="YouTube">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/khunshawn" class="footer-social-link" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/>
+        </svg>
+      </a>
+      <a href="#" class="footer-social-link" aria-label="TikTok">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.6 3.3A4.8 4.8 0 0 1 14.9 0h-3.6v16.4a2.9 2.9 0 0 1-2.9 2.5 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.3 0 .5 0 .8.1V9.5a6.5 6.5 0 0 0-.8 0 6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5V8.1a8.3 8.3 0 0 0 4.8 1.5V6a4.8 4.8 0 0 1-3.1-2.7z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/company/khun-camp" class="footer-social-link" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.3A1.7 1.7 0 1 1 8.2 6.6 1.7 1.7 0 0 1 6.5 8.3zM19 19h-3v-4.7c0-1.4-.5-2.3-1.7-2.3a1.8 1.8 0 0 0-1.7 1.2 2.3 2.3 0 0 0-.1.9V19h-3v-9h3v1.2a3.3 3.3 0 0 1 3-1.6c2.1 0 3.5 1.4 3.5 4.3z"/>
+        </svg>
+      </a>
+    </div>
+    <p><a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="text-gold">Book a Discovery Call</a></p>
+  </div>
+</footer>
+
+<!-- CDN SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="//code.tidio.co/foqxe4dlsoqib33eipiiyhoga58t3b1z.js" defer></script>
+
+<!-- WORKSHEET LOGIC -->
+<script>
+  // Auto-detect real site header height and set CSS variable
+  function setHeaderOffset() {
+    const siteHeader = document.getElementById('site-header');
+    if (siteHeader) {
+      const h = siteHeader.getBoundingClientRect().height;
+      document.documentElement.style.setProperty('--header-h', h + 'px');
+      document.querySelector('.worksheet-wrap').style.paddingTop = h + 'px';
+      document.querySelector('.scorebar').style.top = h + 'px';
+    }
+  }
+  // Run on load and on resize
+  window.addEventListener('load', setHeaderOffset);
+  window.addEventListener('resize', setHeaderOffset);
+  // Also run immediately (before fonts/images load)
+  document.addEventListener('DOMContentLoaded', setHeaderOffset);
+
+  const CALENDAR_URL = 'https://calendar.app.google/1PVSKsN8UGwQiG3g7';
+  const sections = ['s1','s2','s3','s4','s5','s6'];
+  const sectionNames = {
+    s1: 'Audience Map',
+    s2: 'Content Inventory',
+    s3: 'Distribution Map',
+    s4: 'Funnel Walk',
+    s5: 'CTA Audit',
+    s6: 'Conversion Math'
+  };
+
+  document.querySelectorAll('.option').forEach(opt => {
+    opt.addEventListener('click', e => {
+      const radio = opt.querySelector('input[type=radio]');
+      if (!radio) return;
+      const name = radio.name;
+      document.querySelectorAll(`.option input[name="${name}"]`).forEach(r => {
+        r.closest('.option').classList.remove('selected');
+      });
+      radio.checked = true;
+      opt.classList.add('selected');
+      recompute();
+    });
+  });
+
+  ['n_views','n_subs','n_calls','n_custs','n_ltv'].forEach(id => {
+    document.getElementById(id).addEventListener('input', recompute);
+  });
+
+  function val(id) {
+    const v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? 0 : v;
+  }
+
+  function computeSection6() {
+    const views = val('n_views');
+    const subs  = val('n_subs');
+    const calls = val('n_calls');
+    const custs = val('n_custs');
+    const ltv   = val('n_ltv');
+
+    const v2e = views > 0 ? (subs / views) * 100 : null;
+    const e2t = subs  > 0 ? (calls / subs) * 100  : null;
+    const t2c = calls > 0 ? (custs / calls) * 100  : null;
+    const rpv = views > 0 ? (custs * ltv) / views  : null;
+
+    document.getElementById('m_v2e').textContent = v2e !== null ? v2e.toFixed(2) + '%' : '—';
+    document.getElementById('m_e2t').textContent = e2t !== null ? e2t.toFixed(2) + '%' : '—';
+    document.getElementById('m_t2c').textContent = t2c !== null ? t2c.toFixed(2) + '%' : '—';
+    document.getElementById('m_rpv').textContent = rpv !== null ? '$' + rpv.toFixed(2) : '—';
+
+    [['m_v2e', v2e], ['m_e2t', e2t], ['m_t2c', t2c], ['m_rpv', rpv]].forEach(([id, v]) => {
+      document.getElementById(id).classList.toggle('dim', v === null);
+    });
+
+    let s6 = 0;
+    if (v2e !== null && v2e >= 2) s6 += 2;
+    if (e2t !== null && e2t >= 5) s6 += 2;
+    if (t2c !== null) {
+      if (t2c >= 20) s6 += 4;
+      else if (t2c >= 10) s6 += 2;
+    }
+    if (rpv !== null && rpv > 0) s6 += 2;
+    return s6;
+  }
+
+  function getSectionScore(sec) {
+    let score = 0;
+    document.querySelectorAll(`input[name^="${sec}q"]:checked`).forEach(r => {
+      score += parseInt(r.value, 10);
+    });
+    return Math.min(score, 10);
+  }
+
+  function recompute() {
+    const scores = {};
+    scores.s1 = getSectionScore('s1');
+    scores.s2 = getSectionScore('s2');
+    scores.s3 = getSectionScore('s3');
+    scores.s4 = getSectionScore('s4');
+    scores.s5 = getSectionScore('s5');
+    scores.s6 = Math.min(computeSection6(), 10);
+
+    let total = 0;
+    sections.forEach(s => {
+      total += scores[s];
+      document.getElementById(s + 'score').textContent = scores[s];
+      document.getElementById('bd_' + s).textContent = scores[s];
+    });
+
+    document.getElementById('liveScore').textContent = total;
+    document.getElementById('totalScore').textContent = total;
+    document.getElementById('progressFill').style.width = ((total / 60) * 100) + '%';
+
+    const answered = sections.filter(s => {
+      if (s === 's6') return ['n_views','n_subs','n_calls','n_custs','n_ltv'].some(id => val(id) > 0);
+      return document.querySelectorAll(`input[name^="${s}q"]:checked`).length > 0;
+    });
+
+    document.querySelectorAll('.breakdown-item').forEach(el => el.classList.remove('lowest'));
+    if (answered.length >= 3) {
+      let lowest = answered[0];
+      answered.forEach(s => { if (scores[s] < scores[lowest]) lowest = s; });
+      document.querySelector(`[data-bd="${lowest}"]`).classList.add('lowest');
+      document.getElementById('lowestCallout').style.display = 'block';
+      document.getElementById('lowestText').textContent =
+        sectionNames[lowest] + ' scored ' + scores[lowest] + ' / 10. Fix this one first. Higher-scoring sections will not pay off until this is cleared.';
+    } else {
+      document.getElementById('lowestCallout').style.display = 'none';
+    }
+
+    const tierLabel = document.getElementById('tierLabel');
+    const recTitle  = document.getElementById('recTitle');
+    const recBody   = document.getElementById('recBody');
+    const recCTA    = document.getElementById('recCTA');
+    tierLabel.className = 'tier-label';
+
+    if (answered.length < 3) {
+      tierLabel.textContent = 'Keep answering to see your tier';
+      recTitle.textContent  = 'Answer a few questions to see your routed recommendation.';
+      recBody.textContent   = 'Your total score maps to one of four routes. Each one is honest about whether Khun Camp is the right fit.';
+      recCTA.innerHTML = '';
+      return;
+    }
+
+    if (total <= 18) {
+      tierLabel.textContent = 'Awareness Gap';
+      tierLabel.classList.add('tier-aware');
+      recTitle.innerHTML = 'Recommended: Khun Camp Diagnostic <span class="price">· $499</span>';
+      recBody.textContent = 'You suspect the system is broken but cannot name where. A 48-hour focused audit of one specific area will give you the diagnosis itself, which is the unlock.';
+      recCTA.innerHTML = `<a class="ws-btn ws-btn-primary" href="${CALENDAR_URL}">Book the $499 Diagnostic</a><a class="ws-btn ws-btn-secondary" href="${CALENDAR_URL}">Talk to Shawn first</a>`;
+    } else if (total <= 36) {
+      tierLabel.textContent = 'Knows the Gaps, Needs the Map';
+      tierLabel.classList.add('tier-map');
+      recTitle.innerHTML = 'Recommended: Khun Camp Deep Dive <span class="price">· $1,499</span>';
+      recBody.textContent = 'You see multiple leaks but cannot prioritize. Full channel and funnel audit plus a 60-minute debrief gives you the full picture before you fix anything.';
+      recCTA.innerHTML = `<a class="ws-btn ws-btn-primary" href="${CALENDAR_URL}">Book the Deep Dive</a><a class="ws-btn ws-btn-secondary" href="${CALENDAR_URL}">Talk to Shawn first</a>`;
+    } else if (total <= 48) {
+      tierLabel.textContent = 'Ready to Install';
+      tierLabel.classList.add('tier-install');
+      recTitle.innerHTML = 'Recommended: Khun Camp Installation <span class="price">· from $899</span>';
+      recBody.textContent = 'You know what is broken. You need the system installed, not more analysis. A 5-day install of one specific content system (blog automation, email funnel, content-to-customer routing) puts the engine in place.';
+      recCTA.innerHTML = `<a class="ws-btn ws-btn-primary" href="${CALENDAR_URL}">Scope the Install</a><a class="ws-btn ws-btn-secondary" href="${CALENDAR_URL}">Talk to Shawn first</a>`;
+    } else {
+      tierLabel.textContent = 'Operating Well';
+      tierLabel.classList.add('tier-operating');
+      recTitle.textContent = 'You do not need Khun Camp right now.';
+      recBody.textContent  = 'Your system is working. Khun Camp is not your highest-leverage spend. Reinvest in distribution amplification or sales hiring. Send your score in for the operator leaderboard.';
+      recCTA.innerHTML = `<a class="ws-btn ws-btn-primary" href="mailto:shawn@khuncamp.com?subject=Worksheet%20score%20${total}%2F60&body=My%20score%20was%20${total}%20out%20of%2060.%20Add%20me%20to%20the%20leaderboard.">Email score to Shawn</a>`;
+    }
+  }
+
+  recompute();
+</script>
+
+</body>
+</html>
