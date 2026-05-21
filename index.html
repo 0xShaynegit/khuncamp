@@ -153,6 +153,30 @@
       margin-bottom: 0;
       padding-top: 12px;
     }
+
+    /* Fix: no underline on mobile menu links at any state */
+    .mob-menu-link,
+    .mob-menu-link:hover,
+    .mob-menu-link:focus,
+    .mob-menu-link:active,
+    .mob-menu-link:visited {
+      text-decoration: none !important;
+    }
+
+    /* Fix: Optional Module badge — plain label, not a button-like pill */
+    .badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim, #888);
+      background: transparent;
+      border: none;
+      padding: 0;
+      cursor: default;
+      pointer-events: none;
+    }
     .pricing-hidden-cards {
       margin-top: 1.5rem;
     }
@@ -231,8 +255,6 @@
       <span class="sub-nav-div"></span>
       <a href="#faq"          class="sub-nav-link">FAQ</a>
       <span class="sub-nav-div"></span>
-      <a href="blog.html"     class="sub-nav-link">Blog</a>
-      <span class="sub-nav-div"></span>
       <a href="events.html"   class="sub-nav-link">Events</a>
       <span class="sub-nav-div"></span>
       <a href="program.html"  class="sub-nav-link">Program</a>
@@ -254,9 +276,8 @@
       <a href="#proof"        class="mob-menu-link" tabindex="-1"><span class="mob-num">08</span><span class="mob-name">Proof</span><div class="mob-bar"></div></a>
       <a href="#testimonials" class="mob-menu-link" tabindex="-1"><span class="mob-num">09</span><span class="mob-name">Testimonials</span><div class="mob-bar"></div></a>
       <a href="#faq"          class="mob-menu-link" tabindex="-1"><span class="mob-num">10</span><span class="mob-name">FAQ</span><div class="mob-bar"></div></a>
-      <a href="blog.html"     class="mob-menu-link" tabindex="-1"><span class="mob-num">11</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
-      <a href="events.html"   class="mob-menu-link" tabindex="-1"><span class="mob-num">12</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
-      <a href="program.html"  class="mob-menu-link" tabindex="-1"><span class="mob-num">13</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
+      <a href="events.html"   class="mob-menu-link" tabindex="-1"><span class="mob-num">11</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
+      <a href="program.html"  class="mob-menu-link" tabindex="-1"><span class="mob-num">12</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
     </div>
     <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="mob-menu-cta" tabindex="-1">Book a Call →</a>
   </div>

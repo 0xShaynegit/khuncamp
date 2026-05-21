@@ -470,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Sub-nav scroll spy
 (function () {
   const sections = [
-    'hero', 'problem', 'solution', 'how-it-works',
+    'hero', 'who-we-serve', 'audit', 'problem', 'solution', 'how-it-works',
     'deliverables', 'proof', 'testimonials', 'faq', 'final-cta'
   ];
   const links = document.querySelectorAll('.sub-nav-link');
@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.toggle('active', link.getAttribute('href') === '#' + id);
       });
     });
-  }, { threshold: 0.35 });
+  }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
 
   sections.forEach(id => {
     const el = document.getElementById(id);
@@ -515,8 +515,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll spy — highlights active in both navs
   const sections = [
-    'hero','problem','solution','how-it-works',
-    'deliverables','proof','testimonials','faq','final-cta'
+    'hero', 'who-we-serve', 'audit', 'problem', 'solution', 'how-it-works',
+    'deliverables', 'proof', 'testimonials', 'faq', 'final-cta'
   ];
 
   const observer = new IntersectionObserver(entries => {
@@ -530,7 +530,7 @@ document.addEventListener('DOMContentLoaded', () => {
         l.classList.toggle('active', l.getAttribute('href') === '#' + id)
       );
     });
-  }, { threshold: 0.35 });
+  }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
 
   sections.forEach(id => {
     const el = document.getElementById(id);
