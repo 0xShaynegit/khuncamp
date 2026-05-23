@@ -2928,11 +2928,40 @@ body {
   padding-top: 24px;
 }
 
+/* One-time hidden tiers — 4 cards across */
+.pricing-hidden-cards .audit-grid {
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+}
+
+@media (max-width: 1024px) {
+  .pricing-hidden-cards .audit-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 640px;
+  }
+}
+
 @media (max-width: 768px) {
   .audit-grid {
     grid-template-columns: 1fr;
     max-width: 420px;
   }
+  .pricing-hidden-cards .audit-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+}
+
+/* Featured teal card (Engine Plus Most Popular) */
+.audit-card.audit-card--featured.card-teal {
+  border: 4px solid #4A9D9C;
+  background: #111f1f;
+}
+.audit-card.audit-card--featured.card-teal:hover {
+  border-color: #5AADAC;
+}
+.audit-card.audit-card--featured.card-teal .audit-price {
+  color: #4A9D9C;
 }
 
 .audit-card {
