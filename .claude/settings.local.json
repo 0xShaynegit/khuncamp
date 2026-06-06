@@ -9,7 +9,10 @@
       "Bash(node convert-transparent.js)",
       "Bash(for file:*)",
       "Bash(do mv:*)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "WebFetch(domain:khuncamp.com)",
+      "mcp__bef49562-2cc4-40f8-b392-5fabcd856889__create_lead_list",
+      "mcp__bef49562-2cc4-40f8-b392-5fabcd856889__list_campaigns"
     ]
   }
 }
