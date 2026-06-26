@@ -1,5 +1,5 @@
 (function () {
-  var CALENDAR_URL = 'https://calendar.app.google/1PVSKsN8UGwQiG3g7';
+  var CALENDAR_URL = 'https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043';
 
   var modalHTML = [
     '<div class="booking-modal-overlay" id="bookingModalOverlay" role="dialog" aria-modal="true" aria-label="Book a call">',
