@@ -43,7 +43,7 @@
     });
 
     document.addEventListener('click', function (e) {
-      var link = e.target.closest('a[href*="calendar.app.google"]');
+      var link = e.target.closest('a[href*="leadconnectorhq.com/widget/bookings"]');
       if (link && !link.closest('#bookingModalOverlay')) {
         e.preventDefault();
         openModal();
