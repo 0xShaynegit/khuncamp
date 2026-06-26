@@ -10,9 +10,7 @@
     '    </div>',
     '    <div class="booking-modal-body">',
     '      <p>Book your <strong>free Missed-Call Audit</strong>. In 15 minutes we\'ll show you exactly how many bookings you\'re losing to missed calls and slow follow-up, and what a system fix would look like for your business. No obligation.</p>',
-    '    </div>',
-    '    <div class="booking-modal-calendar">',
-    '      <iframe id="bookingCalendarFrame" src="" title="Book a call with Khun Camp" loading="lazy" allowfullscreen></iframe>',
+    '      <a href="' + CALENDAR_URL + '" target="_blank" rel="noopener" class="booking-modal-btn">Book My Free Audit &rarr;</a>',
     '    </div>',
     '  </div>',
     '</div>'
@@ -23,10 +21,8 @@
 
     var overlay = document.getElementById('bookingModalOverlay');
     var closeBtn = document.getElementById('bookingModalClose');
-    var frame = document.getElementById('bookingCalendarFrame');
 
     function openModal() {
-      if (!frame.src) frame.src = CALENDAR_URL;
       overlay.classList.add('is-open');
       document.body.style.overflow = 'hidden';
     }
