@@ -250,6 +250,14 @@
 
   </style>
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a3b9bb95ccb4c81af5a8cf5" data-source="WEB_USER"></script>
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var closeBtn = document.querySelector('[data-testid="chat-widget-close"], .chat-widget-close, .lc-widget-close');
+        if (closeBtn) closeBtn.click();
+      }, 2000);
+    });
+  </script>
 </head>
 <body>
 
