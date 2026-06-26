@@ -44,7 +44,7 @@
 
     document.addEventListener('click', function (e) {
       var link = e.target.closest('a[href*="calendar.app.google"]');
-      if (link) {
+      if (link && !link.closest('#bookingModalOverlay')) {
         e.preventDefault();
         openModal();
       }
