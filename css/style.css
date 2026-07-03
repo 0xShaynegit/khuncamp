@@ -2947,6 +2947,126 @@ body {
   align-items: flex-start;
 }
 
+/* ── Who We Serve v2 cards ── */
+.lane-card-v2 {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-top: 3px solid rgba(201,168,76,0.35);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.lane-card-v2:hover {
+  border-color: rgba(201,168,76,0.5);
+  border-top-color: var(--gold-primary);
+  box-shadow: 0 8px 40px rgba(201,168,76,0.08);
+}
+
+.lane-card-v2--featured {
+  border-top-color: var(--gold-primary);
+  background: rgba(201,168,76,0.04);
+}
+
+.lane-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.lane-icon-v2 {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+}
+
+.lane-card-v2 h3 {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  color: #fff;
+  margin-bottom: 0.9rem;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.lane-body {
+  color: var(--text-dim);
+  line-height: 1.75;
+  margin-bottom: 1.6rem;
+  font-size: 0.95rem;
+}
+
+.lane-list-v2 {
+  list-style: none;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex: 1;
+}
+
+.lane-list-v2 li {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.lane-check {
+  color: var(--gold-primary);
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.lane-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--gold-primary);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(201,168,76,0.35);
+  padding-bottom: 2px;
+  transition: border-color 0.2s, gap 0.2s;
+  width: fit-content;
+}
+
+.lane-cta:hover {
+  border-color: var(--gold-primary);
+  gap: 0.7rem;
+}
+
+.lane-cta--primary {
+  background: var(--gold-primary);
+  color: #000;
+  padding: 0.9rem 1.6rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 900;
+  transition: filter 0.2s, gap 0.2s;
+}
+
+.lane-cta--primary:hover {
+  filter: brightness(1.1);
+  border: none;
+  gap: 0.7rem;
+}
+
 .btn-ghost-gold {
   display: inline-block;
   border: 1px solid var(--gold-primary);
