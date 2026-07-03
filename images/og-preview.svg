@@ -1,0 +1,114 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080808"/>
+      <stop offset="100%" style="stop-color:#0f0e09"/>
+    </linearGradient>
+    <linearGradient id="goldBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#080808"/>
+      <stop offset="25%" style="stop-color:#c9a84c"/>
+      <stop offset="55%" style="stop-color:#e8d070"/>
+      <stop offset="80%" style="stop-color:#c9a84c"/>
+      <stop offset="100%" style="stop-color:#080808"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c9a84c"/>
+      <stop offset="50%" style="stop-color:#e8d070"/>
+      <stop offset="100%" style="stop-color:#c9a84c"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(201,168,76,0.12)"/>
+      <stop offset="100%" style="stop-color:rgba(201,168,76,0.03)"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="22" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- BG -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid -->
+  <g opacity="0.035" stroke="#c9a84c" stroke-width="0.5">
+    <line x1="0" y1="126" x2="1200" y2="126"/><line x1="0" y1="252" x2="1200" y2="252"/>
+    <line x1="0" y1="378" x2="1200" y2="378"/><line x1="0" y1="504" x2="1200" y2="504"/>
+    <line x1="200" y1="0" x2="200" y2="630"/><line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/><line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Glow orb -->
+  <ellipse cx="600" cy="240" rx="360" ry="180" fill="#c9a84c" opacity="0.04" filter="url(#glow)"/>
+
+  <!-- Top/bottom bars -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#goldBar)"/>
+  <rect x="0" y="626" width="1200" height="4" fill="url(#goldBar)"/>
+  <!-- Side lines -->
+  <rect x="0" y="0" width="1" height="630" fill="#c9a84c" opacity="0.2"/>
+  <rect x="1199" y="0" width="1" height="630" fill="#c9a84c" opacity="0.2"/>
+
+  <!-- Eyebrow -->
+  <rect x="460" y="51" width="280" height="1" fill="#c9a84c" opacity="0.4"/>
+  <text x="600" y="43" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="11.5" font-weight="700"
+    letter-spacing="5" fill="#c9a84c">AI SYSTEMS FOR SERVICE BUSINESSES</text>
+  <rect x="460" y="55" width="280" height="1" fill="#c9a84c" opacity="0.4"/>
+
+  <!-- Headline 3 lines at 76px — fits within 1200px -->
+  <!-- Line 1 white -->
+  <text x="600" y="148" text-anchor="middle"
+    font-family="Arial, 'Helvetica Neue', sans-serif"
+    font-size="76" font-weight="900" fill="#ffffff" letter-spacing="-2">YOU'RE LOSING BOOKINGS</text>
+
+  <!-- Line 2 gold -->
+  <text x="600" y="232" text-anchor="middle"
+    font-family="Arial, 'Helvetica Neue', sans-serif"
+    font-size="76" font-weight="900" fill="url(#gold)" letter-spacing="-2">TO MISSED CALLS.</text>
+
+  <!-- Line 3 gold -->
+  <text x="600" y="316" text-anchor="middle"
+    font-family="Arial, 'Helvetica Neue', sans-serif"
+    font-size="76" font-weight="900" fill="url(#gold)" letter-spacing="-2">WE FIX THAT.</text>
+
+  <!-- Divider -->
+  <rect x="140" y="340" width="920" height="1" fill="#c9a84c" opacity="0.18"/>
+
+  <!-- Subtext -->
+  <text x="600" y="372" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="19" font-weight="400"
+    fill="rgba(255,255,255,0.5)">Done-for-you AI + CRM systems. Missed-call capture. Instant follow-up. Automated booking.</text>
+
+  <!-- Stat pills -->
+  <rect x="108" y="402" width="284" height="70" rx="8" fill="url(#card)" stroke="#c9a84c" stroke-opacity="0.28" stroke-width="1"/>
+  <text x="250" y="430" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="30" font-weight="900" fill="#c9a84c">62%</text>
+  <text x="250" y="455" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="11.5" font-weight="600"
+    fill="rgba(255,255,255,0.42)" letter-spacing="1.5">OF CALLERS DON'T LEAVE A VOICEMAIL</text>
+
+  <rect x="458" y="402" width="284" height="70" rx="8" fill="url(#card)" stroke="#c9a84c" stroke-opacity="0.28" stroke-width="1"/>
+  <text x="600" y="430" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="30" font-weight="900" fill="#c9a84c">5 MIN</text>
+  <text x="600" y="455" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="11.5" font-weight="600"
+    fill="rgba(255,255,255,0.42)" letter-spacing="1.5">TO RESPOND OR LOSE THE LEAD</text>
+
+  <rect x="808" y="402" width="284" height="70" rx="8" fill="url(#card)" stroke="#c9a84c" stroke-opacity="0.28" stroke-width="1"/>
+  <text x="950" y="430" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="30" font-weight="900" fill="#c9a84c">$0</text>
+  <text x="950" y="455" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="11.5" font-weight="600"
+    fill="rgba(255,255,255,0.42)" letter-spacing="1.5">RECOVERED WITHOUT A SYSTEM</text>
+
+  <!-- CTA button -->
+  <rect x="380" y="502" width="440" height="54" rx="6" fill="#c9a84c"/>
+  <text x="600" y="535" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="14.5" font-weight="800"
+    fill="#000000" letter-spacing="2.5">GET YOUR FREE MISSED-CALL AUDIT</text>
+
+  <!-- Domain -->
+  <text x="600" y="606" text-anchor="middle"
+    font-family="Arial, sans-serif" font-size="12" font-weight="500"
+    fill="rgba(255,255,255,0.16)" letter-spacing="3.5">KHUNCAMP.COM</text>
+</svg>
