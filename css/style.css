@@ -457,7 +457,96 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
     grid-template-columns: 1fr;
   }
 }
- 
+
+/* ── Problem section v2 ── */
+.problem-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.problem-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-top: 3px solid rgba(220, 60, 60, 0.5);
+  border-radius: 12px;
+  padding: 2rem 2rem 2.2rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.problem-card:hover {
+  border-color: rgba(220,60,60,0.6);
+  border-top-color: #e05050;
+  box-shadow: 0 8px 32px rgba(220,60,60,0.07);
+}
+
+.problem-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.problem-stat {
+  font-size: 2.2rem;
+  font-weight: 900;
+  font-family: var(--font-main);
+  color: #fff;
+  line-height: 1;
+}
+
+.problem-icon-badge {
+  width: 40px;
+  height: 40px;
+  background: rgba(220,60,60,0.12);
+  border: 1px solid rgba(220,60,60,0.25);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e05050;
+  flex-shrink: 0;
+}
+
+.problem-card h3 {
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.problem-card p {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.problem-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.problem-cta-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .problem-grid-v2 {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ==============================
    REFRAME
 ============================== */
