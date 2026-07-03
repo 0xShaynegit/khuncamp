@@ -1,30 +1,49 @@
 (function () {
   var CALENDAR_URL = 'https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043';
 
-  var modalHTML = [
-    '<div class="booking-modal-overlay" id="bookingModalOverlay" role="dialog" aria-modal="true" aria-label="Book a call">',
-    '  <div class="booking-modal">',
-    '    <div class="booking-modal-header">',
-    '      <img src="/images/KhunCamp-Logo-nav.webp" alt="Khun Camp" class="booking-modal-logo">',
-    '      <button class="booking-modal-close" id="bookingModalClose" aria-label="Close">&times;</button>',
-    '    </div>',
-    '    <div class="booking-modal-body">',
-    '      <p>Book your <strong>free Missed-Call Audit</strong>. In 15 minutes we\'ll show you exactly how many bookings you\'re losing to missed calls and slow follow-up, and what a system fix would look like for your business. No obligation.</p>',
-    '    </div>',
-    '    <div class="booking-modal-calendar">',
-    '      <iframe id="bookingCalendarFrame" src="" title="Book a call with Khun Camp" loading="lazy" allow="payment"></iframe>',
-    '    </div>',
-    '  </div>',
-    '</div>'
-  ].join('');
+  var modalHTML = `
+<div class="booking-modal-overlay" id="bookingModalOverlay" role="dialog" aria-modal="true" aria-label="Book your free Missed-Call Audit">
+  <div class="booking-modal">
+    <div class="booking-modal-header">
+      <img src="/images/KhunCamp-Logo-nav.webp" alt="Khun Camp" class="booking-modal-logo">
+      <div class="booking-modal-header-text">
+        <p>Free Missed-Call Audit</p>
+      </div>
+      <button class="booking-modal-close" id="bookingModalClose" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="booking-modal-value">
+      <div class="booking-modal-value-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Free 15-min call
+      </div>
+      <div class="booking-modal-value-divider"></div>
+      <div class="booking-modal-value-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        No commitment
+      </div>
+      <div class="booking-modal-value-divider"></div>
+      <div class="booking-modal-value-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        We show you your numbers first
+      </div>
+    </div>
+    <div class="booking-modal-calendar">
+      <iframe id="bookingCalendarFrame" src="" title="Book a free Missed-Call Audit with Khun Camp" loading="lazy" allow="payment"></iframe>
+    </div>
+  </div>
+</div>`;
 
   function init() {
     document.body.insertAdjacentHTML('beforeend', modalHTML);
 
     var overlay = document.getElementById('bookingModalOverlay');
     var closeBtn = document.getElementById('bookingModalClose');
-    var frame = document.getElementById('bookingCalendarFrame');
-    var loaded = false;
+    var frame   = document.getElementById('bookingCalendarFrame');
+    var loaded  = false;
 
     function openModal() {
       if (!loaded) {
