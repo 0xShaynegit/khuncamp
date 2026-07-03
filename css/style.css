@@ -2781,6 +2781,65 @@ body {
   font-size: 1rem;
 }
 
+/* Hero CTA layout */
+.hero-cta-primary-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero-cta-note {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Pulse glow on primary CTA */
+@keyframes btn-glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+  50%       { box-shadow: 0 0 28px 6px rgba(201,168,76,0.35); }
+}
+
+.btn-pulse {
+  animation: btn-glow-pulse 2.8s ease-in-out infinite;
+}
+
+.btn-pulse:hover {
+  animation: none;
+}
+
+/* Ghost outline — stronger than .btn-ghost */
+.btn-ghost-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1.5px solid rgba(201,168,76,0.6);
+  color: var(--gold-primary);
+  padding: 1.3rem 2.8rem;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: none;
+  transition: border-color 0.25s, background 0.25s, color 0.25s;
+  background: transparent;
+}
+
+.btn-ghost-outline:hover {
+  border-color: var(--gold-primary);
+  background: rgba(201,168,76,0.1);
+  color: #fff;
+}
+
+.btn-arrow {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
 .btn-ghost {
   display: inline-block;
   border: 1px solid rgba(212, 175, 55, 0.4);
@@ -2931,9 +2990,15 @@ body {
   }
 
   .btn-ghost,
+  .btn-ghost-outline,
   .btn-primary.btn-lg {
     width: 100%;
     text-align: center;
+    justify-content: center;
+  }
+
+  .hero-cta-primary-wrap {
+    width: 100%;
   }
 
   .hero-full-content .hero-stats {
