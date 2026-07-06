@@ -239,6 +239,42 @@
       </div>
     </section>
 
+
+    <section class="post-email-capture">
+      <div class="container">
+        <div class="pec-card">
+          <div class="pec-left">
+            <p class="pec-eyebrow">Free weekly breakdown</p>
+            <h3 class="pec-headline">Get the full breakdown.</h3>
+            <p class="pec-sub">One insight a week for service business owners — missed-call recovery, follow-up systems, and the numbers that actually move bookings.</p>
+          </div>
+          <div class="pec-right">
+            <form class="pec-form" id="pecForm" onsubmit="pecSubmit(event)">
+              <input class="pec-input" type="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              <button class="pec-btn" type="submit">Get the breakdown</button>
+            </form>
+            <p class="pec-trust">&#10003; No spam &nbsp;&bull;&nbsp; Unsubscribe any time</p>
+            <p class="pec-success" id="pecSuccess" style="display:none;">You're in — check your inbox.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+    function pecSubmit(e) {
+      e.preventDefault();
+      var form = e.target;
+      var email = form.email.value;
+      fetch('https://services.leadconnectorhq.com/hooks/DWE7lrz0ipb6NuHbp0Yg/webhook-trigger/337122ab-2363-4eb6-ab8a-10897d6f22ad', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, source: 'blog-email-capture', page: window.location.href })
+      }).finally(function() {
+        document.getElementById('pecForm').style.display = 'none';
+        document.getElementById('pecSuccess').style.display = 'block';
+      });
+    }
+    </script>
     <section class="post-footer-cta">
       <div class="container post-footer-cta-inner reveal-up">
         <p class="section-eyebrow">NEXT STEP</p>
@@ -300,5 +336,6 @@
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 </html>
+
 
 

@@ -394,3 +394,100 @@ ol.post-list li::before {
     position: static;
   }
 }
+/* ── BLOG EMAIL CAPTURE ─────────────────────────────────────────── */
+.post-email-capture {
+  padding: 60px 0;
+  border-top: 1px solid #1a1a1a;
+}
+.pec-card {
+  background: #0d0d0d;
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.pec-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c9a84c, #f0d080, #c9a84c);
+}
+.pec-left { flex: 1; }
+.pec-right { flex: 1; }
+.pec-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin: 0 0 0.5rem;
+}
+.pec-headline {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.6rem;
+  line-height: 1.2;
+}
+.pec-sub {
+  font-size: 0.875rem;
+  color: #888;
+  line-height: 1.6;
+  margin: 0;
+}
+.pec-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.pec-input {
+  flex: 1;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 0 16px;
+  height: 46px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.pec-input::placeholder { color: #555; }
+.pec-input:focus { border-color: rgba(201,168,76,0.5); }
+.pec-btn {
+  background: #c9a84c;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 0 22px;
+  height: 46px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.pec-btn:hover { background: #d9b85c; }
+.pec-trust {
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+}
+.pec-success {
+  font-size: 15px;
+  font-weight: 700;
+  color: #c9a84c;
+  margin: 12px 0 0;
+}
+@media (max-width: 768px) {
+  .pec-card { flex-direction: column; gap: 1.5rem; }
+  .pec-form { flex-direction: column; }
+  .pec-btn { width: 100%; }
+}
