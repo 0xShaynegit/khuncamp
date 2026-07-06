@@ -101,10 +101,19 @@
     if (isMobile()) {
       setTimeout(openPopup, MOBILE_DELAY_MS);
     } else {
-      document.addEventListener('mouseleave', function handler(e) {
-        if (e.clientY <= 0) {
+      var triggered = false;
+      document.addEventListener('mouseleave', function (e) {
+        if (triggered) return;
+        if (e.clientY <= 0 || e.relatedTarget === null) {
+          triggered = true;
           openPopup();
-          document.removeEventListener('mouseleave', handler);
+        }
+      });
+      document.addEventListener('mouseout', function (e) {
+        if (triggered) return;
+        if (!e.relatedTarget && e.clientY <= 2) {
+          triggered = true;
+          openPopup();
         }
       });
     }
