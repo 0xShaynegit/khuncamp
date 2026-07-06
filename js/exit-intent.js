@@ -98,24 +98,37 @@
       setCookie(COOKIE_NAME, '1', COOKIE_DAYS);
     });
 
-    if (isMobile()) {
-      setTimeout(openPopup, MOBILE_DELAY_MS);
-    } else {
-      var triggered = false;
+    var triggered = false;
+
+    function trigger() {
+      if (triggered) return;
+      triggered = true;
+      openPopup();
+    }
+
+    // Trigger 1: mouse leaves toward top (desktop exit intent)
+    if (!isMobile()) {
       document.addEventListener('mouseleave', function (e) {
-        if (triggered) return;
-        if (e.clientY <= 0 || e.relatedTarget === null) {
-          triggered = true;
-          openPopup();
-        }
+        if (e.clientY <= 0 || e.relatedTarget === null) trigger();
       });
       document.addEventListener('mouseout', function (e) {
-        if (triggered) return;
-        if (!e.relatedTarget && e.clientY <= 2) {
-          triggered = true;
-          openPopup();
-        }
+        if (!e.relatedTarget && e.clientY <= 2) trigger();
       });
+    }
+
+    // Trigger 2: scroll past 70% of page
+    window.addEventListener('scroll', function onScroll() {
+      var scrolled = window.scrollY + window.innerHeight;
+      var total = document.documentElement.scrollHeight;
+      if (scrolled / total >= 0.70) {
+        window.removeEventListener('scroll', onScroll);
+        trigger();
+      }
+    }, { passive: true });
+
+    // Trigger 3: mobile — 40s inactivity
+    if (isMobile()) {
+      setTimeout(trigger, MOBILE_DELAY_MS);
     }
   }
 
