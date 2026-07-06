@@ -18,11 +18,11 @@
 
       <div class="exit-stat">
         <span class="exit-stat-num">62%</span>
-        <span class="exit-stat-label">of callers never leave a voicemail — they just book elsewhere</span>
+        <span class="exit-stat-label">of callers never leave a voicemail. They just book elsewhere.</span>
       </div>
 
       <h2 class="exit-headline">Do you know how many bookings<br><span>you lost this week?</span></h2>
-      <p class="exit-sub">Most med spas lose 8–15 bookings a month to missed calls and slow follow-up — and never see it in any report. The free audit shows you your exact number.</p>
+      <p class="exit-sub">Most med spas lose 8–15 bookings a month to missed calls and slow follow-up. They never see it in any report. The free audit shows you your exact number.</p>
 
       <a href="${CALENDAR_URL}" class="exit-cta" id="exitCta">Get My Free Missed-Call Audit</a>
       <button class="exit-dismiss" id="exitDismiss">No thanks, I already know my numbers</button>
