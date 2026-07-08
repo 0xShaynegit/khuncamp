@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automated Booking for Service Businesses | Khun Camp</title>
+  <meta name="description" content="Stop playing phone tag. Khun Camp installs automated booking that lets leads schedule themselves — 24/7, no back-and-forth, no staff required.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khuncamp.com/automated-booking/">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khuncamp.com/automated-booking/" />
+  <meta property="og:title" content="Automated Booking for Service Businesses | Khun Camp" />
+  <meta property="og:description" content="Leads book themselves. No phone tag. No manual scheduling. Just appointments appearing in your calendar around the clock." />
+  <meta property="og:image" content="https://khuncamp.com/images/og-preview.svg" />
+
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/jpeg" sizes="128x128" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="apple-touch-icon" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="preload" as="image" href="../images/KhunCamp-Logo-nav.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap&font-display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=20260708">
+
+  <style>
+    .svc-hero { padding: 160px 0 80px; text-align: center; }
+    .svc-eyebrow {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase; color: #c9a84c;
+      border: 1px solid rgba(201,168,76,0.35); padding: 5px 14px;
+      border-radius: 99px; margin-bottom: 1.5rem;
+    }
+    .svc-hero h1 {
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 900;
+      line-height: 1.06; letter-spacing: -0.03em; color: #fff;
+      margin: 0 auto 1.25rem; max-width: 820px; text-wrap: balance;
+    }
+    .svc-hero h1 span { color: #c9a84c; }
+    .svc-hero-sub {
+      font-size: 1.15rem; color: #888; max-width: 560px;
+      margin: 0 auto 2.5rem; line-height: 1.65;
+    }
+    .svc-hero-cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* STAT STRIP */
+    .stat-strip { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 80px; }
+    .stat-strip-inner { display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; text-align: center; }
+    .stat-item-num { font-size: 2.4rem; font-weight: 900; color: #c9a84c; letter-spacing: -0.03em; line-height: 1; }
+    .stat-item-label { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-top: 6px; }
+
+    /* SECTIONS */
+    .svc-section { padding: 80px 0; }
+    .svc-section-eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #c9a84c; margin-bottom: 1rem; }
+    .svc-section h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; color: #fff; line-height: 1.1; margin-bottom: 1.25rem; text-wrap: balance; }
+    .svc-section-sub { font-size: 1rem; color: #777; line-height: 1.7; max-width: 580px; margin-bottom: 3rem; }
+
+    /* PROBLEM CARDS */
+    .problem-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 768px) { .problem-cards { grid-template-columns: 1fr; } }
+    .problem-card-svc {
+      background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 32px 28px;
+    }
+    .problem-stat-big { font-size: 2.8rem; font-weight: 900; color: #c9a84c; letter-spacing: -0.03em; line-height: 1; margin-bottom: 12px; }
+    .problem-card-svc h3 { font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .problem-card-svc p { font-size: 0.9rem; color: #666; line-height: 1.65; margin: 0; }
+
+    /* HOW IT WORKS */
+    .how-steps { display: flex; flex-direction: column; gap: 0; max-width: 680px; }
+    .how-step { display: flex; gap: 24px; align-items: flex-start; padding: 32px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .how-step:last-child { border-bottom: none; }
+    .how-step-num { font-size: 2rem; font-weight: 900; color: rgba(201,168,76,0.25); letter-spacing: -0.03em; line-height: 1; flex-shrink: 0; width: 48px; }
+    .how-step-body h3 { font-size: 1.1rem; font-weight: 800; color: #fff; margin: 0 0 8px; }
+    .how-step-body p { font-size: 0.9rem; color: #666; line-height: 1.65; margin: 0; }
+
+    /* WHAT YOU GET */
+    .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    @media (max-width: 640px) { .features-grid { grid-template-columns: 1fr; } }
+    .feature-card {
+      background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 28px 24px;
+    }
+    .feature-card-icon {
+      width: 40px; height: 40px; background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.2); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px; color: #c9a84c;
+    }
+    .feature-card h3 { font-size: 1rem; font-weight: 800; color: #fff; margin: 0 0 8px; }
+    .feature-card p { font-size: 0.875rem; color: #666; line-height: 1.6; margin: 0; }
+
+    /* PRICING CTA */
+    .pricing-cta-box {
+      background: #0d0d0d; border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 20px; padding: 56px 48px; text-align: center;
+      margin: 80px 0;
+    }
+    .pricing-cta-box h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; color: #fff; margin: 0 0 1rem; letter-spacing: -0.02em; }
+    .pricing-cta-box p { font-size: 1rem; color: #777; margin: 0 0 2rem; line-height: 1.6; }
+    .pricing-tiers { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+    .pricing-tier-pill {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px; padding: 10px 20px; font-size: 0.85rem; color: #aaa;
+    }
+    .pricing-tier-pill strong { color: #fff; }
+
+    /* FAQ */
+    .faq-simple { max-width: 680px; margin: 0 auto; }
+    .faq-simple-item { border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .faq-simple-q {
+      width: 100%; background: none; border: none; padding: 22px 0;
+      display: flex; justify-content: space-between; align-items: center;
+      cursor: pointer; text-align: left; gap: 16px;
+    }
+    .faq-simple-q span { font-size: 0.95rem; font-weight: 700; color: #ccc; line-height: 1.4; }
+    .faq-simple-q .faq-arr { color: #c9a84c; font-size: 1.2rem; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-simple-q.open .faq-arr { transform: rotate(45deg); }
+    .faq-simple-a { display: none; padding: 0 0 22px; font-size: 0.9rem; color: #777; line-height: 1.7; }
+    .faq-simple-a.open { display: block; }
+
+    /* BOTTOM CTA */
+    .bottom-cta { padding: 100px 0; text-align: center; }
+    .bottom-cta h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: #fff; letter-spacing: -0.02em; margin: 0 0 1rem; }
+    .bottom-cta p { font-size: 1rem; color: #666; margin: 0 0 2.5rem; }
+    .btn-gold { display: inline-block; background: #c9a84c; color: #000; font-size: 0.85rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; padding: 18px 40px; border-radius: 999px; text-decoration: none; transition: opacity 0.2s; }
+    .btn-gold:hover { opacity: 0.88; }
+    .btn-outline-gold { display: inline-block; border: 1px solid rgba(201,168,76,0.4); color: #c9a84c; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 17px 36px; border-radius: 999px; text-decoration: none; transition: border-color 0.2s; }
+    .btn-outline-gold:hover { border-color: #c9a84c; }
+    @media (max-width: 640px) { .pricing-cta-box { padding: 40px 24px; } .stat-strip-inner { gap: 40px; } }
+  </style>
+</head>
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Floating Pill Nav -->
+  <header id="site-header">
+    <nav id="floating-nav">
+      <div class="fnav-pill">
+        <a href="../" class="fnav-logo">
+          <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" height="30" loading="eager" fetchpriority="high">
+        </a>
+        <div class="fnav-links">
+          <a href="../" class="fnav-link">Home</a>
+          <div class="fnav-dropdown">
+            <button class="fnav-dropdown-btn active" aria-expanded="false">Services ▾</button>
+            <div class="fnav-dropdown-menu">
+              <a href="../services/" class="fnav-dropdown-item" style="color:#c9a84c;">All Services</a>
+              <a href="../ai-receptionist/" class="fnav-dropdown-item">AI Receptionist</a>
+              <a href="../automated-booking/" class="fnav-dropdown-item active">Automated Booking</a>
+              <a href="../med-spas/" class="fnav-dropdown-item">AI Systems for Med Spas</a>
+              <a href="../websites/" class="fnav-dropdown-item">Website Build &amp; Fix</a>
+            </div>
+          </div>
+          <a href="../blog.html" class="fnav-link">Blog</a>
+          <a href="../events.html" class="fnav-link">Events</a>
+          <a href="../program.html" class="fnav-link">Program</a>
+        </div>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="fnav-cta">Free Audit</a>
+        <button class="fnav-ham" id="ham-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-links">
+        <a href="../" class="mob-menu-link" tabindex="-1"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
+        <a href="../ai-receptionist/" class="mob-menu-link" tabindex="-1"><span class="mob-num">02</span><span class="mob-name">AI Receptionist</span><div class="mob-bar"></div></a>
+        <a href="../automated-booking/" class="mob-menu-link" tabindex="-1"><span class="mob-num">03</span><span class="mob-name">Automated Booking</span><div class="mob-bar"></div></a>
+        <a href="../med-spas/" class="mob-menu-link" tabindex="-1"><span class="mob-num">04</span><span class="mob-name">AI for Med Spas</span><div class="mob-bar"></div></a>
+        <a href="../websites/" class="mob-menu-link" tabindex="-1"><span class="mob-num">05</span><span class="mob-name">Website Build &amp; Fix</span><div class="mob-bar"></div></a>
+        <a href="../blog.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">06</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
+        <a href="../events.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">07</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
+        <a href="../program.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">08</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
+      </div>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="mob-menu-cta" tabindex="-1">Book Your Free Audit →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="svc-hero">
+      <div class="container">
+        <span class="svc-eyebrow">Automated Booking</span>
+        <h1>Stop playing phone tag.<br>Let leads <span>book themselves.</span></h1>
+        <p class="svc-hero-sub">Most businesses still schedule appointments manually — email threads, voicemails, and "what time works for you?" loops. We install a system that lets clients self-book 24/7, sends automatic reminders, and fills your calendar while you sleep.</p>
+        <div class="svc-hero-cta-group">
+          <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-gold">Book a Free Strategy Call</a>
+          <a href="#how-it-works" class="btn-outline-gold">See How It Works</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAT STRIP -->
+    <div class="stat-strip">
+      <div class="container">
+        <div class="stat-strip-inner">
+          <div>
+            <div class="stat-item-num">40%</div>
+            <div class="stat-item-label">of appointments booked outside business hours</div>
+          </div>
+          <div>
+            <div class="stat-item-num">3–5×</div>
+            <div class="stat-item-label">fewer no-shows with automated reminders</div>
+          </div>
+          <div>
+            <div class="stat-item-num">0</div>
+            <div class="stat-item-label">back-and-forth emails per booking</div>
+          </div>
+          <div>
+            <div class="stat-item-num">24/7</div>
+            <div class="stat-item-label">calendar open for self-booking</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROBLEM -->
+    <section class="svc-section">
+      <div class="container">
+        <p class="svc-section-eyebrow">The Problem</p>
+        <h2>Manual scheduling is costing you<br>time, leads, and revenue.</h2>
+        <p class="svc-section-sub">Every appointment that requires a back-and-forth exchange is a chance for the lead to lose interest, find a competitor, or just never follow through.</p>
+        <div class="problem-cards">
+          <div class="problem-card-svc">
+            <div class="problem-stat-big">40%</div>
+            <h3>Bookings happen after hours</h3>
+            <p>Nearly half of people who want to book aren't ready during business hours. If your calendar isn't open, they'll find someone whose is.</p>
+          </div>
+          <div class="problem-card-svc">
+            <div class="problem-stat-big">3–5×</div>
+            <h3>No-show rate drops with reminders</h3>
+            <p>Most no-shows aren't intentional — people forget. Automated confirmation texts and reminders cut no-shows by 60–80% in most service businesses.</p>
+          </div>
+          <div class="problem-card-svc">
+            <div class="problem-stat-big">Hours</div>
+            <h3>Wasted on manual scheduling</h3>
+            <p>Your front desk or admin staff spends hours each week on back-and-forth that a system can handle in seconds — for free.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="svc-section" id="how-it-works" style="border-top: 1px solid rgba(255,255,255,0.06);">
+      <div class="container">
+        <p class="svc-section-eyebrow">How It Works</p>
+        <h2>Lead clicks a link.<br>Appointment lands in your calendar.</h2>
+        <p class="svc-section-sub">The booking system handles everything from the moment a lead is ready to schedule — no human touchpoints required until the appointment itself.</p>
+        <div class="how-steps">
+          <div class="how-step">
+            <div class="how-step-num">01</div>
+            <div class="how-step-body">
+              <h3>Lead receives a booking link</h3>
+              <p>Via text, email, your website, or directly from the AI Receptionist — the lead gets a link to your live calendar with your available slots in real time.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-step-num">02</div>
+            <div class="how-step-body">
+              <h3>They pick a time and confirm</h3>
+              <p>The booking widget shows only your open slots. They pick one, fill in their details, and confirm — no login required, works on mobile.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-step-num">03</div>
+            <div class="how-step-body">
+              <h3>Instant confirmation sent to both parties</h3>
+              <p>The lead gets a confirmation text and email with all the details. Your calendar updates automatically. No manual entry, no double-bookings.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-step-num">04</div>
+            <div class="how-step-body">
+              <h3>Automated reminders fire before the appointment</h3>
+              <p>The system sends reminder texts 24 hours and 1 hour before the appointment. No-show rates drop dramatically.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-step-num">05</div>
+            <div class="how-step-body">
+              <h3>Post-appointment follow-up triggered automatically</h3>
+              <p>After the appointment, automated follow-up messages go out — review requests, rebooking prompts, or whatever fits your business model.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="svc-section" style="border-top: 1px solid rgba(255,255,255,0.06);">
+      <div class="container">
+        <p class="svc-section-eyebrow">What's Included</p>
+        <h2>A full booking system.<br>Set up done-for-you.</h2>
+        <p class="svc-section-sub">We build and configure everything — you don't touch a setting. Just review the test booking, approve it, and go live.</p>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>24/7 self-booking calendar</h3>
+            <p>A live booking page connected to your real calendar. Leads see your actual availability and pick a slot instantly — any time of day.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Automated confirmation texts</h3>
+            <p>Instant SMS confirmation when a booking is made — so the lead never wonders if it went through, and you never have to check manually.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Pre-appointment reminders</h3>
+            <p>Automated reminders at 24h and 1h before the appointment. Dramatically reduces no-shows without any staff effort.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Email + SMS confirmation flow</h3>
+            <p>Both channels covered — email for the details, SMS for the reminder. Meets clients wherever they pay attention.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>CRM sync</h3>
+            <p>Every booking is logged in GoHighLevel automatically — lead info, appointment time, and status. No data entry, no gaps.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Post-appointment follow-up</h3>
+            <p>After each appointment, automated messages go out — review requests, rebooking prompts, or referral asks. Keeps revenue flowing beyond the first visit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING CTA -->
+    <div class="container">
+      <div class="pricing-cta-box">
+        <h2>Available from the Starter package.</h2>
+        <p>Automated Booking is built into every Khun Camp system alongside the AI Receptionist. Start with a free strategy call to see exactly what your calendar flow would look like.</p>
+        <div class="pricing-tiers">
+          <div class="pricing-tier-pill"><strong>Starter</strong> — $1,997 + $297/mo</div>
+          <div class="pricing-tier-pill"><strong>Growth</strong> — $4,997 + $497/mo</div>
+          <div class="pricing-tier-pill"><strong>Pro</strong> — $9,997 + $1,497/mo</div>
+        </div>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-gold">Book a Free Strategy Call</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="svc-section" style="border-top: 1px solid rgba(255,255,255,0.06);">
+      <div class="container">
+        <p class="svc-section-eyebrow" style="text-align:center;">FAQ</p>
+        <h2 style="text-align:center; margin-bottom: 3rem;">Common Questions</h2>
+        <div class="faq-simple">
+          <div class="faq-simple-item">
+            <button class="faq-simple-q">
+              <span>Does this connect to Google Calendar or Outlook?</span>
+              <span class="faq-arr">+</span>
+            </button>
+            <div class="faq-simple-a">Yes. The booking system syncs with Google Calendar and Microsoft Outlook. When a lead books a slot, it blocks it on your calendar instantly — no double-bookings possible.</div>
+          </div>
+          <div class="faq-simple-item">
+            <button class="faq-simple-q">
+              <span>Can I set my own available hours and buffer times?</span>
+              <span class="faq-arr">+</span>
+            </button>
+            <div class="faq-simple-a">Completely. We configure your available hours, buffer time between appointments, appointment types, and any blackout dates. Leads only see slots you actually have open.</div>
+          </div>
+          <div class="faq-simple-item">
+            <button class="faq-simple-q">
+              <span>What happens if someone needs to reschedule?</span>
+              <span class="faq-arr">+</span>
+            </button>
+            <div class="faq-simple-a">The confirmation message includes a reschedule link. The lead can pick a new time without calling you — and the original slot opens back up automatically.</div>
+          </div>
+          <div class="faq-simple-item">
+            <button class="faq-simple-q">
+              <span>How long does setup take?</span>
+              <span class="faq-arr">+</span>
+            </button>
+            <div class="faq-simple-a">We do everything done-for-you. Most clients have their booking system live within 5–7 business days of the kickoff call. You just review and approve before we go live.</div>
+          </div>
+          <div class="faq-simple-item">
+            <button class="faq-simple-q">
+              <span>Do I need to already use GoHighLevel?</span>
+              <span class="faq-arr">+</span>
+            </button>
+            <div class="faq-simple-a">No. If you're not on GHL yet, we set it up as part of the installation. If you are already on GHL, we plug directly into your existing setup.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="bottom-cta" style="border-top: 1px solid rgba(255,255,255,0.06);">
+      <div class="container">
+        <h2>Let your calendar fill itself.</h2>
+        <p>Book a 30-minute call and we'll walk through exactly how automated booking would work for your business.</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-gold">Book a Free Strategy Call</a>
+          <a href="../services/" class="btn-outline-gold">View All Services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Khun Camp. All Rights Reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.youtube.com/@KhunCamp1" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg></a>
+        <a href="https://www.instagram.com/khun.camp/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg></a>
+        <a href="https://www.tiktok.com/@khun_camp" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3.3A4.8 4.8 0 0 1 14.9 0h-3.6v16.4a2.9 2.9 0 0 1-2.9 2.5 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.3 0 .5 0 .8.1V9.5a6.5 6.5 0 0 0-.8 0 6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5V8.1a8.3 8.3 0 0 0 4.8 1.5V6a4.8 4.8 0 0 1-3.1-2.7z"/></svg></a>
+        <a href="mailto:sales@getkhuncamp.com" class="footer-social-link" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2-8 5-8-5h16zm0 12H4V8.9l8 5 8-5V18z"/></svg></a>
+      </div>
+      <p><a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="text-gold">Book Your Free Audit</a></p>
+      <p><a href="mailto:sales@getkhuncamp.com" class="text-gold">sales@getkhuncamp.com</a></p>
+      <p style="margin-top:12px;font-size:0.8rem;color:rgba(255,255,255,0.35);">
+        <a href="../privacy-policy.html" style="color:rgba(255,255,255,0.35);text-decoration:underline;text-underline-offset:3px;margin-right:16px;">Privacy Policy</a>
+        <a href="../terms-of-service.html" style="color:rgba(255,255,255,0.35);text-decoration:underline;text-underline-offset:3px;">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20260708"></script>
+  <script src="../js/booking-modal.js?v=20260708"></script>
+  <script>
+    document.querySelectorAll('.faq-simple-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const a = btn.nextElementSibling;
+        const isOpen = a.classList.contains('open');
+        document.querySelectorAll('.faq-simple-a').forEach(el => el.classList.remove('open'));
+        document.querySelectorAll('.faq-simple-q').forEach(el => el.classList.remove('open'));
+        if (!isOpen) { a.classList.add('open'); btn.classList.add('open'); }
+      });
+    });
+  </script>
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a3b9bc85ccb4c81af5a8f3f" defer></script>
+
+</body>
+</html>
