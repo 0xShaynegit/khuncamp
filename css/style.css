@@ -2472,16 +2472,17 @@ body {
 .sub-nav-dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: #0d0d0d;
+  top: calc(100% + 12px);
+  left: 0;
+  transform: none;
+  background: #111;
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 8px;
-  min-width: 200px;
+  min-width: 220px;
   padding: 6px 0;
   z-index: 200;
   white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 .sub-nav-dropdown:hover .sub-nav-dropdown-menu,
 .sub-nav-dropdown-btn[aria-expanded="true"] + .sub-nav-dropdown-menu {
