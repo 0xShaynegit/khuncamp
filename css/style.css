@@ -2416,8 +2416,8 @@ body {
 
 #floating-nav {
   pointer-events: all;
-  width: calc(100% - 48px);
-  max-width: 920px;
+  width: fit-content;
+  max-width: calc(100% - 48px);
 }
 
 .fnav-pill {
@@ -2427,7 +2427,7 @@ body {
   background: rgba(8, 8, 8, 0.94);
   border: 1px solid rgba(201, 168, 76, 0.22);
   border-radius: 999px;
-  padding: 6px 8px;
+  padding: 8px 10px;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   box-shadow: 0 8px 40px rgba(0,0,0,0.65), 0 0 0 1px rgba(201,168,76,0.06);
@@ -2436,33 +2436,31 @@ body {
 .fnav-logo {
   display: flex;
   align-items: center;
-  padding: 4px 14px 4px 8px;
+  padding: 6px 18px 6px 10px;
   border-right: 1px solid rgba(255,255,255,0.07);
   flex-shrink: 0;
   text-decoration: none;
   z-index: 1;
 }
-.fnav-logo img { height: 28px; width: auto; display: block; }
+.fnav-logo img { height: 34px; width: auto; display: block; }
 
-/* Links absolutely centered in the pill */
+/* Links centered in the pill via flex */
 .fnav-links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 0;
   pointer-events: all;
+  padding: 0 8px;
 }
 
 .fnav-link {
   font-family: var(--font-main);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #666;
-  padding: 8px 12px;
+  padding: 10px 16px;
   border-radius: 999px;
   text-decoration: none;
   white-space: nowrap;
@@ -2481,12 +2479,12 @@ body {
   border: none;
   cursor: pointer;
   font-family: var(--font-main);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #666;
-  padding: 8px 12px;
+  padding: 10px 16px;
   border-radius: 999px;
   white-space: nowrap;
   transition: color 0.2s, background 0.2s;
@@ -2527,17 +2525,17 @@ body {
 /* CTA pill */
 .fnav-cta {
   font-family: var(--font-main);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #000;
   background: #c9a84c;
-  padding: 9px 20px;
+  padding: 12px 26px;
   border-radius: 999px;
   text-decoration: none;
   white-space: nowrap;
-  margin-left: auto;
+  margin-left: 8px;
   flex-shrink: 0;
   z-index: 1;
   transition: background 0.2s;
