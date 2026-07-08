@@ -2423,6 +2423,7 @@ body {
 .fnav-pill {
   display: flex;
   align-items: center;
+  position: relative;
   background: rgba(8, 8, 8, 0.94);
   border: 1px solid rgba(201, 168, 76, 0.22);
   border-radius: 999px;
@@ -2430,7 +2431,6 @@ body {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   box-shadow: 0 8px 40px rgba(0,0,0,0.65), 0 0 0 1px rgba(201,168,76,0.06);
-  gap: 2px;
 }
 
 .fnav-logo {
@@ -2438,17 +2438,21 @@ body {
   align-items: center;
   padding: 4px 14px 4px 8px;
   border-right: 1px solid rgba(255,255,255,0.07);
-  margin-right: 6px;
   flex-shrink: 0;
   text-decoration: none;
+  z-index: 1;
 }
 .fnav-logo img { height: 28px; width: auto; display: block; }
 
+/* Links absolutely centered in the pill */
 .fnav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
-  flex: 1;
   gap: 0;
+  pointer-events: all;
 }
 
 .fnav-link {
@@ -2533,8 +2537,9 @@ body {
   border-radius: 999px;
   text-decoration: none;
   white-space: nowrap;
-  margin-left: 6px;
+  margin-left: auto;
   flex-shrink: 0;
+  z-index: 1;
   transition: background 0.2s;
 }
 .fnav-cta:hover { background: #e0bf6a; }
