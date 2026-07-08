@@ -2469,10 +2469,13 @@ body {
   padding: 0;
   font-family: inherit;
 }
+.sub-nav-dropdown {
+  padding-bottom: 12px;
+}
 .sub-nav-dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   background: #0a0a0a;
@@ -2487,6 +2490,9 @@ body {
 .sub-nav-dropdown:hover .sub-nav-dropdown-menu,
 .sub-nav-dropdown-btn[aria-expanded="true"] + .sub-nav-dropdown-menu {
   display: block;
+}
+.sub-nav-dropdown-menu {
+  transition: opacity 0.15s;
 }
 .sub-nav-dropdown-item {
   display: block;
