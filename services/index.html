@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Khun Camp</title>
+  <meta name="description" content="Khun Camp installs AI systems and builds websites for service businesses. Done-for-you automation, missed-call capture, lead follow-up, and high-converting websites.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khuncamp.com/services/">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khuncamp.com/services/" />
+  <meta property="og:title" content="Services | Khun Camp" />
+  <meta property="og:description" content="Done-for-you AI systems and websites for service businesses. Stop losing leads. Start booking on autopilot." />
+  <meta property="og:image" content="https://khuncamp.com/images/og-preview.svg" />
+
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/jpeg" sizes="128x128" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="apple-touch-icon" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="preload" as="image" href="../images/KhunCamp-Logo-nav.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap&font-display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css?v=20260708">
+
+  <style>
+    .services-hero {
+      padding: 160px 0 80px;
+      text-align: center;
+    }
+    .services-hero-eyebrow {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      border: 1px solid rgba(201,168,76,0.35);
+      padding: 5px 14px;
+      border-radius: 99px;
+      margin-bottom: 1.5rem;
+    }
+    .services-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0 auto 1.25rem;
+      max-width: 700px;
+      text-wrap: balance;
+    }
+    .services-hero-sub {
+      font-size: 1.1rem;
+      color: #888;
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.65;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px 100px;
+    }
+    @media (max-width: 700px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px;
+      padding: 40px 36px 36px;
+      text-decoration: none;
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .service-card:hover {
+      border-color: rgba(201,168,76,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 24px;
+      width: fit-content;
+    }
+    .service-card h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #fff;
+      line-height: 1.1;
+      margin: 0 0 14px;
+    }
+    .service-card-desc {
+      font-size: 0.95rem;
+      color: #777;
+      line-height: 1.65;
+      margin: 0 0 28px;
+      flex: 1;
+    }
+    .service-card-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .service-card-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: #aaa;
+      line-height: 1.45;
+    }
+    .service-card-bullets li::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6'%3E%3Cpath d='M1 3l2 2 4-4' stroke='%23c9a84c' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .service-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-top: auto;
+    }
+    .service-card-cta-arrow {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .service-card:hover .service-card-cta-arrow { transform: translateX(4px); }
+
+    /* Bottom CTA strip */
+    .services-bottom-cta {
+      text-align: center;
+      padding: 60px 24px 100px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .services-bottom-cta p {
+      font-size: 1rem;
+      color: #666;
+      margin: 0 0 1.5rem;
+    }
+    .services-bottom-cta p strong {
+      color: #ccc;
+      font-weight: 700;
+    }
+    .btn-gold {
+      display: inline-block;
+      background: #c9a84c;
+      color: #000;
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Pill Nav -->
+  <header id="site-header">
+    <nav id="floating-nav">
+      <div class="fnav-pill">
+        <a href="../" class="fnav-logo">
+          <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" height="30" loading="eager" fetchpriority="high">
+        </a>
+        <div class="fnav-links">
+          <a href="../" class="fnav-link">Home</a>
+          <div class="fnav-dropdown">
+            <button class="fnav-dropdown-btn active" aria-expanded="false">Services ▾</button>
+            <div class="fnav-dropdown-menu">
+              <a href="../services/" class="fnav-dropdown-item" style="color:#c9a84c;">All Services</a>
+              <a href="../med-spas/" class="fnav-dropdown-item">AI Systems for Med Spas</a>
+              <a href="../websites/" class="fnav-dropdown-item">Website Build &amp; Fix</a>
+            </div>
+          </div>
+          <a href="../blog.html" class="fnav-link">Blog</a>
+          <a href="../events.html" class="fnav-link">Events</a>
+          <a href="../program.html" class="fnav-link">Program</a>
+        </div>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="fnav-cta">Free Audit</a>
+        <button class="fnav-ham" id="ham-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-links">
+        <a href="../" class="mob-menu-link" tabindex="-1"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
+        <a href="../med-spas/" class="mob-menu-link" tabindex="-1"><span class="mob-num">02</span><span class="mob-name">AI for Med Spas</span><div class="mob-bar"></div></a>
+        <a href="../websites/" class="mob-menu-link" tabindex="-1"><span class="mob-num">03</span><span class="mob-name">Website Build &amp; Fix</span><div class="mob-bar"></div></a>
+        <a href="../blog.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">04</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
+        <a href="../events.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">05</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
+        <a href="../program.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">06</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
+      </div>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="mob-menu-cta" tabindex="-1">Free Missed-Call Audit →</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="services-hero">
+      <div class="container">
+        <span class="services-hero-eyebrow">What We Do</span>
+        <h1>Systems That Stop You Losing Money</h1>
+        <p class="services-hero-sub">We install AI automation and build websites that capture leads, follow up instantly, and book appointments while you sleep.</p>
+      </div>
+    </section>
+
+    <div class="services-grid">
+
+      <!-- Card 1: Med Spas AI -->
+      <a href="../med-spas/" class="service-card">
+        <span class="service-card-tag">AI Systems</span>
+        <h2>AI Systems for Med Spas</h2>
+        <p class="service-card-desc">Done-for-you AI and CRM automation installed on your existing tools. Stop losing leads to voicemail. Start booking on autopilot.</p>
+        <ul class="service-card-bullets">
+          <li>Missed-call capture &amp; AI receptionist</li>
+          <li>Instant lead follow-up (under 60 seconds)</li>
+          <li>Automated appointment booking</li>
+          <li>Reviews &amp; referrals engine</li>
+          <li>Database reactivation campaigns</li>
+        </ul>
+        <span class="service-card-cta">Learn more <span class="service-card-cta-arrow">→</span></span>
+      </a>
+
+      <!-- Card 2: Websites -->
+      <a href="../websites/" class="service-card">
+        <span class="service-card-tag">Web</span>
+        <h2>Website Build &amp; Fix</h2>
+        <p class="service-card-desc">High-converting websites built fast and fixed permanently. No recurring agency retainers. No slow turnarounds. Just a site that works.</p>
+        <ul class="service-card-bullets">
+          <li>New site built in 7 days or less</li>
+          <li>Conversion-first design &amp; copy</li>
+          <li>Speed optimization &amp; Core Web Vitals</li>
+          <li>SEO structure built in from day one</li>
+          <li>GHL CRM &amp; booking integration</li>
+        </ul>
+        <span class="service-card-cta">Learn more <span class="service-card-cta-arrow">→</span></span>
+      </a>
+
+    </div>
+
+    <section class="services-bottom-cta">
+      <p><strong>Not sure which service fits?</strong> Book a free audit and we'll tell you exactly what's leaking revenue.</p>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-gold">Get Your Free Audit</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" class="footer-logo">
+          <p class="footer-tagline">AI systems for service businesses.<br>Stop losing leads. Start booking on autopilot.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <span class="footer-col-label">Services</span>
+            <a href="../med-spas/" class="footer-link">AI for Med Spas</a>
+            <a href="../websites/" class="footer-link">Website Build &amp; Fix</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">Company</span>
+            <a href="../blog.html" class="footer-link">Blog</a>
+            <a href="../events.html" class="footer-link">Events</a>
+            <a href="../program.html" class="footer-link">Program</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Khun Camp. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="../privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20260708"></script>
+  <script src="../js/booking-modal.js?v=20260703"></script>
+
+  <!-- GHL Chat Widget -->
+  <script>
+    window.GHL_WIDGET_ID = "6a3b9bc85ccb4c81af5a8f3f";
+  </script>
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a3b9bc85ccb4c81af5a8f3f" defer></script>
+
+</body>
+</html>
