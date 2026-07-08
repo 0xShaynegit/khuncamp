@@ -467,21 +467,45 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
-// Services dropdown — click toggle + close on outside click
+// Services dropdown — fixed-position menu escapes overflow clipping
 (function () {
-  const dropdown = document.querySelector('.sub-nav-dropdown');
-  const btn = document.querySelector('.sub-nav-dropdown-btn');
-  if (!btn) return;
+  const btn  = document.querySelector('.sub-nav-dropdown-btn');
+  const menu = document.querySelector('.sub-nav-dropdown-menu');
+  if (!btn || !menu) return;
+
+  // Switch menu to fixed so #sub-nav overflow:auto can't clip it
+  menu.style.position = 'fixed';
+
+  function positionMenu() {
+    const r = btn.getBoundingClientRect();
+    menu.style.top  = (r.bottom + 4) + 'px';
+    menu.style.left = (r.left + r.width / 2) + 'px';
+    menu.style.transform = 'translateX(-50%)';
+  }
+
+  function openMenu() {
+    positionMenu();
+    menu.style.display = 'block';
+    btn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    menu.style.display = 'none';
+    btn.setAttribute('aria-expanded', 'false');
+  }
 
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
-    const isOpen = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', !isOpen);
+    menu.style.display === 'block' ? closeMenu() : openMenu();
   });
 
-  document.addEventListener('click', () => {
-    btn.setAttribute('aria-expanded', 'false');
-  });
+  // Hover also works
+  btn.closest('.sub-nav-dropdown').addEventListener('mouseenter', openMenu);
+  btn.closest('.sub-nav-dropdown').addEventListener('mouseleave', closeMenu);
+
+  document.addEventListener('click', closeMenu);
+  window.addEventListener('resize', () => { if (menu.style.display === 'block') positionMenu(); });
+  window.addEventListener('scroll', () => { if (menu.style.display === 'block') positionMenu(); }, { passive: true });
 })();
 
 // Hamburger — mobile only

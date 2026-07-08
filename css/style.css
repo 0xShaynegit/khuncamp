@@ -2408,7 +2408,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  overflow-x: auto;
+  overflow: visible; /* must be visible so dropdown can escape below */
   scrollbar-width: none;
 }
 #sub-nav::-webkit-scrollbar { display: none; }
@@ -2511,10 +2511,7 @@ body {
   white-space: nowrap;
   box-shadow: 0 12px 32px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.08);
 }
-.sub-nav-dropdown:hover .sub-nav-dropdown-menu,
-.sub-nav-dropdown-btn[aria-expanded="true"] + .sub-nav-dropdown-menu {
-  display: block;
-}
+/* display controlled by JS */
 .sub-nav-dropdown-item {
   display: block;
   padding: 11px 20px;
@@ -3859,6 +3856,48 @@ body {
 /* Monthly price text color matches tier */
 .audit-card.card-teal   .audit-price { color: #4A9D9C; }
 .audit-card.card-purple .audit-price { color: #7A4FBF; }
+
+/* ==============================
+   MOBILE OPTIMIZATIONS — 2026-07
+============================== */
+
+/* 480px: further reduce section padding and fix small-phone layout */
+@media (max-width: 480px) {
+  section {
+    padding: 50px 0;
+  }
+
+  /* CTA buttons: full-width on very small screens */
+  .btn-primary:not(.btn-sm):not(.nav-desktop-cta) {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  /* Hero CTA group: stack vertically */
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Container horizontal padding: tighter on small phones */
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Touch targets: ensure min 44px height on all nav/sub-nav links */
+  .sub-nav-link {
+    padding: 14px 10px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* h1 scale: clamp already handles this but ensure minimum is readable */
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+}
 
 /* MONTHLY pill badge */
 .monthly-pill {
