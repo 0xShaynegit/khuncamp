@@ -491,9 +491,15 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.setAttribute('aria-expanded', 'false');
   }
 
+  let hoverTimeout;
+  function delayClose() { hoverTimeout = setTimeout(closeMenu, 80); }
+  function cancelClose() { clearTimeout(hoverTimeout); }
+
   btn.addEventListener('click', e => { e.stopPropagation(); menu.style.display === 'block' ? closeMenu() : openMenu(); });
-  btn.closest('.fnav-dropdown').addEventListener('mouseenter', openMenu);
-  btn.closest('.fnav-dropdown').addEventListener('mouseleave', closeMenu);
+  btn.closest('.fnav-dropdown').addEventListener('mouseenter', () => { cancelClose(); openMenu(); });
+  btn.closest('.fnav-dropdown').addEventListener('mouseleave', delayClose);
+  menu.addEventListener('mouseenter', cancelClose);
+  menu.addEventListener('mouseleave', delayClose);
   document.addEventListener('click', closeMenu);
   window.addEventListener('resize',  () => { if (menu.style.display === 'block') positionMenu(); });
   window.addEventListener('scroll',  () => { if (menu.style.display === 'block') positionMenu(); }, { passive: true });
