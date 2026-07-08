@@ -623,62 +623,43 @@
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
 
-  <!-- NAV (identical to index.html) -->
+  <!-- Floating Pill Nav -->
   <header id="site-header">
-    <nav class="container nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="images/KhunCamp-Logo-nav.webp" alt="Khun Camp Logo" width="140" height="46" loading="eager" fetchpriority="high">
-      </a>
-      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary btn-sm magnetic-item nav-desktop-cta">Book a Call</a>
-      <button class="ham-btn" id="ham-btn" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-
-    <div id="sub-nav">
-      <div class="sub-nav-inner">
-        <a href="index.html"                                        class="sub-nav-link">Home</a>
-        <span class="sub-nav-div"></span>
-        <a href="index.html#who-we-serve"                           class="sub-nav-link">Who We Serve</a>
-        <span class="sub-nav-div"></span>
-        <a href="index.html#audit"                                  class="sub-nav-link">Pricing</a>
-        <span class="sub-nav-div"></span>
-        <a href="index.html#problem"                                class="sub-nav-link">Problem</a>
-        <span class="sub-nav-div"></span>
-        <a href="index.html#solution"                               class="sub-nav-link">System</a>
-        <span class="sub-nav-div"></span>
-        <a href="index.html#how-it-works"                           class="sub-nav-link">Processes</a>
-        <span class="sub-nav-div"></span>
-        <a href="index.html#deliverables"                           class="sub-nav-link">Deliverables</a>
-        <span class="sub-nav-div"></span>
-        <a href="index.html#proof"                                  class="sub-nav-link">Proof</a>
-        <span class="sub-nav-div"></span>
-        <a href="index.html#testimonials"                           class="sub-nav-link">Testimonials</a>
-        <span class="sub-nav-div"></span>
-        <a href="index.html#faq"                                    class="sub-nav-link">FAQ</a>
-        <span class="sub-nav-div"></span>
-        <a href="blog.html"                                         class="sub-nav-link">Blog</a>
-        <span class="sub-nav-div"></span>
-        <a href="events.html"                                       class="sub-nav-link active">Events</a>
-        <span class="sub-nav-div"></span>
-        <a href="program.html"                                      class="sub-nav-link">Program</a>
-        <span class="sub-nav-div"></span>
-        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7"    class="sub-nav-link">Book a Call</a>
+    <nav id="floating-nav">
+      <div class="fnav-pill">
+        <a href="index.html" class="fnav-logo">
+          <img src="images/KhunCamp-Logo-nav.webp" alt="Khun Camp" height="30" loading="eager" fetchpriority="high">
+        </a>
+        <div class="fnav-links">
+          <a href="index.html" class="fnav-link">Home</a>
+          <div class="fnav-dropdown">
+            <button class="fnav-dropdown-btn" aria-expanded="false">Services ▾</button>
+            <div class="fnav-dropdown-menu">
+              <a href="services/" class="fnav-dropdown-item" style="color:#c9a84c;">All Services</a>
+              <a href="med-spas/" class="fnav-dropdown-item">AI Systems for Med Spas</a>
+              <a href="websites/" class="fnav-dropdown-item">Website Build &amp; Fix</a>
+            </div>
+          </div>
+          <a href="blog.html" class="fnav-link">Blog</a>
+          <a href="events.html" class="fnav-link active">Events</a>
+          <a href="program.html" class="fnav-link">Program</a>
+        </div>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="fnav-cta">Free Audit</a>
+        <button class="fnav-ham" id="ham-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </div>
-
+    </nav>
     <div id="mobile-menu" aria-hidden="true">
       <div class="mobile-menu-links">
-        <a href="index.html#hero"         class="mob-menu-link"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
-        <a href="index.html#who-we-serve" class="mob-menu-link"><span class="mob-num">02</span><span class="mob-name">Who We Serve</span><div class="mob-bar"></div></a>
-        <a href="index.html#audit"        class="mob-menu-link"><span class="mob-num">03</span><span class="mob-name">Pricing</span><div class="mob-bar"></div></a>
-        <a href="index.html#proof"        class="mob-menu-link"><span class="mob-num">04</span><span class="mob-name">Proof</span><div class="mob-bar"></div></a>
-        <a href="index.html#testimonials" class="mob-menu-link"><span class="mob-num">05</span><span class="mob-name">Testimonials</span><div class="mob-bar"></div></a>
-        <a href="index.html#faq"          class="mob-menu-link"><span class="mob-num">06</span><span class="mob-name">FAQ</span><div class="mob-bar"></div></a>
-        <a href="blog.html"               class="mob-menu-link"><span class="mob-num">07</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
-        <a href="events.html"             class="mob-menu-link"><span class="mob-num">08</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
+        <a href="index.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
+        <a href="med-spas/" class="mob-menu-link" tabindex="-1"><span class="mob-num">02</span><span class="mob-name">AI for Med Spas</span><div class="mob-bar"></div></a>
+        <a href="websites/" class="mob-menu-link" tabindex="-1"><span class="mob-num">03</span><span class="mob-name">Website Build &amp; Fix</span><div class="mob-bar"></div></a>
+        <a href="blog.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">04</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
+        <a href="events.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">05</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
+        <a href="program.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">06</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
       </div>
-      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="mob-menu-cta">Book a Call →</a>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="mob-menu-cta" tabindex="-1">Free Missed-Call Audit →</a>
     </div>
   </header>
 
