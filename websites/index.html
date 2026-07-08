@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design & Fixes for Local Businesses | Khun Camp</title>
+  <meta name="description" content="Khun Camp builds and fixes websites for local businesses — bars, salons, restaurants, med spas. Professional site live in 48 hours. $500 flat. No monthly fees.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khuncamp.com/websites/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khuncamp.com/websites/" />
+  <meta property="og:title" content="Website Design & Fixes for Local Businesses | Khun Camp" />
+  <meta property="og:description" content="Khun Camp builds and fixes websites for local businesses. Professional site live in 48 hours. $500 flat." />
+  <meta property="og:image" content="https://khuncamp.com/images/og-preview.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@khuncamp">
+  <meta name="twitter:creator" content="@khuncamp">
+  <meta name="twitter:url" content="https://khuncamp.com/websites/">
+  <meta name="twitter:title" content="Website Design & Fixes for Local Businesses | Khun Camp">
+  <meta name="twitter:description" content="Khun Camp builds and fixes websites for local businesses. Professional site live in 48 hours. $500 flat.">
+  <meta name="twitter:image" content="https://khuncamp.com/images/og-preview.svg">
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Website Design & Fixes for Local Businesses",
+    "serviceType": "Web Design & Development",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Khun Camp",
+      "image": "https://khuncamp.com/images/KhunCamp-Social-Share.webp"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "500.00",
+      "priceCurrency": "USD"
+    },
+    "description": "Khun Camp builds and fixes websites for local businesses — bars, salons, restaurants, med spas. Professional site live in 48 hours. $500 flat."
+  }
+  </script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/jpeg" sizes="128x128" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="apple-touch-icon" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="preload" as="image" href="../images/KhunCamp-Logo-nav.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css?v=20260703">
+
+  <style>
+    .mob-menu-link,
+    .mob-menu-link:hover,
+    .mob-menu-link:focus,
+    .mob-menu-link:active,
+    .mob-menu-link:visited {
+      text-decoration: none !important;
+    }
+    .ws-what-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .ws-what-card {
+      background: #0d0d0d;
+      border: 1px solid #1e1e1e;
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+    .ws-what-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: rgba(201,168,76,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: #c9a84c;
+    }
+    .ws-what-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+    .ws-what-card p {
+      font-size: 0.875rem;
+      color: #888;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .ws-how-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      counter-reset: steps;
+    }
+    .ws-step {
+      position: relative;
+      padding: 1.5rem;
+      background: #0d0d0d;
+      border: 1px solid #1e1e1e;
+      border-radius: 12px;
+      counter-increment: steps;
+    }
+    .ws-step::before {
+      content: counter(steps, decimal-leading-zero);
+      font-size: 2rem;
+      font-weight: 900;
+      color: rgba(201,168,76,0.15);
+      display: block;
+      margin-bottom: 0.75rem;
+      line-height: 1;
+    }
+    .ws-step h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 0.4rem;
+    }
+    .ws-step p {
+      font-size: 0.85rem;
+      color: #888;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .ws-pricing-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 16px;
+      padding: 2.5rem;
+      max-width: 560px;
+      margin: 2.5rem auto 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .ws-pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #c9a84c, #f0d080, #c9a84c);
+    }
+    .ws-price {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+    }
+    .ws-price span {
+      font-size: 1.25rem;
+      color: #888;
+      font-weight: 400;
+    }
+    .ws-features {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+    .ws-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.925rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #1a1a1a;
+      color: #ccc;
+    }
+    .ws-features li:last-child { border-bottom: none; }
+    .ws-check { color: #c9a84c; font-weight: 700; flex-shrink: 0; }
+    .ws-upsell {
+      background: rgba(201,168,76,0.06);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: #999;
+      line-height: 1.6;
+    }
+    .ws-upsell strong { color: #c9a84c; }
+    .ws-for-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .ws-for-pill {
+      background: #0d0d0d;
+      border: 1px solid #222;
+      border-radius: 10px;
+      padding: 1.25rem;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #ccc;
+    }
+    .ws-for-pill .ws-for-emoji {
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <header id="site-header">
+    <nav class="container nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp Logo" width="140" height="46" loading="eager">
+      </a>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-sm magnetic-item nav-desktop-cta">Get Your Site</a>
+      <button class="ham-btn" id="ham-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div id="sub-nav">
+      <div class="sub-nav-inner">
+        <a href="../index.html"   class="sub-nav-link">Home</a>
+        <span class="sub-nav-div"></span>
+        <a href="#who"            class="sub-nav-link">Who It's For</a>
+        <span class="sub-nav-div"></span>
+        <a href="#what"           class="sub-nav-link">What You Get</a>
+        <span class="sub-nav-div"></span>
+        <a href="#how"            class="sub-nav-link">How It Works</a>
+        <span class="sub-nav-div"></span>
+        <a href="#pricing"        class="sub-nav-link">Pricing</a>
+        <span class="sub-nav-div"></span>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="sub-nav-link">Get Your Site</a>
+      </div>
+    </div>
+    <div id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-links">
+        <a href="../index.html"   class="mob-menu-link" tabindex="-1"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
+        <a href="#who"            class="mob-menu-link" tabindex="-1"><span class="mob-num">02</span><span class="mob-name">Who It's For</span><div class="mob-bar"></div></a>
+        <a href="#what"           class="mob-menu-link" tabindex="-1"><span class="mob-num">03</span><span class="mob-name">What You Get</span><div class="mob-bar"></div></a>
+        <a href="#how"            class="mob-menu-link" tabindex="-1"><span class="mob-num">04</span><span class="mob-name">How It Works</span><div class="mob-bar"></div></a>
+        <a href="#pricing"        class="mob-menu-link" tabindex="-1"><span class="mob-num">05</span><span class="mob-name">Pricing</span><div class="mob-bar"></div></a>
+      </div>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="mob-menu-cta" tabindex="-1">Get Your Site →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="spotlight-section hero-full">
+      <div class="spotlight-bg"></div>
+      <div class="container hero-full-content reveal-up">
+        <p class="hero-eyebrow">WEBSITES FOR LOCAL BUSINESSES</p>
+        <h1 class="gold-gradient-text">Your Facebook page<br>is not a website.</h1>
+        <p class="hero-subtext">Most local businesses are running on a Facebook page and losing customers to competitors who look more professional online. We build you a real website in 48 hours — with your menu, photos, reviews, and a booking button — for $500 flat.</p>
+        <div class="hero-cta-group">
+          <div class="hero-cta-primary-wrap">
+            <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg btn-pulse magnetic-item">Get My Website — $500</a>
+            <p class="hero-cta-note">Live in 48 hours &nbsp;·&nbsp; No monthly fees &nbsp;·&nbsp; One flat price</p>
+          </div>
+          <a href="#what" class="btn-ghost-outline magnetic-item">See What's Included <span class="btn-arrow">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section id="who">
+      <div class="container">
+        <div class="section-header reveal-up text-center">
+          <p class="section-eyebrow">WHO THIS IS FOR</p>
+          <h2>Built for Local Businesses<br><span class="gold-gradient-text">Running on Facebook.</span></h2>
+          <p class="section-subtext">If your business runs off a Facebook page, a broken link, or a site that hasn't been updated in years — this was built for you. We take your existing info and turn it into a site that actually converts.</p>
+        </div>
+        <div class="ws-for-grid reveal-up">
+          <div class="ws-for-pill"><span class="ws-for-emoji">💆</span>Med Spas & Salons</div>
+          <div class="ws-for-pill"><span class="ws-for-emoji">🍺</span>Bars & Restaurants</div>
+          <div class="ws-for-pill"><span class="ws-for-emoji">💅</span>Nail & Beauty Studios</div>
+          <div class="ws-for-pill"><span class="ws-for-emoji">🏋️</span>Gyms & Studios</div>
+          <div class="ws-for-pill"><span class="ws-for-emoji">🐾</span>Pet Groomers & Vets</div>
+          <div class="ws-for-pill"><span class="ws-for-emoji">🔧</span>Local Service Businesses</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section id="what">
+      <div class="container">
+        <div class="section-header reveal-up text-center">
+          <p class="section-eyebrow">WHAT'S INCLUDED</p>
+          <h2>Everything You Need.<br><span class="gold-gradient-text">Nothing You Don't.</span></h2>
+          <p class="section-subtext">We build from your public info — Facebook page, Google listing, photos, reviews. You don't need to prepare anything. We handle the build and hand you a live site.</p>
+        </div>
+        <div class="ws-what-grid reveal-up">
+          <div class="ws-what-card">
+            <div class="ws-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Professional Homepage</h3>
+            <p>Clean, mobile-first design that loads fast and looks sharp. Built to match your brand colors and style.</p>
+          </div>
+          <div class="ws-what-card">
+            <div class="ws-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 10h16M4 14h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Services & Menu Page</h3>
+            <p>Your services, pricing, and menu listed clearly. Pulled from your Facebook or Google listing — no extra work from you.</p>
+          </div>
+          <div class="ws-what-card">
+            <div class="ws-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Booking Button</h3>
+            <p>Click-to-call and book now button on every page. Wired to your existing booking system or Facebook.</p>
+          </div>
+          <div class="ws-what-card">
+            <div class="ws-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Reviews Section</h3>
+            <p>Your best Google or Facebook reviews featured on the site. Social proof that builds trust before they call.</p>
+          </div>
+          <div class="ws-what-card">
+            <div class="ws-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>About & Gallery</h3>
+            <p>Your story and photos in a layout that makes customers feel confident before they walk in the door.</p>
+          </div>
+          <div class="ws-what-card">
+            <div class="ws-what-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Hosting & Domain Setup</h3>
+            <p>We handle hosting setup and connect your domain. Everything live and working — no technical headaches.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how">
+      <div class="container">
+        <div class="section-header reveal-up text-center">
+          <p class="section-eyebrow">HOW IT WORKS</p>
+          <h2>Live in 48 Hours.<br><span class="gold-gradient-text">Here's the Process.</span></h2>
+          <p class="section-subtext">We do the heavy lifting. You approve and go live.</p>
+        </div>
+        <div class="ws-how-steps reveal-up">
+          <div class="ws-step">
+            <h3>You book a call</h3>
+            <p>15 minutes. We grab your business info, confirm the details, and take payment.</p>
+          </div>
+          <div class="ws-step">
+            <h3>We build your site</h3>
+            <p>Within 24 hours we send you a live preview built from your existing info. No homework for you.</p>
+          </div>
+          <div class="ws-step">
+            <h3>You approve</h3>
+            <p>Review the demo. Tell us what to tweak. One round of revisions included.</p>
+          </div>
+          <div class="ws-step">
+            <h3>We go live</h3>
+            <p>Site is live on your domain within 48 hours of your approval. Done.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <div class="container">
+        <div class="section-header reveal-up text-center">
+          <p class="section-eyebrow">PRICING</p>
+          <h2>One Price.<br><span class="gold-gradient-text">No Surprises.</span></h2>
+          <p class="section-subtext">No monthly fees. No upsells hidden in fine print. One flat price for a professional site that's live in 48 hours.</p>
+        </div>
+        <div class="ws-pricing-card reveal-up">
+          <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#c9a84c;margin:0 0 0.75rem;">Website Build</p>
+          <div class="ws-price">$500 <span>flat</span></div>
+          <p style="font-size:0.875rem;color:#888;margin:0.5rem 0 0;">No monthly fees. No contracts. One-time payment.</p>
+          <ul class="ws-features">
+            <li><span class="ws-check">✓</span> Professional homepage + inner pages</li>
+            <li><span class="ws-check">✓</span> Services, menu, and pricing page</li>
+            <li><span class="ws-check">✓</span> Click-to-call + booking button on every page</li>
+            <li><span class="ws-check">✓</span> Reviews section and photo gallery</li>
+            <li><span class="ws-check">✓</span> Mobile-first, fast-loading design</li>
+            <li><span class="ws-check">✓</span> Hosting setup + domain connection</li>
+            <li><span class="ws-check">✓</span> Live in 48 hours</li>
+            <li><span class="ws-check">✓</span> One round of revisions included</li>
+          </ul>
+          <div class="ws-upsell">
+            <strong>Want more after your site is live?</strong> We can add AI missed-call capture, automated follow-up, and a booking system that fills your calendar on autopilot. Same team. One call to upgrade.
+          </div>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg btn-pulse magnetic-item" style="display:block;text-align:center;margin-top:1.75rem;">Get My Website — $500</a>
+          <p style="text-align:center;font-size:0.8rem;color:#555;margin:0.75rem 0 0;">Book a 15-min call · Pay after you see the demo · Live in 48 hours</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <section class="post-footer-cta">
+      <div class="container post-footer-cta-inner reveal-up">
+        <p class="section-eyebrow">READY TO GO</p>
+        <h2>You Already Have the Info.<br><span class="gold-gradient-text">We'll Build the Site.</span></h2>
+        <p class="cta-body">We pull everything from your Facebook page, Google listing, and photos. Book a 15-min call, we handle the rest. Live in 48 hours.</p>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg magnetic-item">Get My Website — $500</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GHL Chat Widget -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a3b9bc85ccb4c81af5a8f3f"></script>
+
+  <!-- Exit Intent -->
+  <link rel="stylesheet" href="../css/exit-intent.css">
+  <script src="../js/exit-intent.js"></script>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
