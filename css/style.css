@@ -2466,9 +2466,35 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
-  font-family: inherit;
+  font-family: var(--font-main);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #888;
+  padding: 14px 14px;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+  -webkit-appearance: none;
+  appearance: none;
 }
+.sub-nav-dropdown-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background: var(--gold-primary);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  border-radius: 2px 2px 0 0;
+}
+.sub-nav-dropdown:hover .sub-nav-dropdown-btn,
+.sub-nav-dropdown-btn:hover { color: #888; }
+.sub-nav-dropdown:hover .sub-nav-dropdown-btn::after { transform: scaleX(0.4); }
 .sub-nav-dropdown {
   padding-bottom: 12px;
 }
