@@ -467,19 +467,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
-// Services dropdown — fixed-position menu escapes overflow clipping
+// Floating pill dropdown — fixed position, escapes any overflow
 (function () {
-  const btn  = document.querySelector('.sub-nav-dropdown-btn');
-  const menu = document.querySelector('.sub-nav-dropdown-menu');
+  const btn  = document.querySelector('.fnav-dropdown-btn');
+  const menu = document.querySelector('.fnav-dropdown-menu');
   if (!btn || !menu) return;
-
-  // Switch menu to fixed so #sub-nav overflow:auto can't clip it
-  menu.style.position = 'fixed';
 
   function positionMenu() {
     const r = btn.getBoundingClientRect();
-    menu.style.top  = (r.bottom + 4) + 'px';
-    menu.style.left = (r.left + r.width / 2) + 'px';
+    menu.style.top       = (r.bottom + 8) + 'px';
+    menu.style.left      = (r.left + r.width / 2) + 'px';
     menu.style.transform = 'translateX(-50%)';
   }
 
@@ -494,25 +491,19 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.setAttribute('aria-expanded', 'false');
   }
 
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    menu.style.display === 'block' ? closeMenu() : openMenu();
-  });
-
-  // Hover also works
-  btn.closest('.sub-nav-dropdown').addEventListener('mouseenter', openMenu);
-  btn.closest('.sub-nav-dropdown').addEventListener('mouseleave', closeMenu);
-
+  btn.addEventListener('click', e => { e.stopPropagation(); menu.style.display === 'block' ? closeMenu() : openMenu(); });
+  btn.closest('.fnav-dropdown').addEventListener('mouseenter', openMenu);
+  btn.closest('.fnav-dropdown').addEventListener('mouseleave', closeMenu);
   document.addEventListener('click', closeMenu);
-  window.addEventListener('resize', () => { if (menu.style.display === 'block') positionMenu(); });
-  window.addEventListener('scroll', () => { if (menu.style.display === 'block') positionMenu(); }, { passive: true });
+  window.addEventListener('resize',  () => { if (menu.style.display === 'block') positionMenu(); });
+  window.addEventListener('scroll',  () => { if (menu.style.display === 'block') positionMenu(); }, { passive: true });
 })();
 
 // Hamburger — mobile only
 (function () {
   const btn  = document.getElementById('ham-btn');
   const menu = document.getElementById('mobile-menu');
-  if (!btn) return;
+  if (!btn || !menu) return;
 
   btn.addEventListener('click', () => {
     const isOpen = menu.classList.toggle('open');
@@ -525,8 +516,8 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       menu.classList.remove('open');
       btn.classList.remove('open');
-      btn.setAttribute('aria-expanded', false);
-      menu.setAttribute('aria-hidden', true);
+      btn.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
     });
   });
 })();
