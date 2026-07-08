@@ -467,27 +467,20 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
-// Sub-nav scroll spy
+// Services dropdown — click toggle + close on outside click
 (function () {
-  const sections = [
-    'hero', 'who-we-serve', 'audit', 'problem', 'solution', 'how-it-works',
-    'deliverables', 'proof', 'testimonials', 'faq', 'final-cta'
-  ];
-  const links = document.querySelectorAll('.sub-nav-link');
+  const dropdown = document.querySelector('.sub-nav-dropdown');
+  const btn = document.querySelector('.sub-nav-dropdown-btn');
+  if (!btn) return;
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const id = entry.target.id;
-      links.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-      });
-    });
-  }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !isOpen);
+  });
 
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) observer.observe(el);
+  document.addEventListener('click', () => {
+    btn.setAttribute('aria-expanded', 'false');
   });
 })();
 
@@ -504,38 +497,30 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.setAttribute('aria-hidden', !isOpen);
   });
 
-  // Close on link tap
   document.querySelectorAll('.mob-menu-link').forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.remove('open');
       btn.classList.remove('open');
       btn.setAttribute('aria-expanded', false);
+      menu.setAttribute('aria-hidden', true);
     });
   });
+})();
 
-  // Scroll spy — highlights active in both navs
-  const sections = [
-    'hero', 'who-we-serve', 'audit', 'problem', 'solution', 'how-it-works',
-    'deliverables', 'proof', 'testimonials', 'faq', 'final-cta'
-  ];
+// Sub-nav scroll spy — only watches hero (nav no longer has section anchors)
+(function () {
+  const heroEl = document.getElementById('hero');
+  if (!heroEl) return;
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const id = entry.target.id;
       document.querySelectorAll('.sub-nav-link').forEach(l =>
-        l.classList.toggle('active', l.getAttribute('href') === '#' + id)
-      );
-      document.querySelectorAll('.mob-menu-link').forEach(l =>
-        l.classList.toggle('active', l.getAttribute('href') === '#' + id)
+        l.classList.toggle('active', entry.isIntersecting && l.getAttribute('href') === '#hero')
       );
     });
-  }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+  }, { rootMargin: '0px', threshold: 0.1 });
 
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) observer.observe(el);
-  });
+  observer.observe(heroEl);
 })();
 
 /* ============================================================
