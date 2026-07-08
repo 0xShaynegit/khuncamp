@@ -467,11 +467,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
-// Floating pill dropdown — fixed position, escapes any overflow
+// Floating pill dropdown — appended to body to escape pointer-events:none on header
 (function () {
   const btn  = document.querySelector('.fnav-dropdown-btn');
   const menu = document.querySelector('.fnav-dropdown-menu');
   if (!btn || !menu) return;
+
+  // Move menu to body so it isn't under pointer-events:none header
+  document.body.appendChild(menu);
 
   function positionMenu() {
     const r = btn.getBoundingClientRect();
@@ -492,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let hoverTimeout;
-  function delayClose() { hoverTimeout = setTimeout(closeMenu, 80); }
+  function delayClose() { hoverTimeout = setTimeout(closeMenu, 100); }
   function cancelClose() { clearTimeout(hoverTimeout); }
 
   btn.addEventListener('click', e => { e.stopPropagation(); menu.style.display === 'block' ? closeMenu() : openMenu(); });
@@ -500,7 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
   btn.closest('.fnav-dropdown').addEventListener('mouseleave', delayClose);
   menu.addEventListener('mouseenter', cancelClose);
   menu.addEventListener('mouseleave', delayClose);
-  document.addEventListener('click', closeMenu);
+  document.addEventListener('click', e => { if (!btn.contains(e.target) && !menu.contains(e.target)) closeMenu(); });
   window.addEventListener('resize',  () => { if (menu.style.display === 'block') positionMenu(); });
   window.addEventListener('scroll',  () => { if (menu.style.display === 'block') positionMenu(); }, { passive: true });
 })();
