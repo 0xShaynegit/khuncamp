@@ -4065,3 +4065,68 @@ body {
   .proof-stat-num { font-size: 1.8rem; }
 }
 /* ── END SOCIAL PROOF ───────────────────────────────────────────── */
+
+/* ── WHY US SECTION ─────────────────────────────────────────────── */
+#why-us { padding: 80px 0; border-top: 1px solid rgba(255,255,255,0.06); }
+
+.wu-table-wrap { overflow-x: auto; margin-bottom: 40px; }
+.wu-table { width: 100%; border-collapse: collapse; min-width: 560px; }
+.wu-table thead th { padding: 14px 22px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.wu-th-label { text-align: left; color: #333; width: 28%; }
+.wu-th-us {
+  text-align: center; color: #c9a84c;
+  background: rgba(201,168,76,0.07);
+  border: 1px solid rgba(201,168,76,0.2); border-bottom: none;
+  border-radius: 12px 12px 0 0;
+}
+.wu-th-them { text-align: center; color: #2d2d2d; }
+
+.wu-table tbody td { padding: 15px 22px; border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: middle; font-size: 0.875rem; }
+.wu-td-label { color: #444; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.wu-td-us {
+  text-align: center; font-weight: 700; color: #fff;
+  background: rgba(201,168,76,0.04);
+  border-left: 1px solid rgba(201,168,76,0.15);
+  border-right: 1px solid rgba(201,168,76,0.15);
+}
+.wu-table tbody tr:last-child .wu-td-us {
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  border-radius: 0 0 12px 12px;
+}
+.wu-td-them { text-align: center; color: #333; }
+.wu-check { color: #c9a84c; margin-right: 6px; }
+.wu-cross { color: #2d2d2d; margin-right: 6px; }
+
+.wu-cards {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 16px; margin-bottom: 40px;
+}
+.wu-card {
+  background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px; padding: 30px 26px;
+}
+.wu-card-num {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(201,168,76,0.4); margin-bottom: 14px;
+}
+.wu-card h3 {
+  font-size: 1.05rem; font-weight: 900; color: #fff;
+  line-height: 1.25; margin: 0 0 12px;
+}
+.wu-card p { font-size: 0.875rem; color: #555; line-height: 1.7; margin: 0; }
+
+.wu-bottom-cta {
+  background: #0d0d0d; border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 18px; padding: 48px 40px; text-align: center;
+}
+.wu-bottom-cta h3 {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 900;
+  color: #fff; letter-spacing: -0.02em; margin: 0 0 10px;
+}
+.wu-bottom-cta p { font-size: 0.875rem; color: #555; margin: 0 0 28px; }
+
+@media (max-width: 768px) {
+  .wu-cards { grid-template-columns: 1fr; }
+  .wu-bottom-cta { padding: 36px 24px; }
+}
+/* ── END WHY US ─────────────────────────────────────────────────── */
