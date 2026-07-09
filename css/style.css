@@ -4130,3 +4130,20 @@ body {
   .wu-bottom-cta { padding: 36px 24px; }
 }
 /* ── END WHY US ─────────────────────────────────────────────────── */
+
+/* ── URGENCY + CTA UPGRADES ─────────────────────────────────────── */
+.hero-urgency {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.78rem; color: #555; margin-top: 10px;
+}
+.hero-urgency strong { color: #c9a84c; }
+.hero-urgency-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #c9a84c; flex-shrink: 0;
+  animation: urgency-pulse 2s ease-in-out infinite;
+}
+@keyframes urgency-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+/* ── END URGENCY ─────────────────────────────────────────────────── */
