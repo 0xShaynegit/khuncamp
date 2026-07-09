@@ -63,7 +63,7 @@
     /* Override body background so worksheet styles dominate below the nav */
     body { background: var(--bg); }
 
-    /* Worksheet content wrapper — sits below the site header */
+    /* Worksheet content wrapper - sits below the site header */
     .worksheet-wrap {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif;
       color: var(--text);
@@ -78,7 +78,7 @@
       font-weight: 700; letter-spacing: -0.02em; line-height: 1.2;
     }
 
-    /* STICKY SCORE BAR — sticks below the site nav */
+    /* STICKY SCORE BAR - sticks below the site nav */
     .scorebar {
       position: sticky;
       top: var(--header-h); /* matches the site header + sub-nav height */
@@ -603,10 +603,10 @@
 
       <div class="computed">
         <h4>Your funnel math (live)</h4>
-        <div class="metric-row"><span class="name">View → email rate</span><span class="val dim" id="m_v2e">—</span></div>
-        <div class="metric-row"><span class="name">Email → trial rate</span><span class="val dim" id="m_e2t">—</span></div>
-        <div class="metric-row"><span class="name">Trial → close rate</span><span class="val dim" id="m_t2c">—</span></div>
-        <div class="metric-row"><span class="name">Revenue per view</span><span class="val dim" id="m_rpv">—</span></div>
+        <div class="metric-row"><span class="name">View → email rate</span><span class="val dim" id="m_v2e">-</span></div>
+        <div class="metric-row"><span class="name">Email → trial rate</span><span class="val dim" id="m_e2t">-</span></div>
+        <div class="metric-row"><span class="name">Trial → close rate</span><span class="val dim" id="m_t2c">-</span></div>
+        <div class="metric-row"><span class="name">Revenue per view</span><span class="val dim" id="m_rpv">-</span></div>
       </div>
     </div>
   </section>
@@ -752,10 +752,10 @@
     const t2c = calls > 0 ? (custs / calls) * 100  : null;
     const rpv = views > 0 ? (custs * ltv) / views  : null;
 
-    document.getElementById('m_v2e').textContent = v2e !== null ? v2e.toFixed(2) + '%' : '—';
-    document.getElementById('m_e2t').textContent = e2t !== null ? e2t.toFixed(2) + '%' : '—';
-    document.getElementById('m_t2c').textContent = t2c !== null ? t2c.toFixed(2) + '%' : '—';
-    document.getElementById('m_rpv').textContent = rpv !== null ? '$' + rpv.toFixed(2) : '—';
+    document.getElementById('m_v2e').textContent = v2e !== null ? v2e.toFixed(2) + '%' : '-';
+    document.getElementById('m_e2t').textContent = e2t !== null ? e2t.toFixed(2) + '%' : '-';
+    document.getElementById('m_t2c').textContent = t2c !== null ? t2c.toFixed(2) + '%' : '-';
+    document.getElementById('m_rpv').textContent = rpv !== null ? '$' + rpv.toFixed(2) : '-';
 
     [['m_v2e', v2e], ['m_e2t', e2t], ['m_t2c', t2c], ['m_rpv', rpv]].forEach(([id, v]) => {
       document.getElementById(id).classList.toggle('dim', v === null);
