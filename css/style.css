@@ -3012,10 +3012,19 @@ body {
 
 .hero-full-content .hero-cta-group {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
   margin-bottom: 3rem;
+}
+
+.hero-cta-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .btn-lg {
@@ -3025,10 +3034,7 @@ body {
 
 /* Hero CTA layout */
 .hero-cta-primary-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
+  display: contents;
 }
 
 .hero-cta-note {
