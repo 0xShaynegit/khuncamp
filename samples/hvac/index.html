@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summit Air & Heating | HVAC Repair & Installation | Houston, TX</title>
+  <meta name="description" content="Houston's trusted HVAC company. AC repair, heating installation, emergency service 24/7. Licensed & insured. Same-day appointments available. Call (713) 555-0192.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #fff; color: #1a1a2e; line-height: 1.6; }
+
+    /* TOKENS */
+    :root {
+      --navy: #0d2d52;
+      --navy-light: #1a3d6e;
+      --blue: #1565c0;
+      --blue-light: #1976d2;
+      --orange: #e65100;
+      --orange-bright: #f57c00;
+      --gray-50: #f8f9fa;
+      --gray-100: #f0f2f5;
+      --gray-300: #d0d5dd;
+      --gray-500: #6b7280;
+      --gray-700: #374151;
+      --white: #ffffff;
+    }
+
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ TOP BAR ============ */
+    .topbar {
+      background: var(--navy);
+      color: rgba(255,255,255,0.8);
+      font-size: 0.8rem;
+      padding: 8px 0;
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .topbar a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    .topbar-badges { display: flex; gap: 20px; }
+    .topbar-badge { display: flex; align-items: center; gap: 5px; }
+    .topbar-badge svg { color: var(--orange-bright); }
+
+    /* ============ HEADER ============ */
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-100);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 24px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .logo-text { line-height: 1.15; }
+    .logo-text strong { display: block; font-size: 1.05rem; font-weight: 900; color: var(--navy); letter-spacing: -0.02em; }
+    .logo-text span { display: block; font-size: 0.7rem; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    .header-nav { display: flex; gap: 28px; }
+    .header-nav a { text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--gray-700); transition: color 0.15s; }
+    .header-nav a:hover { color: var(--blue); }
+
+    .header-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+    .header-phone { display: flex; flex-direction: column; }
+    .header-phone-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-500); }
+    .header-phone-num { font-size: 1.05rem; font-weight: 900; color: var(--navy); text-decoration: none; letter-spacing: -0.01em; }
+    .btn { display: inline-block; border-radius: 8px; font-weight: 700; text-decoration: none; transition: all 0.15s; cursor: pointer; border: none; text-align: center; }
+    .btn-primary { background: var(--orange); color: white; padding: 12px 24px; font-size: 0.88rem; }
+    .btn-primary:hover { background: var(--orange-bright); }
+    .btn-outline { border: 2px solid var(--navy); color: var(--navy); padding: 10px 22px; font-size: 0.88rem; background: transparent; }
+    .btn-outline:hover { background: var(--navy); color: white; }
+
+    @media (max-width: 768px) {
+      .header-nav { display: none; }
+      .header-phone-label { display: none; }
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #1a4a7a 100%);
+      color: white;
+      padding: 80px 0 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; gap: 40px; } }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(230,81,0,0.2);
+      border: 1px solid rgba(230,81,0,0.4);
+      color: #ffb74d;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+    }
+    .hero-badge-dot { width: 7px; height: 7px; background: #ff7043; border-radius: 50%; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(0.85)} }
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: #ffb74d; }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-btns .btn-primary { padding: 16px 32px; font-size: 0.95rem; border-radius: 10px; }
+    .hero-btns .btn-ghost {
+      padding: 14px 28px;
+      border: 2px solid rgba(255,255,255,0.3);
+      color: white;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .hero-btns .btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+    .hero-note { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 14px; }
+
+    /* Hero trust badges */
+    .hero-trust { display: flex; gap: 20px; margin-top: 40px; flex-wrap: wrap; }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 600;
+    }
+    .hero-trust-item svg { color: #66bb6a; flex-shrink: 0; }
+
+    /* Hero card */
+    .hero-card {
+      background: white;
+      border-radius: 20px;
+      padding: 32px;
+      color: var(--navy);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+    }
+    .hero-card-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+    .hero-card h3 { font-size: 1.3rem; font-weight: 900; margin-bottom: 20px; letter-spacing: -0.02em; }
+    .form-group { margin-bottom: 14px; }
+    .form-label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--gray-500); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .form-input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--gray-300);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: var(--navy);
+      transition: border-color 0.15s;
+      background: var(--gray-50);
+    }
+    .form-input:focus { outline: none; border-color: var(--blue); background: white; }
+    .form-select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
+    .hero-card .btn-primary { width: 100%; padding: 14px; font-size: 0.92rem; border-radius: 8px; margin-top: 6px; }
+    .hero-card-note { font-size: 0.74rem; color: var(--gray-500); text-align: center; margin-top: 10px; }
+
+    /* ============ STATS BAR ============ */
+    .stats-bar { background: var(--orange); padding: 28px 0; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    @media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat-item {
+      text-align: center;
+      padding: 0 24px;
+      border-right: 1px solid rgba(255,255,255,0.2);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 2rem; font-weight: 900; color: white; line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.8); font-weight: 600; margin-top: 4px; }
+
+    /* ============ SECTIONS ============ */
+    section { padding: 80px 0; }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; color: var(--navy); }
+    .section-sub { font-size: 1rem; color: var(--gray-500); margin-top: 12px; max-width: 560px; }
+    .section-header { margin-bottom: 48px; }
+    .text-center { text-align: center; }
+    .text-center .section-sub { margin-left: auto; margin-right: auto; }
+
+    /* ============ SERVICES ============ */
+    .services-bg { background: var(--gray-50); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .services-grid { grid-template-columns: 1fr; } }
+    .service-card {
+      background: white;
+      border: 1px solid var(--gray-300);
+      border-radius: 14px;
+      padding: 32px 28px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+    .service-icon {
+      width: 52px; height: 52px;
+      background: rgba(21,101,192,0.08);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      margin-bottom: 18px;
+    }
+    .service-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .service-card p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.65; margin-bottom: 16px; }
+    .service-link { font-size: 0.82rem; font-weight: 700; color: var(--blue); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+    .service-link:hover { color: var(--orange); }
+
+    /* ============ WHY US ============ */
+    .why-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    @media (max-width: 768px) { .why-inner { grid-template-columns: 1fr; gap: 40px; } }
+    .why-visual {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-300);
+      border-radius: 20px;
+      padding: 40px;
+      position: relative;
+    }
+    .why-cert {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: white;
+      border: 1px solid var(--gray-300);
+      border-radius: 10px;
+      padding: 14px 18px;
+    }
+    .cert-icon { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cert-icon.blue { background: rgba(21,101,192,0.1); color: var(--blue); }
+    .cert-icon.orange { background: rgba(230,81,0,0.1); color: var(--orange); }
+    .cert-icon.green { background: rgba(46,125,50,0.1); color: #2e7d32; }
+    .cert-text strong { display: block; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+    .cert-text span { font-size: 0.78rem; color: var(--gray-500); }
+    .why-points { display: flex; flex-direction: column; gap: 24px; }
+    .why-point { display: flex; gap: 16px; }
+    .why-num {
+      width: 36px; height: 36px;
+      background: var(--navy);
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .why-point h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .why-point p { font-size: 0.86rem; color: var(--gray-500); line-height: 1.65; }
+
+    /* ============ REVIEWS ============ */
+    .reviews-bg { background: var(--navy); }
+    .reviews-bg h2 { color: white; }
+    .reviews-bg .section-eyebrow { color: #ffb74d; }
+    .reviews-bg .section-sub { color: rgba(255,255,255,0.6); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; } }
+    .review-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 28px;
+    }
+    .stars { color: #ffb74d; font-size: 0.9rem; margin-bottom: 14px; letter-spacing: 2px; }
+    .review-text { font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700; color: white; flex-shrink: 0; }
+    .review-name { font-size: 0.88rem; font-weight: 700; color: white; }
+    .review-source { font-size: 0.74rem; color: rgba(255,255,255,0.45); }
+
+    /* ============ EMERGENCY BAND ============ */
+    .emergency { background: var(--orange); padding: 48px 0; }
+    .emergency-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .emergency h2 { color: white; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+    .emergency p { color: rgba(255,255,255,0.85); font-size: 1rem; margin-top: 6px; }
+    .btn-white {
+      background: white;
+      color: var(--orange);
+      padding: 18px 36px;
+      font-size: 1rem;
+      font-weight: 900;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.15s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-white:hover { opacity: 0.9; }
+
+    /* ============ FOOTER ============ */
+    .site-footer { background: #0a1d33; color: rgba(255,255,255,0.6); padding: 48px 0 32px; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
+    .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .footer-logo-icon { width: 38px; height: 38px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--navy); }
+    .footer-logo strong { font-size: 1rem; font-weight: 900; color: white; }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.7; max-width: 280px; }
+    .footer-brand .footer-phone { font-size: 1.1rem; font-weight: 900; color: #ffb74d; display: block; margin-top: 14px; text-decoration: none; }
+    .footer-col h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+    .footer-col a { display: block; font-size: 0.875rem; color: rgba(255,255,255,0.65); text-decoration: none; margin-bottom: 8px; transition: color 0.15s; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom a { color: rgba(255,255,255,0.45); text-decoration: none; }
+    .footer-bottom a:hover { color: rgba(255,255,255,0.8); }
+
+    /* ============ SAMPLE BANNER ============ */
+    .sample-banner {
+      background: #1a1a2e;
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .sample-banner a { color: #c9a84c; text-decoration: none; }
+    .sample-banner a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- SAMPLE BANNER -->
+  <div class="sample-banner">
+    This is a sample website built by <a href="https://khuncamp.com/websites/" target="_blank">Khun Camp</a>. Want one like this for your business? <a href="https://khuncamp.com/websites/" target="_blank">Get yours for $500 →</a>
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Serving Houston & Surrounding Areas Since 2009</span>
+      <div class="topbar-badges">
+        <span class="topbar-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Licensed & Insured
+        </span>
+        <span class="topbar-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          24/7 Emergency Service
+        </span>
+        <span class="topbar-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Same-Day Available
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="currentColor" opacity="0.3"/><path d="M17 8l-5-5-5 5v8l5 2 5-2V8z" stroke="white" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M12 3v18M7 8h10" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="logo-text">
+            <strong>Summit Air & Heating</strong>
+            <span>Houston HVAC Experts</span>
+          </div>
+        </a>
+
+        <nav class="header-nav">
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-right">
+          <div class="header-phone">
+            <span class="header-phone-label">Call Now</span>
+            <a href="tel:7135550192" class="header-phone-num">(713) 555-0192</a>
+          </div>
+          <a href="#contact" class="btn btn-primary">Book Service</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="hero-badge-dot"></div>
+            24/7 Emergency Service Available
+          </div>
+          <h1>Houston's Most<br>Trusted <span>HVAC</span><br>Company</h1>
+          <p class="hero-sub">AC repair, heating installation, and emergency service for homes and businesses across Houston. We show up on time, fix it right, and back it with a warranty.</p>
+          <div class="hero-btns">
+            <a href="tel:7135550192" class="btn btn-primary">Call (713) 555-0192</a>
+            <a href="#services" class="btn-ghost">See Our Services</a>
+          </div>
+          <p class="hero-note">Same-day appointments available · No service call fee with repair</p>
+          <div class="hero-trust">
+            <div class="hero-trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+              NATE Certified Technicians
+            </div>
+            <div class="hero-trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+              10-Year Parts Warranty
+            </div>
+            <div class="hero-trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+              Flat-Rate Pricing
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <p class="hero-card-title">Get a Free Quote</p>
+          <h3>Book a Service Call</h3>
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="John Smith">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-input" placeholder="(713) 555-0000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Service Needed</label>
+            <select class="form-input form-select">
+              <option>AC Repair</option>
+              <option>AC Installation</option>
+              <option>Heating Repair</option>
+              <option>Furnace Installation</option>
+              <option>Maintenance Tune-Up</option>
+              <option>Emergency Service</option>
+            </select>
+          </div>
+          <a href="#" class="btn btn-primary">Schedule My Appointment</a>
+          <p class="hero-card-note">We'll call you back within 15 minutes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num">4,200+</div>
+          <div class="stat-label">Customers Served</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">15yrs</div>
+          <div class="stat-label">In Business</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4.9★</div>
+          <div class="stat-label">Google Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Emergency Service</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="services-bg">
+    <div class="container">
+      <div class="section-header text-center">
+        <p class="section-eyebrow">What We Do</p>
+        <h2>Complete HVAC Services<br>for Houston Homes & Businesses</h2>
+        <p class="section-sub">From emergency repairs to full system installs, we handle it all. Residential and commercial.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="currentColor"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>AC Repair</h3>
+          <p>Not cooling? Warm air, strange sounds, or tripped breakers — we diagnose fast and fix right. Same-day service available.</p>
+          <a href="#" class="service-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" stroke="currentColor" stroke-width="2"/><line x1="12" y1="12" x2="12" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>AC Installation</h3>
+          <p>New system, replacement, or upgrade. We size it correctly for your home, install clean, and test before we leave.</p>
+          <a href="#" class="service-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Heating Repair</h3>
+          <p>Furnace not firing? Heat pump acting up? We service all makes and models and carry parts on the truck.</p>
+          <a href="#" class="service-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Furnace Installation</h3>
+          <p>High-efficiency furnace installs with proper sizing and duct balancing. Financing available for qualifying customers.</p>
+          <a href="#" class="service-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z" fill="currentColor"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z" fill="currentColor"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z" fill="currentColor"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z" fill="currentColor"/><path d="M15.5 19H14v-1.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/><path d="M10 9.5c0 .83-.67 1.5-1.5 1.5H3.5C2.67 11 2 10.33 2 9.5S2.67 8 3.5 8h5c.83 0 1.5.67 1.5 1.5z" fill="currentColor"/><path d="M8.5 5H10v1.5c0 .83-.67 1.5-1.5 1.5S7 7.33 7 6.5 7.67 5 8.5 5z" fill="currentColor"/></svg>
+          </div>
+          <h3>Maintenance Plans</h3>
+          <p>Annual tune-ups, priority scheduling, and 15% off parts. Catch problems before they become expensive breakdowns.</p>
+          <a href="#" class="service-link">Learn more →</a>
+        </div>
+        <div class="service-card" style="border-color: var(--orange); background: rgba(230,81,0,0.03);">
+          <div class="service-icon" style="background: rgba(230,81,0,0.1); color: var(--orange);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Emergency Service</h3>
+          <p style="color: var(--gray-700);">System down at midnight in July? We answer 24/7 and dispatch the same night. No extra charge for nights or weekends.</p>
+          <a href="tel:7135550192" class="service-link" style="color: var(--orange);">Call Now: (713) 555-0192 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why-us">
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-visual">
+          <div class="why-cert">
+            <div class="cert-item">
+              <div class="cert-icon blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              </div>
+              <div class="cert-text">
+                <strong>NATE Certified</strong>
+                <span>All technicians certified by NATE</span>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon orange">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="cert-text">
+                <strong>4.9★ on Google</strong>
+                <span>340+ verified reviews</span>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+              </div>
+              <div class="cert-text">
+                <strong>10-Year Parts Warranty</strong>
+                <span>On all installed equipment</span>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+              </div>
+              <div class="cert-text">
+                <strong>On-Time Guarantee</strong>
+                <span>We call when we're 30 min away</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-eyebrow">Why Choose Us</p>
+          <h2>We've Been Doing This for 15 Years. We Do It Right.</h2>
+          <p class="section-sub" style="margin-bottom: 36px;">Houston summers don't forgive. Neither do we when it comes to doing the job properly.</p>
+          <div class="why-points">
+            <div class="why-point">
+              <div class="why-num">1</div>
+              <div>
+                <h4>Flat-rate pricing, no surprises</h4>
+                <p>You get a price before we start. No hidden fees, no "it costs more than we thought" after the fact.</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="why-num">2</div>
+              <div>
+                <h4>Same-day service, most days</h4>
+                <p>We stock the most common parts on every truck. That means we fix it on the first visit, not the third.</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="why-num">3</div>
+              <div>
+                <h4>Technicians you can trust</h4>
+                <p>Background-checked, NATE-certified, and drug-tested. You know who's coming before they knock.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary" style="margin-top: 32px; padding: 15px 32px;">Book a Service Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews-bg">
+    <div class="container">
+      <div class="section-header text-center">
+        <p class="section-eyebrow">Customer Reviews</p>
+        <h2>What Houston Homeowners Say</h2>
+        <p class="section-sub">340+ five-star reviews on Google. Here are a few.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"AC went out on a Saturday night in August. I called at 10pm and they had a tech at my door by midnight. Fixed it that night. Absolute lifesavers."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background: #1976d2;">MR</div>
+            <div>
+              <div class="review-name">Mike R.</div>
+              <div class="review-source">Google Review · Katy, TX</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Got three quotes. Summit was in the middle on price but blew everyone else away on professionalism. New Carrier unit installed in one day. No mess, no complaints."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background: #388e3c;">SL</div>
+            <div>
+              <div class="review-name">Sarah L.</div>
+              <div class="review-source">Google Review · The Woodlands, TX</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"I've used Summit for 6 years. They service my restaurant every spring and my home every fall. Never had an issue they didn't fix right the first time."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background: #e65100;">TN</div>
+            <div>
+              <div class="review-name">Tony N.</div>
+              <div class="review-source">Google Review · Sugar Land, TX</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMERGENCY BAND -->
+  <section class="emergency" id="contact">
+    <div class="container">
+      <div class="emergency-inner">
+        <div>
+          <h2>AC Out? Heating Gone? Call Now.</h2>
+          <p>We answer 24 hours a day, 7 days a week. Same-night dispatch for emergencies.</p>
+        </div>
+        <a href="tel:7135550192" class="btn-white">📞 (713) 555-0192</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 8l-5-5-5 5v8l5 2 5-2V8z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/></svg>
+            </div>
+            <strong>Summit Air & Heating</strong>
+          </div>
+          <p>Houston's trusted HVAC company since 2009. Licensed, insured, and NATE certified. We service all makes and models.</p>
+          <a href="tel:7135550192" class="footer-phone">(713) 555-0192</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#">AC Repair</a>
+          <a href="#">AC Installation</a>
+          <a href="#">Heating Repair</a>
+          <a href="#">Furnace Installation</a>
+          <a href="#">Maintenance Plans</a>
+          <a href="#">Emergency Service</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Service Areas</a>
+          <a href="#">Reviews</a>
+          <a href="#">Financing</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Summit Air & Heating. All Rights Reserved. License #TACLA12345C</span>
+        <div>
+          <a href="#">Privacy Policy</a>
+          &nbsp;·&nbsp;
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -214,6 +214,82 @@
       display: block;
       margin-bottom: 0.4rem;
     }
+
+    /* SAMPLE WORK SECTION */
+    #samples { border-top: 1px solid rgba(255,255,255,0.06); }
+    .samples-grid { display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 860px; margin: 0 auto; }
+    .sample-card { background: #0d0d0d; border: 1px solid #1e1e1e; border-radius: 16px; overflow: hidden; }
+    .samples-note { text-align: center; font-size: 0.82rem; color: #444; margin-top: 28px; }
+
+    /* Browser chrome */
+    .sample-browser { border-bottom: 1px solid #1e1e1e; }
+    .sample-browser-bar {
+      display: flex; align-items: center; gap: 10px;
+      background: #161616; padding: 10px 14px; border-bottom: 1px solid #222;
+    }
+    .sample-browser-dots { display: flex; gap: 5px; }
+    .sample-browser-dots span { width: 10px; height: 10px; border-radius: 50%; background: #333; display: block; }
+    .sample-browser-dots span:nth-child(1) { background: #ff5f57; }
+    .sample-browser-dots span:nth-child(2) { background: #febc2e; }
+    .sample-browser-dots span:nth-child(3) { background: #28c840; }
+    .sample-browser-url {
+      background: #1e1e1e; border-radius: 5px; padding: 4px 12px;
+      font-size: 0.72rem; color: #555; flex: 1; max-width: 280px;
+    }
+
+    /* HVAC mini preview */
+    .sample-preview { overflow: hidden; }
+    .hvac-preview { background: #fff; font-family: 'Inter', sans-serif; }
+
+    .hvac-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 16px; background: #fff; border-bottom: 1px solid #eee; gap: 8px;
+    }
+    .hvac-logo { display: flex; align-items: center; gap: 7px; }
+    .hvac-logo-icon { width: 24px; height: 24px; background: #0d2d52; border-radius: 5px; flex-shrink: 0; }
+    .hvac-logo-name { font-size: 0.65rem; font-weight: 800; color: #0d2d52; line-height: 1.2; }
+    .hvac-logo-sub { font-size: 0.48rem; color: #888; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .hvac-nav-phone { font-size: 0.62rem; font-weight: 800; color: #0d2d52; }
+    .hvac-nav-btn { background: #e65100; color: #fff; font-size: 0.58rem; font-weight: 700; padding: 4px 10px; border-radius: 5px; }
+
+    .hvac-hero {
+      display: grid; grid-template-columns: 1fr 1fr;
+      background: linear-gradient(135deg, #0d2d52, #1a3d6e);
+      padding: 20px 16px; gap: 14px; align-items: start;
+    }
+    .hvac-badge {
+      display: inline-block; background: rgba(230,81,0,0.25);
+      border: 1px solid rgba(230,81,0,0.4); color: #ffb74d;
+      font-size: 0.5rem; font-weight: 700; padding: 3px 8px;
+      border-radius: 99px; margin-bottom: 8px; letter-spacing: 0.06em;
+    }
+    .hvac-h1 { font-size: 0.85rem; font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 7px; }
+    .hvac-h1 span { color: #ffb74d; }
+    .hvac-sub { font-size: 0.52rem; color: rgba(255,255,255,0.65); line-height: 1.5; margin-bottom: 10px; }
+    .hvac-btns { display: flex; gap: 5px; }
+    .hvac-btn-primary { background: #e65100; color: #fff; font-size: 0.52rem; font-weight: 700; padding: 5px 10px; border-radius: 4px; }
+    .hvac-btn-ghost { border: 1px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.8); font-size: 0.52rem; font-weight: 600; padding: 5px 10px; border-radius: 4px; }
+    .hvac-form { background: #fff; border-radius: 8px; padding: 10px 12px; }
+    .hvac-form-title { font-size: 0.62rem; font-weight: 800; color: #0d2d52; margin-bottom: 8px; }
+    .hvac-form-field { height: 18px; background: #f0f2f5; border-radius: 4px; margin-bottom: 5px; border: 1px solid #ddd; }
+    .hvac-form-cta { background: #e65100; color: #fff; font-size: 0.52rem; font-weight: 700; padding: 6px; border-radius: 4px; text-align: center; margin-top: 7px; }
+
+    .hvac-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      background: #e65100; padding: 8px 16px; gap: 0;
+    }
+    .hvac-stat { text-align: center; padding: 0 6px; border-right: 1px solid rgba(255,255,255,0.2); }
+    .hvac-stat:last-child { border-right: none; }
+    .hvac-stat-num { font-size: 0.68rem; font-weight: 900; color: #fff; }
+    .hvac-stat-lbl { font-size: 0.44rem; color: rgba(255,255,255,0.75); font-weight: 600; margin-top: 1px; }
+
+    /* Sample card info */
+    .sample-info { padding: 28px 32px; }
+    .sample-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .sample-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #c9a84c; background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); padding: 3px 10px; border-radius: 99px; }
+    .sample-info h3 { font-size: 1.2rem; font-weight: 900; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .sample-info p { font-size: 0.875rem; color: #666; line-height: 1.65; margin-bottom: 20px; }
+    .sample-view-btn { display: inline-block; font-size: 0.85rem; padding: 12px 26px; }
   </style>
 </head>
 <body>
@@ -300,6 +376,80 @@
           <div class="ws-for-pill"><span class="ws-for-emoji">🐾</span>Pet Groomers & Vets</div>
           <div class="ws-for-pill"><span class="ws-for-emoji">🔧</span>Local Service Businesses</div>
         </div>
+      </div>
+    </section>
+
+    <!-- SAMPLE WORK -->
+    <section id="samples">
+      <div class="container">
+        <div class="section-header reveal-up text-center">
+          <p class="section-eyebrow">SAMPLE WORK</p>
+          <h2>See What We Build.<br><span class="gold-gradient-text">Real Sites. Real Businesses.</span></h2>
+          <p class="section-subtext">Every site is custom-built to match your brand, services, and location. Here's a live example of what you get.</p>
+        </div>
+        <div class="samples-grid reveal-up">
+
+          <!-- HVAC Sample -->
+          <div class="sample-card">
+            <div class="sample-browser">
+              <div class="sample-browser-bar">
+                <div class="sample-browser-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="sample-browser-url">summitairandheating.com</div>
+              </div>
+              <div class="sample-preview hvac-preview">
+                <div class="hvac-nav">
+                  <div class="hvac-logo">
+                    <div class="hvac-logo-icon"></div>
+                    <div>
+                      <div class="hvac-logo-name">Summit Air &amp; Heating</div>
+                      <div class="hvac-logo-sub">Houston HVAC Experts</div>
+                    </div>
+                  </div>
+                  <div class="hvac-nav-phone">(713) 555-0192</div>
+                  <div class="hvac-nav-btn">Book Service</div>
+                </div>
+                <div class="hvac-hero">
+                  <div class="hvac-hero-content">
+                    <div class="hvac-badge">24/7 Emergency Service</div>
+                    <div class="hvac-h1">Houston's Most<br>Trusted <span>HVAC</span><br>Company</div>
+                    <div class="hvac-sub">AC repair, heating installation, and emergency service for homes across Houston.</div>
+                    <div class="hvac-btns">
+                      <div class="hvac-btn-primary">Call Now</div>
+                      <div class="hvac-btn-ghost">Our Services</div>
+                    </div>
+                  </div>
+                  <div class="hvac-form">
+                    <div class="hvac-form-title">Get a Free Quote</div>
+                    <div class="hvac-form-field"></div>
+                    <div class="hvac-form-field"></div>
+                    <div class="hvac-form-field"></div>
+                    <div class="hvac-form-cta">Schedule My Appointment</div>
+                  </div>
+                </div>
+                <div class="hvac-stats">
+                  <div class="hvac-stat"><div class="hvac-stat-num">4,200+</div><div class="hvac-stat-lbl">Customers</div></div>
+                  <div class="hvac-stat"><div class="hvac-stat-num">15yrs</div><div class="hvac-stat-lbl">In Business</div></div>
+                  <div class="hvac-stat"><div class="hvac-stat-num">4.9★</div><div class="hvac-stat-lbl">Google</div></div>
+                  <div class="hvac-stat"><div class="hvac-stat-num">24/7</div><div class="hvac-stat-lbl">Emergency</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="sample-info">
+              <div class="sample-tags">
+                <span class="sample-tag">HVAC</span>
+                <span class="sample-tag">Service Business</span>
+                <span class="sample-tag">Local</span>
+              </div>
+              <h3>Summit Air &amp; Heating</h3>
+              <p>Full HVAC company site with service booking, emergency call-out, reviews, certifications, and a quote form that converts.</p>
+              <a href="../samples/hvac/" target="_blank" class="btn-primary magnetic-item sample-view-btn">View Live Sample &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+        <p class="samples-note reveal-up">More samples coming soon: restaurants, salons, gyms, dental &amp; med spas.</p>
       </div>
     </section>
 
