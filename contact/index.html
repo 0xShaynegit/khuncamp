@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Khun Camp</title>
+  <meta name="description" content="Get in touch with Khun Camp. Book a free Missed-Call Audit, email us directly, or find us on social media.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khuncamp.com/contact/">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khuncamp.com/contact/" />
+  <meta property="og:title" content="Contact Us | Khun Camp" />
+  <meta property="og:description" content="Book a free Missed-Call Audit or reach us directly. We respond to every email." />
+  <meta property="og:image" content="https://khuncamp.com/images/og-preview.svg" />
+
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/jpeg" sizes="128x128" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="apple-touch-icon" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="preload" as="image" href="../images/KhunCamp-Logo-nav.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap&font-display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=20260708">
+
+  <style>
+    .contact-hero {
+      padding: 160px 0 60px;
+      text-align: center;
+    }
+    .contact-eyebrow {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase; color: #c9a84c;
+      border: 1px solid rgba(201,168,76,0.35); padding: 5px 14px;
+      border-radius: 99px; margin-bottom: 1.5rem;
+    }
+    .contact-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 900;
+      line-height: 1.06; letter-spacing: -0.03em; color: #fff;
+      margin: 0 auto 1rem; max-width: 700px; text-wrap: balance;
+    }
+    .contact-hero h1 span { color: #c9a84c; }
+    .contact-hero-sub {
+      font-size: 1.05rem; color: #666; max-width: 480px;
+      margin: 0 auto; line-height: 1.65;
+    }
+
+    /* CONTACT OPTIONS GRID */
+    .contact-section { padding: 60px 0 100px; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto 40px;
+    }
+    @media (max-width: 640px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    .contact-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 18px;
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .contact-card--primary {
+      border-color: rgba(201,168,76,0.25);
+      background: rgba(201,168,76,0.04);
+      grid-column: 1 / -1;
+    }
+    .contact-card-icon {
+      width: 48px; height: 48px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: #c9a84c; margin-bottom: 20px; font-size: 1.3rem;
+    }
+    .contact-card-tag {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #c9a84c; margin-bottom: 10px;
+    }
+    .contact-card h2 {
+      font-size: 1.4rem; font-weight: 900; color: #fff;
+      letter-spacing: -0.02em; margin: 0 0 10px;
+    }
+    .contact-card p {
+      font-size: 0.9rem; color: #666; line-height: 1.65; margin: 0 0 28px; flex: 1;
+    }
+
+    .btn-gold {
+      display: inline-block; background: #c9a84c; color: #000;
+      font-size: 0.82rem; font-weight: 900; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 16px 32px;
+      border-radius: 999px; text-decoration: none; transition: opacity 0.2s;
+      width: fit-content;
+    }
+    .btn-gold:hover { opacity: 0.88; }
+    .btn-outline-gold {
+      display: inline-block; border: 1px solid rgba(201,168,76,0.4); color: #c9a84c;
+      font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 15px 28px; border-radius: 999px;
+      text-decoration: none; transition: border-color 0.2s; width: fit-content;
+    }
+    .btn-outline-gold:hover { border-color: #c9a84c; }
+
+    .contact-email-value {
+      display: inline-block; font-size: 1.05rem; font-weight: 700;
+      color: #c9a84c; text-decoration: none; margin-bottom: 24px;
+      transition: opacity 0.2s;
+    }
+    .contact-email-value:hover { opacity: 0.75; }
+
+    /* SOCIAL ROW */
+    .contact-social-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 18px;
+      padding: 36px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .contact-social-card p {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #333; margin-bottom: 20px;
+    }
+    .social-links {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .social-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 999px; padding: 10px 20px;
+      font-size: 0.8rem; font-weight: 700; color: #666;
+      text-decoration: none; transition: border-color 0.2s, color 0.2s;
+    }
+    .social-link:hover { border-color: #c9a84c; color: #c9a84c; }
+
+    /* RESPONSE PROMISE */
+    .response-promise {
+      text-align: center; padding: 60px 0 0;
+      max-width: 480px; margin: 0 auto;
+    }
+    .response-promise p {
+      font-size: 0.85rem; color: #333; line-height: 1.7;
+    }
+    .response-promise strong { color: #666; }
+  </style>
+</head>
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAV -->
+  <header id="site-header">
+    <nav id="floating-nav">
+      <div class="fnav-pill">
+        <a href="../" class="fnav-logo">
+          <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" height="30" loading="eager" fetchpriority="high">
+        </a>
+        <div class="fnav-links">
+          <a href="../" class="fnav-link">Home</a>
+          <div class="fnav-dropdown">
+            <button class="fnav-dropdown-btn" aria-expanded="false">Services &#9660;</button>
+            <div class="fnav-dropdown-menu">
+              <a href="../services/" class="fnav-dropdown-item" style="color:#c9a84c;">All Services</a>
+              <a href="../ai-receptionist/" class="fnav-dropdown-item">AI Receptionist</a>
+              <a href="../automated-booking/" class="fnav-dropdown-item">Automated Booking</a>
+              <a href="../med-spas/" class="fnav-dropdown-item">AI Systems for Med Spas</a>
+              <a href="../websites/" class="fnav-dropdown-item">Website Build &amp; Fix</a>
+            </div>
+          </div>
+          <a href="../blog.html" class="fnav-link">Blog</a>
+          <a href="../events.html" class="fnav-link">Events</a>
+          <a href="../program.html" class="fnav-link">Program</a>
+          <a href="../contact/" class="fnav-link active">Contact</a>
+        </div>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="fnav-cta">Free Audit</a>
+        <button class="fnav-ham" id="ham-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-links">
+        <a href="../" class="mob-menu-link" tabindex="-1"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
+        <a href="../services/" class="mob-menu-link" tabindex="-1"><span class="mob-num">02</span><span class="mob-name">Services</span><div class="mob-bar"></div></a>
+        <a href="../blog.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">03</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
+        <a href="../events.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">04</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
+        <a href="../program.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">05</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
+        <a href="../contact/" class="mob-menu-link active" tabindex="-1"><span class="mob-num">06</span><span class="mob-name">Contact</span><div class="mob-bar"></div></a>
+      </div>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="mob-menu-cta" tabindex="-1">Free Missed-Call Audit &rarr;</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="contact-hero">
+      <div class="container">
+        <span class="contact-eyebrow">Get In Touch</span>
+        <h1>Let's find out what<br>you're <span>leaving on the table.</span></h1>
+        <p class="contact-hero-sub">Book a free 15-minute Missed-Call Audit, email us directly, or find us on social. We respond to every message.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT OPTIONS -->
+    <section class="contact-section">
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <!-- Primary: Book the audit -->
+          <div class="contact-card contact-card--primary">
+            <div class="contact-card-icon">&#128197;</div>
+            <p class="contact-card-tag">Fastest way to start</p>
+            <h2>Book a free Missed-Call Audit</h2>
+            <p>A 15-minute call where we track your missed calls, calculate your lost-revenue number, and show you exactly what you're losing. No pitch. No commitment. Just your data.</p>
+            <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-gold">Book My Free Audit &rarr;</a>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-card">
+            <div class="contact-card-icon">&#9993;</div>
+            <p class="contact-card-tag">Email us directly</p>
+            <h2>Prefer to write first?</h2>
+            <p>Send us a message and a real person will reply, not an auto-responder. We typically respond within one business day.</p>
+            <a href="mailto:sales@getkhuncamp.com" class="contact-email-value">sales@getkhuncamp.com</a>
+            <a href="mailto:sales@getkhuncamp.com" class="btn-outline-gold">Send an Email &rarr;</a>
+          </div>
+
+          <!-- General questions -->
+          <div class="contact-card">
+            <div class="contact-card-icon">&#128172;</div>
+            <p class="contact-card-tag">General questions</p>
+            <h2>Not sure where to start?</h2>
+            <p>If you're not sure the system is right for your business, email us and describe what you're dealing with. We'll tell you honestly whether we can help.</p>
+            <a href="mailto:sales@getkhuncamp.com" class="btn-outline-gold">Ask a Question &rarr;</a>
+          </div>
+
+        </div>
+
+        <!-- Social -->
+        <div class="contact-social-card">
+          <p>Find us on social</p>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@KhunCamp1" target="_blank" rel="noopener" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5v-7l6.25 3.5-6.25 3.5z"/></svg>
+              YouTube
+            </a>
+            <a href="https://www.instagram.com/khun.camp/" target="_blank" rel="noopener" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.8-.1C3.7 21.6 2.1 20 2 16.8c-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.9C2.1 3.9 3.7 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zm0-2.2C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.1 8.3 0 8.7 0 12c0 3.3.1 3.7.1 4.9.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7-.1 4.9-.1c4.4-.2 6.8-2.6 7-7 0-1.2.1-1.6.1-4.9s-.1-3.7-.1-4.9C23.7 2.6 21.3.2 16.9 0 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4A6.2 6.2 0 0012 5.8zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.8 1.4 1.4 0 000-2.8z"/></svg>
+              Instagram
+            </a>
+            <a href="https://www.tiktok.com/@khun_camp" target="_blank" rel="noopener" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3.3A4.9 4.9 0 0114.8 0h-3.6v16.5a2.9 2.9 0 11-2-2.7V10a6.5 6.5 0 105.6 6.5V8.1a8.4 8.4 0 004.9 1.6V6.1a4.9 4.9 0 01-3.1-2.8h3.1-.1z"/></svg>
+              TikTok
+            </a>
+            <a href="https://www.linkedin.com/company/khun-camp/" target="_blank" rel="noopener" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.5v1.6h.1a3.8 3.8 0 013.4-1.9c3.7 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 110-4.2 2.1 2.1 0 010 4.2zm1.8 13H3.6V9h3.5v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.5C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.8V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://x.com/khuncamp" target="_blank" rel="noopener" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 1h3.5l-7.6 8.7L23 23h-7l-5.5-7.2L4.1 23H.6l8.2-9.3L1 1h7.2l4.9 6.5L18.2 1zm-1.2 19.8h1.9L7.1 3h-2L17 20.8z"/></svg>
+              X / Twitter
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61590278049569" target="_blank" rel="noopener" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1C0 18.1 4.4 23 10.1 24v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-1.9.9-1.9 1.9v2.2h3.3l-.5 3.5H14v8.4C19.6 23 24 18.1 24 12.1z"/></svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+
+        <div class="response-promise">
+          <p><strong>We read every message.</strong> If you're not sure this is right for your business, just ask. We'll be straight with you.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-cta">
+        <h3>Not sure where to start?</h3>
+        <p>Book the free audit. We show you your numbers first.</p>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary">Get My Free Missed-Call Audit</a>
+      </div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" height="32" style="margin-bottom:1rem;">
+          <p>Done-for-you AI and CRM automation for service businesses. We install it. We maintain it.</p>
+        </div>
+        <div class="footer-links-group">
+          <div>
+            <h4>Services</h4>
+            <a href="../ai-receptionist/">AI Receptionist</a>
+            <a href="../automated-booking/">Automated Booking</a>
+            <a href="../med-spas/">AI for Med Spas</a>
+            <a href="../websites/">Website Build &amp; Fix</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="../">Home</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../program.html">Program</a>
+            <a href="../contact/">Contact</a>
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <a href="../terms-of-service.html">Terms</a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary" style="font-size:0.8rem;padding:12px 22px;">Free Audit &rarr;</a>
+          <div class="footer-socials">
+            <a href="https://www.youtube.com/@KhunCamp1" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5v-7l6.25 3.5-6.25 3.5z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/khun.camp/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.8-.1C3.7 21.6 2.1 20 2 16.8c-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.9C2.1 3.9 3.7 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zm0-2.2C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.1 8.3 0 8.7 0 12c0 3.3.1 3.7.1 4.9.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7-.1 4.9-.1c4.4-.2 6.8-2.6 7-7 0-1.2.1-1.6.1-4.9s-.1-3.7-.1-4.9C23.7 2.6 21.3.2 16.9 0 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4A6.2 6.2 0 0012 5.8zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.8 1.4 1.4 0 000-2.8z"/></svg>
+            </a>
+            <a href="https://x.com/khuncamp" target="_blank" rel="noopener" class="footer-social-link" aria-label="X / Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 1h3.5l-7.6 8.7L23 23h-7l-5.5-7.2L4.1 23H.6l8.2-9.3L1 1h7.2l4.9 6.5L18.2 1zm-1.2 19.8h1.9L7.1 3h-2L17 20.8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Khun Camp. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="../privacy-policy.html">Privacy Policy</a>
+          <a href="../terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/booking-modal.js" defer></script>
+
+</body>
+</html>
