@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Install: Done-For-You Websites for Local Businesses | Khun Camp</title>
-  <meta name="description" content="Khun Camp builds and fixes websites for local businesses - bars, salons, restaurants, med spas. Professional site live in 48 hours. $500 flat. No monthly fees.">
+  <meta name="description" content="Khun Camp builds and fixes websites for local businesses - bars, salons, restaurants, med spas. Professional site live in 72 hours. $500 flat. No monthly fees.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://khuncamp.com/websites/">
 
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://khuncamp.com/websites/" />
   <meta property="og:title" content="Web Install: Done-For-You Websites for Local Businesses | Khun Camp" />
-  <meta property="og:description" content="Khun Camp builds and fixes websites for local businesses. Professional site live in 48 hours. $500 flat." />
+  <meta property="og:description" content="Khun Camp builds and fixes websites for local businesses. Professional site live in 72 hours. $500 flat." />
   <meta property="og:image" content="https://khuncamp.com/images/og-preview.svg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -23,7 +23,7 @@
   <meta name="twitter:creator" content="@khuncamp">
   <meta name="twitter:url" content="https://khuncamp.com/websites/">
   <meta name="twitter:title" content="Web Install: Done-For-You Websites for Local Businesses | Khun Camp">
-  <meta name="twitter:description" content="Khun Camp builds and fixes websites for local businesses. Professional site live in 48 hours. $500 flat.">
+  <meta name="twitter:description" content="Khun Camp builds and fixes websites for local businesses. Professional site live in 72 hours. $500 flat.">
   <meta name="twitter:image" content="https://khuncamp.com/images/og-preview.svg">
 
   <!-- Schema -->
@@ -43,7 +43,7 @@
       "price": "500.00",
       "priceCurrency": "USD"
     },
-    "description": "Khun Camp builds and fixes websites for local businesses - bars, salons, restaurants, med spas. Professional site live in 48 hours. $500 flat."
+    "description": "Khun Camp builds and fixes websites for local businesses - bars, salons, restaurants, med spas. Professional site live in 72 hours. $500 flat."
   }
   </script>
 
@@ -209,7 +209,64 @@
       font-weight: 600;
       color: #ccc;
     }
-    .ws-for-pill .ws-for-emoji {
+    .ws-addons-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ws-addons-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #444;
+      margin: 0 0 1rem;
+    }
+    .ws-addons-col--right .ws-addons-label { color: #c9a84c; }
+    .ws-addons-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background: #0d0d0d;
+      border-radius: 12px;
+      border: 1px solid #1e1e1e;
+      overflow: hidden;
+    }
+    .ws-addons-list li {
+      font-size: 0.875rem;
+      color: #888;
+      line-height: 1.5;
+      padding: 0.85rem 1.25rem 0.85rem 2.5rem;
+      border-bottom: 1px solid #1a1a1a;
+      position: relative;
+    }
+    .ws-addons-list li:last-child { border-bottom: none; }
+    .ws-addons-list li strong { color: #ccc; }
+    .ws-addons-list--no li::before {
+      content: '✕';
+      position: absolute;
+      left: 1rem;
+      color: #333;
+      font-size: 0.75rem;
+      top: 0.9rem;
+    }
+    .ws-addons-list--yes { border-color: rgba(201,168,76,0.2); }
+    .ws-addons-list--yes li::before {
+      content: '+';
+      position: absolute;
+      left: 1rem;
+      color: #c9a84c;
+      font-weight: 900;
+      font-size: 0.85rem;
+      top: 0.82rem;
+    }
+    @media (max-width: 640px) {
+      .ws-addons-wrap { grid-template-columns: 1fr; }
+    }    .ws-for-pill .ws-for-emoji {
       font-size: 1.5rem;
       display: block;
       margin-bottom: 0.4rem;
@@ -349,11 +406,11 @@
       <div class="container hero-full-content reveal-up">
         <p class="hero-eyebrow">WEBSITES FOR LOCAL BUSINESSES</p>
         <h1 class="gold-gradient-text">Your Facebook page<br>is not a website.</h1>
-        <p class="hero-subtext">Most local businesses are running on a Facebook page and losing customers to competitors who look more professional online. We build you a real website in 48 hours - with your menu, photos, reviews, and a booking button - for $500 flat.</p>
+        <p class="hero-subtext">Most local businesses are running on a Facebook page and losing customers to competitors who look more professional online. We build you a real website in 72 hours — with your services, photos, reviews, and a booking button — for $500 flat.</p>
         <div class="hero-cta-group">
           <div class="hero-cta-primary-wrap">
             <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg btn-pulse magnetic-item">Get My Website - $500</a>
-            <p class="hero-cta-note">Live in 48 hours &nbsp;·&nbsp; No monthly fees &nbsp;·&nbsp; One flat price</p>
+            <p class="hero-cta-note">Live in 72 hours &nbsp;·&nbsp; $500 flat &nbsp;·&nbsp; One round of revisions</p>
           </div>
           <a href="#what" class="btn-ghost-outline magnetic-item">See What's Included <span class="btn-arrow">↓</span></a>
         </div>
@@ -566,20 +623,20 @@
         </div>
         <div class="ws-how-steps reveal-up">
           <div class="ws-step">
-            <h3>You book a call</h3>
-            <p>15 minutes. We grab your business info, confirm the details, and take payment.</p>
+            <h3>Book a call</h3>
+            <p>15 minutes. We show you what your site will look like live on the call. You see it before you pay.</p>
           </div>
           <div class="ws-step">
-            <h3>We build your site</h3>
-            <p>Within 24 hours we send you a live preview built from your existing info. No homework for you.</p>
+            <h3>You agree &amp; pay</h3>
+            <p>$500 flat. Payment clears, we spin up your account and start the real build immediately.</p>
           </div>
           <div class="ws-step">
-            <h3>You approve</h3>
-            <p>Review the demo. Tell us what to tweak. One round of revisions included.</p>
+            <h3>Send us your stuff</h3>
+            <p>Email, photos, videos, anything you want on the site. We do the rest — no tech skills needed.</p>
           </div>
           <div class="ws-step">
-            <h3>We go live</h3>
-            <p>Site is live on your domain within 48 hours of your approval. Done.</p>
+            <h3>Live in 72 hours</h3>
+            <p>We build, you approve, we go live. One round of revisions included. Done.</p>
           </div>
         </div>
       </div>
@@ -591,12 +648,12 @@
         <div class="section-header reveal-up text-center">
           <p class="section-eyebrow">PRICING</p>
           <h2>One Price.<br><span class="gold-gradient-text">No Surprises.</span></h2>
-          <p class="section-subtext">No monthly fees. No upsells hidden in fine print. One flat price for a professional site that's live in 48 hours.</p>
+          <p class="section-subtext">No monthly fees. No upsells hidden in fine print. One flat price for a professional site that's live in 72 hours.</p>
         </div>
         <div class="ws-pricing-card reveal-up">
           <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#c9a84c;margin:0 0 0.75rem;">Website Build</p>
           <div class="ws-price">$500 <span>flat</span></div>
-          <p style="font-size:0.875rem;color:#888;margin:0.5rem 0 0;">No monthly fees. No contracts. One-time payment.</p>
+          <p style="font-size:0.875rem;color:#888;margin:0.5rem 0 0;">One-time payment. Optional maintenance &amp; AI add-ons available after delivery.</p>
           <ul class="ws-features">
             <li><span class="ws-check">✓</span> Professional homepage + inner pages</li>
             <li><span class="ws-check">✓</span> Services, menu, and pricing page</li>
@@ -604,21 +661,54 @@
             <li><span class="ws-check">✓</span> Reviews section and photo gallery</li>
             <li><span class="ws-check">✓</span> Mobile-first, fast-loading design</li>
             <li><span class="ws-check">✓</span> Hosting setup + domain connection</li>
-            <li><span class="ws-check">✓</span> Live in 48 hours</li>
+            <li><span class="ws-check">✓</span> Live in 72 hours</li>
             <li><span class="ws-check">✓</span> One round of revisions included</li>
           </ul>
           <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg btn-pulse magnetic-item" style="display:block;text-align:center;margin-top:1.75rem;">Get My Website - $500</a>
-          <p style="text-align:center;font-size:0.8rem;color:#555;margin:0.75rem 0 0;">Book a 15-min call · Pay after you see the demo · Live in 48 hours</p>
+          <p style="text-align:center;font-size:0.8rem;color:#555;margin:0.75rem 0 0;">Book a 15-min call · Pay after you see the demo · Live in 72 hours</p>
         </div>
       </div>
     </section>
 
+
+    <!-- WHAT'S NOT INCLUDED + ADD-ONS -->
+    <section id="addons">
+      <div class="container">
+        <div class="section-header reveal-up text-center">
+          <p class="section-eyebrow">WHAT'S NOT INCLUDED</p>
+          <h2>The $500 Covers the Site.<br><span class="gold-gradient-text">Everything Else Is Optional.</span></h2>
+          <p class="section-subtext">No surprises. Here's exactly what's in and what's not — and what you can add after your site goes live.</p>
+        </div>
+        <div class="ws-addons-wrap reveal-up">
+          <div class="ws-addons-col">
+            <p class="ws-addons-label">NOT INCLUDED IN $500</p>
+            <ul class="ws-addons-list ws-addons-list--no">
+              <li>Ongoing site changes after delivery</li>
+              <li>AI missed-call text-back</li>
+              <li>Chat widget</li>
+              <li>Review automation</li>
+              <li>Appointment reminders</li>
+              <li>Booking bot / FAQ bot</li>
+              <li>AI voice receptionist</li>
+            </ul>
+          </div>
+          <div class="ws-addons-col ws-addons-col--right">
+            <p class="ws-addons-label">ADD AFTER YOUR SITE GOES LIVE</p>
+            <ul class="ws-addons-list ws-addons-list--yes">
+              <li><strong>$297/mo Maintenance Plan</strong> — ongoing updates, changes, and support</li>
+              <li><strong>AI add-ons (à la carte)</strong> — missed-call text-back, chat widget, review automation, booking bot, FAQ bot — each under $297. Any two beats the monthly plan.</li>
+              <li><strong>AI Voice Receptionist</strong> — $1,000 standalone · $500 if you already have the site</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- FOOTER CTA -->
     <section class="post-footer-cta">
       <div class="container post-footer-cta-inner reveal-up">
         <p class="section-eyebrow">READY TO GO</p>
         <h2>You Already Have the Info.<br><span class="gold-gradient-text">We'll Build the Site.</span></h2>
-        <p class="cta-body">We pull everything from your Facebook page, Google listing, and photos. Book a 15-min call, we handle the rest. Live in 48 hours.</p>
+        <p class="cta-body">We pull everything from your Facebook page, Google listing, and photos. Book a 15-min call, we handle the rest. Live in 72 hours.</p>
         <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg magnetic-item">Get My Website - $500</a>
       </div>
     </section>
