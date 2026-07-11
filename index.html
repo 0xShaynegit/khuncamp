@@ -401,18 +401,18 @@
   <main>
 
 <!-- HERO -->
-<section id="hero" class="spotlight-section hero-full" style="padding:140px 0 80px;">
+<section id="hero" class="spotlight-section hero-full" style="padding:140px 0 80px;min-height:unset;">
   <div class="spotlight-bg"></div>
-  <div class="container reveal-up" style="max-width:1200px;">
-    <div style="display:flex;align-items:center;gap:60px;justify-content:space-between;">
+  <div class="container reveal-up" style="max-width:1160px;">
+    <div class="hero-split-row">
 
       <!-- LEFT: copy -->
-      <div style="flex:1;min-width:0;text-align:left;">
-        <p class="hero-eyebrow" style="text-align:left;">AI SYSTEMS FOR SERVICE BUSINESSES</p>
-        <h1 class="gold-gradient-text" style="font-size:clamp(2.6rem,5.5vw,5.2rem);line-height:1.05;margin:1rem 0 1.5rem;text-align:left;">Fill your calendar.<br>Without answering every call.</h1>
-        <p class="hero-subtext" style="max-width:480px;margin:0 0 2.5rem;text-align:left;">Khun Camp installs AI that catches missed calls, follows up with every lead in under 60 seconds, and books appointments 24/7 without your front desk touching it. Done-for-you. Live in 7 days.</p>
-        <div class="hero-cta-group" style="align-items:flex-start;">
-          <div class="hero-cta-buttons" style="justify-content:flex-start;">
+      <div class="hero-split-left">
+        <p class="hero-eyebrow">AI SYSTEMS FOR SERVICE BUSINESSES</p>
+        <h1 class="gold-gradient-text hero-split-h1">Fill your calendar.<br>Without answering<br>every call.</h1>
+        <p class="hero-subtext hero-split-sub">Khun Camp installs AI that catches missed calls, follows up with every lead in under 60 seconds, and books appointments 24/7 without your front desk touching it. Done-for-you. Live in 7 days.</p>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;">
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
             <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg btn-pulse magnetic-item">Get Your Free Missed-Call Audit</a>
             <a href="#how-it-works" class="btn-ghost-outline magnetic-item">See How It Works <span class="btn-arrow">↓</span></a>
           </div>
@@ -422,7 +422,7 @@
       </div>
 
       <!-- RIGHT: video -->
-      <div style="flex-shrink:0;width:340px;">
+      <div class="hero-split-video">
         <div style="border-radius:16px;overflow:hidden;border:1px solid #1e1e1e;background:#0d0d0d;">
           <video
             src="https://assets.cdn.filesafe.space/DWE7lrz0ipb6NuHbp0Yg/media/6a51ab7f9c9b37b5fd3e6850.mp4"
@@ -438,13 +438,41 @@
 </section>
 
 <style>
-@media (max-width: 860px) {
-  #hero .container > div { flex-direction: column !important; gap: 40px !important; }
-  #hero .container > div > div:last-child { width: 100% !important; max-width: 300px; margin: 0 auto; }
-  #hero .container > div > div:first-child { text-align: center !important; }
-  #hero .hero-eyebrow, #hero h1, #hero .hero-subtext { text-align: center !important; }
-  #hero .hero-cta-group { align-items: center !important; }
-  #hero .hero-cta-buttons { justify-content: center !important; }
+.hero-split-row {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  justify-content: space-between;
+}
+.hero-split-left {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+.hero-split-left .hero-eyebrow { text-align: left; }
+.hero-split-h1 {
+  font-size: clamp(2rem, 3.4vw, 3.2rem) !important;
+  line-height: 1.08 !important;
+  margin: 1rem 0 1.25rem !important;
+  text-align: left !important;
+}
+.hero-split-sub {
+  max-width: 460px !important;
+  margin: 0 0 2rem !important;
+  text-align: left !important;
+}
+.hero-split-video {
+  flex-shrink: 0;
+  width: 300px;
+}
+@media (max-width: 900px) {
+  .hero-split-row { flex-direction: column; gap: 36px; }
+  .hero-split-left { text-align: center; }
+  .hero-split-left .hero-eyebrow,
+  .hero-split-h1,
+  .hero-split-sub { text-align: center !important; }
+  .hero-split-left > div { align-items: center !important; }
+  .hero-split-video { width: 260px; margin: 0 auto; }
 }
 </style>
 
