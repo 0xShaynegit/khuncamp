@@ -421,10 +421,12 @@
     <div style="border-radius:16px;overflow:hidden;border:1px solid #1e1e1e;background:#0d0d0d;">
       <video
         id="kc-hero-video"
-        muted playsinline
+        muted playsinline preload="auto"
+        poster="https://kc-hero-assets.netlify.app/khuncamp-hero-poster.jpg"
         style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;"
-        aria-label="Khun Camp AI system demo">
-        <source src="https://assets.cdn.filesafe.space/DWE7lrz0ipb6NuHbp0Yg/media/6a51ab7f9c9b37b5fd3e6850.mp4" type="video/mp4">
+        aria-label="Khun Camp AI system demo — missed call handled in seconds">
+        <source src="https://kc-hero-assets.netlify.app/khuncamp-hero-missedcall.webm" type="video/webm">
+        <source src="https://kc-hero-assets.netlify.app/khuncamp-hero-missedcall.mp4" type="video/mp4">
       </video>
     </div>
     <script>
@@ -473,6 +475,20 @@
 </section>
 
 
+<!-- TRUST BAR VIDEO -->
+<section id="trust-bar" style="padding:0;overflow:hidden;background:#0a0a0a;border-top:1px solid #111;border-bottom:1px solid #111;">
+  <video id="kc-trust-bar" muted playsinline preload="auto"
+    poster="https://kc-hero-assets.netlify.app/trust-bar-poster.jpg"
+    style="width:100%;display:block;aspect-ratio:4/1;object-fit:cover;">
+    <source src="https://kc-hero-assets.netlify.app/trust-bar.webm" type="video/webm">
+    <source src="https://kc-hero-assets.netlify.app/trust-bar.mp4" type="video/mp4">
+  </video>
+  <script>
+  (function(){var v=document.getElementById('kc-trust-bar');if(!v)return;var p=false;
+   new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting&&!p){p=true;v.play().catch(function(){});o.disconnect();}});},{threshold:0.3}).observe(v);})();
+  </script>
+</section>
+
 <!-- PROBLEM -->
 <section id="problem">
   <div class="container">
@@ -480,6 +496,22 @@
       <p class="section-eyebrow">THE PROBLEM WE SOLVE</p>
       <h2>You Can't Answer Every Call.<br><span class="gold-gradient-text">That's Costing You.</span></h2>
       <p class="section-subtext">While you're with a client, calls go to voicemail. Most callers never ring back&mdash;they just book whoever picked up first.</p>
+    </div>
+
+    <!-- Problem stats visual -->
+    <div class="reveal-up" style="margin-bottom:2.5rem;">
+      <div style="border-radius:16px;overflow:hidden;border:1px solid #1e1e1e;background:#0d0d0d;">
+        <video id="kc-problem-stats" muted playsinline preload="auto"
+          poster="https://kc-hero-assets.netlify.app/problem-stats-poster.jpg"
+          style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
+          <source src="https://kc-hero-assets.netlify.app/problem-stats.webm" type="video/webm">
+          <source src="https://kc-hero-assets.netlify.app/problem-stats.mp4" type="video/mp4">
+        </video>
+      </div>
+      <script>
+      (function(){var v=document.getElementById('kc-problem-stats');if(!v)return;var p=false;
+       new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting&&!p){p=true;v.play().catch(function(){});o.disconnect();}});},{threshold:0.4}).observe(v);})();
+      </script>
     </div>
 
     <div class="problem-grid-v2 reveal-up">
@@ -505,13 +537,13 @@
       </div>
       <div class="problem-card">
         <div class="problem-card-top">
-          <span class="problem-stat kc-count" data-target="0" data-prefix="$" data-suffix="">$0</span>
+          <span class="problem-stat kc-count" data-target="21" data-suffix="×">0×</span>
           <div class="problem-icon-badge">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke="currentColor" stroke-width="2"/><path d="M16 3H8l-2 4h12l-2-4z" stroke="currentColor" stroke-width="2"/></svg>
           </div>
         </div>
         <h3>Old Leads Sitting Cold</h3>
-        <p>Your database is full of people who enquired and never booked. Without a reactivation system, that revenue stays invisible&mdash;and your next booking is already in someone else's CRM.</p>
+        <p>Businesses that follow up within 5 minutes are 21× more likely to convert a lead. If you're following up hours later&mdash;or relying on callbacks&mdash;that revenue is already gone.</p>
       </div>
     </div>
 
@@ -554,6 +586,22 @@
       <h2>Six Components.<br><span class="gold-gradient-text">One Complete System.</span></h2>
       <p class="section-subtext">Every piece works together so your business captures, follows up, books, reactivates, and grows&mdash;on autopilot.</p>
     </div>
+    <!-- System components visual -->
+    <div class="reveal-up" style="margin-bottom:2.5rem;">
+      <div style="border-radius:16px;overflow:hidden;border:1px solid #1e1e1e;background:#0d0d0d;">
+        <video id="kc-system" muted playsinline preload="auto"
+          poster="https://kc-hero-assets.netlify.app/system-components-poster.jpg"
+          style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
+          <source src="https://kc-hero-assets.netlify.app/system-components.webm" type="video/webm">
+          <source src="https://kc-hero-assets.netlify.app/system-components.mp4" type="video/mp4">
+        </video>
+      </div>
+      <script>
+      (function(){var v=document.getElementById('kc-system');if(!v)return;var p=false;
+       new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting&&!p){p=true;v.play().catch(function(){});o.disconnect();}});},{threshold:0.4}).observe(v);})();
+      </script>
+    </div>
+
     <div class="system-grid reveal-up">
 
       <div class="system-card-v2">
@@ -653,6 +701,22 @@
       <p class="section-eyebrow">REAL RESULTS</p>
       <h2>Numbers don't lie.<br><span class="gold-gradient-text">Our clients' do.</span></h2>
       <p class="section-subtext">Real outcomes from real service businesses&mdash;specific numbers, real timelines.</p>
+    </div>
+
+    <!-- Proof stats visual -->
+    <div class="reveal-up" style="margin-bottom:2.5rem;">
+      <div style="border-radius:16px;overflow:hidden;border:1px solid #1e1e1e;background:#0d0d0d;">
+        <video id="kc-proof" muted playsinline preload="auto"
+          poster="https://kc-hero-assets.netlify.app/proof-stats-poster.jpg"
+          style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
+          <source src="https://kc-hero-assets.netlify.app/proof-stats.webm" type="video/webm">
+          <source src="https://kc-hero-assets.netlify.app/proof-stats.mp4" type="video/mp4">
+        </video>
+      </div>
+      <script>
+      (function(){var v=document.getElementById('kc-proof');if(!v)return;var p=false;
+       new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting&&!p){p=true;v.play().catch(function(){});o.disconnect();}});},{threshold:0.4}).observe(v);})();
+      </script>
     </div>
 
     <!-- STAT STRIP -->
