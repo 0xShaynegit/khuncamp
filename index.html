@@ -403,22 +403,16 @@
 <!-- HERO -->
 <section id="hero" class="spotlight-section hero-full" style="padding:140px 0 80px;min-height:unset;">
   <div class="spotlight-bg"></div>
-  <div class="container reveal-up" style="max-width:580px;text-align:center;">
 
-    <!-- HEADLINE -->
-    <h1 style="font-size:clamp(1.85rem,3.8vw,2.9rem);font-weight:900;line-height:1.1;margin:0 0 10px;letter-spacing:-0.02em;">Every missed call,<br>handled in <span class="gold-gradient-text">seconds.</span></h1>
-    <p style="color:#aaa;font-size:1rem;margin:0 0 32px;line-height:1.5;">Your AI system answers, follows up, and books the appointment&mdash;while you&rsquo;re with a client.</p>
-
-    <!-- VIDEO -->
-    <div style="border-radius:16px;overflow:hidden;border:1px solid #1e1e1e;background:#0d0d0d;margin-bottom:36px;">
+  <!-- VIDEO — full container width -->
+  <div class="container reveal-up" style="margin-bottom:36px;">
+    <div style="border-radius:16px;overflow:hidden;border:1px solid #1e1e1e;background:#0d0d0d;">
       <video
         id="kc-hero-video"
         muted playsinline
-        poster="https://kc-hero-assets.netlify.app/khuncamp-hero-poster.jpg"
         style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;"
         aria-label="Khun Camp AI system demo">
-        <source src="https://kc-hero-assets.netlify.app/khuncamp-hero-missedcall.webm" type="video/webm">
-        <source src="https://kc-hero-assets.netlify.app/khuncamp-hero-missedcall.mp4" type="video/mp4">
+        <source src="https://assets.cdn.filesafe.space/DWE7lrz0ipb6NuHbp0Yg/media/6a51ab7f9c9b37b5fd3e6850.mp4" type="video/mp4">
       </video>
     </div>
     <script>
@@ -438,18 +432,18 @@
       obs.observe(v);
     })();
     </script>
+  </div>
 
-    <!-- CTA -->
+  <!-- CTA + TRUST BAR -->
+  <div class="container reveal-up" style="max-width:600px;text-align:center;">
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
       <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
         <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg btn-pulse magnetic-item">Get Your Free Missed-Call Audit</a>
-        <a href="#how-it-works" class="btn-ghost-outline magnetic-item">See How It Works <span class="btn-arrow">↓</span></a>
+        <a href="#solution" class="btn-ghost-outline magnetic-item">See How It Works <span class="btn-arrow">↓</span></a>
       </div>
       <p class="hero-cta-note">Free 15-min call &nbsp;·&nbsp; No commitment &nbsp;·&nbsp; We show you your numbers first</p>
       <p class="hero-urgency"><span class="hero-urgency-dot"></span> We take on 4 new installs per month - <strong>2 spots remaining this month</strong></p>
     </div>
-
-    <!-- TRUST BAR -->
     <div style="margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 12px;">
       <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#4a4a4a;white-space:nowrap;">Trusted by</span>
       <span style="font-size:0.8rem;color:#666;">Med Spas</span>
@@ -464,8 +458,8 @@
       <span style="color:#333;font-size:0.75rem;">&middot;</span>
       <span style="font-size:0.8rem;color:#666;">Law Firms</span>
     </div>
-
   </div>
+
 </section>
 
 
