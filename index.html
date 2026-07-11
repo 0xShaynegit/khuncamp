@@ -408,12 +408,32 @@
     <!-- VIDEO -->
     <div style="border-radius:16px;overflow:hidden;border:1px solid #1e1e1e;background:#0d0d0d;margin-bottom:36px;">
       <video
-        src="https://assets.cdn.filesafe.space/DWE7lrz0ipb6NuHbp0Yg/media/6a51ab7f9c9b37b5fd3e6850.mp4"
-        autoplay muted loop playsinline
-        style="width:100%;display:block;aspect-ratio:9/16;object-fit:cover;"
+        id="kc-hero-video"
+        muted playsinline
+        poster="https://kc-hero-assets.netlify.app/khuncamp-hero-poster.jpg"
+        style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;"
         aria-label="Khun Camp AI system demo">
+        <source src="https://kc-hero-assets.netlify.app/khuncamp-hero-missedcall.webm" type="video/webm">
+        <source src="https://kc-hero-assets.netlify.app/khuncamp-hero-missedcall.mp4" type="video/mp4">
       </video>
     </div>
+    <script>
+    (function(){
+      var v = document.getElementById('kc-hero-video');
+      if(!v) return;
+      var played = false;
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting && e.intersectionRatio >= 0.4 && !played){
+            played = true;
+            v.play();
+            obs.disconnect();
+          }
+        });
+      }, { threshold: 0.4 });
+      obs.observe(v);
+    })();
+    </script>
 
     <!-- CTA -->
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
