@@ -403,18 +403,14 @@
 <!-- HERO -->
 <style>
   #hero { padding: 140px 0 80px; flex-direction: column; align-items: center; }
-  .hero-cta-wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-  .hero-cta-wrap .btn-primary,
-  .hero-cta-wrap .btn-ghost-outline { width: auto !important; display: inline-flex !important; flex: 0 0 auto; }
+  .hero-cta-wrap { display: flex !important; flex-wrap: wrap; gap: 12px; justify-content: center; flex-direction: row !important; }
+  #hero .hero-cta-wrap a { width: auto !important; display: inline-flex !important; flex: 0 0 auto !important; white-space: nowrap !important; }
   .hero-trust-bar { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 12px; }
   @media (max-width: 768px) {
     #hero { padding: 100px 0 60px; }
   }
   @media (max-width: 480px) {
     #hero { padding: 80px 0 48px; }
-    .hero-cta-wrap { flex-direction: column; align-items: stretch; }
-    .hero-cta-wrap .btn-primary,
-    .hero-cta-wrap .btn-ghost-outline { min-width: unset; width: 100%; text-align: center; }
   }
 </style>
 <section id="hero" class="spotlight-section hero-full">
