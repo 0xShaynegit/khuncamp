@@ -401,22 +401,52 @@
   <main>
 
 <!-- HERO -->
-<section id="hero" class="spotlight-section hero-full">
+<section id="hero" class="spotlight-section hero-full" style="padding:140px 0 80px;">
   <div class="spotlight-bg"></div>
-  <div class="container hero-full-content reveal-up">
-    <p class="hero-eyebrow">AI SYSTEMS FOR SERVICE BUSINESSES</p>
-    <h1 class="gold-gradient-text">Fill your calendar.<br>Without answering every call.</h1>
-    <p class="hero-subtext">Khun Camp installs AI that catches missed calls, follows up with every lead in under 60 seconds, and books appointments 24/7 without your front desk touching it. Done-for-you. Live in 7 days.</p>
-    <div class="hero-cta-group">
-      <div class="hero-cta-buttons">
-        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg btn-pulse magnetic-item">Get Your Free Missed-Call Audit</a>
-        <a href="#how-it-works" class="btn-ghost-outline magnetic-item">See How It Works <span class="btn-arrow">↓</span></a>
+  <div class="container reveal-up" style="max-width:1200px;">
+    <div style="display:flex;align-items:center;gap:60px;justify-content:space-between;">
+
+      <!-- LEFT: copy -->
+      <div style="flex:1;min-width:0;text-align:left;">
+        <p class="hero-eyebrow" style="text-align:left;">AI SYSTEMS FOR SERVICE BUSINESSES</p>
+        <h1 class="gold-gradient-text" style="font-size:clamp(2.6rem,5.5vw,5.2rem);line-height:1.05;margin:1rem 0 1.5rem;text-align:left;">Fill your calendar.<br>Without answering every call.</h1>
+        <p class="hero-subtext" style="max-width:480px;margin:0 0 2.5rem;text-align:left;">Khun Camp installs AI that catches missed calls, follows up with every lead in under 60 seconds, and books appointments 24/7 without your front desk touching it. Done-for-you. Live in 7 days.</p>
+        <div class="hero-cta-group" style="align-items:flex-start;">
+          <div class="hero-cta-buttons" style="justify-content:flex-start;">
+            <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg btn-pulse magnetic-item">Get Your Free Missed-Call Audit</a>
+            <a href="#how-it-works" class="btn-ghost-outline magnetic-item">See How It Works <span class="btn-arrow">↓</span></a>
+          </div>
+          <p class="hero-cta-note">Free 15-min call &nbsp;·&nbsp; No commitment &nbsp;·&nbsp; We show you your numbers first</p>
+          <p class="hero-urgency"><span class="hero-urgency-dot"></span> We take on 4 new installs per month - <strong>2 spots remaining this month</strong></p>
+        </div>
       </div>
-      <p class="hero-cta-note">Free 15-min call &nbsp;·&nbsp; No commitment &nbsp;·&nbsp; We show you your numbers first</p>
-      <p class="hero-urgency"><span class="hero-urgency-dot"></span> We take on 4 new installs per month - <strong>2 spots remaining this month</strong></p>
+
+      <!-- RIGHT: video -->
+      <div style="flex-shrink:0;width:340px;">
+        <div style="border-radius:16px;overflow:hidden;border:1px solid #1e1e1e;background:#0d0d0d;">
+          <video
+            src="https://assets.cdn.filesafe.space/DWE7lrz0ipb6NuHbp0Yg/media/6a51ab7f9c9b37b5fd3e6850.mp4"
+            autoplay muted loop playsinline
+            style="width:100%;display:block;aspect-ratio:9/16;object-fit:cover;"
+            aria-label="Khun Camp AI system demo">
+          </video>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<style>
+@media (max-width: 860px) {
+  #hero .container > div { flex-direction: column !important; gap: 40px !important; }
+  #hero .container > div > div:last-child { width: 100% !important; max-width: 300px; margin: 0 auto; }
+  #hero .container > div > div:first-child { text-align: center !important; }
+  #hero .hero-eyebrow, #hero h1, #hero .hero-subtext { text-align: center !important; }
+  #hero .hero-cta-group { align-items: center !important; }
+  #hero .hero-cta-buttons { justify-content: center !important; }
+}
+</style>
 
 <!-- SOCIAL PROOF -->
 <section id="social-proof">
