@@ -401,7 +401,23 @@
   <main>
 
 <!-- HERO -->
-<section id="hero" class="spotlight-section hero-full" style="padding:140px 0 80px;min-height:unset;">
+<style>
+  #hero { padding: 140px 0 80px; }
+  .hero-cta-wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .hero-cta-wrap .btn-primary,
+  .hero-cta-wrap .btn-ghost-outline { min-width: 200px; }
+  .hero-trust-bar { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 12px; }
+  @media (max-width: 768px) {
+    #hero { padding: 100px 0 60px; }
+  }
+  @media (max-width: 480px) {
+    #hero { padding: 80px 0 48px; }
+    .hero-cta-wrap { flex-direction: column; align-items: stretch; }
+    .hero-cta-wrap .btn-primary,
+    .hero-cta-wrap .btn-ghost-outline { min-width: unset; width: 100%; text-align: center; }
+  }
+</style>
+<section id="hero" class="spotlight-section hero-full">
   <div class="spotlight-bg"></div>
 
   <!-- VIDEO — full container width -->
@@ -435,16 +451,16 @@
   </div>
 
   <!-- CTA + TRUST BAR -->
-  <div class="container reveal-up" style="max-width:600px;text-align:center;">
+  <div class="container reveal-up" style="max-width:640px;text-align:center;">
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
-      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+      <div class="hero-cta-wrap">
         <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg btn-pulse magnetic-item">Get Your Free Missed-Call Audit</a>
         <a href="#solution" class="btn-ghost-outline magnetic-item">See How It Works <span class="btn-arrow">↓</span></a>
       </div>
       <p class="hero-cta-note">Free 15-min call &nbsp;·&nbsp; No commitment &nbsp;·&nbsp; We show you your numbers first</p>
-      <p class="hero-urgency"><span class="hero-urgency-dot"></span> We take on 4 new installs per month - <strong>2 spots remaining this month</strong></p>
+      <p class="hero-urgency"><span class="hero-urgency-dot"></span> We take on 4 new installs per month &ndash; <strong>2 spots remaining this month</strong></p>
     </div>
-    <div style="margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 12px;">
+    <div class="hero-trust-bar">
       <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#4a4a4a;white-space:nowrap;">Trusted by</span>
       <span style="font-size:0.8rem;color:#666;">Med Spas</span>
       <span style="color:#333;font-size:0.75rem;">&middot;</span>
