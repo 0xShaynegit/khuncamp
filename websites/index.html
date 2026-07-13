@@ -402,7 +402,7 @@
     <section id="hero" class="spotlight-section hero-full">
       <div class="spotlight-bg"></div>
       <div class="container hero-full-content reveal-up">
-        <p class="hero-eyebrow">WEBSITES FOR LOCAL BUSINESSES</p>
+        <p class="hero-eyebrow">WEB INSTALL</p>
         <h1 class="gold-gradient-text">Your Facebook page<br>is not a website.</h1>
         <p class="hero-subtext">Most local businesses are running on a Facebook page and losing customers to competitors who look more professional online. We build you a real website in 72 hours with your services, photos, reviews, and a booking button, for $500 flat.</p>
         <div class="hero-cta-group">
@@ -416,24 +416,31 @@
       </div>
     </section>
 
-    <!-- SAMPLE WORK (right after hero) -->
+    <!-- DEMO SITES -->
     <section id="samples" class="samples-section">
       <div class="container samples-container">
         <div class="samples-header reveal-up">
           <div>
-            <p class="section-eyebrow">LIVE SAMPLE</p>
+            <p class="section-eyebrow">LIVE DEMOS</p>
             <h2>This Is What<br><span class="gold-gradient-text">$500 Gets You.</span></h2>
-            <p class="section-subtext" style="max-width:420px;">Every site we build looks and works like this. Scroll through it, click around. It's fully live.</p>
+            <p class="section-subtext" style="max-width:420px;">Real sites we built. Click the tabs to switch industries, scroll through, and interact. Every site is fully live.</p>
           </div>
-          <div class="samples-header-right">
-            <div class="sample-tags">
-              <span class="sample-tag">HVAC</span>
-              <span class="sample-tag">Service Business</span>
-              <span class="sample-tag">Local</span>
-            </div>
-            <p class="sample-desc">Full HVAC company site with booking form, emergency call-out, services grid, reviews, and a contact footer.</p>
-            <a href="../samples/hvac/" target="_blank" class="btn-primary magnetic-item sample-view-btn">Open Full Site &rarr;</a>
-          </div>
+        </div>
+
+        <!-- DEMO TABS -->
+        <div class="demo-tabs reveal-up">
+          <button class="demo-tab active" onclick="switchDemo('hvac',this)">
+            <span class="demo-tab-label">HVAC</span>
+            <span class="demo-tab-sub">Summit Air &amp; Heating</span>
+          </button>
+          <button class="demo-tab" onclick="switchDemo('salon',this)">
+            <span class="demo-tab-label">Hair Salon</span>
+            <span class="demo-tab-sub">Velvet Studio</span>
+          </button>
+          <button class="demo-tab" onclick="switchDemo('barber',this)">
+            <span class="demo-tab-label">Barbershop</span>
+            <span class="demo-tab-sub">The Cut Co.</span>
+          </button>
         </div>
 
         <div class="sample-browser-wrap reveal-up">
@@ -441,16 +448,16 @@
             <div class="sample-browser-dots">
               <span></span><span></span><span></span>
             </div>
-            <div class="sample-browser-url">
+            <div class="sample-browser-url" id="demo-url">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z" stroke="currentColor" stroke-width="1.5"/><path d="M12 2c-2.5 2.5-4 5.5-4 10s1.5 7.5 4 10M12 2c2.5 2.5 4 5.5 4 10s-1.5 7.5-4 10M2 12h20" stroke="currentColor" stroke-width="1.5"/></svg>
-              summitairandheating.com
+              <span id="demo-url-text">summitairandheating.com</span>
             </div>
-            <a href="../samples/hvac/" target="_blank" class="sample-browser-open" title="Open in new tab">
+            <a href="../demos/hvac/" target="_blank" class="sample-browser-open" id="demo-open-link" title="Open in new tab">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
           <div class="sample-iframe-wrap">
-            <iframe src="../samples/hvac/" title="Summit Air &amp; Heating - HVAC Sample Site" loading="lazy" scrolling="yes" allowfullscreen></iframe>
+            <iframe id="demo-iframe" src="../demos/hvac/" title="Demo Site" loading="lazy" scrolling="yes" allowfullscreen></iframe>
             <div class="sample-iframe-overlay" onclick="this.style.display='none'" title="Click to interact">
               <div class="sample-iframe-overlay-hint">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 15l6 6M9.5 14a4.5 4.5 0 100-9 4.5 4.5 0 000 9z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -459,9 +466,43 @@
             </div>
           </div>
         </div>
-        <p class="samples-note reveal-up">More samples coming soon: restaurants, salons, gyms, dental &amp; med spas.</p>
+
+        <div class="demo-cta-row reveal-up">
+          <a id="demo-full-link" href="../demos/hvac/" target="_blank" class="btn-primary magnetic-item sample-view-btn">Open Full Site &rarr;</a>
+          <p class="samples-note" style="margin:0;">More coming: restaurants, gyms, dental &amp; med spas.</p>
+        </div>
       </div>
     </section>
+
+    <style>
+    .demo-tabs { display:flex; gap:10px; margin-bottom:20px; flex-wrap:wrap; }
+    .demo-tab { background:#111; border:1px solid #222; border-radius:10px; padding:12px 20px; cursor:pointer; text-align:left; transition:all 0.18s; }
+    .demo-tab:hover { border-color:#c9a84c; }
+    .demo-tab.active { border-color:#c9a84c; background:rgba(201,168,76,0.08); }
+    .demo-tab-label { display:block; font-size:0.82rem; font-weight:700; color:#fff; }
+    .demo-tab-sub { display:block; font-size:0.7rem; color:#555; margin-top:2px; }
+    .demo-tab.active .demo-tab-sub { color:#c9a84c; }
+    .demo-cta-row { display:flex; align-items:center; gap:24px; margin-top:16px; flex-wrap:wrap; }
+    </style>
+
+    <script>
+    var demos = {
+      hvac:   { url:'../demos/hvac/',   display:'summitairandheating.com' },
+      salon:  { url:'../demos/salon/',  display:'velvetstudioatx.com' },
+      barber: { url:'../demos/barber/', display:'thecutcoatl.com' }
+    };
+    function switchDemo(key, btn) {
+      var d = demos[key];
+      document.getElementById('demo-iframe').src = d.url;
+      document.getElementById('demo-url-text').textContent = d.display;
+      document.getElementById('demo-open-link').href = d.url;
+      document.getElementById('demo-full-link').href = d.url;
+      document.querySelectorAll('.demo-tab').forEach(function(t){ t.classList.remove('active'); });
+      btn.classList.add('active');
+      var overlay = document.querySelector('.sample-iframe-overlay');
+      if(overlay) overlay.style.display = '';
+    }
+    </script>
 
     <!-- WHO IT'S FOR -->
     <section id="who">
