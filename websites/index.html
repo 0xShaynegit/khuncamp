@@ -579,14 +579,70 @@
           <h2>Built for Local Businesses<br><span class="gold-gradient-text">Running on Facebook.</span></h2>
           <p class="section-subtext">If your business runs off a Facebook page, a broken link, or a site that hasn't been updated in years - this was built for you. We take your existing info and turn it into a site that actually converts.</p>
         </div>
-        <div class="ws-for-grid reveal-up">
-          <div class="ws-for-pill"><span class="ws-for-emoji">💆</span>Med Spas & Salons</div>
-          <div class="ws-for-pill"><span class="ws-for-emoji">🍺</span>Bars & Restaurants</div>
-          <div class="ws-for-pill"><span class="ws-for-emoji">💅</span>Nail & Beauty Studios</div>
-          <div class="ws-for-pill"><span class="ws-for-emoji">🏋️</span>Gyms & Studios</div>
-          <div class="ws-for-pill"><span class="ws-for-emoji">🐾</span>Pet Groomers & Vets</div>
-          <div class="ws-for-pill"><span class="ws-for-emoji">🔧</span>Local Service Businesses</div>
+        <div class="ws-for-cards reveal-up">
+
+          <div class="ws-for-card">
+            <div class="ws-for-card-img" style="background-image:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=340&fit=crop&auto=format');"></div>
+            <div class="ws-for-card-body">
+              <div class="ws-for-card-label">Med Spas & Salons</div>
+              <div class="ws-for-card-sub">Booking, services, reviews</div>
+            </div>
+          </div>
+
+          <div class="ws-for-card">
+            <div class="ws-for-card-img" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=340&fit=crop&auto=format');"></div>
+            <div class="ws-for-card-body">
+              <div class="ws-for-card-label">Bars & Restaurants</div>
+              <div class="ws-for-card-sub">Menu, hours, reservations</div>
+            </div>
+          </div>
+
+          <div class="ws-for-card">
+            <div class="ws-for-card-img" style="background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=340&fit=crop&auto=format');"></div>
+            <div class="ws-for-card-body">
+              <div class="ws-for-card-label">Nail & Beauty Studios</div>
+              <div class="ws-for-card-sub">Portfolio, pricing, booking</div>
+            </div>
+          </div>
+
+          <div class="ws-for-card">
+            <div class="ws-for-card-img" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=340&fit=crop&auto=format');"></div>
+            <div class="ws-for-card-body">
+              <div class="ws-for-card-label">Gyms & Studios</div>
+              <div class="ws-for-card-sub">Classes, memberships, schedule</div>
+            </div>
+          </div>
+
+          <div class="ws-for-card">
+            <div class="ws-for-card-img" style="background-image:url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=340&fit=crop&auto=format');"></div>
+            <div class="ws-for-card-body">
+              <div class="ws-for-card-label">Pet Groomers & Vets</div>
+              <div class="ws-for-card-sub">Services, gallery, appointments</div>
+            </div>
+          </div>
+
+          <div class="ws-for-card">
+            <div class="ws-for-card-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=340&fit=crop&auto=format');"></div>
+            <div class="ws-for-card-body">
+              <div class="ws-for-card-label">Local Service Businesses</div>
+              <div class="ws-for-card-sub">HVAC, plumbing, landscaping</div>
+            </div>
+          </div>
+
         </div>
+
+        <style>
+        .ws-for-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:40px; }
+        @media(max-width:768px){ .ws-for-cards { grid-template-columns:1fr 1fr; } }
+        @media(max-width:480px){ .ws-for-cards { grid-template-columns:1fr; } }
+        .ws-for-card { background:#0d0d0d; border:1px solid #1e1e1e; border-radius:14px; overflow:hidden; transition:border-color 0.2s, transform 0.2s; }
+        .ws-for-card:hover { border-color:#c9a84c; transform:translateY(-4px); }
+        .ws-for-card-img { height:180px; background-size:cover; background-position:center; position:relative; }
+        .ws-for-card-img::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%); }
+        .ws-for-card-body { padding:18px 20px 20px; }
+        .ws-for-card-label { font-size:0.95rem; font-weight:700; color:#fff; margin-bottom:4px; }
+        .ws-for-card-sub { font-size:0.75rem; color:#666; }
+        </style>
       </div>
     </section>
 
