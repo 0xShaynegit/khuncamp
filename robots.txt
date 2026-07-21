@@ -5,18 +5,28 @@ User-agent: *
 Allow: /
 Disallow: /.well-known/
 Disallow: /node_modules/
-Disallow: /.git/
-Disallow: /.claude/
 
-# Specific bot rules
+# AI answer engines - explicitly allowed
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
 
 # Sitemap
 Sitemap: https://khuncamp.com/sitemap.xml
-
-# Crawl delay (in seconds)
-Crawl-delay: 1
