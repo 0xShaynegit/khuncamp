@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videography Services | Khun Camp</title>
+  <meta name="description" content="Professional videography by Shawn — CEO interviews, business promos, event coverage, and creator content. Shot on Sony ZV1 Mark II 4K. Based in the Philippines.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khuncamp.com/videography/">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khuncamp.com/videography/" />
+  <meta property="og:title" content="Videography Services | Khun Camp" />
+  <meta property="og:description" content="CEO interviews, business promos, and event coverage. Shot in 4K by Shawn." />
+  <meta property="og:image" content="https://khuncamp.com/images/og-preview.svg" />
+
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/jpeg" sizes="128x128" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="apple-touch-icon" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="preload" as="image" href="../images/KhunCamp-Logo-nav.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap&font-display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css?v=20260708">
+  <link rel="stylesheet" href="../css/booking-modal.css">
+
+  <style>
+    /* HERO */
+    .vid-hero { padding: 160px 0 80px; text-align: center; }
+    .vid-hero-eyebrow { display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#c9a84c; border:1px solid rgba(201,168,76,0.35); padding:5px 14px; border-radius:99px; margin-bottom:1.5rem; }
+    .vid-hero h1 { font-size:clamp(2.4rem,5vw,3.8rem); font-weight:900; line-height:1.08; letter-spacing:-0.02em; color:#fff; max-width:760px; margin:0 auto 1.25rem; text-wrap:balance; }
+    .vid-hero-sub { font-size:1.1rem; color:#888; max-width:520px; margin:0 auto 2.5rem; line-height:1.65; }
+    .vid-hero-ctas { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+    /* CREDIBILITY BAR */
+    .vid-cred { padding:32px 0; border-top:1px solid rgba(255,255,255,0.06); border-bottom:1px solid rgba(255,255,255,0.06); }
+    .vid-cred-inner { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px 40px; }
+    .vid-cred-item { display:flex; align-items:center; gap:8px; font-size:0.8rem; color:#666; }
+    .vid-cred-dot { width:5px; height:5px; border-radius:50%; background:#c9a84c; flex-shrink:0; }
+
+    /* BALI FEATURE VIDEO */
+    .vid-feature { padding:80px 0; }
+    .vid-feature-label { font-size:0.65rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#c9a84c; margin-bottom:12px; text-align:center; }
+    .vid-feature h2 { font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:900; letter-spacing:-0.02em; color:#fff; text-align:center; margin:0 auto 12px; max-width:600px; text-wrap:balance; }
+    .vid-feature-sub { font-size:0.95rem; color:#666; text-align:center; max-width:440px; margin:0 auto 40px; line-height:1.65; }
+    .vid-embed-wrap { position:relative; width:100%; max-width:900px; margin:0 auto; border-radius:16px; overflow:hidden; border:1px solid #1e1e1e; background:#0d0d0d; aspect-ratio:16/9; }
+    .vid-embed-wrap iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+    /* PACKAGES */
+    .vid-packages { padding:80px 0; }
+    .vid-packages-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:3rem; }
+    @media(max-width:900px){ .vid-packages-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:580px){ .vid-packages-grid { grid-template-columns:1fr; } }
+    .vid-pkg { background:#0d0d0d; border:1px solid rgba(255,255,255,0.07); border-radius:20px; padding:36px 30px; display:flex; flex-direction:column; position:relative; overflow:hidden; transition:border-color 0.25s, transform 0.25s, box-shadow 0.25s; }
+    .vid-pkg::before { content:''; position:absolute; top:0;left:0;right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,0.5),transparent); opacity:0; transition:opacity 0.3s; }
+    .vid-pkg:hover { border-color:rgba(201,168,76,0.3); transform:translateY(-4px); box-shadow:0 24px 60px rgba(0,0,0,0.5); }
+    .vid-pkg:hover::before { opacity:1; }
+    .vid-pkg-tag { display:inline-block; font-size:0.62rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#c9a84c; background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.2); padding:4px 12px; border-radius:99px; margin-bottom:22px; width:fit-content; }
+    .vid-pkg h3 { font-size:1.25rem; font-weight:900; color:#fff; margin:0 0 12px; line-height:1.15; }
+    .vid-pkg-desc { font-size:0.875rem; color:#777; line-height:1.65; margin:0 0 24px; flex:1; }
+    .vid-pkg-bullets { list-style:none; padding:0; margin:0 0 28px; display:flex; flex-direction:column; gap:9px; }
+    .vid-pkg-bullets li { display:flex; align-items:flex-start; gap:10px; font-size:0.82rem; color:#aaa; line-height:1.45; }
+    .vid-pkg-bullets li::before { content:''; width:16px; height:16px; min-width:16px; background:rgba(201,168,76,0.12); border:1px solid rgba(201,168,76,0.3); border-radius:50%; margin-top:1px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6'%3E%3Cpath d='M1 3l2 2 4-4' stroke='%23c9a84c' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:center; }
+    .vid-pkg-cta { display:inline-flex; align-items:center; gap:8px; font-size:0.78rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:#c9a84c; text-decoration:none; margin-top:auto; }
+    .vid-pkg-cta-arrow { transition:transform 0.2s; }
+    .vid-pkg:hover .vid-pkg-cta-arrow { transform:translateX(4px); }
+
+    /* GEAR */
+    .vid-gear { padding:64px 0; border-top:1px solid rgba(255,255,255,0.06); border-bottom:1px solid rgba(255,255,255,0.06); }
+    .vid-gear-label { font-size:0.65rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#444; text-align:center; margin-bottom:20px; }
+    .vid-gear-list { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 32px; }
+    .vid-gear-item { display:flex; align-items:center; gap:8px; font-size:0.875rem; color:#777; }
+    .vid-gear-icon { color:#c9a84c; }
+
+    /* PORTFOLIO PLACEHOLDERS */
+    .vid-portfolio { padding:80px 0; }
+    .vid-portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:3rem; }
+    @media(max-width:860px){ .vid-portfolio-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:520px){ .vid-portfolio-grid { grid-template-columns:1fr; } }
+    .vid-port-card { background:#0d0d0d; border:1px solid #1e1e1e; border-radius:14px; overflow:hidden; }
+    .vid-port-thumb { height:160px; background:#111; display:flex; align-items:center; justify-content:center; position:relative; }
+    .vid-port-play { width:48px; height:48px; border-radius:50%; background:rgba(201,168,76,0.15); border:1px solid rgba(201,168,76,0.4); display:flex; align-items:center; justify-content:center; color:#c9a84c; }
+    .vid-port-coming { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#333; position:absolute; bottom:10px; right:12px; }
+    .vid-port-body { padding:16px 18px 20px; }
+    .vid-port-tag { font-size:0.6rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#c9a84c; margin-bottom:6px; }
+    .vid-port-title { font-size:0.9rem; font-weight:700; color:#fff; margin-bottom:4px; }
+    .vid-port-sub { font-size:0.75rem; color:#555; }
+
+    /* BOTTOM CTA */
+    .vid-bottom-cta { text-align:center; padding:80px 24px 100px; border-top:1px solid rgba(255,255,255,0.06); }
+    .vid-bottom-cta h2 { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#fff; margin:0 auto 16px; max-width:560px; text-wrap:balance; line-height:1.1; }
+    .vid-bottom-cta p { font-size:1rem; color:#666; margin:0 0 2rem; }
+    .btn-gold { display:inline-block; background:#c9a84c; color:#000; font-size:0.8rem; font-weight:900; letter-spacing:0.1em; text-transform:uppercase; padding:16px 36px; border-radius:999px; text-decoration:none; transition:opacity 0.2s, transform 0.2s; }
+    .btn-gold:hover { opacity:0.88; transform:translateY(-1px); }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Pill Nav -->
+  <header id="site-header">
+    <nav id="floating-nav">
+      <div class="fnav-pill">
+        <a href="../" class="fnav-logo">
+          <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" height="30" loading="eager" fetchpriority="high">
+        </a>
+        <div class="fnav-links">
+          <a href="../" class="fnav-link">Home</a>
+          <div class="fnav-dropdown">
+            <button class="fnav-dropdown-btn" aria-expanded="false">Services ▾</button>
+            <div class="fnav-dropdown-menu">
+              <a href="../services/" class="fnav-dropdown-item">AI Installation</a>
+              <a href="../websites/" class="fnav-dropdown-item">Web Install</a>
+              <a href="../videography/" class="fnav-dropdown-item active">Videography</a>
+            </div>
+          </div>
+          <a href="../blog.html" class="fnav-link">Blog</a>
+          <a href="../events.html" class="fnav-link">Events</a>
+          <a href="../program.html" class="fnav-link">Program</a>
+          <a href="../contact/" class="fnav-link">Contact</a>
+        </div>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="fnav-cta">Book a Call</a>
+        <button class="fnav-ham" id="ham-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-links">
+        <a href="../" class="mob-menu-link" tabindex="-1"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
+        <a href="../services/" class="mob-menu-link" tabindex="-1"><span class="mob-num">02</span><span class="mob-name">AI Installation</span><div class="mob-bar"></div></a>
+        <a href="../websites/" class="mob-menu-link" tabindex="-1"><span class="mob-num">03</span><span class="mob-name">Web Install</span><div class="mob-bar"></div></a>
+        <a href="../videography/" class="mob-menu-link" tabindex="-1"><span class="mob-num">04</span><span class="mob-name">Videography</span><div class="mob-bar"></div></a>
+        <a href="../blog.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">05</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
+        <a href="../events.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">06</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
+        <a href="../program.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">07</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
+        <a href="../contact/" class="mob-menu-link" tabindex="-1"><span class="mob-num">08</span><span class="mob-name">Contact</span><div class="mob-bar"></div></a>
+      </div>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="mob-menu-cta" tabindex="-1">Book a Call →</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="vid-hero">
+    <div class="container">
+      <span class="vid-hero-eyebrow">Videography Services</span>
+      <h1>We Film the People<br><span style="background:linear-gradient(135deg,#c9a84c,#e8c97a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Building Something Real.</span></h1>
+      <p class="vid-hero-sub">CEO interviews, business promos, event coverage, and creator content — shot in 4K by Shawn.</p>
+      <div class="vid-hero-ctas">
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-pulse magnetic-item" style="background:#c9a84c;color:#000;font-size:0.875rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:1.1rem 2rem;border-radius:4px;text-decoration:none;">Book a Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIBILITY BAR -->
+  <div class="vid-cred">
+    <div class="container">
+      <div class="vid-cred-inner">
+        <div class="vid-cred-item"><span class="vid-cred-dot"></span>Official Coordinator — Danao Nomad Fest</div>
+        <div class="vid-cred-item"><span class="vid-cred-dot"></span>CEO & Founder Interviews on YouTube</div>
+        <div class="vid-cred-item"><span class="vid-cred-dot"></span>Sony ZV1 Mark II · 4K 60fps</div>
+        <div class="vid-cred-item"><span class="vid-cred-dot"></span>DJI Drone · DJI Wireless 3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BALI FEATURE VIDEO -->
+  <section class="vid-feature">
+    <div class="container">
+      <p class="vid-feature-label">Latest Work</p>
+      <h2>Bali Creator Vlog</h2>
+      <p class="vid-feature-sub">Shot on location in Bali — travel content for creators and personal brands who want elevated content.</p>
+      <div class="vid-embed-wrap reveal-up">
+        <iframe src="https://www.youtube.com/embed/bkL-LFFrgjE?si=NAte6_1s7KMDa2Tr" title="Bali Creator Vlog by Shawn" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="vid-packages">
+    <div class="container">
+      <div class="section-header reveal-up text-center">
+        <p class="section-eyebrow">PACKAGES</p>
+        <h2>Pick Your Package.<br><span class="gold-gradient-text">We Handle the Rest.</span></h2>
+        <p class="section-subtext">Every package is shot by Shawn, edited and delivered ready to post.</p>
+      </div>
+
+      <div class="vid-packages-grid">
+
+        <!-- CEO INTERVIEW -->
+        <div class="vid-pkg reveal-up">
+          <span class="vid-pkg-tag">Interview</span>
+          <h3>CEO Interview Package</h3>
+          <p class="vid-pkg-desc">Filmed podcast or interview episode for founders, coaches, and executives who want to build authority on YouTube.</p>
+          <ul class="vid-pkg-bullets">
+            <li>1 full interview episode, edited</li>
+            <li>B-roll cuts + clean audio</li>
+            <li>Branded intro & outro</li>
+            <li>Ready to upload to YouTube</li>
+            <li>DJI Wireless 3 microphone</li>
+          </ul>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="vid-pkg-cta">Book a Call <span class="vid-pkg-cta-arrow">→</span></a>
+        </div>
+
+        <!-- BUSINESS PROMO -->
+        <div class="vid-pkg reveal-up">
+          <span class="vid-pkg-tag">Promo</span>
+          <h3>Business Promo Package</h3>
+          <p class="vid-pkg-desc">One polished promo video for your business — for your website, social media, or Google listing. Shot on location.</p>
+          <ul class="vid-pkg-bullets">
+            <li>1 promo video, fully edited</li>
+            <li>Shot on Sony ZV1 Mark II 4K</li>
+            <li>Music, captions, color grade</li>
+            <li>Pairs perfectly with the $500 Web Install</li>
+            <li>Delivered within 7 days</li>
+          </ul>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="vid-pkg-cta">Book a Call <span class="vid-pkg-cta-arrow">→</span></a>
+        </div>
+
+        <!-- EVENT COVERAGE -->
+        <div class="vid-pkg reveal-up">
+          <span class="vid-pkg-tag">Event</span>
+          <h3>Event Coverage Package</h3>
+          <p class="vid-pkg-desc">Full event day shoot — conferences, nomad festivals, meetups, and business events. Highlight reel + raw footage delivered.</p>
+          <ul class="vid-pkg-bullets">
+            <li>Full event day coverage</li>
+            <li>Highlight reel, edited</li>
+            <li>DJI drone aerial shots</li>
+            <li>Raw footage included</li>
+            <li>As seen at Danao Nomad Fest</li>
+          </ul>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="vid-pkg-cta">Book a Call <span class="vid-pkg-cta-arrow">→</span></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GEAR -->
+  <div class="vid-gear">
+    <div class="container">
+      <p class="vid-gear-label">Shot with</p>
+      <div class="vid-gear-list">
+        <div class="vid-gear-item">
+          <svg class="vid-gear-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3l-4-2-4 2"/><circle cx="12" cy="14" r="3"/></svg>
+          Sony ZV1 Mark II · 4K 60fps
+        </div>
+        <div class="vid-gear-item">
+          <svg class="vid-gear-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          DJI Wireless 3 Microphone
+        </div>
+        <div class="vid-gear-item">
+          <svg class="vid-gear-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          DJI Drone · Aerial Coverage
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <section class="vid-portfolio">
+    <div class="container">
+      <div class="section-header reveal-up text-center">
+        <p class="section-eyebrow">PORTFOLIO</p>
+        <h2>More Work<br><span class="gold-gradient-text">Coming Soon.</span></h2>
+        <p class="section-subtext">CEO interviews, business promos, and event coverage videos being added now.</p>
+      </div>
+
+      <div class="vid-portfolio-grid reveal-up">
+
+        <div class="vid-port-card">
+          <div class="vid-port-thumb">
+            <div class="vid-port-play">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <span class="vid-port-coming">Coming Soon</span>
+          </div>
+          <div class="vid-port-body">
+            <div class="vid-port-tag">Interview</div>
+            <div class="vid-port-title">CEO Interview — Episode 1</div>
+            <div class="vid-port-sub">YouTube · Placeholder</div>
+          </div>
+        </div>
+
+        <div class="vid-port-card">
+          <div class="vid-port-thumb">
+            <div class="vid-port-play">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <span class="vid-port-coming">Coming Soon</span>
+          </div>
+          <div class="vid-port-body">
+            <div class="vid-port-tag">Event</div>
+            <div class="vid-port-title">Danao Nomad Fest Recap</div>
+            <div class="vid-port-sub">YouTube · Placeholder</div>
+          </div>
+        </div>
+
+        <div class="vid-port-card">
+          <div class="vid-port-thumb">
+            <div class="vid-port-play">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <span class="vid-port-coming">Coming Soon</span>
+          </div>
+          <div class="vid-port-body">
+            <div class="vid-port-tag">Promo</div>
+            <div class="vid-port-title">Business Promo — Sample</div>
+            <div class="vid-port-sub">YouTube · Placeholder</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="vid-bottom-cta">
+    <h2>Ready to Film<br><span class="gold-gradient-text">Your Story?</span></h2>
+    <p>Book a call with Shawn and we'll figure out the right package for you.</p>
+    <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-gold">Book a Call →</a>
+  </section>
+
+  <script src="../js/main.js?v=20260708" defer></script>
+</body>
+</html>
