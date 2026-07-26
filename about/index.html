@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Shawn Arrington | Khun Camp</title>
+  <meta name="description" content="Shawn Arrington is a US Army veteran and founder of Khun Camp. He installs AI systems for small and mid-size service businesses.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khuncamp.com/about/">
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://khuncamp.com/about/" />
+  <meta property="og:title" content="About Shawn Arrington | Khun Camp" />
+  <meta property="og:description" content="US Army veteran. Founder of Khun Camp. Installs AI systems for service businesses." />
+  <meta property="og:image" content="https://khuncamp.com/images/og-preview.svg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://khuncamp.com/about/#person",
+    "name": "Shawn Arrington",
+    "url": "https://khuncamp.com/about/",
+    "jobTitle": "Founder",
+    "worksFor": { "@id": "https://khuncamp.com/#organization" },
+    "description": "US Army veteran and founder of Khun Camp. Installs AI booking and lead-capture systems for service businesses.",
+    "knowsAbout": [
+      "med spa marketing automation",
+      "AI receptionist systems",
+      "GoHighLevel CRM",
+      "speed to lead",
+      "missed call recovery"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/shawn-arrington-507801121/",
+      "https://khunshawn.substack.com/",
+      "https://www.youtube.com/@KhunCamp1",
+      "https://khun-shawn.com/"
+    ]
+  }
+  </script>
+
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/jpeg" sizes="128x128" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="apple-touch-icon" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="preload" as="image" href="../images/KhunCamp-Logo-nav.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap&font-display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=20260708">
+  <link rel="stylesheet" href="../css/booking-modal.css">
+
+  <style>
+    .about-hero {
+      padding: 160px 0 80px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .about-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 5rem;
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .about-eyebrow {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      border: 1px solid rgba(201,168,76,0.35);
+      padding: 5px 14px;
+      border-radius: 99px;
+      margin-bottom: 1.5rem;
+    }
+    .about-hero h1 {
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 0.3rem;
+    }
+    .about-hero-subtitle {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 2.5rem;
+    }
+    .about-photo-wrap {
+      position: relative;
+    }
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .about-photo-placeholder {
+      text-align: center;
+      color: #333;
+    }
+    .about-photo-placeholder p {
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+      color: #2a2a2a;
+    }
+    .about-social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .about-social-links a {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #c9a84c;
+      text-decoration: none;
+      border: 1px solid rgba(201,168,76,0.3);
+      padding: 0.4rem 1rem;
+      border-radius: 99px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .about-social-links a:hover {
+      background: #c9a84c;
+      color: #0a0a0a;
+    }
+
+    /* BIO BODY */
+    .about-body {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 5rem 24px;
+    }
+    .about-body-inner {
+      max-width: 640px;
+    }
+    .bio-section {
+      margin-bottom: 3rem;
+    }
+    .bio-section-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+    .bio-section p {
+      font-size: 1rem;
+      color: #aaa;
+      line-height: 1.85;
+      margin-bottom: 1.1rem;
+    }
+    .bio-section p:last-child { margin-bottom: 0; }
+
+    .bio-divider {
+      border: none;
+      border-top: 1px solid #1e1e1e;
+      margin: 3rem 0;
+    }
+
+    .bio-tagline {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      font-style: italic;
+      margin-bottom: 3rem;
+    }
+
+    /* CTA */
+    .about-cta {
+      border-top: 1px solid #1e1e1e;
+      padding: 4rem 24px;
+      text-align: center;
+    }
+    .about-cta h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .about-cta p {
+      font-size: 0.95rem;
+      color: #555;
+      max-width: 44ch;
+      margin: 0 auto 2rem;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 780px) {
+      .about-hero-inner {
+        grid-template-columns: 1fr;
+      }
+      .about-photo-wrap {
+        order: -1;
+        max-width: 280px;
+      }
+    }
+  </style>
+
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a3b9bc85ccb4c81af5a8f3f" data-source="WEB_USER"></script>
+</head>
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAV -->
+  <header id="site-header">
+    <nav id="floating-nav">
+      <div class="fnav-pill">
+        <a href="../index.html" class="fnav-logo">
+          <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" height="30" loading="eager" fetchpriority="high">
+        </a>
+        <div class="fnav-links">
+          <a href="../index.html" class="fnav-link">Home</a>
+          <div class="fnav-dropdown">
+            <button class="fnav-dropdown-btn" aria-expanded="false">Services ▾</button>
+            <div class="fnav-dropdown-menu">
+              <a href="../services/" class="fnav-dropdown-item">AI Installation</a>
+              <a href="../websites/" class="fnav-dropdown-item">Web Install</a>
+            </div>
+          </div>
+          <a href="../blog.html" class="fnav-link">Blog</a>
+          <a href="../events.html" class="fnav-link">Events</a>
+          <a href="../program.html" class="fnav-link">Program</a>
+          <a href="../contact/" class="fnav-link">Contact</a>
+          <a href="../demo/" class="fnav-link">Try the AI</a>
+        </div>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="fnav-cta">Free Audit</a>
+        <button class="fnav-ham" id="ham-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-links">
+        <a href="../index.html"   class="mob-menu-link" tabindex="-1"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
+        <a href="../services/"    class="mob-menu-link" tabindex="-1"><span class="mob-num">02</span><span class="mob-name">AI Installation</span><div class="mob-bar"></div></a>
+        <a href="../websites/"    class="mob-menu-link" tabindex="-1"><span class="mob-num">03</span><span class="mob-name">Web Install</span><div class="mob-bar"></div></a>
+        <a href="../blog.html"    class="mob-menu-link" tabindex="-1"><span class="mob-num">04</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
+        <a href="../events.html"  class="mob-menu-link" tabindex="-1"><span class="mob-num">05</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
+        <a href="../program.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">06</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
+        <a href="../contact/"     class="mob-menu-link" tabindex="-1"><span class="mob-num">07</span><span class="mob-name">Contact</span><div class="mob-bar"></div></a>
+        <a href="../demo/"        class="mob-menu-link" tabindex="-1"><span class="mob-num">08</span><span class="mob-name">Try the AI</span><div class="mob-bar"></div></a>
+      </div>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="mob-menu-cta" tabindex="-1">Free Missed-Call Audit &#8594;</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="about-hero">
+      <div class="about-hero-inner">
+        <div>
+          <span class="about-eyebrow">About</span>
+          <h1>Shawn Arrington</h1>
+          <p class="about-hero-subtitle">Founder, Khun Camp</p>
+          <div class="about-social-links">
+            <a href="https://www.linkedin.com/in/shawn-arrington-507801121/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://khunshawn.substack.com/" target="_blank" rel="noopener">Substack</a>
+            <a href="https://www.youtube.com/@KhunCamp1" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+        <div class="about-photo-wrap">
+          <div class="about-photo">
+            <!-- Replace src with real photo URL when available -->
+            <div class="about-photo-placeholder">
+              <p>Photo of Shawn Arrington</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIO -->
+    <div class="about-body">
+      <div class="about-body-inner">
+
+        <div class="bio-section">
+          <p>I joined the US Army because my mother dared me to.</p>
+          <p>I was doing a science project with a friend, said it to get a rise out of her, and she gave me a look that meant you couldn't if you tried. I went to the recruiter the next day. Picked the Army over the Air Force because the Army recruiter showed up in combat boots and the Air Force guy showed up in dress blues. Picked 13J, fire control, mostly because I thought I was picking 13B.</p>
+          <p>That is the honest version. My whole reasoning was pride and a uniform.</p>
+          <p>I served from 2017 to February 2020 and was honorably discharged. Nine months of it in Korea. Most of my actual days were spent in a motor pool doing maintenance and waiting. The job itself was artillery fire control, which means somebody runs the numbers before anything moves and the numbers have to be right the first time. I got out an E-4, specialist, junior enough that the numbers were rarely mine. I just watched how much rode on them.</p>
+          <p>I separated in February 2020, a few weeks before the world shut down. I planned to go to school. Then COVID closed the campuses. I do not learn well online. So I went to work at a friend's company instead, making money playing video games, and started building a channel on the side. That turned into 47,000 subscribers and, at the peak, nine videos a day.</p>
+          <p>That taught me the thing most operators never get to learn: what actually makes a stranger stop, trust you, and act.</p>
+          <p>Now I install AI systems for small and mid-size service businesses.</p>
+        </div>
+
+        <hr class="bio-divider">
+
+        <div class="bio-section">
+          <span class="bio-section-label">What I actually do</span>
+          <p>Most businesses do not have an AI problem. They have an install problem.</p>
+          <p>The tools exist. They are cheap and they are good. What is missing is the person who wires them into how the business already runs, then stays on to keep them running when the models change underneath. That second part is the part everyone skips.</p>
+          <p>Khun Camp does both. We install the system, the customer keeps the asset, and we stay on the warranty. We do not sell installs that we plan to abandon.</p>
+          <p>If the math does not work, we do not pitch it.</p>
+        </div>
+
+        <hr class="bio-divider">
+
+        <div class="bio-section">
+          <span class="bio-section-label">Where I work from</span>
+          <p>Khun Camp was founded in Da Nang, Vietnam. I do not live there.</p>
+          <p>I rotate through Southeast Asia. Thailand, Vietnam, the Philippines right now, more countries coming. I have been traveling since I was two months old. This is not a lifestyle I picked up as an adult. It is just the shape my life has always had.</p>
+        </div>
+
+        <p class="bio-tagline">Remember to stay human.</p>
+
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="about-cta">
+      <h2>Want to work together?</h2>
+      <p>Book a free Missed-Call Audit. We'll show you what it's costing you before we pitch anything.</p>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-lg magnetic-item">Book a Free Call</a>
+    </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-socials">
+        <a href="https://www.youtube.com/@KhunCamp1" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        </a>
+        <a href="mailto:sales@getkhuncamp.com" class="footer-social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Khun Camp. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20260708" defer></script>
+  <script src="../js/booking-modal.js?v=20260703" defer></script>
+
+</body>
+</html>
