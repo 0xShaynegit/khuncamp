@@ -10,7 +10,8 @@
   --glass: rgba(42, 191, 191, 0.06);
   --glass-border: rgba(42, 191, 191, 0.2);
   --ease-smooth: cubic-bezier(0.23, 1, 0.32, 1);
-  --font-main: 'Inter', sans-serif;
+  --font-main: 'DM Sans', sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
 }
  
 /* RESET */
@@ -1513,8 +1514,8 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
   --radius-sm:   6px;
   --radius-md:   12px;
   --radius-lg:   18px;
-  --font-display: 'Syne', sans-serif;
-  --font-mono:    'Space Mono', monospace;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-mono:    'DM Sans', sans-serif;
 }
  
 body {
@@ -4237,3 +4238,4 @@ body {
   .obj-cta-strip { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
 }
 /* ── END OBJECTION HANDLING ──────────────────────────────────────── */
+
