@@ -38,8 +38,9 @@
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: #c9a84c;
-      border: 1px solid rgba(201,168,76,0.35);
+      color: #2ABFBF;
+      background: rgba(42,191,191,0.12);
+      border: none;
       padding: 5px 14px;
       border-radius: 99px;
       margin-bottom: 1.5rem;
@@ -49,7 +50,7 @@
       font-weight: 900;
       line-height: 1.08;
       letter-spacing: -0.02em;
-      color: #fff;
+      color: #1A2E33;
       margin: 0 auto 1.25rem;
       max-width: 700px;
       text-wrap: balance;
@@ -96,7 +97,7 @@
     .service-card:hover {
       border-color: rgba(201,168,76,0.3);
       transform: translateY(-4px);
-      box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(42,191,191,0.1);
     }
     .service-card:hover::before { opacity: 1; }
     .service-card-tag {
@@ -105,9 +106,9 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #c9a84c;
-      background: rgba(201,168,76,0.08);
-      border: 1px solid rgba(201,168,76,0.2);
+      color: #2ABFBF;
+      background: rgba(42,191,191,0.08);
+      border: 1px solid rgba(42,191,191,0.2);
       padding: 4px 12px;
       border-radius: 99px;
       margin-bottom: 24px;
@@ -168,7 +169,7 @@
       font-weight: 800;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #c9a84c;
+      color: #2ABFBF;
       margin-top: auto;
     }
     .service-card-cta-arrow {
@@ -194,7 +195,7 @@
     }
     .btn-gold {
       display: inline-block;
-      background: #c9a84c;
+      background: #2ABFBF;
       color: #000;
       font-size: 0.8rem;
       font-weight: 900;
@@ -256,8 +257,8 @@
   <style>
     /* AI Installation page styles */
     .ai-hero { padding: 160px 0 80px; text-align: center; }
-    .ai-hero h1 { font-size: clamp(2.4rem,5vw,3.8rem); font-weight:900; line-height:1.08; letter-spacing:-0.02em; color:#fff; max-width:760px; margin:0 auto 1.25rem; text-wrap:balance; }
-    .ai-hero-sub { font-size:1.1rem; color:#888; max-width:540px; margin:0 auto 2.5rem; line-height:1.65; }
+    .ai-hero h1 { font-size: clamp(2.4rem,5vw,3.8rem); font-weight:900; line-height:1.08; letter-spacing:-0.02em; color:#1A2E33; max-width:760px; margin:0 auto 1.25rem; text-wrap:balance; }
+    .ai-hero-sub { font-size:1.1rem; color:#4A6670; max-width:540px; margin:0 auto 2.5rem; line-height:1.65; }
     .ai-hero-ctas { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
 
     /* 6-component grid */
@@ -267,11 +268,11 @@
     @media(max-width:560px){ .ai-components-grid{ grid-template-columns:1fr; } }
     .ai-comp-card { background:#0d0d0d; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:32px 28px; position:relative; overflow:hidden; transition:border-color 0.25s,transform 0.2s; }
     .ai-comp-card::before { content:''; position:absolute; top:0;left:0;right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,0.5),transparent); opacity:0; transition:opacity 0.3s; }
-    .ai-comp-card:hover { border-color:rgba(201,168,76,0.25); transform:translateY(-3px); }
+    .ai-comp-card:hover { border-color:rgba(42,191,191,0.25); transform:translateY(-3px); }
     .ai-comp-card:hover::before { opacity:1; }
-    .ai-comp-num { font-size:0.65rem; font-weight:700; letter-spacing:0.18em; color:#c9a84c; margin-bottom:16px; }
-    .ai-comp-icon { width:40px; height:40px; background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.2); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#c9a84c; margin-bottom:18px; }
-    .ai-comp-card h3 { font-size:1.1rem; font-weight:800; color:#fff; margin:0 0 10px; line-height:1.2; }
+    .ai-comp-num { font-size:0.65rem; font-weight:700; letter-spacing:0.18em; color:#2ABFBF; margin-bottom:16px; }
+    .ai-comp-icon { width:40px; height:40px; background:rgba(42,191,191,0.08); border:1px solid rgba(42,191,191,0.2); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#2ABFBF; margin-bottom:18px; }
+    .ai-comp-card h3 { font-size:1.1rem; font-weight:800; color:#1A2E33; margin:0 0 10px; line-height:1.2; }
     .ai-comp-card p { font-size:0.875rem; color:#777; line-height:1.6; margin:0; }
 
     /* Industries bar */
@@ -283,12 +284,12 @@
 
     /* How it works ribbon */
     .ai-process { padding:80px 0 60px; }
-    .ai-process-steps { display:flex; gap:0; align-items:flex-start; justify-content:center; flex-wrap:wrap; background:rgba(201,168,76,0.04); border:1px solid rgba(201,168,76,0.13); border-radius:16px; padding:2.5rem; margin-top:2.5rem; }
+    .ai-process-steps { display:flex; gap:0; align-items:flex-start; justify-content:center; flex-wrap:wrap; background:rgba(42,191,191,0.04); border:1px solid rgba(42,191,191,0.13); border-radius:16px; padding:2.5rem; margin-top:2.5rem; }
     .ai-process-step { flex:1; min-width:180px; max-width:240px; text-align:center; padding:0 1.5rem; }
-    .ai-process-num { font-size:0.65rem; font-weight:700; letter-spacing:0.16em; color:#c9a84c; margin-bottom:10px; }
-    .ai-process-title { font-size:1rem; font-weight:800; color:#fff; margin:0 0 8px; }
-    .ai-process-body { font-size:0.85rem; color:#777; line-height:1.55; margin:0; }
-    .ai-process-arrow { font-size:1.4rem; color:rgba(201,168,76,0.3); align-self:center; padding:0 0.5rem; flex-shrink:0; }
+    .ai-process-num { font-size:0.65rem; font-weight:700; letter-spacing:0.16em; color:#2ABFBF; margin-bottom:10px; }
+    .ai-process-title { font-size:1rem; font-weight:800; color:#1A2E33; margin:0 0 8px; }
+    .ai-process-body { font-size:0.85rem; color:#4A6670; line-height:1.55; margin:0; }
+    .ai-process-arrow { font-size:1.4rem; color:rgba(42,191,191,0.3); align-self:center; padding:0 0.5rem; flex-shrink:0; }
     @media(max-width:600px){ .ai-process-steps{flex-direction:column;align-items:center;} .ai-process-arrow{transform:rotate(90deg);padding:0.5rem 0;} }
 
     /* Pricing */
@@ -296,25 +297,25 @@
     .ai-pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:3rem; }
     @media(max-width:900px){ .ai-pricing-grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto;} }
     .ai-price-card { background:#0d0d0d; border:1px solid rgba(255,255,255,0.07); border-radius:20px; padding:36px 32px; display:flex; flex-direction:column; position:relative; }
-    .ai-price-card--featured { border-color:rgba(201,168,76,0.4); box-shadow:0 0 40px rgba(201,168,76,0.07); }
-    .ai-price-badge { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:#c9a84c; color:#000; font-size:0.65rem; font-weight:900; letter-spacing:0.14em; text-transform:uppercase; padding:4px 16px; border-radius:99px; white-space:nowrap; }
-    .ai-price-tier { font-size:0.7rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#c9a84c; margin-bottom:12px; }
-    .ai-price-amount { font-size:2.6rem; font-weight:900; color:#fff; letter-spacing:-0.03em; line-height:1; }
+    .ai-price-card--featured { border-color:rgba(42,191,191,0.4); box-shadow:0 0 40px rgba(201,168,76,0.07); }
+    .ai-price-badge { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:#2ABFBF; color:#fff; font-size:0.65rem; font-weight:900; letter-spacing:0.14em; text-transform:uppercase; padding:4px 16px; border-radius:99px; white-space:nowrap; }
+    .ai-price-tier { font-size:0.7rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#2ABFBF; margin-bottom:12px; }
+    .ai-price-amount { font-size:2.6rem; font-weight:900; color:#1A2E33; letter-spacing:-0.03em; line-height:1; }
     .ai-price-freq { font-size:0.8rem; color:#555; margin-left:4px; }
     .ai-price-retainer { font-size:0.82rem; color:#666; margin:8px 0 20px; }
     .ai-price-divider { height:1px; background:rgba(255,255,255,0.07); margin:20px 0; }
     .ai-price-features { list-style:none; padding:0; margin:0 0 28px; display:flex; flex-direction:column; gap:10px; flex:1; }
     .ai-price-features li { font-size:0.875rem; color:#aaa; display:flex; align-items:flex-start; gap:10px; line-height:1.45; }
-    .ai-price-features li::before { content:''; width:16px; height:16px; min-width:16px; background:rgba(201,168,76,0.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6'%3E%3Cpath d='M1 3l2 2 4-4' stroke='%23c9a84c' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center; border:1px solid rgba(201,168,76,0.25); border-radius:50%; margin-top:1px; }
-    .ai-price-cta { display:block; text-align:center; padding:14px 24px; border-radius:6px; font-size:0.8rem; font-weight:900; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; transition:opacity 0.2s,transform 0.15s; }
+    .ai-price-features li::before { content:''; width:16px; height:16px; min-width:16px; background:rgba(42,191,191,0.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6'%3E%3Cpath d='M1 3l2 2 4-4' stroke='%232ABFBF' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center; border:1px solid rgba(42,191,191,0.25); border-radius:50%; margin-top:1px; }
+    .ai-price-cta { display:block; text-align:center; padding:14px 24px; border-radius:50px; font-size:0.8rem; font-weight:900; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; transition:opacity 0.2s,transform 0.15s; }
     .ai-price-cta:hover { opacity:0.88; transform:translateY(-1px); }
-    .ai-price-cta--gold { background:#c9a84c; color:#000; }
-    .ai-price-cta--outline { background:transparent; color:#c9a84c; border:1px solid rgba(201,168,76,0.4); }
+    .ai-price-cta--gold { background:#2ABFBF; color:#fff; }
+    .ai-price-cta--outline { background:transparent; color:#2ABFBF; border:1px solid rgba(42,191,191,0.4); }
 
     /* Final CTA */
     .ai-final-cta { text-align:center; padding:80px 0 100px; }
-    .ai-final-cta h2 { font-size:clamp(2rem,4vw,3rem); font-weight:900; letter-spacing:-0.02em; color:#fff; margin:0 0 1rem; text-wrap:balance; }
-    .ai-final-cta p { font-size:1rem; color:#777; max-width:480px; margin:0 auto 2rem; line-height:1.6; }
+    .ai-final-cta h2 { font-size:clamp(2rem,4vw,3rem); font-weight:900; letter-spacing:-0.02em; color:#1A2E33; margin:0 0 1rem; text-wrap:balance; }
+    .ai-final-cta p { font-size:1rem; color:#4A6670; max-width:480px; margin:0 auto 2rem; line-height:1.6; }
   </style>
 
   <main>
@@ -323,11 +324,11 @@
     <section class="ai-hero">
       <div class="container">
         <span class="services-hero-eyebrow">AI Systems Installation</span>
-        <h1>One Install. Six Systems.<br><span style="background:linear-gradient(135deg,#c9a84c,#e8c97a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Every Lead Captured.</span></h1>
+        <h1>One Install. Six Systems.<br><span style="background:linear-gradient(135deg,#2ABFBF,#1A8C8C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Every Lead Captured.</span></h1>
         <p class="ai-hero-sub">We build and maintain a done-for-you AI system on your existing tools: missed-call capture, instant follow-up, automated booking, and more. Live in 7 days.</p>
         <div class="ai-hero-ctas">
-          <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-pulse magnetic-item" style="background:#c9a84c;color:#000;font-size:0.875rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:1.1rem 2rem;border-radius:4px;text-decoration:none;">Get Your Free Missed-Call Audit</a>
-          <a href="#components" style="background:transparent;color:#fff;font-size:0.875rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:1.1rem 2rem;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.2);">See What's Included ↓</a>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-pulse magnetic-item" style="background:#2ABFBF;color:#fff;font-size:0.875rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:1.1rem 2rem;border-radius:50px;text-decoration:none;">Get Your Free Missed-Call Audit</a>
+          <a href="#components" style="background:transparent;color:#2C4A52;font-size:0.875rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:1.1rem 2rem;border-radius:50px;text-decoration:none;border:1px solid rgba(42,191,191,0.4);">See What's Included ↓</a>
         </div>
       </div>
     </section>
@@ -424,7 +425,7 @@
         <p class="section-eyebrow">LET'S START</p>
         <h2>See exactly how many bookings<br><span class="gold-gradient-text">you're losing.</span></h2>
         <p>Get your free Missed-Call Audit. We'll show you the number, then you decide if it's worth fixing.</p>
-        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-pulse magnetic-item" style="display:inline-block;background:#c9a84c;color:#000;font-size:0.875rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:1.1rem 2.5rem;border-radius:4px;text-decoration:none;">Get My Free Missed-Call Audit</a>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-primary btn-pulse magnetic-item" style="display:inline-block;background:#2ABFBF;color:#fff;font-size:0.875rem;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;padding:1.1rem 2.5rem;border-radius:50px;text-decoration:none;">Get My Free Missed-Call Audit</a>
         <p style="margin-top:14px;font-size:0.82rem;color:#555;">Free 15-min call &nbsp;·&nbsp; No commitment &nbsp;·&nbsp; We show you your numbers first</p>
       </div>
     </section>
@@ -479,6 +480,7 @@
 
 </body>
 </html>
+
 
 
 
