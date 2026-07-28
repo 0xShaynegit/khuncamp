@@ -638,10 +638,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeLightbox();
   });
 
+})();
+
 /* ============================================================
    SECTION DIVIDERS — label-in-line style
 ============================================================ */
-(function injectSectionDividers() {
+(function () {
   const sections = Array.from(document.querySelectorAll('main > section, body > section'));
   sections.forEach((section, i) => {
     if (i === 0) return;
@@ -650,9 +652,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!label) return;
     const divider = document.createElement('div');
     divider.className = 'section-divider';
-    divider.innerHTML = `<span>${label}</span>`;
+    divider.innerHTML = '<span>' + label + '</span>';
     section.parentNode.insertBefore(divider, section);
   });
-})();
-
 })();
