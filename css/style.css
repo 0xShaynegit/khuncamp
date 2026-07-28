@@ -1559,22 +1559,25 @@ body {
  
 /* ── Section Header ──────────────────────────────────────────── */
 .section-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  color: var(--accent);
+  font-family: var(--font-main);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #2ABFBF;
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+  background: rgba(42,191,191,0.12);
+  padding: 4px 12px;
+  border-radius: 50px;
+  gap: 0;
 }
 .section-eyebrow::before {
   content: '';
-  display: block;
-  width: 24px;
-  height: 1px;
-  background: var(--accent);
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
 }
  
 .section-title {
