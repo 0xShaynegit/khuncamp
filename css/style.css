@@ -101,13 +101,13 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
   color: #fff;
   padding: 1.2rem 2.5rem;
   border: none;
-  border-radius: 0;
+  border-radius: 50px;
   font-family: var(--font-main);
   font-weight: 900;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  cursor: none;
+  cursor: pointer;
   transition: transform 0.4s var(--ease-smooth), box-shadow 0.4s var(--ease-smooth), filter 0.4s var(--ease-smooth);
   box-shadow: 0 0 0 var(--gold-glow);
   position: relative;
@@ -3040,7 +3040,7 @@ body {
 
 .hero-cta-note {
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(44,74,82,0.55);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin: 0;
@@ -3073,7 +3073,7 @@ body {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  cursor: none;
+  cursor: pointer;
   transition: border-color 0.25s, background 0.25s, color 0.25s;
   background: transparent;
 }
@@ -3113,7 +3113,7 @@ body {
   gap: 2rem;
   flex-wrap: wrap;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(42,191,191,0.2);
 }
 
 /* SECTION SUBTEXT */
@@ -3522,13 +3522,13 @@ body {
 
 .pricing-freq {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(44,74,82,0.4);
   font-weight: 500;
 }
 
 .pricing-retainer {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(44,74,82,0.55);
 }
 
 .pricing-retainer strong {
@@ -3948,7 +3948,7 @@ body {
 .proof-stat-strip {
   display: flex; justify-content: center; gap: 64px; flex-wrap: wrap;
   padding: 32px 0; margin-bottom: 56px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(42,191,191,0.2);
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .proof-stat { text-align: center; }
@@ -4074,7 +4074,7 @@ body {
 /* ── END SOCIAL PROOF ───────────────────────────────────────────── */
 
 /* ── WHY US SECTION ─────────────────────────────────────────────── */
-#why-us { padding: 80px 0; border-top: 1px solid rgba(255,255,255,0.06); }
+#why-us { padding: 80px 0; border-top: 1px solid rgba(42,191,191,0.2); }
 
 .wu-table-wrap { overflow-x: auto; margin-bottom: 40px; }
 .wu-table { width: 100%; border-collapse: collapse; min-width: 560px; }
@@ -4158,7 +4158,7 @@ body {
 /* ── OBJECTION HANDLING SECTION ─────────────────────────────────── */
 #objections {
   padding: 80px 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(42,191,191,0.2);
 }
 
 .obj-grid {
@@ -4238,4 +4238,5 @@ body {
   .obj-cta-strip { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
 }
 /* ── END OBJECTION HANDLING ──────────────────────────────────────── */
+
 
