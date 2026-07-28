@@ -1,8 +1,8 @@
 ﻿/* KHUN CAMP — DESIGN SYSTEM v1.0 */
  
 :root {
-  --bg-deep: #F7F5F0;
-  --bg-charcoal: #F7F5F0;
+  --bg-deep: #EDE8DF;
+  --bg-charcoal: #EDE8DF;
   --gold-primary: #2ABFBF;
   --gold-glow: rgba(42, 191, 191, 0.2);
   --text-main: #2C4A52;
@@ -802,7 +802,7 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
   grid-template-columns: 380px 1fr;
   gap: 4rem;
   align-items: center;
-  background: #F7F5F0;
+  background: #EDE8DF;
   border: 1px solid rgba(42,191,191,0.15);
   border-radius: 8px;
   padding: 3rem;
@@ -1190,7 +1190,7 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
 }
 #final-cta h1, #final-cta h2, #final-cta h3, #final-cta p, #final-cta .cta-body, #final-cta .cta-footnote { color: #fff; }
 #final-cta .btn-primary { background: #fff; color: #2ABFBF; }
-#final-cta .btn-primary:hover { background: #F7F5F0; color: #2ABFBF; }
+#final-cta .btn-primary:hover { background: #EDE8DF; color: #2ABFBF; }
  
 .btn-final {
   font-size: 1.25rem;
@@ -1311,7 +1311,7 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
   }
 #final-cta h1, #final-cta h2, #final-cta h3, #final-cta p, #final-cta .cta-body, #final-cta .cta-footnote { color: #fff; }
 #final-cta .btn-primary { background: #fff; color: #2ABFBF; }
-#final-cta .btn-primary:hover { background: #F7F5F0; color: #2ABFBF; }
+#final-cta .btn-primary:hover { background: #EDE8DF; color: #2ABFBF; }
  
   .btn-final {
     font-size: 1rem;
@@ -1501,8 +1501,8 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
  
 /* ── Design Tokens (match KhunCamp dark theme) ─────────────────── */
 :root {
-  --bg: #F7F5F0;
-  --surface:     #F7F5F0;
+  --bg: #EDE8DF;
+  --surface:     #EDE8DF;
   --surface-2: #E8E2DA;
   --border: rgba(42,191,191,0.15);
   --border-hi: rgba(42,191,191,0.3);
@@ -2430,7 +2430,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  background: #F7F5F0;
+  background: #EDE8DF;
   border: 1px solid rgba(42,191,191, 0.25);
   border-radius: 999px;
   padding: 8px 10px;
@@ -2501,7 +2501,7 @@ body {
 .fnav-dropdown-menu {
   display: none;
   position: fixed;
-  background: #F7F5F0;
+  background: #EDE8DF;
   border: 1px solid rgba(42,191,191,0.25);
   border-radius: 12px;
   padding: 6px;
@@ -2725,7 +2725,7 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 0.9rem 1.2rem;
-  background: #F7F5F0;
+  background: #EDE8DF;
   border: 1px solid #222;
   border-radius: 8px;
   text-decoration: none;
@@ -3698,7 +3698,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background: #2ABFBF;
-  color: #F7F5F0;
+  color: #EDE8DF;
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 3px;
@@ -3971,7 +3971,7 @@ body {
   gap: 16px; margin-bottom: 20px;
 }
 .proof-result-card {
-  background: #F7F5F0;
+  background: #EDE8DF;
   border: 1px solid rgba(42,191,191,0.15);
   border-radius: 16px; padding: 28px 24px;
 }
@@ -4020,7 +4020,7 @@ body {
   gap: 16px; margin-bottom: 48px; margin-top: 16px;
 }
 .proof-testi-card {
-  background: #F7F5F0;
+  background: #EDE8DF;
   border: 1px solid rgba(42,191,191,0.1);
   border-radius: 16px; padding: 26px 22px;
   display: flex; flex-direction: column;
@@ -4058,7 +4058,7 @@ body {
   gap: 10px; flex-wrap: wrap;
 }
 .proof-industry-pill {
-  background: #F7F5F0; border: 1px solid rgba(42,191,191,0.1);
+  background: #EDE8DF; border: 1px solid rgba(42,191,191,0.1);
   border-radius: 8px; padding: 8px 18px;
   font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.08em; color: #444; text-transform: uppercase;
@@ -4112,7 +4112,7 @@ body {
   gap: 16px; margin-bottom: 40px;
 }
 .wu-card {
-  background: #F7F5F0; border: 1px solid rgba(42,191,191,0.1);
+  background: #EDE8DF; border: 1px solid rgba(42,191,191,0.1);
   border-radius: 16px; padding: 30px 26px;
 }
 .wu-card-num {
@@ -4126,7 +4126,7 @@ body {
 .wu-card p { font-size: 0.875rem; color: #4A6670; line-height: 1.7; margin: 0; }
 
 .wu-bottom-cta {
-  background: #F7F5F0; border: 1px solid rgba(42,191,191,0.2);
+  background: #EDE8DF; border: 1px solid rgba(42,191,191,0.2);
   border-radius: 18px; padding: 48px 40px; text-align: center;
 }
 .wu-bottom-cta h3 {
@@ -4172,7 +4172,7 @@ body {
 }
 
 .obj-item {
-  background: #F7F5F0;
+  background: #EDE8DF;
   border: 1px solid rgba(42,191,191,0.08);
   padding: 32px 28px;
 }
@@ -4209,7 +4209,7 @@ body {
 .obj-a strong { color: #2ABFBF; font-weight: 700; }
 
 .obj-cta-strip {
-  background: #F7F5F0;
+  background: #EDE8DF;
   border: 1px solid rgba(42,191,191,0.18);
   border-radius: 14px;
   padding: 36px 40px;
@@ -4241,6 +4241,7 @@ body {
   .obj-cta-strip { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
 }
 /* ── END OBJECTION HANDLING ──────────────────────────────────────── */
+
 
 
 
