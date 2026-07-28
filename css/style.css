@@ -82,7 +82,7 @@ section {
  
 /* UTILITIES */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #fff 0%, var(--gold-primary) 100%);
+  background: linear-gradient(135deg, #2ABFBF 0%, #1A8C8C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3504,7 +3504,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
+  color: rgba(44,74,82,0.55);
   margin-bottom: 0.8rem;
 }
 
@@ -3539,7 +3539,7 @@ body {
 }
 
 .pricing-retainer strong {
-  color: rgba(255,255,255,0.75);
+  color: #2C4A52;
   font-weight: 700;
 }
 
@@ -3560,7 +3560,7 @@ body {
 
 .pricing-features li {
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.75);
+  color: #2C4A52;
   display: flex;
   gap: 0.6rem;
   align-items: flex-start;
@@ -3576,7 +3576,7 @@ body {
 
 .pricing-note {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.35);
+  color: rgba(44,74,82,0.6);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-style: italic;
