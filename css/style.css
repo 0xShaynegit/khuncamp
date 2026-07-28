@@ -298,10 +298,8 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
 }
  
 #site-header.scrolled {
-  background: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--glass-border);
+  background: transparent;
+  border-bottom: none;
 }
  
 .nav-inner {
