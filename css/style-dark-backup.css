@@ -1,14 +1,14 @@
 /* KHUN CAMP — DESIGN SYSTEM v1.0 */
  
 :root {
-  --bg-deep: #F7F5F0;
-  --bg-charcoal: #EEE9E2;
-  --gold-primary: #2ABFBF;
-  --gold-glow: rgba(42, 191, 191, 0.2);
-  --text-main: #2C4A52;
-  --text-dim: #4A6670;
-  --glass: rgba(42, 191, 191, 0.06);
-  --glass-border: rgba(42, 191, 191, 0.2);
+  --bg-deep: #0a0a0a;
+  --bg-charcoal: #121212;
+  --gold-primary: #D4AF37;
+  --gold-glow: rgba(212, 175, 55, 0.3);
+  --text-main: #e0e0e0;
+  --text-dim: #a0a0a0;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(212, 175, 55, 0.15);
   --ease-smooth: cubic-bezier(0.23, 1, 0.32, 1);
   --font-main: 'Inter', sans-serif;
 }
