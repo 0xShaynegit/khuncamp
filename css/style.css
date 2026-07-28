@@ -2,7 +2,7 @@
  
 :root {
   --bg-deep: #F7F5F0;
-  --bg-charcoal: #EEE9E2;
+  --bg-charcoal: #F7F5F0;
   --gold-primary: #2ABFBF;
   --gold-glow: rgba(42, 191, 191, 0.2);
   --text-main: #2C4A52;
@@ -1506,7 +1506,7 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
 /* ── Design Tokens (match KhunCamp dark theme) ─────────────────── */
 :root {
   --bg: #F7F5F0;
-  --surface:     #EEE9E2;
+  --surface:     #F7F5F0;
   --surface-2: #E8E2DA;
   --border: rgba(42,191,191,0.15);
   --border-hi: rgba(42,191,191,0.3);
@@ -2731,7 +2731,7 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 0.9rem 1.2rem;
-  background: #EEE9E2;
+  background: #F7F5F0;
   border: 1px solid #222;
   border-radius: 8px;
   text-decoration: none;
@@ -3704,7 +3704,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background: #2ABFBF;
-  color: #EEE9E2;
+  color: #F7F5F0;
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 3px;
@@ -3977,7 +3977,7 @@ body {
   gap: 16px; margin-bottom: 20px;
 }
 .proof-result-card {
-  background: #EEE9E2;
+  background: #F7F5F0;
   border: 1px solid rgba(42,191,191,0.15);
   border-radius: 16px; padding: 28px 24px;
 }
@@ -4026,7 +4026,7 @@ body {
   gap: 16px; margin-bottom: 48px; margin-top: 16px;
 }
 .proof-testi-card {
-  background: #EEE9E2;
+  background: #F7F5F0;
   border: 1px solid rgba(42,191,191,0.1);
   border-radius: 16px; padding: 26px 22px;
   display: flex; flex-direction: column;
@@ -4064,7 +4064,7 @@ body {
   gap: 10px; flex-wrap: wrap;
 }
 .proof-industry-pill {
-  background: #EEE9E2; border: 1px solid rgba(42,191,191,0.1);
+  background: #F7F5F0; border: 1px solid rgba(42,191,191,0.1);
   border-radius: 8px; padding: 8px 18px;
   font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.08em; color: #444; text-transform: uppercase;
@@ -4118,7 +4118,7 @@ body {
   gap: 16px; margin-bottom: 40px;
 }
 .wu-card {
-  background: #EEE9E2; border: 1px solid rgba(42,191,191,0.1);
+  background: #F7F5F0; border: 1px solid rgba(42,191,191,0.1);
   border-radius: 16px; padding: 30px 26px;
 }
 .wu-card-num {
@@ -4132,7 +4132,7 @@ body {
 .wu-card p { font-size: 0.875rem; color: #4A6670; line-height: 1.7; margin: 0; }
 
 .wu-bottom-cta {
-  background: #EEE9E2; border: 1px solid rgba(42,191,191,0.2);
+  background: #F7F5F0; border: 1px solid rgba(42,191,191,0.2);
   border-radius: 18px; padding: 48px 40px; text-align: center;
 }
 .wu-bottom-cta h3 {
@@ -4178,7 +4178,7 @@ body {
 }
 
 .obj-item {
-  background: #EEE9E2;
+  background: #F7F5F0;
   border: 1px solid rgba(42,191,191,0.08);
   padding: 32px 28px;
 }
@@ -4215,7 +4215,7 @@ body {
 .obj-a strong { color: #2ABFBF; font-weight: 700; }
 
 .obj-cta-strip {
-  background: #EEE9E2;
+  background: #F7F5F0;
   border: 1px solid rgba(42,191,191,0.18);
   border-radius: 14px;
   padding: 36px 40px;
@@ -4247,6 +4247,7 @@ body {
   .obj-cta-strip { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
 }
 /* ── END OBJECTION HANDLING ──────────────────────────────────────── */
+
 
 
 
