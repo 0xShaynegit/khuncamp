@@ -354,10 +354,10 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
 .hero-eyebrow {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
-  color: var(--gold-primary);
+  color: #2ABFBF;
   font-weight: 700;
   margin-bottom: 1rem;
-  display: block;
+  display: inline-block; background: rgba(42,191,191,0.12); padding: 4px 12px; border-radius: 50px;
 }
  
 .hero-subtext {
@@ -442,10 +442,10 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
 .section-eyebrow {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
-  color: var(--gold-primary);
+  color: #2ABFBF;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  display: block;
+  display: inline-block; background: rgba(42,191,191,0.12); padding: 4px 12px; border-radius: 50px;
 }
  
 .problem-grid {
@@ -1189,9 +1189,12 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
    FINAL CTA
 ============================== */
 #final-cta {
-  background: var(--bg-deep);
+  background: #2ABFBF;
   padding: 150px 0;
 }
+#final-cta h1, #final-cta h2, #final-cta h3, #final-cta p, #final-cta .cta-body, #final-cta .cta-footnote { color: #fff; }
+#final-cta .btn-primary { background: #fff; color: #2ABFBF; }
+#final-cta .btn-primary:hover { background: #F7F5F0; color: #2ABFBF; }
  
 .btn-final {
   font-size: 1.25rem;
@@ -1310,6 +1313,9 @@ a.text-gold { text-decoration: underline; text-underline-offset: 3px; }
   #final-cta {
     padding: 100px 0;
   }
+#final-cta h1, #final-cta h2, #final-cta h3, #final-cta p, #final-cta .cta-body, #final-cta .cta-footnote { color: #fff; }
+#final-cta .btn-primary { background: #fff; color: #2ABFBF; }
+#final-cta .btn-primary:hover { background: #F7F5F0; color: #2ABFBF; }
  
   .btn-final {
     font-size: 1rem;
@@ -1576,7 +1582,7 @@ body {
   font-weight: 700; font-family: var(--font-display); text-transform: none;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: var(--text-1);
+  color: #1A2E33;
   margin-bottom: 64px;
 }
  
@@ -4238,6 +4244,7 @@ body {
   .obj-cta-strip { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
 }
 /* ── END OBJECTION HANDLING ──────────────────────────────────────── */
+
 
 
 
