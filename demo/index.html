@@ -46,7 +46,7 @@
       transform: translateX(-50%);
       width: 700px;
       height: 700px;
-      background: radial-gradient(ellipse, rgba(201,168,76,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(42,191,191,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -61,9 +61,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(201,168,76,0.1);
-      border: 1px solid rgba(201,168,76,0.3);
-      color: var(--gold, #c9a84c);
+      background: rgba(42,191,191,0.1);
+      border: 1px solid rgba(42,191,191,0.3);
+      color: var(--gold-primary, #2ABFBF);
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.16em;
@@ -96,7 +96,7 @@
     }
 
     .demo-headline .gold {
-      color: var(--gold, #c9a84c);
+      color: var(--gold-primary, #2ABFBF);
     }
 
     .demo-desc {
@@ -143,7 +143,7 @@
       justify-content: center;
       gap: 14px;
       width: 100%;
-      background: var(--gold, #c9a84c);
+      background: var(--gold-primary, #2ABFBF);
       color: #0a0a0a;
       font-size: clamp(1.5rem, 4vw, 2rem);
       font-weight: 900;
@@ -194,8 +194,8 @@
     }
 
     .demo-copy-btn:hover {
-      border-color: var(--gold, #c9a84c);
-      color: var(--gold, #c9a84c);
+      border-color: var(--gold-primary, #2ABFBF);
+      color: var(--gold-primary, #2ABFBF);
     }
 
     .demo-copy-btn svg {
@@ -236,8 +236,8 @@
     .expect-check {
       width: 18px;
       height: 18px;
-      background: rgba(201,168,76,0.12);
-      border: 1px solid rgba(201,168,76,0.3);
+      background: rgba(42,191,191,0.12);
+      border: 1px solid rgba(42,191,191,0.3);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -249,7 +249,7 @@
     .expect-check svg {
       width: 10px;
       height: 10px;
-      color: var(--gold, #c9a84c);
+      color: var(--gold-primary, #2ABFBF);
     }
 
     /* CTA after */
@@ -268,8 +268,8 @@
     .demo-after-cta a {
       display: inline-block;
       background: transparent;
-      border: 1px solid var(--gold, #c9a84c);
-      color: var(--gold, #c9a84c);
+      border: 1px solid var(--gold-primary, #2ABFBF);
+      color: var(--gold-primary, #2ABFBF);
       font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -281,7 +281,7 @@
     }
 
     .demo-after-cta a:hover {
-      background: var(--gold, #c9a84c);
+      background: var(--gold-primary, #2ABFBF);
       color: #0a0a0a;
     }
 
@@ -421,7 +421,7 @@
                   <polyline points="1.5,5 4,7.5 8.5,2.5"/>
                 </svg>
               </span>
-              Try to confuse her. See how she handles edge cases
+              Try to trip her up. See how she recovers
             </li>
           </ul>
         </div>
@@ -438,15 +438,15 @@
     </section>
   </main>
 
-  <script src="../js/main.js?v=20260708"></script>
+  <script src="../js/main.js?v=20260740"></script>
   <script src="../js/booking-modal.js?v=20260703"></script>
   <script>
     function copyNumber(btn) {
       navigator.clipboard.writeText('(572) 223-7838').then(() => {
         const span = btn.querySelector('span');
         span.textContent = 'Copied!';
-        btn.style.borderColor = 'var(--gold, #c9a84c)';
-        btn.style.color = 'var(--gold, #c9a84c)';
+        btn.style.borderColor = 'var(--gold-primary, #2ABFBF)';
+        btn.style.color = 'var(--gold-primary, #2ABFBF)';
         setTimeout(() => {
           span.textContent = 'Copy number';
           btn.style.borderColor = '';
