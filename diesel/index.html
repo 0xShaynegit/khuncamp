@@ -270,7 +270,6 @@
     .btn {
       display: block;
       width: 100%;
-      background: var(--amber);
       color: #090A0B;
       font-family: var(--font-display);
       font-weight: 900;
@@ -283,7 +282,7 @@
       transition: opacity 0.15s, transform 0.15s;
     }
 
-    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
     /* ── SECTION SCAFFOLD ── */
     .section-wrap {
@@ -634,6 +633,55 @@
       max-width: 600px;
     }
 
+    /* ── GRADIENT TEXT ── */
+    .grad {
+      background: linear-gradient(125deg, #F5A623 0%, #FFD166 55%, #E8E3D8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .grad-cool {
+      background: linear-gradient(125deg, #2ABFBF 0%, #7EEAEA 50%, #E8E3D8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .grad-hot {
+      background: linear-gradient(125deg, #FF6B35 0%, #F5A623 50%, #FFD166 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── SHIMMER BUTTON ── */
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .btn {
+      background: linear-gradient(
+        90deg,
+        #F5A623 0%,
+        #FFD166 40%,
+        #F5A623 55%,
+        #FFD166 70%,
+        #F5A623 100%
+      );
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite;
+    }
+
+    /* ── GLOW PULSE ── */
+    @keyframes glow-pulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(245,166,35,0.1), 0 0 60px rgba(245,166,35,0.04); }
+      50% { box-shadow: 0 0 30px rgba(245,166,35,0.18), 0 0 80px rgba(245,166,35,0.08); }
+    }
+
+    .offer-full { animation: glow-pulse 4s ease-in-out infinite; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       nav { padding: 0 20px; }
@@ -655,7 +703,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-brand">
-      <div class="kc-mark">KC</div>
+      <img src="../images/KhunCamp-Logo-badge-512.webp" alt="Khun Camp" style="height:36px;width:auto;display:block;">
       <div class="nav-text-block">
         <div class="nav-wordmark">Khun Camp</div>
         <div class="nav-sub">Mobile Diesel &amp; Roadside</div>
@@ -670,7 +718,7 @@
     <div class="hero-glow"></div>
     <div class="hero-inner">
       <p class="eyebrow">For Mobile Diesel &amp; Roadside Operators</p>
-      <h1>Stop Losing<br>Jobs to <em>Voicemail</em></h1>
+      <h1>Stop Losing<br>Jobs to <em class="grad">Voicemail</em></h1>
       <div class="hero-scene">
         You're under a truck. The phone rings. Twice.<br><br>
         <strong>Both of them go to voicemail.</strong> One was a customer. By the time you're clear and you've checked it, he's already called the next guy on the list.
@@ -695,13 +743,13 @@
   <!-- COST -->
   <div class="section-wrap">
     <p class="section-label">The Problem</p>
-    <h2>What Voicemail<br>Actually Costs You</h2>
+    <h2><span class="grad">What Voicemail</span><br>Actually Costs You</h2>
     <p>You've got to remember to check it. Then you've got to call back — usually hours later, usually after hours. And when a fleet dispatcher asks why nobody returned his call, you've got nothing to show him.</p>
     <p>None of that is a you problem. You were working. That's a voicemail problem.</p>
 
     <div class="cost-block">
       <p class="cost-tag">One Missed Call, After Hours</p>
-      <div class="cost-number">$700</div>
+      <div class="cost-number grad-hot">$700</div>
       <p>A $200 call-out plus a two-hour minimum at emergency rate. That's the floor on a single 2am call sitting in a voicemail box nobody checked.</p>
     </div>
   </div>
@@ -711,7 +759,7 @@
   <!-- BEFORE / AFTER -->
   <div class="section-wrap">
     <p class="section-label">What Changes</p>
-    <h2>Same Phone.<br>Same Number.<br>Nothing New to Learn.</h2>
+    <h2><span class="grad-cool">Same Phone.<br>Same Number.</span><br>Nothing New to Learn.</h2>
 
     <div class="compare">
       <div class="col">
@@ -743,7 +791,7 @@
   <div id="get-it">
     <div class="section-wrap">
       <p class="section-label">Founding Operator — First 5 Only</p>
-      <h2>One Price.<br>No Subscription.</h2>
+      <h2><span class="grad">One Price.</span><br>No Subscription.</h2>
 
       <div class="offer-full">
         <span class="founding-tag">Founding Operator Price</span>
@@ -791,7 +839,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-top">
-      <div class="kc-mark" style="width:28px;height:28px;font-size:12px;">KC</div>
+      <img src="../images/KhunCamp-Logo-badge-512.webp" alt="Khun Camp" style="height:28px;width:auto;display:block;">
       <span class="footer-wordmark">Khun Camp</span>
     </div>
     <p class="footer-desc">Built for mobile diesel and roadside repair operators.</p>
