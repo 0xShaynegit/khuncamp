@@ -27,6 +27,13 @@
       --font-body: 'DM Sans', system-ui, sans-serif;
       --max: 740px;
       --r: 4px;
+      --tape: repeating-linear-gradient(
+        -45deg,
+        var(--amber) 0px,
+        var(--amber) 10px,
+        #090A0B 10px,
+        #090A0B 20px
+      );
     }
 
     html { scroll-behavior: smooth; }
@@ -324,6 +331,20 @@
     }
 
     .section-wrap p:last-child { margin-bottom: 0; }
+
+    /* ── CAUTION TAPE ── */
+    .tape {
+      height: 12px;
+      background: var(--tape);
+      opacity: 0.85;
+      flex-shrink: 0;
+    }
+
+    .tape-thin {
+      height: 8px;
+      background: var(--tape);
+      opacity: 0.5;
+    }
 
     /* ── RULE DIVIDER ── */
     .rule {
@@ -629,6 +650,8 @@
 </head>
 <body>
 
+  <div class="tape"></div>
+
   <!-- NAV -->
   <nav>
     <div class="nav-brand">
@@ -667,7 +690,7 @@
     </div>
   </section>
 
-  <hr class="rule">
+  <div class="tape"></div>
 
   <!-- COST -->
   <div class="section-wrap">
@@ -683,7 +706,7 @@
     </div>
   </div>
 
-  <hr class="rule">
+  <div class="tape-thin"></div>
 
   <!-- BEFORE / AFTER -->
   <div class="section-wrap">
@@ -714,7 +737,7 @@
     </div>
   </div>
 
-  <hr class="rule">
+  <div class="tape"></div>
 
   <!-- OFFER -->
   <div id="get-it">
@@ -746,7 +769,7 @@
     </div>
   </div>
 
-  <hr class="rule">
+  <div class="tape-thin"></div>
 
   <!-- STRAIGHT TALK -->
   <div class="section-wrap">
@@ -762,6 +785,8 @@
       <p>If you're a one or two truck operation and the phone rings while your hands are full, that's who this is built for.</p>
     </div>
   </div>
+
+  <div class="tape"></div>
 
   <!-- FOOTER -->
   <footer>
