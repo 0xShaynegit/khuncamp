@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shawn Arrington — Founder | Khun Camp</title>
+  <meta name="description" content="US Army veteran. 47K YouTube subscribers. Now builds AI systems for businesses. This is the honest version.">
+  <link rel="canonical" href="https://khuncamp.com/founder/">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/jpeg" sizes="128x128" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shawn Arrington",
+    "url": "https://khuncamp.com/founder/",
+    "jobTitle": "Founder",
+    "worksFor": { "name": "Khun Camp", "url": "https://khuncamp.com" },
+    "description": "US Army veteran and founder of Khun Camp. Builds AI systems for small and mid-size service businesses.",
+    "sameAs": [
+      "https://www.linkedin.com/in/shawn-arrington-507801121/",
+      "https://khunshawn.substack.com/",
+      "https://www.youtube.com/@KhunCamp1"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #c9a84c;
+      --gold-dim: rgba(201,168,76,0.2);
+      --gold-border: rgba(201,168,76,0.3);
+      --bg: #0a0a0a;
+      --bg-card: #111111;
+      --text: #ffffff;
+      --text-dim: #888888;
+      --text-muted: #333333;
+      --font: 'DM Sans', system-ui, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --max: 800px;
+      --r: 4px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .nav-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 64px;
+    }
+
+    .nav-logo img { height: 36px; width: auto; }
+
+    .nav-cta {
+      background: var(--gold);
+      color: #0a0a0a;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      padding: 10px 22px;
+      border-radius: var(--r);
+      transition: opacity 0.15s;
+    }
+
+    .nav-cta:hover { opacity: 0.85; }
+
+    .sub-nav {
+      border-top: 1px solid #1a1a1a;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      padding: 0 40px;
+    }
+
+    .sub-nav a {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      padding: 12px 20px;
+      transition: color 0.15s;
+      position: relative;
+    }
+
+    .sub-nav a:hover { color: var(--gold); }
+
+    .sub-nav a.active {
+      color: var(--gold);
+    }
+
+    .sub-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .sub-nav-div {
+      width: 1px;
+      background: #1e1e1e;
+      margin: 10px 0;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 96px 40px 72px;
+      border-bottom: 1px solid #1a1a1a;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-border);
+      padding: 5px 14px;
+      border-radius: 99px;
+      margin-bottom: 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+      letter-spacing: 0.03em;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .social-links a {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      border: 1px solid var(--gold-border);
+      padding: 6px 14px;
+      border-radius: 99px;
+      transition: background 0.15s, color 0.15s;
+      letter-spacing: 0.03em;
+    }
+
+    .social-links a:hover {
+      background: var(--gold);
+      color: #0a0a0a;
+    }
+
+    .photo-wrap {
+      position: sticky;
+      top: 120px;
+    }
+
+    .photo-box {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--bg-card);
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-placeholder {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ── BIO ── */
+    .bio {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 72px 40px;
+    }
+
+    .bio-section {
+      margin-bottom: 56px;
+    }
+
+    .bio-section:last-child { margin-bottom: 0; }
+
+    .bio-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .bio-label::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .bio-section p {
+      font-size: 17px;
+      color: var(--text-dim);
+      line-height: 1.85;
+      margin-bottom: 18px;
+      max-width: 620px;
+    }
+
+    .bio-section p:last-child { margin-bottom: 0; }
+
+    .bio-section p strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .bio-divider {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      margin: 56px 0;
+    }
+
+    .bio-tagline {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--text);
+      font-style: italic;
+      margin: 0;
+      max-width: 480px;
+    }
+
+    /* ── CTA ── */
+    .cta {
+      border-top: 1px solid #1a1a1a;
+      padding: 72px 40px;
+      text-align: center;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .cta h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      font-size: 16px;
+      color: var(--text-dim);
+      max-width: 44ch;
+      margin: 0 auto 32px;
+      line-height: 1.65;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #0a0a0a;
+      font-weight: 900;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      padding: 15px 36px;
+      border-radius: var(--r);
+      transition: opacity 0.15s, transform 0.15s;
+    }
+
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid #1a1a1a;
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--text-muted);
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .nav-top { padding: 0 20px; }
+      .sub-nav { padding: 0 8px; }
+      .sub-nav a { padding: 12px 12px; font-size: 10px; }
+      .hero { padding: 64px 20px 48px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .photo-wrap { order: -1; max-width: 200px; position: static; }
+      .bio { padding: 48px 20px; }
+      .cta { padding: 48px 20px; }
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-top">
+      <a href="/" class="nav-logo">
+        <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp">
+      </a>
+      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="nav-cta">Book a Call</a>
+    </div>
+    <div class="sub-nav">
+      <a href="/">Who We Are</a>
+      <span class="sub-nav-div"></span>
+      <a href="/evidence/">Evidence</a>
+      <span class="sub-nav-div"></span>
+      <a href="/founder/" class="active">Founder</a>
+      <span class="sub-nav-div"></span>
+      <a href="/offer/">The Offer</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="eyebrow">Founder</span>
+    <div class="hero-grid">
+      <div>
+        <h1>Shawn Arrington</h1>
+        <p class="hero-title">Founder, Khun Camp</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/shawn-arrington-507801121/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://khunshawn.substack.com/" target="_blank" rel="noopener">Substack</a>
+          <a href="https://www.youtube.com/@KhunCamp1" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://khun-shawn.com/" target="_blank" rel="noopener">Personal Site</a>
+        </div>
+      </div>
+      <div class="photo-wrap">
+        <div class="photo-box">
+          <img src="../images/KhunCamp by window in black blazer KhunCamp Khun Camp.webp" alt="Shawn Arrington">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BIO -->
+  <div class="bio">
+
+    <div class="bio-section">
+      <p>I joined the US Army because my mother dared me to.</p>
+      <p>I was doing a science project with a friend, said it to get a rise out of her, and she gave me a look that meant <strong>you couldn't if you tried.</strong> I went to the recruiter the next day. Picked the Army over the Air Force because the Army recruiter showed up in combat boots and the Air Force guy showed up in dress blues. Picked 13J, fire control, mostly because I thought I was picking 13B.</p>
+      <p>That is the honest version. My whole reasoning was pride and a uniform.</p>
+      <p>I served from 2017 to February 2020 and was honorably discharged. Nine months of it in Korea. Most of my actual days were spent in a motor pool doing maintenance and waiting. The job itself was artillery fire control — somebody runs the numbers before anything moves and the numbers have to be right the first time. I got out an E-4, specialist, junior enough that the numbers were rarely mine. I just watched how much rode on them.</p>
+      <p>I separated in February 2020, a few weeks before the world shut down. I planned to go to school. Then COVID closed the campuses. I do not learn well online. So I went to work at a friend's company instead, making money playing video games, and started building a channel on the side. <strong>That turned into 47,000 subscribers and, at the peak, nine videos a day.</strong></p>
+      <p>That taught me the thing most operators never get to learn: what actually makes a stranger stop, trust you, and act.</p>
+      <p>Now I install AI systems for small and mid-size service businesses.</p>
+    </div>
+
+    <hr class="bio-divider">
+
+    <div class="bio-section">
+      <p class="bio-label">What I actually do</p>
+      <p>Most businesses do not have an AI problem. They have an install problem.</p>
+      <p>The tools exist. They are cheap and they are good. What is missing is the person who wires them into how the business already runs, then stays on to keep them running when the models change underneath. <strong>That second part is the part everyone skips.</strong></p>
+      <p>Khun Camp does both. We install the system, the customer keeps the asset, and we stay on the warranty. We do not sell installs that we plan to abandon.</p>
+      <p>If the math does not work, we do not pitch it.</p>
+    </div>
+
+    <hr class="bio-divider">
+
+    <div class="bio-section">
+      <p class="bio-label">Where I work from</p>
+      <p>Khun Camp was founded in Da Nang, Vietnam. I do not live there.</p>
+      <p>I rotate through Southeast Asia. Thailand, Vietnam, the Philippines right now, more countries coming. I have been traveling since I was two months old. This is not a lifestyle I picked up as an adult. It is just the shape my life has always had.</p>
+    </div>
+
+    <hr class="bio-divider">
+
+    <p class="bio-tagline">"Remember to stay human."</p>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Want to work together?</h2>
+    <p>Book a call. We'll show you what it's costing you before we pitch anything.</p>
+    <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn">Book a Call</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" style="height:28px;width:auto;opacity:0.5;">
+    <div class="footer-links">
+      <a href="/terms-of-service.html">Terms</a>
+      <a href="/privacy-policy.html">Privacy</a>
+      <a href="/contact/">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Khun Camp</p>
+  </footer>
+
+</body>
+</html>
