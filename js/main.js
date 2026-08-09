@@ -467,52 +467,35 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
-// Floating pill dropdown — appended to body to escape pointer-events:none on header
+// Sub-nav scroll spy
 (function () {
-  const btn  = document.querySelector('.fnav-dropdown-btn');
-  const menu = document.querySelector('.fnav-dropdown-menu');
-  if (!btn || !menu) return;
+  const sections = [
+    'hero', 'who-we-serve', 'audit', 'problem', 'solution', 'how-it-works',
+    'deliverables', 'proof', 'testimonials', 'faq', 'final-cta'
+  ];
+  const links = document.querySelectorAll('.sub-nav-link');
 
-  // Move menu to body so it isn't under pointer-events:none header
-  document.body.appendChild(menu);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id;
+      links.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    });
+  }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
 
-  function positionMenu() {
-    const r = btn.getBoundingClientRect();
-    menu.style.top       = (r.bottom + 8) + 'px';
-    menu.style.left      = (r.left + r.width / 2) + 'px';
-    menu.style.transform = 'translateX(-50%)';
-  }
-
-  function openMenu() {
-    positionMenu();
-    menu.style.display = 'block';
-    btn.setAttribute('aria-expanded', 'true');
-  }
-
-  function closeMenu() {
-    menu.style.display = 'none';
-    btn.setAttribute('aria-expanded', 'false');
-  }
-
-  let hoverTimeout;
-  function delayClose() { hoverTimeout = setTimeout(closeMenu, 100); }
-  function cancelClose() { clearTimeout(hoverTimeout); }
-
-  btn.addEventListener('click', e => { e.stopPropagation(); menu.style.display === 'block' ? closeMenu() : openMenu(); });
-  btn.closest('.fnav-dropdown').addEventListener('mouseenter', () => { cancelClose(); openMenu(); });
-  btn.closest('.fnav-dropdown').addEventListener('mouseleave', delayClose);
-  menu.addEventListener('mouseenter', cancelClose);
-  menu.addEventListener('mouseleave', delayClose);
-  document.addEventListener('click', e => { if (!btn.contains(e.target) && !menu.contains(e.target)) closeMenu(); });
-  window.addEventListener('resize',  () => { if (menu.style.display === 'block') positionMenu(); });
-  window.addEventListener('scroll',  () => { if (menu.style.display === 'block') positionMenu(); }, { passive: true });
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
 })();
 
 // Hamburger — mobile only
 (function () {
   const btn  = document.getElementById('ham-btn');
   const menu = document.getElementById('mobile-menu');
-  if (!btn || !menu) return;
+  if (!btn) return;
 
   btn.addEventListener('click', () => {
     const isOpen = menu.classList.toggle('open');
@@ -521,30 +504,38 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.setAttribute('aria-hidden', !isOpen);
   });
 
+  // Close on link tap
   document.querySelectorAll('.mob-menu-link').forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.remove('open');
       btn.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      menu.setAttribute('aria-hidden', 'true');
+      btn.setAttribute('aria-expanded', false);
     });
   });
-})();
 
-// Sub-nav scroll spy — only watches hero (nav no longer has section anchors)
-(function () {
-  const heroEl = document.getElementById('hero');
-  if (!heroEl) return;
+  // Scroll spy — highlights active in both navs
+  const sections = [
+    'hero', 'who-we-serve', 'audit', 'problem', 'solution', 'how-it-works',
+    'deliverables', 'proof', 'testimonials', 'faq', 'final-cta'
+  ];
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id;
       document.querySelectorAll('.sub-nav-link').forEach(l =>
-        l.classList.toggle('active', entry.isIntersecting && l.getAttribute('href') === '#hero')
+        l.classList.toggle('active', l.getAttribute('href') === '#' + id)
+      );
+      document.querySelectorAll('.mob-menu-link').forEach(l =>
+        l.classList.toggle('active', l.getAttribute('href') === '#' + id)
       );
     });
-  }, { rootMargin: '0px', threshold: 0.1 });
+  }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
 
-  observer.observe(heroEl);
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
 })();
 
 /* ============================================================
@@ -638,21 +629,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeLightbox();
   });
 
-})();
-
-/* ============================================================
-   SECTION DIVIDERS — label-in-line style
-============================================================ */
-(function () {
-  const sections = Array.from(document.querySelectorAll('main > section, body > section'));
-  sections.forEach((section, i) => {
-    if (i === 0) return;
-    const eyebrow = section.querySelector('.section-eyebrow');
-    const label = eyebrow ? eyebrow.textContent.trim() : '';
-    if (!label) return;
-    const divider = document.createElement('div');
-    divider.className = 'section-divider';
-    divider.innerHTML = '<span>' + label + '</span>';
-    section.parentNode.insertBefore(divider, section);
-  });
 })();
