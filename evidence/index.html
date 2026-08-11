@@ -41,7 +41,8 @@
     .nav-logo img { height: 36px; width: auto; }
     .nav-cta { background: var(--gold); color: #0a0a0a; font-weight: 700; font-size: 13px; letter-spacing: 0.05em; padding: 10px 22px; border-radius: var(--r); transition: opacity 0.15s; }
     .nav-cta:hover { opacity: 0.85; }
-    .sub-nav { border-top: 1px solid #1a1a1a; display: flex; justify-content: center; padding: 0 40px; }
+    .sub-nav { border-top: 1px solid #1a1a1a; display: flex; justify-content: center; padding: 0 40px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .sub-nav::-webkit-scrollbar { display: none; }
     .sub-nav a { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); padding: 12px 20px; transition: color 0.15s; position: relative; }
     .sub-nav a:hover { color: var(--gold); }
     .sub-nav a.active { color: var(--gold); }
@@ -116,13 +117,22 @@
 
     @media (max-width: 640px) {
       .nav-top { padding: 0 20px; }
-      .sub-nav { padding: 0 8px; }
-      .sub-nav a { padding: 12px 10px; font-size: 10px; }
+      .sub-nav { padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; justify-content: flex-start; scrollbar-width: none; }
+      .sub-nav::-webkit-scrollbar { display: none; }
+      .sub-nav a { padding: 12px 10px; font-size: 9.5px; white-space: nowrap; flex-shrink: 0; }
+      .sub-nav-div { flex-shrink: 0; }
       .hero, .stats-section, .testimonials-section, .cases-section, .industry-section, .cta { padding-left: 20px; padding-right: 20px; }
+      .hero h1 { font-size: 2rem; }
       .stats-grid { grid-template-columns: 1fr; }
+      .stats-section { padding: 40px 20px; }
       .testimonials-grid { grid-template-columns: 1fr; }
+      .testimonials-section { padding: 40px 20px; }
+      .cases-section { padding: 40px 20px; }
+      .case-card { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+      .case-result { min-width: unset; }
+      .industry-section { padding: 40px 20px; }
       .industry-grid { grid-template-columns: 1fr; }
-      .case-card { grid-template-columns: 1fr; }
+      .cta { padding: 48px 20px; }
       footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
     }
   </style>
