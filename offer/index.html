@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Offer | Khun Camp</title>
-  <meta name="description" content="AI systems installation and content growth packages. Transparent pricing, real deliverables.">
+  <meta name="description" content="Full-service content growth. We run your channel end to end so you can focus on your business.">
   <link rel="canonical" href="https://khuncamp.com/offer/">
   <meta name="theme-color" content="#000000">
   <link rel="icon" type="image/jpeg" sizes="128x128" href="../images/KhunCamp-Logo-favicon-solid.jpg">
@@ -56,42 +56,46 @@
     .hero h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.1; color: var(--text); margin-bottom: 16px; }
     .hero p { font-size: 17px; color: var(--text-dim); max-width: 560px; line-height: 1.65; }
 
-    /* TRACK LABEL */
-    .track { max-width: var(--max); margin: 0 auto; }
-    .track-header { padding: 56px 40px 0; }
-    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    /* SCOPE BLOCK */
+    .scope { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; }
+    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
     .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); }
-    .track-title { font-family: var(--font-serif); font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: var(--text); margin-bottom: 10px; }
-    .track-desc { font-size: 15px; color: var(--text-dim); max-width: 560px; line-height: 1.65; margin-bottom: 0; }
+    .scope-text { font-size: 19px; color: var(--text); line-height: 1.65; max-width: 640px; font-weight: 500; }
+    .scope-text em { color: var(--gold); font-style: normal; }
 
-    /* PRICING GRID */
-    .pricing-grid { padding: 32px 40px 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; border-bottom: 1px solid #1a1a1a; }
-    .plan-card { background: var(--bg-card); padding: 32px 28px; display: flex; flex-direction: column; position: relative; }
-    .plan-card.featured { background: var(--bg-feature); outline: 1px solid var(--gold-border); }
-    .plan-badge { position: absolute; top: -1px; left: 50%; transform: translateX(-50%); font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; background: var(--gold); color: #0a0a0a; padding: 4px 14px; border-radius: 0 0 4px 4px; white-space: nowrap; }
-    .plan-name { font-size: 13px; font-weight: 700; letter-spacing: 0.05em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 8px; }
-    .plan-price { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.8rem); color: var(--gold); line-height: 1; margin-bottom: 4px; }
-    .plan-cadence { font-size: 12px; color: var(--text-muted); margin-bottom: 24px; }
-    .plan-features { list-style: none; flex: 1; margin-bottom: 28px; }
-    .plan-features li { font-size: 14px; color: var(--text-dim); padding: 7px 0; border-bottom: 1px solid #1a1a1a; display: flex; align-items: flex-start; gap: 10px; line-height: 1.45; }
-    .plan-features li::before { content: '›'; color: var(--gold); flex-shrink: 0; font-size: 14px; margin-top: 1px; }
-    .plan-btn { display: block; text-align: center; background: var(--bg-lift); color: var(--text); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; padding: 13px 20px; border-radius: var(--r); border: 1px solid #222; transition: border-color 0.15s, color 0.15s; }
-    .plan-btn:hover { border-color: var(--gold); color: var(--gold); }
-    .plan-card.featured .plan-btn { background: var(--gold); color: #0a0a0a; border-color: var(--gold); }
-    .plan-card.featured .plan-btn:hover { opacity: 0.88; }
+    /* PRICING */
+    .pricing { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; }
+    .offer-card { background: var(--bg-feature); border: 1px solid var(--gold-border); padding: 52px 48px; position: relative; }
+    .offer-card-badge { position: absolute; top: -1px; left: 48px; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; background: var(--gold); color: #0a0a0a; padding: 5px 16px; border-radius: 0 0 4px 4px; }
+    .offer-card-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .offer-left h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--text); margin-bottom: 8px; line-height: 1.2; }
+    .offer-left p { font-size: 14px; color: var(--text-dim); line-height: 1.6; margin-top: 12px; max-width: 36ch; }
+    .offer-pricing { display: flex; flex-direction: column; gap: 20px; }
+    .price-line { display: flex; flex-direction: column; gap: 2px; }
+    .price-amount { font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3rem); color: var(--gold); line-height: 1; }
+    .price-label { font-size: 12px; color: var(--text-dim); letter-spacing: 0.05em; }
+    .price-div { width: 100%; height: 1px; background: #222; }
+    .price-pay { font-size: 12px; font-weight: 700; color: var(--gold); letter-spacing: 0.04em; margin-top: 6px; display: inline-block; transition: opacity 0.15s; }
+    .price-pay:hover { opacity: 0.7; }
+    .offer-cta { margin-top: 32px; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #0a0a0a; font-weight: 900; font-size: 15px; letter-spacing: 0.04em; padding: 16px 40px; border-radius: var(--r); transition: opacity 0.15s, transform 0.15s; }
+    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
+    .offer-note { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
 
-    /* SEPARATOR */
-    .track-sep { max-width: var(--max); margin: 0 auto; border: none; border-top: 1px solid #1a1a1a; }
+    /* WHAT'S INCLUDED */
+    .included { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; }
+    .included-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 32px; }
+    .included-item { background: var(--bg-card); padding: 28px 28px; }
+    .included-item h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .included-item p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 
-    /* PRICING GRID 2 — 3 col creator */
-    .pricing-grid-2col { padding: 32px 40px 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; border-bottom: 1px solid #1a1a1a; }
-
-    /* GUARANTEE */
-    .guarantee { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
-    .guarantee-block { background: var(--bg-card); padding: 36px 32px; }
-    .guarantee-icon { font-size: 28px; margin-bottom: 16px; }
-    .guarantee-block h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
-    .guarantee-block p { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+    /* HOW IT WORKS */
+    .how { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 32px; }
+    .step { background: var(--bg-card); padding: 32px 28px; }
+    .step-num { font-family: var(--font-serif); font-size: 2.4rem; color: var(--gold); opacity: 0.4; line-height: 1; margin-bottom: 16px; }
+    .step h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .step p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 
     /* FAQ */
     .faq { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; }
@@ -100,12 +104,10 @@
     .faq-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
     .faq-a { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
 
-    /* CTA */
-    .cta { max-width: var(--max); margin: 0 auto; padding: 72px 40px; text-align: center; }
+    /* BOTTOM CTA */
+    .cta { max-width: var(--max); margin: 0 auto; padding: 80px 40px; text-align: center; }
     .cta h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--text); margin-bottom: 16px; }
     .cta p { font-size: 16px; color: var(--text-dim); max-width: 44ch; margin: 0 auto 32px; line-height: 1.65; }
-    .btn { display: inline-block; background: var(--gold); color: #0a0a0a; font-weight: 900; font-size: 15px; letter-spacing: 0.04em; padding: 15px 36px; border-radius: var(--r); transition: opacity 0.15s, transform 0.15s; }
-    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
 
     /* FOOTER */
     footer { border-top: 1px solid #1a1a1a; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
@@ -116,20 +118,24 @@
 
     @media (max-width: 720px) {
       .nav-top { padding: 0 20px; }
-      .sub-nav { padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; justify-content: flex-start; scrollbar-width: none; }
-      .sub-nav::-webkit-scrollbar { display: none; }
+      .sub-nav { padding: 0; justify-content: flex-start; }
       .sub-nav a { padding: 12px 10px; font-size: 9.5px; white-space: nowrap; flex-shrink: 0; }
       .sub-nav-div { flex-shrink: 0; }
       .hero { padding: 48px 20px 40px; }
       .hero h1 { font-size: 2rem; }
-      .track-header { padding: 40px 20px 0; }
-      .pricing-grid, .pricing-grid-2col { grid-template-columns: 1fr; padding: 20px 20px 40px; }
-      .plan-card { padding: 28px 20px; }
-      .plan-badge { font-size: 8px; }
-      .guarantee { grid-template-columns: 1fr; padding: 40px 20px; }
+      .scope { padding: 40px 20px; }
+      .scope-text { font-size: 17px; }
+      .pricing { padding: 40px 20px; }
+      .offer-card { padding: 40px 24px; }
+      .offer-card-badge { left: 24px; }
+      .offer-card-inner { grid-template-columns: 1fr; gap: 32px; }
+      .included { padding: 40px 20px; }
+      .included-grid { grid-template-columns: 1fr; }
+      .how { padding: 40px 20px; }
+      .steps { grid-template-columns: 1fr; }
       .faq { padding: 40px 20px; }
       .faq-item { padding: 20px; }
-      .cta { padding: 48px 20px; }
+      .cta { padding: 56px 20px; }
       footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
     }
   </style>
@@ -157,141 +163,97 @@
   <!-- HERO -->
   <div class="hero">
     <span class="eyebrow">The Offer</span>
-    <h1>Two tracks.<br>One goal: more revenue.</h1>
-    <p>AI systems that answer, follow up, and qualify. Or content that compounds into customers. Pick the track that fits your business.</p>
+    <h1>We turn content<br>into customers.</h1>
+    <p>Full-service content growth. Strategy, production, posting, and community management, all done for you. You show up, we run the channel.</p>
   </div>
 
-  <!-- ── TRACK 1: AI SYSTEMS ── -->
-  <div class="track">
-    <div class="track-header">
-      <p class="section-label">Track 1</p>
-      <h2 class="track-title">AI Systems Installation</h2>
-      <p class="track-desc">We install your AI infrastructure (missed call text-back, voice agent, automated follow-up) and stay on to keep it running. You own the asset.</p>
-    </div>
-    <div class="pricing-grid">
+  <!-- SCOPE -->
+  <div class="scope">
+    <p class="section-label">What we do</p>
+    <p class="scope-text">We run your content growth end to end: <em>strategy, scripts and filming direction, editing and production, posting and scheduling</em> across your platforms, and community replies in your voice. Monthly strategy call and report. You focus on your business, we run the channel.</p>
+  </div>
 
-      <div class="plan-card">
-        <p class="plan-name">Live Installation Seat</p>
-        <p class="plan-price">$899</p>
-        <p class="plan-cadence">one-time</p>
-        <ul class="plan-features">
-          <li>Missed call text-back, live in 48 hours</li>
-          <li>AI qualification flow built to your intake</li>
-          <li>GHL sub-account setup + A2P registration</li>
-          <li>30-day warranty period</li>
-          <li>1 revision round included</li>
-        </ul>
-        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="plan-btn">Book a Call</a>
+  <!-- PRICING -->
+  <div class="pricing">
+    <p class="section-label">Pricing</p>
+    <div class="offer-card">
+      <span class="offer-card-badge">One Offer. Full Service.</span>
+      <div class="offer-card-inner">
+        <div class="offer-left">
+          <h2>Content Operating System</h2>
+          <p>We build your content system from the ground up, then run it every month. One team, one point of contact, one channel that actually grows.</p>
+          <div class="offer-cta">
+            <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-gold">Book a Call</a>
+            <p class="offer-note">We will map out your channel on the call. No pitch until the math works.</p>
+          </div>
+        </div>
+        <div class="offer-pricing">
+          <div class="price-line">
+            <span class="price-amount">$3,000</span>
+            <span class="price-label">Content Operating System Build, one-time</span>
+            <a href="https://buy.stripe.com/00w5kCeR6dVJgVmaxx7ss1u" class="price-pay">Pay now &rarr;</a>
+          </div>
+          <div class="price-div"></div>
+          <div class="price-line">
+            <span class="price-amount">$1,500</span>
+            <span class="price-label">Growth Retainer, per month</span>
+            <a href="https://buy.stripe.com/6oU6oGcIYcRF8oQ2117ss1v" class="price-pay">Subscribe &rarr;</a>
+          </div>
+        </div>
       </div>
-
-      <div class="plan-card featured">
-        <span class="plan-badge">Best Value</span>
-        <p class="plan-name">Full Implementation Bundle</p>
-        <p class="plan-price">$1,499</p>
-        <p class="plan-cadence">one-time</p>
-        <ul class="plan-features">
-          <li>Everything in Live Installation Seat</li>
-          <li>AI voice agent (answers live calls)</li>
-          <li>Automated follow-up sequences built</li>
-          <li>Pipeline and CRM configured</li>
-          <li>60-day warranty period</li>
-          <li>Unlimited revisions in warranty window</li>
-        </ul>
-        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="plan-btn">Book a Call</a>
-      </div>
-
-      <div class="plan-card">
-        <p class="plan-name">Team Enablement</p>
-        <p class="plan-price">$3,999</p>
-        <p class="plan-cadence">one-time initial setup</p>
-        <ul class="plan-features">
-          <li>Full Implementation Bundle for your team</li>
-          <li>Up to 3 seats configured</li>
-          <li>Team onboarding call included</li>
-          <li>Custom workflows per role</li>
-          <li>90-day warranty + priority support</li>
-        </ul>
-        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="plan-btn">Book a Call</a>
-      </div>
-
     </div>
   </div>
 
-  <!-- ── TRACK 2: CONTENT GROWTH ── -->
-  <div class="track">
-    <div class="track-header">
-      <p class="section-label">Track 2</p>
-      <h2 class="track-title">Content Creator Growth</h2>
-      <p class="track-desc">Content built to convert, not just grow followers. Every piece is engineered to drive inbound calls, booked appointments, and qualified leads.</p>
-    </div>
-    <div class="pricing-grid-2col">
-
-      <div class="plan-card">
-        <p class="plan-name">Creator Growth Engine</p>
-        <p class="plan-price">$2,500</p>
-        <p class="plan-cadence">per month</p>
-        <ul class="plan-features">
-          <li>Short-form content strategy built around your offer</li>
-          <li>Script writing and editing</li>
-          <li>Publishing cadence managed</li>
-          <li>Monthly performance review</li>
-        </ul>
-        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="plan-btn">Book a Call</a>
+  <!-- WHAT'S INCLUDED -->
+  <div class="included">
+    <p class="section-label">What is included</p>
+    <div class="included-grid">
+      <div class="included-item">
+        <h3>Strategy and Creative Direction</h3>
+        <p>Your public persona, hook bank, brand voice, and content angles. Built once, refined monthly from what the data says.</p>
       </div>
-
-      <div class="plan-card featured">
-        <span class="plan-badge">Most Popular</span>
-        <p class="plan-name">Creator Growth Engine Plus</p>
-        <p class="plan-price">$2,999</p>
-        <p class="plan-cadence">per month</p>
-        <ul class="plan-features">
-          <li>Everything in Creator Growth Engine</li>
-          <li>Long-form content included (YouTube/Substack)</li>
-          <li>Repurposing across platforms</li>
-          <li>Bi-weekly strategy calls</li>
-          <li>AI-assisted content batching</li>
-        </ul>
-        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="plan-btn">Book a Call</a>
+      <div class="included-item">
+        <h3>Scripts and Filming Direction</h3>
+        <p>We write the scripts and give you a shot list. You film. We handle the rest.</p>
       </div>
-
-      <div class="plan-card">
-        <p class="plan-name">Creator Growth Team Engine</p>
-        <p class="plan-price">$4,999<span style="font-size:1rem;color:var(--text-muted);">+</span></p>
-        <p class="plan-cadence">per month, starting from</p>
-        <ul class="plan-features">
-          <li>Full content team embedded in your brand</li>
-          <li>All Plus features across multiple channels</li>
-          <li>Dedicated content lead</li>
-          <li>Weekly calls + async access</li>
-          <li>Custom scope, priced on engagement</li>
-        </ul>
-        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="plan-btn">Book a Call</a>
+      <div class="included-item">
+        <h3>Editing and Production</h3>
+        <p>Long-form and short-form, cut and delivered on schedule. Every piece follows your brand rules, no briefing required each round.</p>
       </div>
-
+      <div class="included-item">
+        <h3>Posting and Scheduling</h3>
+        <p>We publish on cadence across your platforms, with captions written in your voice. You do not touch a scheduler.</p>
+      </div>
+      <div class="included-item">
+        <h3>Community Replies</h3>
+        <p>Comments and DMs handled in your voice using the brand reply guide we build in month one.</p>
+      </div>
+      <div class="included-item">
+        <h3>Monthly Strategy Call and Report</h3>
+        <p>View velocity, what landed, what to double down on. Thirty minutes, every month, with real numbers.</p>
+      </div>
     </div>
   </div>
 
-  <!-- GUARANTEE BLOCKS -->
-  <div class="guarantee">
-    <div class="guarantee-block">
-      <div class="guarantee-icon">48</div>
-      <h3>48-hour install guarantee</h3>
-      <p>AI Systems installations go live within 48 hours of payment. If not, we work until they do at no extra charge.</p>
-    </div>
-    <div class="guarantee-block">
-      <div class="guarantee-icon">&#x2714;</div>
-      <h3>You own the asset</h3>
-      <p>The system runs on your account, in your name. If you ever leave, you keep everything we built. No lock-in.</p>
-    </div>
-    <div class="guarantee-block">
-      <div class="guarantee-icon">&#x21BB;</div>
-      <h3>Warranty included</h3>
-      <p>Every install comes with a warranty window. If it breaks or the model changes underneath, we fix it. Covered.</p>
-    </div>
-    <div class="guarantee-block">
-      <div class="guarantee-icon">&#x2197;</div>
-      <h3>No pitch before the math works</h3>
-      <p>We run the numbers on your first call. If AI does not move the needle for your business, we say so and you leave with a free audit.</p>
+  <!-- HOW IT WORKS -->
+  <div class="how">
+    <p class="section-label">How it works</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>We build your system</h3>
+        <p>Onboarding, brand intake, CreativeOS. We map your persona, your voice, your hooks, and your platforms. This is the one-time build.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>We run the channel</h3>
+        <p>Scripts, filming direction, editing, posting, replies. Every month on schedule. You film when we ask. We handle everything else.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>We optimize on data</h3>
+        <p>Monthly report shows what is working. We adjust the strategy, update the angles, and compound what performs.</p>
+      </div>
     </div>
   </div>
 
@@ -300,33 +262,33 @@
     <p class="section-label">Common questions</p>
     <div class="faq-list">
       <div class="faq-item">
-        <p class="faq-q">Do I need to already have a CRM or existing software?</p>
-        <p class="faq-a">No. We set everything up from scratch using GHL (GoHighLevel). If you already have one, we can work with it. You do not need to come in with anything pre-built.</p>
+        <p class="faq-q">What do I actually have to do?</p>
+        <p class="faq-a">Film the content when we give you the shot list. Show up for the monthly strategy call. That is it. Everything else is handled.</p>
       </div>
       <div class="faq-item">
-        <p class="faq-q">What does the AI voice agent actually do?</p>
-        <p class="faq-a">It answers live inbound calls when you or your team cannot. It qualifies the lead using your intake questions, takes a message, and triggers follow-up sequences with no human required. It sounds like a professional receptionist, not a robot.</p>
+        <p class="faq-q">What platforms do you post on?</p>
+        <p class="faq-a">We map that out on the first call based on where your audience is. Most clients run YouTube, Instagram Reels, and TikTok. We adapt to what fits your offer and your ICP.</p>
       </div>
       <div class="faq-item">
-        <p class="faq-q">How fast does content convert to actual customers?</p>
-        <p class="faq-a">Typically 60 to 90 days to see consistent inbound from content. The AI Systems track produces results faster, often in the first week, because it works on calls that are already coming in.</p>
+        <p class="faq-q">How long before I see results?</p>
+        <p class="faq-a">Typically 60 to 90 days before content drives consistent inbound. The first month is building the system right so every month after compounds, not resets.</p>
       </div>
       <div class="faq-item">
-        <p class="faq-q">Can I combine both tracks?</p>
-        <p class="faq-a">Yes. Several clients run both. The AI handles inbound that content generates, so the two compound. Ask about bundled pricing on the call.</p>
+        <p class="faq-q">Is there a minimum commitment?</p>
+        <p class="faq-a">We ask for three months minimum. Content growth is a compounding channel. If you come in looking for a spike, this is not the right fit and we will tell you that on the call.</p>
       </div>
       <div class="faq-item">
-        <p class="faq-q">What if it is not working?</p>
-        <p class="faq-a">During the warranty period we revise until it does. After that, we do a paid audit to find the gap. We do not disappear after the invoice clears.</p>
+        <p class="faq-q">What if the content is not working?</p>
+        <p class="faq-a">That is what the monthly report is for. If something is not converting, we see it in the data and we adjust. You will never hear "keep posting and trust the process" without a reason.</p>
       </div>
     </div>
   </div>
 
-  <!-- CTA -->
+  <!-- BOTTOM CTA -->
   <div class="cta">
-    <h2>Not sure which track fits?</h2>
-    <p>Book a call. We will look at your numbers, tell you which track makes sense, and give you a straight answer. Even if it is not one of these.</p>
-    <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn">Book a Call</a>
+    <h2>Ready to hand off the channel?</h2>
+    <p>Book a call. We will look at your current content, your offer, and your audience, and tell you exactly how we would run it.</p>
+    <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-gold">Book a Call</a>
   </div>
 
   <footer>
