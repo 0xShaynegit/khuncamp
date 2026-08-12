@@ -3,1632 +3,415 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khun Camp | Content Growth Company</title>
-  <meta name="description" content="Khun Camp turns content into customers using AI, systems, and distribution. We help creators grow on YouTube and businesses attract the right buyers">
+  <title>Khun Camp | Content growth company</title>
+  <meta name="description" content="We run your content growth end to end. Strategy, scripts, editing, posting, and community replies. One team, one monthly fee.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://khuncamp.com/">
-
-<!-- Open Graph / Social Preview -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://khuncamp.com/" />
-<meta property="og:title" content="Khun Camp | Content Growth Company" />
-<meta property="og:description" content="We turn content into customers using AI, systems, and distribution. Built for creators and businesses." />
-<meta property="og:image" content="https://khuncamp.com/images/og-preview.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-
-  <!-- Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://khuncamp.com/">
+  <meta property="og:title" content="Khun Camp | Content growth company">
+  <meta property="og:description" content="We run your content growth end to end. Strategy, scripts, editing, posting, and community replies. One team, one monthly fee.">
+  <meta property="og:image" content="https://khuncamp.com/images/og-preview.jpg">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Khun Camp | Content Growth Company">
-  <meta property="twitter:description" content="We turn content into customers using AI, systems, and distribution. Built for creators and businesses.">
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Khun Camp YouTube Audit & Systems",
-    "serviceType": "YouTube Growth Consultancy",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Khun Camp",
-      "image": "https://khuncamp.com/images/KhunCamp-Social-Share.webp"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "499.00",
-      "priceCurrency": "USD"
-    },
-    "description": "Professional YouTube channel audits and full-service growth infrastructure for creators."
-  }
-  </script>
-
-  <!-- Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Khun Camp",
-    "url": "https://khuncamp.com",
-    "logo": "https://khuncamp.com/images/KhunCamp-Logo-nav.webp",
-    "image": "https://khuncamp.com/images/KhunCamp-Social-Share.webp",
-    "description": "Khun Camp turns content into customers using AI, systems, and distribution. We help creators grow on YouTube and businesses attract the right buyers.",
-    "foundingDate": "2024",
-    "sameAs": [],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "hello@khuncamp.com"
-    }
-  }
-  </script>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is Khun Camp?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Khun Camp is an engineering firm for YouTube creators. We build the infrastructure, team, and strategy behind your channel so you can scale past 50K subscribers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does Khun Camp work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We start with a $500 audit to analyse your channel, then assemble your growth team (editors, thumbnail designers, SEO specialists) and design a system for sustainable growth. You publish, we handle the rest."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What will I get inside Khun Camp?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Weekly strategy guidance, full content system, editor and thumbnail direction, SEO optimisation, AI-assisted workflows, and optional website and creator infrastructure setup."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Favicons & Web App -->
+  <meta property="twitter:title" content="Khun Camp | Content growth company">
+  <meta property="twitter:description" content="We run your content growth end to end. Strategy, scripts, editing, posting, and community replies. One team, one monthly fee.">
   <link rel="icon" type="image/jpeg" sizes="128x128" href="images/KhunCamp-Logo-favicon-solid.jpg">
   <link rel="apple-touch-icon" href="images/KhunCamp-Logo-favicon-solid.jpg">
-  <link rel="manifest" href="manifest.json">
-  <!-- Preload above-fold assets -->
-  <link rel="preload" as="image" href="images/KhunCamp-Logo-nav.webp">
-
-  <!-- Font connections -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap&font-display=swap" rel="stylesheet">
-
-  <!-- Preconnect CDN scripts -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    .audit-card-cta {
-      display: block;
-      width: 100%;
-      text-align: center;
-      margin-top: auto;
-      padding-top: 20px;
-    }
-    .audit-card {
-      display: flex;
-      flex-direction: column;
-    }
-    .audit-features {
-      flex: 1;
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #c9a84c;
+      --gold-dim: rgba(201,168,76,0.12);
+      --gold-border: rgba(201,168,76,0.3);
+      --bg: #0a0a0a;
+      --bg-card: #111111;
+      --bg-lift: #161616;
+      --bg-feature: #131108;
+      --text: #ffffff;
+      --text-dim: #888888;
+      --text-muted: #333333;
+      --font: 'DM Sans', system-ui, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --max: 900px;
+      --r: 4px;
     }
 
-    /* Pricing track layout */
-    .pricing-track {
-      margin-bottom: 3rem;
-    }
-    .pricing-track-header {
-      margin-bottom: 2rem;
-    }
-    .pricing-track-tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--gold, #c9a84c);
-      border: 1px solid var(--gold, #c9a84c);
-      padding: 4px 12px;
-      border-radius: 99px;
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-    }
-    .pricing-track-label h3 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 800;
-      margin: 0.3rem 0 0.6rem;
-    }
-    .pricing-track-sub {
-      color: var(--text-muted, #999);
-      font-size: 0.95rem;
-      max-width: 600px;
-      line-height: 1.6;
-    }
-    .pricing-track-divider {
-      border: none;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      margin: 3rem 0;
-    }
-    .audit-card-note {
-      font-size: 0.8rem;
-      color: var(--text-muted, #888);
-      font-style: italic;
-      line-height: 1.5;
-      margin-bottom: 0;
-      padding-top: 12px;
-    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-    /* Founder LinkedIn button */
-    .founder-linkedin {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-      padding: 11px 22px;
-      border: 1px solid var(--gold-primary, #c9a84c);
-      border-radius: 4px;
-      color: var(--gold-primary, #c9a84c);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: background 0.2s, color 0.2s;
-    }
-    .founder-linkedin:hover {
-      background: var(--gold-primary, #c9a84c);
-      color: #000;
-    }
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #1a1a1a; }
+    .nav-top { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-cta { background: var(--gold); color: #0a0a0a; font-weight: 700; font-size: 13px; letter-spacing: 0.05em; padding: 10px 22px; border-radius: var(--r); transition: opacity 0.15s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .sub-nav { border-top: 1px solid #1a1a1a; display: flex; justify-content: center; padding: 0 40px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .sub-nav::-webkit-scrollbar { display: none; }
+    .sub-nav a { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); padding: 12px 20px; transition: color 0.15s; position: relative; white-space: nowrap; flex-shrink: 0; }
+    .sub-nav a:hover { color: var(--gold); }
+    .sub-nav a.active { color: var(--gold); }
+    .sub-nav a.active::after { content: ''; position: absolute; bottom: 0; left: 20px; right: 20px; height: 2px; background: var(--gold); }
+    .sub-nav-div { width: 1px; background: #1e1e1e; margin: 10px 0; flex-shrink: 0; }
 
-    /* Fix: no underline on mobile menu links at any state */
-    .mob-menu-link,
-    .mob-menu-link:hover,
-    .mob-menu-link:focus,
-    .mob-menu-link:active,
-    .mob-menu-link:visited {
-      text-decoration: none !important;
-    }
+    /* HERO */
+    .hero { padding: 96px 40px 80px; max-width: var(--max); margin: 0 auto; border-bottom: 1px solid #1a1a1a; }
+    .eyebrow { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold-border); padding: 5px 14px; border-radius: 99px; margin-bottom: 28px; }
+    .hero h1 { font-family: var(--font-serif); font-size: clamp(2.8rem, 6vw, 4.2rem); line-height: 1.08; color: var(--text); margin-bottom: 24px; }
+    .hero-sub { font-size: 18px; color: var(--text-dim); max-width: 600px; line-height: 1.7; margin-bottom: 36px; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #0a0a0a; font-weight: 900; font-size: 15px; letter-spacing: 0.04em; padding: 16px 40px; border-radius: var(--r); transition: opacity 0.15s, transform 0.15s; }
+    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
 
-    /* Fix: Optional Module badge — plain label, not a button-like pill */
-    .badge {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-dim, #888);
-      background: transparent;
-      border: none;
-      padding: 0;
-      cursor: default;
-      pointer-events: none;
-    }
-    .pricing-hidden-cards {
-      margin-top: 1.5rem;
-    }
-    .pricing-see-all {
-      text-align: center;
-      margin-top: 1.75rem;
-    }
-    .btn-see-all {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.15);
-      color: var(--text-muted, #aaa);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      padding: 10px 28px;
-      border-radius: 99px;
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .btn-see-all:hover,
-    .btn-see-all--open {
-      border-color: var(--gold, #c9a84c);
-      color: var(--gold, #c9a84c);
-    }
-    .see-all-arrow {
-      margin-left: 6px;
-      display: inline-block;
-    }
+    /* SECTIONS */
+    .section { max-width: var(--max); margin: 0 auto; padding: 72px 40px; border-bottom: 1px solid #1a1a1a; }
+    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+    .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); }
+    .section-h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--text); line-height: 1.15; margin-bottom: 12px; }
+    .section-intro { font-size: 16px; color: var(--text-dim); max-width: 560px; line-height: 1.65; margin-bottom: 40px; }
 
+    /* WHAT WE TAKE OFF YOUR DESK */
+    .desk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .desk-item { background: var(--bg-card); padding: 32px 28px; }
+    .desk-item h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .desk-item p { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+    .desk-item-wide { grid-column: span 2; background: var(--bg-lift); border-left: 2px solid var(--gold); }
+
+    /* HOW IT WORKS */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .step { background: var(--bg-card); padding: 36px 28px; }
+    .step-num { font-family: var(--font-serif); font-size: 2.8rem; color: var(--gold); opacity: 0.35; line-height: 1; margin-bottom: 20px; }
+    .step h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .step p { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+
+    /* PROOF */
+    .proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .proof-item { background: var(--bg-card); padding: 28px; }
+    .proof-item-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+    .proof-item p { font-size: 14px; color: var(--text); line-height: 1.65; }
+    .proof-item small { display: block; font-size: 11px; color: var(--text-muted); margin-top: 8px; font-style: italic; }
+
+    /* TESTIMONIALS */
+    .testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .testi-card { background: var(--bg-card); padding: 28px; display: flex; flex-direction: column; justify-content: space-between; }
+    .testi-quote { font-size: 14px; color: var(--text-dim); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .testi-person { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .testi-avatar-initials { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-lift); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .testi-name { font-size: 14px; font-weight: 700; color: var(--text); }
+    .testi-role { font-size: 12px; color: var(--text-muted); }
+
+    /* PRICING */
+    .offer-card { background: var(--bg-feature); border: 1px solid var(--gold-border); padding: 52px 48px; position: relative; }
+    .offer-card-badge { position: absolute; top: -1px; left: 48px; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; background: var(--gold); color: #0a0a0a; padding: 5px 16px; border-radius: 0 0 4px 4px; }
+    .offer-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .offer-left h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--text); line-height: 1.2; margin-bottom: 12px; }
+    .offer-left p { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+    .offer-prices { display: flex; flex-direction: column; gap: 24px; }
+    .price-row { display: flex; flex-direction: column; gap: 2px; }
+    .price-amount { font-family: var(--font-serif); font-size: clamp(2.2rem, 4vw, 3rem); color: var(--gold); line-height: 1; }
+    .price-label { font-size: 12px; color: var(--text-dim); letter-spacing: 0.04em; }
+    .price-pay { font-size: 12px; font-weight: 700; color: var(--gold); margin-top: 6px; display: inline-block; transition: opacity 0.15s; }
+    .price-pay:hover { opacity: 0.7; }
+    .price-div { height: 1px; background: #222; }
+    .offer-cta { margin-top: 36px; }
+    .offer-note { font-size: 12px; color: var(--text-muted); margin-top: 10px; }
+
+    /* FOUNDER */
+    .founder-strip { display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: center; }
+    .founder-strip img { width: 200px; height: 200px; object-fit: cover; object-position: top; border-radius: var(--r); }
+    .founder-strip h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 2rem); color: var(--text); margin-bottom: 8px; }
+    .founder-strip p { font-size: 15px; color: var(--text-dim); line-height: 1.65; margin-bottom: 20px; max-width: 480px; }
+    .btn-outline { display: inline-block; border: 1px solid var(--gold-border); color: var(--gold); font-size: 13px; font-weight: 700; letter-spacing: 0.05em; padding: 11px 24px; border-radius: var(--r); transition: background 0.15s, color 0.15s; }
+    .btn-outline:hover { background: var(--gold); color: #0a0a0a; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+    .faq-item { background: var(--bg-card); padding: 28px 32px; }
+    .faq-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .faq-a { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+
+    /* BOTTOM CTA */
+    .bottom-cta { max-width: var(--max); margin: 0 auto; padding: 80px 40px; text-align: center; }
+    .bottom-cta h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--text); margin-bottom: 16px; }
+    .bottom-cta p { font-size: 16px; color: var(--text-dim); max-width: 44ch; margin: 0 auto 32px; line-height: 1.65; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid #1a1a1a; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 12px; color: var(--text-muted); transition: color 0.15s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+
+    /* MOBILE */
+    @media (max-width: 720px) {
+      .nav-top { padding: 0 20px; }
+      .sub-nav { padding: 0; justify-content: flex-start; }
+      .hero { padding: 56px 20px 48px; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-sub { font-size: 16px; }
+      .section { padding: 48px 20px; }
+      .desk-grid { grid-template-columns: 1fr; }
+      .desk-item-wide { grid-column: span 1; }
+      .steps { grid-template-columns: 1fr; }
+      .proof-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .offer-card { padding: 40px 24px; }
+      .offer-card-badge { left: 24px; }
+      .offer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .founder-strip { grid-template-columns: 1fr; }
+      .founder-strip img { width: 100%; height: 240px; }
+      .faq-item { padding: 20px; }
+      .bottom-cta { padding: 56px 20px; }
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
   </style>
-  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a3b9bb95ccb4c81af5a8cf5" data-source="WEB_USER"></script>
 </head>
 <body>
 
-  <!-- CURSOR -->
-  <div id="cursor-dot"></div>
-  <div id="cursor-ring"></div>
-
-
-
-<!-- NAV -->
-<header id="site-header">
-  <nav class="container nav-inner">
-    <a href="#hero" class="nav-logo">
-      <img src="images/KhunCamp-Logo-nav.webp" alt="Khun Camp Logo" width="140" height="46" loading="eager" fetchpriority="high">
-    </a>
-
-    <!-- Desktop CTA — hidden on mobile -->
-    <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary btn-sm magnetic-item nav-desktop-cta">Book a Call</a>
-
-    <!-- Hamburger — mobile only -->
-    <button class="ham-btn" id="ham-btn" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+  <nav>
+    <div class="nav-top">
+      <a href="/" class="nav-logo"><img src="images/KhunCamp-Logo-nav.webp" alt="Khun Camp" width="140" height="46" loading="eager"></a>
+      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="nav-cta">Book a Call</a>
+    </div>
+    <div class="sub-nav">
+      <a href="/" class="active">Who We Are</a>
+      <span class="sub-nav-div"></span>
+      <a href="/evidence/">Evidence</a>
+      <span class="sub-nav-div"></span>
+      <a href="/events/">Events</a>
+      <span class="sub-nav-div"></span>
+      <a href="/founder/">Founder</a>
+      <span class="sub-nav-div"></span>
+      <a href="/offer/">The Offer</a>
+    </div>
   </nav>
 
-  <!-- SUB NAV — desktop only -->
-  <div id="sub-nav">
-    <div class="sub-nav-inner">
-      <a href="/"              class="sub-nav-link active">Who We Are</a>
-      <span class="sub-nav-div"></span>
-      <a href="/evidence/"     class="sub-nav-link">Evidence</a>
-      <span class="sub-nav-div"></span>
-      <a href="/events/"       class="sub-nav-link">Events</a>
-      <span class="sub-nav-div"></span>
-      <a href="/founder/"      class="sub-nav-link">Founder</a>
-      <span class="sub-nav-div"></span>
-      <a href="/offer/"        class="sub-nav-link">The Offer</a>
+  <!-- HERO -->
+  <div class="hero">
+    <span class="eyebrow">Content growth company</span>
+    <h1>We turn content<br>into customers.</h1>
+    <p class="hero-sub">Strategy, scripts, filming direction, editing, posting, and community replies. One team, one monthly fee, no scrambling on a Sunday night for something to put up.</p>
+    <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-gold">Book a Call</a>
+  </div>
+
+  <!-- WHAT WE TAKE OFF YOUR DESK -->
+  <div class="section">
+    <p class="section-label">What we take off your desk</p>
+    <div class="desk-grid">
+      <div class="desk-item">
+        <h3>Strategy and content pillars</h3>
+        <p>We work out what you should be talking about, then build a 90-day plan around it. Your audience, your offer, your angles, researched and mapped before anything gets made.</p>
+      </div>
+      <div class="desk-item">
+        <h3>Scripts and filming direction</h3>
+        <p>You get the shot list and the words. If you have never filmed before, we walk you through it on a call first. No wasted weekends on footage that cannot be used.</p>
+      </div>
+      <div class="desk-item">
+        <h3>Editing and production</h3>
+        <p>Footage comes back finished, cut to your look, captioned, ready to go out. Every piece follows your brand rules without needing a brief each round.</p>
+      </div>
+      <div class="desk-item">
+        <h3>Posting and scheduling</h3>
+        <p>Everything goes out on time across your platforms. You do not touch a scheduler.</p>
+      </div>
+      <div class="desk-item desk-item-wide">
+        <h3>Community replies</h3>
+        <p>Someone answers comments and DMs in your voice, not a corporate one. We build a reply guide in month one so responses sound like you, because they are based on how you actually write.</p>
+      </div>
     </div>
   </div>
 
-  <!-- MOBILE MENU — hidden on desktop -->
-  <div id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-links">
-      <a href="#hero"         class="mob-menu-link" tabindex="-1"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
-      <a href="#who-we-serve" class="mob-menu-link" tabindex="-1"><span class="mob-num">02</span><span class="mob-name">Who We Serve</span><div class="mob-bar"></div></a>
-      <a href="#audit"        class="mob-menu-link" tabindex="-1"><span class="mob-num">03</span><span class="mob-name">Pricing</span><div class="mob-bar"></div></a>
-      <a href="#problem"      class="mob-menu-link" tabindex="-1"><span class="mob-num">04</span><span class="mob-name">Problem</span><div class="mob-bar"></div></a>
-      <a href="#solution"     class="mob-menu-link" tabindex="-1"><span class="mob-num">05</span><span class="mob-name">System</span><div class="mob-bar"></div></a>
-      <a href="#how-it-works" class="mob-menu-link" tabindex="-1"><span class="mob-num">06</span><span class="mob-name">Process</span><div class="mob-bar"></div></a>
-      <a href="#deliverables" class="mob-menu-link" tabindex="-1"><span class="mob-num">07</span><span class="mob-name">Deliverables</span><div class="mob-bar"></div></a>
-      <a href="#proof"        class="mob-menu-link" tabindex="-1"><span class="mob-num">08</span><span class="mob-name">Proof</span><div class="mob-bar"></div></a>
-      <a href="#testimonials" class="mob-menu-link" tabindex="-1"><span class="mob-num">09</span><span class="mob-name">Testimonials</span><div class="mob-bar"></div></a>
-      <a href="#faq"          class="mob-menu-link" tabindex="-1"><span class="mob-num">10</span><span class="mob-name">FAQ</span><div class="mob-bar"></div></a>
-      <a href="blog.html"     class="mob-menu-link" tabindex="-1"><span class="mob-num">11</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
-      <a href="events.html"   class="mob-menu-link" tabindex="-1"><span class="mob-num">12</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
-      <a href="program.html"  class="mob-menu-link" tabindex="-1"><span class="mob-num">13</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
-    </div>
-    <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="mob-menu-cta" tabindex="-1">Book a Call →</a>
-  </div>
-</header>
-
-  <!-- MAIN -->
-  <main>
-
-<!-- HERO -->
-<section id="hero" class="spotlight-section hero-full">
-  <div class="spotlight-bg"></div>
-  <div class="container hero-full-content reveal-up">
-    <p class="hero-eyebrow">CONTENT GROWTH COMPANY</p>
-    <h1 class="gold-gradient-text">We Turn Content<br>Into Customers.</h1>
-    <p class="hero-subtext">Khun Camp is a content growth company. We partner with businesses and creators using content, AI, and distribution to bring the right customers to the right people.</p>
-    <div class="hero-cta-group">
-      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary btn-lg magnetic-item">Book a Call</a>
-      <a href="#who-we-serve" class="btn-ghost magnetic-item">See How It Works</a>
-      <a href="program.html" class="btn-ghost-gold magnetic-item">Creator Development Program →</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-number">500M+</span>
-        <span class="hero-stat-label">Total Views Generated</span>
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <p class="section-label">How it works</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>We learn your brand properly</h3>
+        <p>One recorded call, real questions, no generic form. Voice guide and audience avatar come back for sign-off before anything gets made.</p>
       </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-number">3M+</span>
-        <span class="hero-stat-label">Subscribers Gained</span>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>We build the system</h3>
+        <p>Pillars, templates, the 90-day plan, analytics tracking. This is the one-time build everything else runs on.</p>
       </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-number">3.5x</span>
-        <span class="hero-stat-label">Average Growth Rate</span>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>We run it every month</h3>
+        <p>Content, report, and a call to decide what changes next. You film when we ask. We handle everything else.</p>
       </div>
     </div>
   </div>
-</section>
 
-<!-- WHO WE SERVE -->
-<section id="who-we-serve">
-  <div class="container">
-    <div class="section-header reveal-up text-center">
-      <p class="section-eyebrow">WHO WE WORK WITH</p>
-      <h2>Two Lanes.<br><span class="gold-gradient-text">One Engine.</span></h2>
-      <p class="section-subtext">Whether you're a creator building a personal brand or a business trying to attract the right buyers. We run the same system: content, distribution, and results.</p>
-    </div>
-    <div class="lanes-grid reveal-up">
-      <!-- Lane 1: Creators -->
-      <div class="lane-card">
-        <div class="lane-icon">🎬</div>
-        <p class="lane-eyebrow">FOR CREATORS</p>
-        <h3>YouTube Growth Systems</h3>
-        <p>You're posting but not growing. We build the strategy, team, and infrastructure behind your channel so you can focus on hitting record.</p>
-        <ul class="lane-list">
-          <li><span class="text-gold">→</span> Done-for-you growth infrastructure</li>
-          <li><span class="text-gold">→</span> Editors, thumbnails & SEO</li>
-          <li><span class="text-gold">→</span> Weekly strategy & performance reviews</li>
-        </ul>
-        <a href="#audit" class="btn-ghost-gold">See Audit Tiers</a>
+  <!-- PROOF -->
+  <div class="section">
+    <p class="section-label">Proof</p>
+    <h2 class="section-h2">What we can back</h2>
+    <p class="section-intro">No borrowed credibility, no inflated numbers. Here is what is real and on the record.</p>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <p class="proof-item-label">Shawn's channel</p>
+        <p>47,000 subscribers built from scratch. Travel and lifestyle content, filmed and grown from Southeast Asia. This is Shawn's own channel, not a client result.</p>
       </div>
-      <!-- Lane 2: Businesses -->
-      <div class="lane-card lane-card--accent">
-        <div class="lane-icon">🏢</div>
-        <p class="lane-eyebrow">FOR BUSINESSES</p>
-        <h3>We Bring You the Right Customers</h3>
-        <p>You have a great business, but the right buyers aren't finding you, or they're not converting. We fix that. We're not a vendor. We're a growth partner focused on one thing: bringing you customers through content and distribution.</p>
-        <ul class="lane-list">
-          <li><span class="text-gold">→</span> Content strategy built around your ideal buyer</li>
-          <li><span class="text-gold">→</span> Distribution that reaches the right audience</li>
-          <li><span class="text-gold">→</span> Systems that turn attention into real revenue</li>
-        </ul>
-        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-ghost-gold">Book a Discovery Call</a>
+      <div class="proof-item">
+        <p class="proof-item-label">Clients on record</p>
+        <p>Videography and content production delivered for Callie Johnson, M Jay, Jamrell Buynay, and Markos. Real work, real people, on file.</p>
+      </div>
+      <div class="proof-item">
+        <p class="proof-item-label">Industry data</p>
+        <p>78% of businesses say phone calls are their highest-quality inbound lead. 82% of customers still prefer to call when making a purchase decision.</p>
+        <small>Source: CallRail State of the Call 2023</small>
+      </div>
+      <div class="proof-item">
+        <p class="proof-item-label">Operating since 2022</p>
+        <p>Built and run out of Southeast Asia. Shawn is based in Da Nang. The team is distributed and has been delivering for three years.</p>
       </div>
     </div>
   </div>
-</section>
 
-
-<!-- PRICING -->
-<section id="audit">
-  <div class="container">
-
-    <div class="section-header reveal-up text-center">
-      <p class="section-eyebrow">SERVICES & PRICING</p>
-      <h2>Two Tracks.<br><span class="gold-gradient-text">One Decision.</span></h2>
-      <p class="section-subtext">Whether you're a business owner installing AI into your operations or a creator turning content into customers, choose the track that fits where you are right now.</p>
-    </div>
-
-    <!-- ── TRACK 1: AI SYSTEMS INSTALLATION ───────────────────────── -->
-    <div class="pricing-track reveal-up">
-      <div class="pricing-track-header">
-        <div class="pricing-track-label">
-          <span class="pricing-track-tag">FOR BUSINESS OWNERS</span>
-          <h3>AI Systems <span class="gold-gradient-text">Installation</span></h3>
-          <p class="pricing-track-sub">For local operators, agencies, consultants, clinics, and service providers who want AI working inside their business, not just on their phone.</p>
-        </div>
-      </div>
-
-      <div class="audit-grid" id="ai-grid">
-
-        <!-- Card 1 — Live Installation Seat -->
-        <div class="audit-card card-gold">
-          <p class="audit-tier-label">Live Installation</p>
-          <p class="audit-price">$899</p>
-          <p class="audit-price-sub">One-time</p>
-          <div class="audit-divider"></div>
-          <p class="audit-product-name">Live Installation Seat</p>
-          <ul class="audit-features">
-            <li><span class="kw">Claude Code</span> setup &amp; training</li>
-            <li><span class="kw">Wispr Flow</span> setup &amp; training</li>
-            <li><span class="kw">Gamma</span> setup &amp; training</li>
-            <li><span class="kw">Live business workflow</span> mapping</li>
-            <li><span class="kw">First AI workflow</span> direction</li>
-            <li><span class="kw">10-day implementation</span> support</li>
-          </ul>
-          <p class="audit-card-note">Bring your laptop. Leave with Claude Code, Wispr Flow, and Gamma plus your first AI business workflow installed.</p>
-          <a href="https://buy.stripe.com/cNicN4fVacRF6gIbBB7ss0i" target="_blank" class="btn-ghost-gold audit-card-cta">Reserve Live Installation Seat $899</a>
-        </div>
-
-        <!-- Card 2 — Full Implementation Bundle — Featured -->
-        <div class="audit-card audit-card--featured card-gold">
-          <div class="audit-badge">Best Value</div>
-          <p class="audit-tier-label">Full Bundle</p>
-          <p class="audit-price">$1,499</p>
-          <p class="audit-price-sub">One-time</p>
-          <div class="audit-divider"></div>
-          <p class="audit-product-name">Full Implementation Bundle</p>
-          <ul class="audit-features">
-            <li><span class="kw">Everything</span> in Live Installation Seat</li>
-            <li><span class="kw">Full course materials</span> included</li>
-            <li><span class="kw">AI business command center</span> templates</li>
-            <li><span class="kw">10-day</span> bounded implementation support</li>
-          </ul>
-          <p class="audit-card-note">The live install plus course materials, templates, and 10 days of support so the setup turns into real usage.</p>
-          <a href="https://buy.stripe.com/fZu9AS6kA7xlfRifRR7ss0k" target="_blank" class="btn-primary audit-card-cta">Get Full Implementation Bundle $1,499</a>
-        </div>
-
-        <!-- Card 3 — Team Enablement Initial Setup -->
-        <div class="audit-card card-gold">
-          <p class="audit-tier-label">Initial Setup</p>
-          <p class="audit-price">$3,999</p>
-          <p class="audit-price-sub">One-time</p>
-          <div class="audit-divider"></div>
-          <p class="audit-product-name">Team Enablement Initial Setup</p>
-          <ul class="audit-features">
-            <li><span class="kw">Full team</span> AI installation</li>
-            <li><span class="kw">Workflow</span> mapping &amp; setup</li>
-            <li><span class="kw">Prompt library</span> built for your team</li>
-            <li><span class="kw">Staff training</span> included</li>
-            <li><span class="kw">System rollout</span> planning</li>
-          </ul>
-          <p class="audit-card-note">The foundation. Get your team set up, trained, and running on AI before the retainer begins.</p>
-          <a href="https://buy.stripe.com/3cI9AS8sIg3RfRi6hh7ss0H" target="_blank" class="btn-ghost-gold audit-card-cta">Start Team Enablement Setup $3,999</a>
-        </div>
-
-      </div>
-
-      <!-- Hidden AI cards -->
-      <div class="pricing-hidden-cards" id="ai-hidden" style="display:none;">
-        <div class="audit-grid">
-
-          <!-- Hidden: Public Live Seat -->
-<!-- CARD 4 HIDDEN: $999 Future Public Price — unpublished per SOP 2026-05-19. Re-add with Starts [date] pill when ready. -->
-
-          <!-- Hidden: Team Enablement One-Time -->
-          <div class="audit-card card-gold">
-            <p class="audit-tier-label">Team Enablement</p>
-            <p class="audit-price">$5,000</p>
-            <p class="audit-price-sub">One-time</p>
-            <div class="audit-divider"></div>
-            <p class="audit-product-name">AI Systems Team Enablement</p>
-            <ul class="audit-features">
-              <li><span class="kw">Staff training</span> included</li>
-              <li><span class="kw">Team workflow</span> support</li>
-              <li><span class="kw">Implementation</span> guidance</li>
-              <li><span class="kw">Adoption</span> support</li>
-              <li><span class="kw">System rollout</span> planning</li>
-            </ul>
-            <p class="audit-card-note">Full team AI enablement: drift audits, prompt updates, and new workflows rolled out across your team. One flat investment, no ongoing commitment.</p>
-            <a href="https://buy.stripe.com/8x27sKcIY4l948Aaxx7ss0I" target="_blank" class="btn-ghost-gold audit-card-cta">Start Team Enablement $5,000</a>
+  <!-- TESTIMONIALS -->
+  <div class="section">
+    <p class="section-label">What people say</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-quote">"I worked with Shawn as the videographer for my workshop at Da Nang Nomad Fest. The footage and audio turned out beautifully and really captured the feeling of the event. Professional, relaxed, and very easy to work with."</p>
+        <div class="testi-person">
+          <img src="images/callie.jpg" alt="Callie Johnson" class="testi-avatar" loading="lazy">
+          <div>
+            <div class="testi-name">Callie Johnson</div>
+            <div class="testi-role">Founder, The Resonance Container</div>
           </div>
-
-          <!-- Hidden: Owner Support Retainer -->
-          <div class="audit-card card-teal">
-            <p class="audit-tier-label">Owner Retainer</p>
-            <p class="audit-price">$1,499<span class="mo-suffix">/mo</span></p>
-            <span class="monthly-pill">Monthly</span>
-            <div class="audit-divider"></div>
-            <p class="audit-product-name">AI Systems Owner Support</p>
-            <ul class="audit-features">
-              <li><span class="kw">Owner-level AI usage</span> support</li>
-              <li><span class="kw">Workflow refinement</span> included</li>
-              <li><span class="kw">Tool recommendations</span></li>
-              <li><span class="kw">Light implementation</span> guidance</li>
-            </ul>
-            <p class="audit-card-note">Keep Khun Camp close as your AI support layer after the installation.</p>
-            
-            <a href="https://buy.stripe.com/aFacN4gZedVJbB25dd7ss0J" target="_blank" class="btn-ghost-gold audit-card-cta">Start Owner Support $1,499/mo</a>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"The interview with Khun Camp was a standout moment at Nomad Fest. The questions were thoughtful and grounding, helping me reconnect with my purpose and reflect on why I do what I do."</p>
+        <div class="testi-person">
+          <img src="images/Erosa.jpg" alt="M Jay" class="testi-avatar" loading="lazy">
+          <div>
+            <div class="testi-name">M Jay</div>
+            <div class="testi-role">Founder, The Erosa</div>
           </div>
-
         </div>
       </div>
-
-      <div class="pricing-see-all reveal-up">
-        <button class="btn-see-all" id="ai-see-all-btn" onclick="togglePricing('ai')">
-          See All AI Systems Pricing <span class="see-all-arrow" id="ai-arrow">↓</span>
-        </button>
-      </div>
-
-    </div>
-    <!-- /Track 1 -->
-
-    <div class="pricing-track-divider"></div>
-
-    <!-- ── TRACK 2: CONTENT CREATOR GROWTH ────────────────────────── -->
-    <div class="pricing-track reveal-up">
-      <div class="pricing-track-header">
-        <div class="pricing-track-label">
-          <span class="pricing-track-tag">FOR CREATORS & COACHES</span>
-          <h3>Content Creator <span class="gold-gradient-text">Growth</span></h3>
-          <p class="pricing-track-sub">For YouTubers, coaches, educators, personal brands, and content-led entrepreneurs who want to turn content into consistent leads and revenue.</p>
-        </div>
-      </div>
-
-      <!-- Monthly Retainer Tiers — all 3 visible together -->
-      <div class="audit-grid audit-grid--monthly" id="creator-grid">
-
-        <!-- Card 1 — Creator Growth Engine -->
-        <div class="audit-card card-teal">
-          <p class="audit-tier-label">Monthly Retainer</p>
-          <p class="audit-price">$2,500<span class="mo-suffix">/mo</span></p>
-          <span class="monthly-pill">Monthly</span>
-          <div class="audit-divider"></div>
-          <p class="audit-product-name">Creator Growth Engine</p>
-          <ul class="audit-features">
-            <li><span class="kw">Monthly creator growth</span> support</li>
-            <li><span class="kw">Content-to-customer</span> guidance</li>
-            <li><span class="kw">CTA testing</span> each month</li>
-            <li><span class="kw">Distribution</span> review</li>
-            <li><span class="kw">Performance</span> direction</li>
-          </ul>
-          <p class="audit-card-note">Monthly creator growth support without pretending it includes a full production team.</p>
-          <a href="https://buy.stripe.com/14A4gy38o4l98oQ6hh7ss0y" target="_blank" class="btn-ghost-gold audit-card-cta">Start Creator Growth Engine $2,500/mo</a>
-        </div>
-
-        <!-- Card 2 — Creator Growth Engine Plus — MOST POPULAR -->
-        <div class="audit-card audit-card--featured card-teal">
-          <div class="audit-badge">Most Popular</div>
-          <p class="audit-tier-label">Engine Plus</p>
-          <p class="audit-price">$2,999<span class="mo-suffix">/mo</span></p>
-          <span class="monthly-pill">Monthly</span>
-          <div class="audit-divider"></div>
-          <p class="audit-product-name">Creator Growth Engine Plus</p>
-          <ul class="audit-features">
-            <li><span class="kw">Deeper strategy</span> each month</li>
-            <li><span class="kw">Content calendar</span> direction</li>
-            <li><span class="kw">Funnel</span> improvements</li>
-            <li><span class="kw">Reporting</span> included</li>
-            <li>Limited production coordination</li>
-          </ul>
-          <p class="audit-card-note">For monetized creators who need deeper implementation across content, offer, and funnel.</p>
-          <a href="https://buy.stripe.com/8x2bJ0cIY2d1cF6axx7ss0F" target="_blank" class="btn-primary audit-card-cta">Start Creator Growth Engine Plus $2,999/mo</a>
-        </div>
-
-        <!-- Card 3 — Creator Growth Team Engine -->
-        <div class="audit-card card-purple">
-          <p class="audit-tier-label">Team Engine</p>
-          <p class="audit-price-sub" style="margin-bottom:2px;">Starts at</p>
-          <p class="audit-price">$4,999<span class="mo-suffix">/mo</span></p>
-          <span class="monthly-pill">Monthly</span>
-          <div class="audit-divider"></div>
-          <p class="audit-product-name">Creator Growth Team Engine</p>
-          <ul class="audit-features">
-            <li><span class="kw">Production coordination</span> included</li>
-            <li><span class="kw">Team workflows</span> built</li>
-            <li><span class="kw">Content systems</span> managed</li>
-            <li><span class="kw">Reporting</span> delivered</li>
-            <li><span class="kw">Ongoing multi-platform</span> implementation</li>
-          </ul>
-          <p class="audit-card-note">For creators with teams, editors, content systems, and multi-platform growth needs.</p>
-          <a href="https://buy.stripe.com/6oUbJ0aAQ9Ft9sUfRR7ss0G" target="_blank" class="btn-ghost-gold audit-card-cta">Apply For Creator Growth Team Engine</a>
-        </div>
-
-      </div>
-
-      <!-- Hidden Creator cards — one-time tiers -->
-      <div class="pricing-hidden-cards" id="creator-hidden" style="display:none;">
-        <div class="audit-grid">
-
-          <!-- Hidden: Diagnostic -->
-          <div class="audit-card card-slate">
-            <p class="audit-tier-label">Entry Diagnostic</p>
-            <p class="audit-price">$499</p>
-            <p class="audit-price-sub">One-time</p>
-            <div class="audit-divider"></div>
-            <p class="audit-product-name">Creator Growth Diagnostic</p>
-            <ul class="audit-features">
-              <li><span class="kw">Content &amp; channel</span> review</li>
-              <li><span class="kw">Offer and CTA</span> check</li>
-              <li><span class="kw">Top 3 bottlenecks</span> identified</li>
-              <li><span class="kw">Quick-win</span> action list</li>
-              <li><span class="kw">Written summary</span> delivered</li>
-            </ul>
-            <p class="audit-card-note">Find out why your content is not turning into stronger growth, leads, or revenue.</p>
-            <a href="https://buy.stripe.com/eVqfZggZeg3R34w9tt7ss0n" target="_blank" class="btn-ghost-gold audit-card-cta">Book Creator Growth Diagnostic $499</a>
+      <div class="testi-card">
+        <p class="testi-quote">"Shawn brought a powerful mix of creativity, initiative, and leadership to the content team at Da Nang Nomad Fest. He didn't just contribute high-quality content himself but actively elevated the overall output. Proactive, solution-oriented, and a fantastic collaborator."</p>
+        <div class="testi-person">
+          <div class="testi-avatar-initials">M</div>
+          <div>
+            <div class="testi-name">Markos</div>
+            <div class="testi-role">Content creator, 29K subscribers</div>
           </div>
-
-          <!-- Hidden: Deep Dive -->
-          <div class="audit-card card-gold">
-            <p class="audit-tier-label">Full Teardown</p>
-            <p class="audit-price">$1,499</p>
-            <p class="audit-price-sub">One-time</p>
-            <div class="audit-divider"></div>
-            <p class="audit-product-name">Creator Growth Deep Dive</p>
-            <ul class="audit-features">
-              <li><span class="kw">Channel and content</span> audit</li>
-              <li><span class="kw">Offer and audience</span> alignment review</li>
-              <li><span class="kw">Content-to-customer funnel</span> map</li>
-              <li><span class="kw">Clip and CTA</span> opportunity map</li>
-              <li>Priority roadmap</li>
-              <li>60-minute debrief call</li>
-            </ul>
-            <p class="audit-card-note">A full teardown of your channel, offer, CTA, and content-to-customer path.</p>
-            <a href="https://buy.stripe.com/aFa6oG7oE7xlbB2dJJ7ss0r" target="_blank" class="btn-ghost-gold audit-card-cta">Book Creator Growth Deep Dive $1,499</a>
-          </div>
-
-          <!-- Hidden: Implementation Sprint -->
-          <div class="audit-card card-gold">
-            <p class="audit-tier-label">Implementation</p>
-            <p class="audit-price">$3,500</p>
-            <p class="audit-price-sub">One-time</p>
-            <div class="audit-divider"></div>
-            <p class="audit-product-name">Creator Growth Implementation Sprint</p>
-            <ul class="audit-features">
-              <li><span class="kw">Everything</span> in Creator Growth Deep Dive</li>
-              <li><span class="kw">Clip strategy</span> included</li>
-              <li><span class="kw">CTA map</span> built</li>
-              <li><span class="kw">Funnel</span> recommendations</li>
-              <li><span class="kw">Distribution</span> priorities mapped</li>
-              <li>30-day implementation plan</li>
-            </ul>
-            <p class="audit-card-note">Turn the diagnosis into a creator growth system and 30-day action plan.</p>
-            <a href="https://buy.stripe.com/eVqbJ04cscRF48A3557ss0t" target="_blank" class="btn-ghost-gold audit-card-cta">Book Creator Growth Implementation Sprint $3,500</a>
-          </div>
-
-          <!-- Hidden: VIP Sprint -->
-          <div class="audit-card card-gold">
-            <p class="audit-tier-label">VIP Sprint</p>
-            <p class="audit-price">$5,000</p>
-            <p class="audit-price-sub">One-time</p>
-            <div class="audit-divider"></div>
-            <p class="audit-product-name">Creator Growth VIP Sprint</p>
-            <ul class="audit-features">
-              <li><span class="kw">Deeper strategy</span> session</li>
-              <li><span class="kw">Implementation planning</span> included</li>
-              <li><span class="kw">Content-to-customer system</span> design</li>
-              <li><span class="kw">Priority support</span> throughout</li>
-            </ul>
-            <p class="audit-card-note">For monetized creators and creator-founders who need a sharper growth system now.</p>
-            <a href="https://buy.stripe.com/fZu14mgZe5pd0WodJJ7ss0w" target="_blank" class="btn-ghost-gold audit-card-cta">Book Creator Growth VIP Sprint $5,000</a>
-          </div>
-
         </div>
       </div>
-
-      <div class="pricing-see-all reveal-up">
-        <button class="btn-see-all" id="creator-see-all-btn" onclick="togglePricing('creator')">
-          See All Creator Growth Pricing <span class="see-all-arrow" id="creator-arrow">↓</span>
-        </button>
-      </div>
-
-    </div>
-    <!-- /Track 2 -->
-
-    <!-- ADD-ON STRIP -->
-    <div class="pricing-track-divider"></div>
-    <div class="reveal-up" style="text-align:center; margin-bottom: 2.5rem;">
-      <span class="pricing-track-tag">ADD-ON</span>
-      <div style="display:flex; align-items:center; justify-content:center; gap: 1.5rem; flex-wrap:wrap; margin-top: 1.25rem; padding: 1.5rem 2rem; border: 1px solid rgba(201,168,76,0.2); border-radius: 16px; background: rgba(201,168,76,0.04);">
-        <div style="text-align:left;">
-          <p style="font-size:1rem; font-weight:700; margin:0 0 0.25rem; color: var(--gold-primary, #c9a84c);">AI Prompt Pack</p>
-          <p style="font-size:0.875rem; color: var(--text-dim, #999); margin:0;">Ready-to-use prompts for content, strategy & business workflows.</p>
-        </div>
-        <div style="display:flex; align-items:center; gap:1rem; flex-shrink:0;">
-          <span style="font-size:1.5rem; font-weight:800; color:#fff;">$50</span>
-          <a href="https://buy.stripe.com/4gMfZg6kAeZNcF66hh7ss0B" target="_blank" class="btn-ghost-gold magnetic-item" style="white-space:nowrap;">Get the Prompt Pack →</a>
+      <div class="testi-card">
+        <p class="testi-quote">"Shawn has shown great leadership and initiative. He's definitely someone I'd like to have on my team."</p>
+        <div class="testi-person">
+          <div class="testi-avatar-initials">JB</div>
+          <div>
+            <div class="testi-name">Jamrell Buynay</div>
+            <div class="testi-role">Host and segment producer, Filipinos of Thailand</div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="audit-cta reveal-up">
-      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary btn-lg magnetic-item">Book a Call</a>
-      <p class="audit-cta-note">Not sure which track fits? <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="text-gold">Book a free 15-min call</a> and we'll point you in the right direction.</p>
-    </div>
-
   </div>
-</section>
 
-<script>
-  function togglePricing(track) {
-    var hidden = document.getElementById(track + '-hidden');
-    var btn = document.getElementById(track + '-see-all-btn');
-    var arrow = document.getElementById(track + '-arrow');
-    var isOpen = hidden.style.display !== 'none';
-
-    if (isOpen) {
-      hidden.style.display = 'none';
-      btn.classList.remove('btn-see-all--open');
-      arrow.textContent = '↓';
-      btn.innerHTML = btn.innerHTML.replace('See Less', track === 'ai' ? 'See All AI Systems Pricing' : 'See All Creator Growth Pricing').replace('↑', '↓');
-    } else {
-      hidden.style.display = 'block';
-      btn.classList.add('btn-see-all--open');
-    }
-
-    // Re-render button text cleanly
-    var label = track === 'ai' ? 'AI Systems' : 'Creator Growth';
-    if (!isOpen) {
-      btn.innerHTML = 'See Less ' + label + ' Pricing <span class="see-all-arrow" id="' + track + '-arrow">↑</span>';
-    } else {
-      btn.innerHTML = 'See All ' + label + ' Pricing <span class="see-all-arrow" id="' + track + '-arrow">↓</span>';
-    }
-  }
-</script>
-
-    <!-- PROBLEM -->
-    <section id="problem">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <h2>The Problem<br><span class="gold-gradient-text">We Solve.</span></h2>
-        </div>
-
-        <!-- Creators Problem -->
-        <div class="problem-audience-label reveal-up">
-          <span class="problem-tag">FOR CREATORS</span>
-          <p class="problem-audience-sub">You are posting. The growth just isn't showing up.</p>
-        </div>
-        <div class="problem-grid">
-          <div class="system-card reveal-up">
-            <span class="card-icon">✕</span>
-            <h3>The Growth Stall</h3>
-            <p>Videos go live and plateau at a few hundred views. You're posting, but the algorithm isn't catching your content.</p>
-          </div>
-          <div class="system-card reveal-up">
-            <span class="card-icon">✕</span>
-            <h3>Reactive Guesswork</h3>
-            <p>You're guessing titles and thumbnails on the day of upload. There is no predictive data behind your creative choices.</p>
-          </div>
-          <div class="system-card reveal-up">
-            <span class="card-icon">✕</span>
-            <h3>The Solo Grind</h3>
-            <p>You are the scriptwriter, editor, and manager. You've built a job, not a channel. It's not a system; it's a burden.</p>
+  <!-- PRICING -->
+  <div class="section">
+    <p class="section-label">The offer</p>
+    <div class="offer-card">
+      <span class="offer-card-badge">One offer. Full service.</span>
+      <div class="offer-inner">
+        <div class="offer-left">
+          <h2>Content operating system</h2>
+          <p>We build your content system from the ground up, then run it every month. One team, one point of contact. Your channel actually grows.</p>
+          <div class="offer-cta">
+            <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-gold">Book a Call</a>
+            <p class="offer-note">We map out your channel on the call. No pitch until the math works.</p>
           </div>
         </div>
-
-        <!-- Businesses Problem -->
-        <div class="problem-audience-label reveal-up" style="margin-top: 4rem;">
-          <span class="problem-tag problem-tag--gold">FOR BUSINESSES</span>
-          <p class="problem-audience-sub">You have a great business. The wrong people are finding you.</p>
-        </div>
-        <div class="problem-grid">
-          <div class="system-card reveal-up">
-            <span class="card-icon">✕</span>
-            <h3>Invisible to the Right Buyers</h3>
-            <p>You're getting traffic, but it's not converting. The people who would actually pay aren't the ones finding you.</p>
+        <div class="offer-prices">
+          <div class="price-row">
+            <span class="price-amount">$3,000</span>
+            <span class="price-label">Content operating system build, one-time</span>
+            <a href="https://buy.stripe.com/00w5kCeR6dVJgVmaxx7ss1u" class="price-pay">Pay now &rarr;</a>
           </div>
-          <div class="system-card reveal-up">
-            <span class="card-icon">✕</span>
-            <h3>Content Without Direction</h3>
-            <p>You're producing content or not at all but there's no system behind it. No strategy, no distribution, no measurable outcome.</p>
-          </div>
-          <div class="system-card reveal-up">
-            <span class="card-icon">✕</span>
-            <h3>Attention That Doesn't Convert</h3>
-            <p>You have a product or service worth buying. But the gap between awareness and revenue hasn't been bridged. That's exactly what we fix.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- REFRAME -->
-    <section id="reframe">
-      <div class="container text-center">
-        <div class="reveal-up">
-          <h2>It's not a content problem.<br><span class="gold-gradient-text">It's a system problem.</span></h2>
-          <p class="reframe-body">The creators who scale past 50K and the businesses that consistently attract the right buyers share one thing: a repeatable system behind their content. Not more effort. Better infrastructure.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOLUTION -->
-    <section id="solution">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <p class="section-eyebrow">THE SYSTEM</p>
-          <h2>The Khun Camp<br><span class="gold-gradient-text">Infrastructure</span></h2>
-          <p>One creator at the centre. A full team executing around you.</p>
-        </div>
-        <div class="solution-diagram-wrapper reveal-up">
-          <svg id="solution-diagram" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-label="Khun Camp growth system diagram">
-            <!-- Connection lines -->
-            <line class="node-line" x1="300" y1="200" x2="300" y2="60" />
-            <line class="node-line" x1="300" y1="200" x2="490" y2="130" />
-            <line class="node-line" x1="300" y1="200" x2="490" y2="280" />
-            <line class="node-line" x1="300" y1="200" x2="300" y2="340" />
-            <line class="node-line" x1="300" y1="200" x2="110" y2="280" />
-            <line class="node-line" x1="300" y1="200" x2="110" y2="130" />
-            <!-- Centre node -->
-            <circle class="node-center" cx="300" cy="200" r="50" />
-            <text class="node-label node-label-center" x="300" y="196" text-anchor="middle">CREATOR</text>
-            <text class="node-label node-label-center-sub" x="300" y="212" text-anchor="middle">YOU</text>
-            <!-- Satellite nodes -->
-            <circle class="node-satellite" cx="300" cy="60" r="36" />
-            <text class="node-label" x="300" y="56" text-anchor="middle">STRATEGY</text>
-            <text class="node-label-sub" x="300" y="70" text-anchor="middle">WEEKLY</text>
-            <circle class="node-satellite" cx="490" cy="130" r="36" />
-            <text class="node-label" x="490" y="126" text-anchor="middle">SEO</text>
-            <text class="node-label-sub" x="490" y="140" text-anchor="middle">TRAFFIC</text>
-            <circle class="node-satellite" cx="490" cy="280" r="36" />
-            <text class="node-label" x="490" y="276" text-anchor="middle">EDITORS</text>
-            <text class="node-label-sub" x="490" y="290" text-anchor="middle">QUALITY</text>
-            <circle class="node-satellite" cx="300" cy="340" r="36" />
-            <text class="node-label" x="300" y="336" text-anchor="middle">THUMBNAILS</text>
-            <text class="node-label-sub" x="300" y="350" text-anchor="middle">CTR</text>
-            <circle class="node-satellite" cx="110" cy="280" r="36" />
-            <text class="node-label" x="110" y="276" text-anchor="middle">AI</text>
-            <text class="node-label-sub" x="110" y="290" text-anchor="middle">WORKFLOWS</text>
-            <circle class="node-satellite" cx="110" cy="130" r="36" />
-            <text class="node-label" x="110" y="126" text-anchor="middle">SYSTEM</text>
-            <text class="node-label-sub" x="110" y="140" text-anchor="middle">CALENDAR</text>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section id="how-it-works">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <p class="section-eyebrow">THE PROCESS</p>
-          <h2>How Khun Camp <span class="gold-gradient-text">Works</span></h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-step reveal-up" data-step="01">
-            <div class="step-number gold-gradient-text">01</div>
-            <div class="step-connector"></div>
-            <div class="step-content">
-              <h3>Content Audit</h3>
-              <p>We break down your channel, library, and data to find exactly what's blocking your growth. You receive a prioritised action plan starting from $499.</p>
-            </div>
-          </div>
-          <div class="timeline-step reveal-up" data-step="02">
-            <div class="step-number gold-gradient-text">02</div>
-            <div class="step-connector"></div>
-            <div class="step-content">
-              <h3>Join the Camp</h3>
-              <p>We assemble your core team: editors, thumbnail designers, and SEO specialists, to design your entire growth system around your channel goals.</p>
-            </div>
-          </div>
-          <div class="timeline-step reveal-up" data-step="03">
-            <div class="step-number gold-gradient-text">03</div>
-            <div class="step-connector"></div>
-            <div class="step-content">
-              <h3>Scale</h3>
-              <p>You publish. Your team handles the rest while we watch the numbers and iterate every week. The system compounds.</p>
-            </div>
+          <div class="price-div"></div>
+          <div class="price-row">
+            <span class="price-amount">$1,500</span>
+            <span class="price-label">Growth retainer, per month</span>
+            <a href="https://buy.stripe.com/6oU6oGcIYcRF8oQ2117ss1v" class="price-pay">Subscribe &rarr;</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- DELIVERABLES -->
-    <section id="deliverables">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <p class="section-eyebrow">WHAT YOU GET</p>
-          <h2>Inside the <span class="gold-gradient-text">Engineering Lab</span></h2>
-        </div>
-        <div class="bento-grid">
-          <div class="bento-item reveal-up bento-span-2">
-            <h3 class="gold-gradient-text bento-h3">Weekly Strategy Guidance</h3>
-            <p>Direct access to high-level strategy. We hold weekly calls or async breakdowns focused on the Three Pillars: Titles, Hooks, and Offers.</p>
-          </div>
-          <div class="bento-item reveal-up">
-            <h3 class="gold-gradient-text bento-h3">Full Content System</h3>
-            <p>A mapped content calendar and pillars designed for sustainable, compounding growth.</p>
-          </div>
-          <div class="bento-item reveal-up">
-            <h3 class="gold-gradient-text bento-h3">Editor & Thumbnail Direction</h3>
-            <p>Creative briefs and feedback loops that ensure quality rises every month.</p>
-          </div>
-          <div class="bento-item reveal-up">
-            <h3 class="gold-gradient-text bento-h3">SEO & Optimisation</h3>
-            <p>Upload checklists, metadata, and internal linking optimised for Search and Suggested traffic.</p>
-          </div>
-          <div class="bento-item reveal-up">
-            <h3 class="gold-gradient-text bento-h3">AI-Assisted Workflows</h3>
-            <p>Proprietary workflows for idea expansion and scripting, leveraging AI without losing your human voice.</p>
-          </div>
-          <div class="bento-item reveal-up bento-span-3 bento-highlight">
-            <div class="bento-highlight-inner">
-              <div>
-                <h3 class="gold-gradient-text bento-h3">Website & Creator Infrastructure</h3>
-                <p>When you're ready to scale beyond the platform, we build the offer pages and funnels to capture your audience.</p>
-              </div>
-              <span class="badge">OPTIONAL MODULE</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="container">
-
-    <div class="faq-header-grid">
+  <!-- FOUNDER -->
+  <div class="section">
+    <p class="section-label">The founder</p>
+    <div class="founder-strip">
+      <img src="images/KhunCamp by window in black blazer KhunCamp Khun Camp.webp" alt="Shawn Arrington, founder of Khun Camp" loading="lazy">
       <div>
-        <p class="section-eyebrow">FAQ</p>
-        <h2>Got <span class="gold-gradient-text">Questions.</span><br>We Got You.</h2>
+        <h2>Shawn Arrington</h2>
+        <p>Former US Army. 47,000 YouTube subscribers built from scratch in Southeast Asia. Shawn has spent three years figuring out what makes content actually convert, not just perform. Khun Camp is the operating system he built and still runs himself.</p>
+        <a href="/founder/" class="btn-outline">Full story &rarr;</a>
       </div>
-      <p class="faq-side-text">
-        Still unsure? These are the most common questions serious creators ask before working with us.
-        Can't find your answer? <a href="mailto:sales@getkhuncamp.com" class="text-gold">Email us directly →</a>
-      </p>
     </div>
-
-    <div class="faq-categories">
-      <button class="faq-cat-btn active" data-cat="all">All</button>
-      <button class="faq-cat-btn" data-cat="audit">The Audit</button>
-      <button class="faq-cat-btn" data-cat="program">The Program</button>
-      <button class="faq-cat-btn" data-cat="results">Results</button>
-      <button class="faq-cat-btn" data-cat="pricing">Pricing</button>
-    </div>
-
-    <div class="faq-list" id="faq-list">
-
-      <div class="faq-item" data-cat="audit">
-        <button class="faq-q">
-          <span class="faq-q-num">01</span>
-          <span class="faq-q-text">What are the audit tiers and what does each one include?</span>
-          <div class="faq-icon"><span></span></div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Khun Camp has two service tracks. <strong>AI Systems Installation</strong> is for business owners who want AI working inside their operations — starting from an $899 live installation seat up to a $5,000 one-time team enablement package. <strong>Content Creator Growth</strong> is for creators, coaches, and personal brands — starting from a $499 diagnostic up to $4,999/month for the full team engine. Not sure which track fits? Book a call — we'll point you in the right direction.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" data-cat="audit">
-        <button class="faq-q">
-          <span class="faq-q-num">02</span>
-          <span class="faq-q-text">My channel is under 10K subscribers. Is the audit still worth it?</span>
-          <div class="faq-icon"><span></span></div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Yes, catching the right problems early saves years of wasted effort. The audit is designed to identify <strong>structural blockers</strong> that prevent channels from breaking through, regardless of size. Many of our best results come from channels under 5K who fixed foundational issues early.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" data-cat="program">
-        <button class="faq-q">
-          <span class="faq-q-num">03</span>
-          <span class="faq-q-text">What is Khun Camp: a course, coaching program, or an agency?</span>
-          <div class="faq-icon"><span></span></div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            None of the above. Khun Camp is a <strong>done-for-you growth infrastructure</strong>. We don't teach you. We build the system and team behind your channel so you can focus entirely on showing up on camera. Think of us as your behind-the-scenes growth engine.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" data-cat="program">
-        <button class="faq-q">
-          <span class="faq-q-num">04</span>
-          <span class="faq-q-text">How involved do I need to be once I join the Camp?</span>
-          <div class="faq-icon"><span></span></div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Your primary job is to <strong>record content</strong>. We handle strategy, editing direction, thumbnail briefs, SEO, and weekly performance reviews. You'll have one weekly touchpoint to stay aligned. Everything else runs without you.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" data-cat="program">
-        <button class="faq-q">
-          <span class="faq-q-num">05</span>
-          <span class="faq-q-text">What niches do you work with?</span>
-          <div class="faq-icon"><span></span></div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            We've worked across travel, tech, finance, lifestyle, and personal development. The system works for <strong>any niche with a defined audience</strong>. What matters more than niche is your commitment level. Khun Camp is for serious creators only.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" data-cat="results">
-        <button class="faq-q">
-          <span class="faq-q-num">06</span>
-          <span class="faq-q-text">How long before I see real results?</span>
-          <div class="faq-icon"><span></span></div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Most creators see measurable improvements in CTR and impressions within <strong>4 to 6 weeks</strong> after implementing audit recommendations. Full system momentum typically kicks in at the 90-day mark. Growth is not overnight. It's engineered.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" data-cat="results">
-        <button class="faq-q">
-          <span class="faq-q-num">07</span>
-          <span class="faq-q-text">Can you guarantee subscriber growth?</span>
-          <div class="faq-icon"><span></span></div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            We don't guarantee specific numbers. Anyone who does is lying. What we <strong>do guarantee</strong> is a rigorously tested system, a dedicated team, and weekly iteration based on real data. The 3.5x average growth rate across our clients speaks for itself.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" data-cat="pricing">
-        <button class="faq-q">
-          <span class="faq-q-num">08</span>
-          <span class="faq-q-text">What does the full Khun Camp program cost?</span>
-          <div class="faq-icon"><span></span></div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Full program pricing depends on which track fits your situation. For creators, entry starts at <strong>$499 for the Creator Growth Diagnostic</strong>, up to $4,999/month for the full team engine. For business owners, entry starts at <strong>$899 for a Live Installation Seat</strong>, up to $5,000 one-time for full team enablement. Book a call and we'll walk you through the right fit.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" data-cat="pricing">
-        <button class="faq-q">
-          <span class="faq-q-num">09</span>
-          <span class="faq-q-text">Is the audit fee credited toward the program?</span>
-          <div class="faq-icon"><span></span></div>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Yes. If you join the full program within 30 days of your audit, the <strong>audit fee is credited</strong> toward your first month regardless of which tier you chose. The audit is not a sales pitch. It's a genuine deliverable that stands on its own.
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="faq-cta-bar">
-      <div>
-        <p style="color:#fff; font-weight:900; font-size:1rem; margin-bottom:0.25rem;">Ready to stop guessing?</p>
-        <p style="color:#888; font-size:0.875rem;">Not sure which track fits? Let's figure it out together.</p>
-      </div>
-      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary magnetic-item">Book a Call</a>
-    </div>
-
   </div>
-</section>
 
-    <!-- FOUNDER PROOF -->
-    <section id="proof">
-      <div class="container">
-        <div class="founder-block reveal-up">
-          <div class="founder-image">
-            <img src="images/KhunCamp by window in black blazer KhunCamp Khun Camp.webp" alt="KhunShawn, Content Systems Engineer" width="480" height="600" loading="lazy">
-          </div>
-          <div class="founder-info">
-            <p class="section-eyebrow">LED BY</p>
-            <h2 class="gold-gradient-text">Khun Shawn</h2>
-            <p class="founder-title">CEO · Khun Camp</p>
-            <p class="founder-body">This isn't theory. It's the same operating system used to build and scale creator channels from scratch. Every system inside Khun Camp has been tested on a real channel, with real data.</p>
-             <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary btn-lg magnetic-item">Book a Call</a>
-             <a href="https://www.linkedin.com/in/shawn-arrington-507801121/" target="_blank" rel="noopener" class="founder-linkedin magnetic-item">
-               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                 <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.3A1.7 1.7 0 1 1 8.2 6.6 1.7 1.7 0 0 1 6.5 8.3zM19 19h-3v-4.7c0-1.4-.5-2.3-1.7-2.3a1.8 1.8 0 0 0-1.7 1.2 2.3 2.3 0 0 0-.1.9V19h-3v-9h3v1.2a3.3 3.3 0 0 1 3-1.6c2.1 0 3.5 1.4 3.5 4.3z"/>
-               </svg>
-               Connect on LinkedIn
-             </a>
-          </div>
-        </div>
+  <!-- FAQ -->
+  <div class="section">
+    <p class="section-label">Common questions</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">What do I actually have to do?</p>
+        <p class="faq-a">Film when we give you the shot list. Show up for the monthly strategy call. That is it. Everything else is handled.</p>
       </div>
-    </section>
-
-
-
-
-    <!-- PODCAST SECTION (hidden) -->
-    <section id="podcast" style="display:none;">
-      <div class="container">
-
-        <div class="podcast-strip-header reveal-up">
-          <p class="section-eyebrow">KHUN CAMP PODCASTS</p>
-          <p class="podcast-strip-hint">Tap a show to view photos</p>
-        </div>
-
-        <div class="podcast-strip reveal-up">
-
-          <!-- PODCAST CARD 1 -->
-          <div class="podcast-card" data-podcast="Modern Dating vs. Arranged Marriage | Khun Camp Podcast #1" data-images='["images/pd1.webp","images/pd2.webp","images/pd3.webp"]'>
-            <div class="podcast-card-img">
-              <img src="images/pd1.webp" alt="Modern Dating vs. Arranged Marriage | Khun Camp Podcast #1" width="400" height="400" loading="lazy">
-            </div>
-            <div class="proof-overlay"><span>Khun Camp Podcast EP #1</span></div>
-          </div>
-
-          <!-- PODCAST CARD 2 -->
-          <div class="podcast-card" data-podcast="Talk about online dating | Khun Camp Podcast #2" data-images='["images/podcast1.png","images/podcast2.png","images/podcast3.png"]'>
-            <div class="podcast-card-img">
-              <img src="images/podcast1.png" alt="Khun Camp Podcast EP #2" width="400" height="400" loading="lazy">
-            </div>
-            <div class="proof-overlay"><span>Khun Camp Podcast EP #2</span></div>
-          </div>
-
-          <!-- PODCAST CARD 3 -->
-          <div class="podcast-card" data-podcast="Ghosting and Conflict | Khun Camp Podcast #3" data-images='["images/Khun Shawn ep3-1.webp","images/Khun Shawn ep3-2.webp","images/Khun Shawn ep3-3.webp"]'>
-            <div class="podcast-card-img">
-              <img src="images/Khun Shawn ep3-2.webp" alt="Khun Camp Podcast EP #3" width="400" height="400" loading="lazy">
-            </div>
-            <div class="proof-overlay"><span>Khun Camp Podcast EP #3</span></div>
-          </div>
-
-          <!-- PODCAST CARD 4 -->
-          <div class="podcast-card" data-podcast="The Divine Union | Khun Camp Podcast #4" data-images='["images/Khun Shawn ep4-1.webp","images/Khun Shawn ep4-2.webp","images/Khun Shawn ep4-3.webp"]'>
-            <div class="podcast-card-img">
-              <img src="images/Khun Shawn ep4-1.webp" alt="Khun Camp Podcast EP #4" width="400" height="400" loading="lazy">
-              </div>
-              <div class="proof-overlay"><span>Khun Camp Podcast EP #4</span></div>
-          </div>
-
-        </div>
-
-        <!-- YOUTUBE VIDEO LINKS -->
-        <div class="podcast-yt-links">
-          <p class="yt-label">WATCH FULL EPISODES ON YOUTUBE</p>
-          <div class="yt-link-list">
-
-            <a class="yt-link-card" href="https://www.youtube.com/watch?v=v4gvkG0VRLo" target="_blank" rel="noopener">
-              <div class="yt-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-              </div>
-              <div class="yt-link-text">
-                <span class="yt-ep">EP #1</span>
-                <span class="yt-title">Modern Dating vs. Arranged Marriages</span>
-              </div>
-              <div class="yt-arrow">→</div>
-            </a>
-
-            <a class="yt-link-card" href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_2" target="_blank" rel="noopener">
-              <div class="yt-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-              </div>
-              <div class="yt-link-text">
-                <span class="yt-ep">EP #2</span>
-                <span class="yt-title">Talk About Online Dating</span>
-              </div>
-              <div class="yt-arrow">→</div>
-            </a>
-
-            <a class="yt-link-card" href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_3" target="_blank" rel="noopener">
-              <div class="yt-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-              </div>
-              <div class="yt-link-text">
-                <span class="yt-ep">EP #3</span>
-                <span class="yt-title">Ghosting and Conflict</span>
-              </div>
-              <div class="yt-arrow">→</div>
-            </a>
-
-            <a class="yt-link-card" href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_4" target="_blank" rel="noopener">
-              <div class="yt-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-              </div>
-              <div class="yt-link-text">
-                <span class="yt-ep">EP #4</span>
-                <span class="yt-title">The Divine Union</span>
-              </div>
-              <div class="yt-arrow">→</div>
-            </a>
-
-          </div>
-        </div>
-
+      <div class="faq-item">
+        <p class="faq-q">What is the difference between the build fee and the retainer?</p>
+        <p class="faq-a">The $3,000 build is a one-time investment. We learn your brand, build your creative system, set up tracking, and produce the first round of content. The $1,500/mo retainer is everything after that: ongoing content, posting, replies, and the monthly report. The build is the foundation. The retainer runs it.</p>
       </div>
-    </section>
-
-    <!-- PODCAST LIGHTBOX (hidden) -->
-    <div id="podcast-lightbox" aria-hidden="true" style="display:none!important;">
-      <div class="lightbox-backdrop"></div>
-      <div class="lightbox-panel">
-        <button class="lightbox-close" aria-label="Close">&times;</button>
-        <h3 class="lightbox-title"></h3>
-        <div class="lightbox-grid"></div>
-        <div class="lightbox-fullview" style="display:none;">
-          <button class="lightbox-back">← Back to gallery</button>
-          <img class="lightbox-fullimg" src="" alt="">
-        </div>
+      <div class="faq-item">
+        <p class="faq-q">What platforms do you post on?</p>
+        <p class="faq-a">We map that out on the first call based on where your audience is. Most clients run YouTube, Instagram Reels, and TikTok. We adapt to what fits your offer and the people you are trying to reach.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How long before content drives actual customers?</p>
+        <p class="faq-a">Typically 60 to 90 days before content drives consistent inbound. The first month is building the system right so every month after compounds instead of starting over. If you are looking for a spike, this is not the right fit and we will tell you that on the call.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Is there a minimum commitment?</p>
+        <p class="faq-a">We ask for three months minimum on the retainer. Content growth is a compounding channel. Three months is enough to see real data on what is working.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What if it is not working?</p>
+        <p class="faq-a">That is what the monthly report is for. If something is not converting, we see it in the data and we adjust. You will not hear "keep posting and trust the process" without a reason.</p>
       </div>
     </div>
-
-   <section class="testimonials-section" id="testimonials">
-  <div class="container">
-
-
-
-    <!-- Header -->
-    <p class="section-eyebrow">What people say</p>
-    <h2 class="section-title">Trusted by creators<br>&amp; collaborators</h2>
-
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-      <div class="stat-item">
-        <div class="stat-number">500M+</div>
-        <div class="stat-label">Total Views Generated</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">3M+</div>
-        <div class="stat-label">Subscribers Gained</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">3.5×</div>
-        <div class="stat-label">Average Growth Rate</div>
-      </div>
-    </div>
-
-    <!-- ── Featured Testimonial ─────────────────────────────────── -->
-    <!--
-      HOW TO ADD YOUR VIDEO:
-      Option A – YouTube embed (recommended):
-        Replace the .play-overlay div with:
-        <iframe width="100%" height="100%" style="position:absolute;inset:0;border:none;"
-          src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=0"
-          allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-      Option B – Video file:
-        <video src="videos/marcus-testimonial.mp4" poster="images/marcus-thumb.jpg"
-               controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
-
-      Option C – Thumbnail image + play button (current placeholder):
-        Add inside .featured-media (before .play-overlay):
-        <img src="images/marcus-thumb.jpg" alt="Marcus T. testimonial" />
-    -->
-    <div class="featured-card">
-
-      <div class="featured-media">
-        <iframe src="https://player.vimeo.com/video/1196518362?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
-          title="Video Testimonial">
-        </iframe>
-        <div class="media-badge">Featured</div>
-      </div>
-
-      <div class="featured-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-        <p class="quote-text" style="margin:0;">
-          Whether you're a creator, startup, or business, Khun Camp helps you scale your reach and impact through smarter content.
-        </p>
-
-        <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-primary magnetic-item" style="display:inline-block;margin-top:32px;">Book a Call</a>
-      </div>
-
-    </div>
-    <!-- /Featured -->
-
-    <!-- ── 3-Column Grid ─────────────────────────────────────────── -->
-    <div class="cards-grid">
-
-      <!-- Card 1 — Creator Photo -->
-      <div class="tcard">
-        <div class="card-photo">
-          
-           
-            <img src="images/callie.jpg" alt="Callie Johnson" width="80" height="80" loading="lazy" />
-          
-          <span class="photo-placeholder"></span>
-        </div>
-
-        <p class="card-quote">
-          "I worked with KhunShawn as the videographer for my workshop at Da Nang Nomad Fest, and it was such a positive experience. He filmed the workshop and later interviewed me, and throughout the process he was professional, relaxed, and very easy to work with.
-
-What stood out most was the quality of his work was the footage and audio turned out beautifully and really captured the feeling of the event. It’s clear he puts a lot of care into what he does.
-
-I’m very grateful for the work he did and would happily recommend him to anyone looking for a talented videographer."
-        </p>
-
-        <div class="creator-row">
-          <div class="avatar">
-            <!--<img src="images/aisha.jpg" alt="Aisha L." />-->
-            CJ
-          </div>
-          <div>
-            <div class="creator-name">Callie Johnson</div>
-            <div class="creator-meta">Founder - The Resonance Container</div>
-          </div>
-        </div>
-
-        <div class="card-brand">
-          <div class="brand-logo">
-            <!--<img src="images/aisha-brand.png" alt="Brand" />-->
-            CJ
-          </div>
-          <a href="https://calliejohnson.substack.com" class="brand-name" target="_blank">
-  calliejohnson.substack.com
-</a>
-          <span class="brand-stat">check out!</span>
-        </div>
-
-        <div class="tags">
-          <span class="tag">Business</span>
-          <span class="stars">★★★★★</span>
-        </div>
-      </div>
-
-      <!-- Card 2 — Video Testimonial -->
-      <div class="tcard">
-        <div class="card-media">
-          <!--
-            REPLACE with video thumbnail + play, or embed:
-            <img src="images/ryan-thumb.jpg" alt="Ryan K. testimonial" />
-          -->
-          <div class="play-btn-sm">
-            <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
-              <path d="M6 4l12 6-12 6V4z" fill="#000"/>
-            </svg>
-          </div>
-          <span class="card-media-label">Video Testimonial</span>
-        </div>
-
-        <p class="card-quote">
-          "The audit alone was worth every dollar. Shawn identified three critical gaps in my upload strategy I had completely overlooked for 18 months."
-        </p>
-
-        <div class="creator-row">
-          <div class="avatar">RK</div>
-          <div>
-            <div class="creator-name">Ryan K.</div>
-            <div class="creator-meta">Tech Creator · 18K Subscribers</div>
-          </div>
-        </div>
-
-        <div class="card-brand">
-          <div class="brand-logo">RK</div>
-          <span class="brand-name">Tech Channel</span>
-          <span class="brand-stat">18K SUBS</span>
-        </div>
-
-        <div class="tags">
-          <span class="tag">Tech</span>
-          <span class="stars">★★★★★</span>
-        </div>
-      </div>
-
-      <!-- Card 3 — Text Only -->
-     <div class="tcard">
-        <div class="card-photo">
-          
-           
-            <img src="images/Erosa.jpg" alt="M Jay" width="80" height="80" loading="lazy" />
-          
-          <span class="photo-placeholder"></span>
-        </div>
-
-        <p class="card-quote">
-          Attending Nomad Fest, even as its first edition, was genuinely surprising. I had the opportunity to connect with people across a wide range of industries and gain insight into how Asia is shaping and influencing their businesses.
-The interview with Khun Camp was a standout moment. The questions were thoughtful and grounding, helping me reconnect with my purpose and reflect on why I do what I do.
-Looking forward to seeing how this grows. See you next year.
-        </p>
-
-        <div class="creator-row">
-          <div class="avatar">
-            <!--<img src="images/erosa.jpg" alt="M Jay" />-->
-            MJ
-          </div>
-          <div>
-            <div class="creator-name">M Jay</div>
-            <div class="creator-meta">Founder - The Erosa</div>
-          </div>
-        </div>
-
-        <div class="card-brand">
-          <div class="brand-logo">
-            <!--<img src="images/theerosa.png" alt="Brand" />-->
-            MJ
-          </div>
-          <a href="https://www.theerosa.com" class="brand-name" target="_blank">
-  theerosa.com
-</a>
-          <span class="brand-stat">check out!</span>
-        </div>
-
-        <div class="tags">
-          <span class="tag">Business</span>
-          <span class="stars">★★★★★</span>
-        </div>
-      </div>
-
-    </div>
-    <!-- /3-column grid -->
-
-    <!-- ── 2-Column Lower Row ────────────────────────────────────── -->
-    <div class="cards-grid-2" style="margin-top: 16px;">
-
-      <!-- Card 4 -->
-      <div class="tcard">
-        <div class="tags" style="margin-bottom: -4px;">
-          <span class="stars">★★★★★</span>
-        </div>
-
-        <p class="card-quote">
-          "I had the pleasure of working with Khunshawn during the Da Nang Nomad Fest 2026 in Vietnam, where he was part of our Content Creation and Social Media team.
-
-Khunshawn brought a powerful mix of creativity, initiative, and leadership to the team. He didn’t just contribute high-quality content himself, but went the extra mile by actively coordinating with others, encouraging his team to support with video editing, and elevating the overall output.
-
-The result was a series of dynamic, engaging videos that truly captured the energy and spirit of the event. His ability to take ownership and push for better results made a real difference.
-
-On top of that, Khunshawn was great to collaborate with, proactive, and always solution-oriented.
-
-If you’re looking for someone who combines content creation skills with leadership and a strong execution mindset, Khunshawn is a fantastic choice."
-        </p>
-
-        <div class="creator-row">
-          <div class="avatar">M</div>
-          <div>
-            <div class="creator-name">Markos</div>
-            <div class="creator-meta">Business Creator · 29K Subscribers</div>
-          </div>
-        </div>
-
-        <div class="card-brand">
-          <!--
-            REPLACE with actual brand logo:
-            <div class="brand-logo"><img src="images/david-brand.png" alt="Brand" /></div>
-          -->
-          <div class="brand-logo">M</div>
-          <span class="brand-name">Business Channel</span>
-          <span class="brand-stat">29K SUBS</span>
-        </div>
-
-        <div class="tags">
-          <span class="tag">Business</span>
-        </div>
-      </div>
-
-      <!-- Card 5 — Verified Collaborator -->
-      <div class="tcard">
-        <span class="verified-badge">Verified Collaborator</span>
-
-        <p class="card-quote">
-          "Shawn has shown great leadership and initiative. He's definitely someone I'd like to have on my team!"
-        </p>
-
-        <div class="creator-row">
-          <div class="avatar">JB</div>
-          <div>
-            <div class="creator-name">Jamrell Buynay</div>
-            <div class="creator-meta">Host &amp; Segment Producer, Filipinos of Thailand</div>
-          </div>
-        </div>
-
-        <div class="card-brand">
-          <!--
-            REPLACE with actual brand logo:
-            <div class="brand-logo"><img src="images/filipinos-thailand-logo.png" alt="Filipinos of Thailand" /></div>
-          -->
-          <div class="brand-logo">FT</div>
-          <span class="brand-name">Filipinos of Thailand</span>
-          <span class="brand-stat">PARTNER</span>
-        </div>
-
-        <div class="tags">
-          <span class="tag">Collaborator</span>
-        </div>
-      </div>
-
-    </div>
-    <!-- /2-column grid -->
-
   </div>
-</section>
 
+  <!-- BOTTOM CTA -->
+  <div class="bottom-cta">
+    <h2>Ready to hand off the channel?</h2>
+    <p>Book a call. We will look at your content, your offer, and your audience, and tell you exactly how we would run it.</p>
+    <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-gold">Book a Call</a>
+  </div>
 
-    <!-- AUTHORITY MARKS -->
-    <section id="authority-marks">
-      <div class="container authority-inner">
-        <span class="authority-label">SOON TO BE FEATURED ON:</span>
-        <div class="authority-logos">
-          <span class="authority-name">INTRO.CO</span>
-          <span class="authority-name">YOUTUBE CERTIFIED</span>
-          <span class="authority-name">CREATOR ESSENTIALS</span>
-        </div>
-      </div>
-    </section>
+  <footer>
+    <img src="images/KhunCamp-Logo-nav.webp" alt="Khun Camp" style="height:28px;width:auto;opacity:0.4;">
+    <div class="footer-links">
+      <a href="/terms-of-service.html">Terms</a>
+      <a href="/privacy-policy.html">Privacy</a>
+      <a href="mailto:sales@getkhuncamp.com">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Khun Camp</p>
+  </footer>
 
-    <!-- BLOG PREVIEW -->
-    <section id="blog-preview">
-      <div class="container">
-        <div class="section-header-row reveal-up">
-          <div>
-            <p class="section-eyebrow">FROM THE BLOG</p>
-            <h2>Insights From<br><span class="gold-gradient-text">The Growth Engine</span></h2>
-          </div>
-          <a href="blog.html" class="btn-ghost-gold magnetic-item">See All Posts →</a>
-        </div>
-
-        <div class="blog-preview-grid reveal-up">
-
-          <article class="blog-preview-card">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag--creator">For Creators</span>
-              <span class="blog-tag blog-tag--format">The Breakdown</span>
-            </div>
-            <h3 class="blog-preview-title">
-              <a href="blog/why-your-youtube-channel-plateaus.html">Why Your YouTube Channel Plateaus at 10K and Exactly How to Break Through</a>
-            </h3>
-            <p class="blog-preview-excerpt">It's not your content. It's not your niche. It's a structural problem most creators never fix because they never know to look for it.</p>
-            <a href="blog/why-your-youtube-channel-plateaus.html" class="blog-read-more">Read the breakdown →</a>
-          </article>
-
-          <article class="blog-preview-card">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag--biz">For Businesses</span>
-              <span class="blog-tag blog-tag--format">The Breakdown</span>
-            </div>
-            <h3 class="blog-preview-title">
-              <a href="blog/the-funnel-gap-most-businesses-never-see.html">The Funnel Gap Most Businesses Never See Until They Lose the Sale</a>
-            </h3>
-            <p class="blog-preview-excerpt">You're getting traffic. People are watching. But no one's buying. Here's where the leak actually is and what to plug first.</p>
-            <a href="blog/the-funnel-gap-most-businesses-never-see.html" class="blog-read-more">Read the breakdown →</a>
-          </article>
-
-          <article class="blog-preview-card">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag--creator">For Creators</span>
-              <span class="blog-tag blog-tag--format">Case Study</span>
-            </div>
-            <h3 class="blog-preview-title">
-              <a href="blog/8k-to-22k-in-10-weeks.html">From 8K to 22K in 10 Weeks: What We Actually Did</a>
-            </h3>
-            <p class="blog-preview-excerpt">A real breakdown of the thumbnail framework, title system, and upload cadence that moved the needle fast for a travel creator stuck at a plateau.</p>
-            <a href="blog/8k-to-22k-in-10-weeks.html" class="blog-read-more">Read the case study →</a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section id="final-cta">
-      <div class="container text-center reveal-up">
-        <p class="section-eyebrow">LET'S TALK</p>
-        <h2>Ready to Turn<br><span class="gold-gradient-text">Content Into Customers?</span></h2>
-        <p class="cta-body">Whether you're a creator stuck on a plateau or a business that wants to reach the right buyers Let's find out if we're a fit.</p>
-        <a href="https://khun-shawn.com/" class="btn-primary btn-final magnetic-item" id="breathing-cta">Book a Discovery Call</a>
-        <p class="cta-footnote">No hard pitch. Just a conversation about your growth.</p>
-      </div>
-    </section>
-
-  </main>
-
-<!-- FOOTER --> <footer id="site-footer"> <div class="container footer-inner"> 
-  <p>&copy; 2026 Khun Camp. All Rights Reserved.</p> 
-  <div class="footer-socials"> 
-    <a href="#" class="footer-social-link" aria-label="YouTube"> 
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> 
-        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/> </svg> </a> 
-        <a href="https://www.instagram.com/khunshawn" class="footer-social-link" aria-label="Instagram"> 
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> 
-            <path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/> </svg> </a> 
-            <a href="#" class="footer-social-link" aria-label="TikTok"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M19.6 3.3A4.8 4.8 0 0 1 14.9 0h-3.6v16.4a2.9 2.9 0 0 1-2.9 2.5 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.3 0 .5 0 .8.1V9.5a6.5 6.5 0 0 0-.8 0 6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5V8.1a8.3 8.3 0 0 0 4.8 1.5V6a4.8 4.8 0 0 1-3.1-2.7z"/> </svg> </a> 
-            <a href="https://www.linkedin.com/company/khun-camp" class="footer-social-link" aria-label="LinkedIn"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.3A1.7 1.7 0 1 1 8.2 6.6 1.7 1.7 0 0 1 6.5 8.3zM19 19h-3v-4.7c0-1.4-.5-2.3-1.7-2.3a1.8 1.8 0 0 0-1.7 1.2 2.3 2.3 0 0 0-.1.9V19h-3v-9h3v1.2a3.3 3.3 0 0 1 3-1.6c2.1 0 3.5 1.4 3.5 4.3z"/> </svg> </a>
-            <a href="mailto:sales@getkhuncamp.com" class="footer-social-link" aria-label="Email" title="sales@getkhuncamp.com"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2-8 5-8-5h16zm0 12H4V8.9l8 5 8-5V18z"/> </svg> </a> </div> <p>
-              <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="text-gold">Book a Discovery Call</a></p>
-              <p><a href="mailto:sales@getkhuncamp.com" class="text-gold">sales@getkhuncamp.com</a></p>
-      <p style="margin-top:12px;font-size:0.8rem;color:rgba(255,255,255,0.35);">
-        <a href="privacy-policy.html" style="color:rgba(255,255,255,0.35);text-decoration:underline;text-underline-offset:3px;margin-right:16px;">Privacy Policy</a>
-        <a href="terms-of-service.html" style="color:rgba(255,255,255,0.35);text-decoration:underline;text-underline-offset:3px;">Terms of Service</a>
-      </p> </div> </footer>
-
-  <!-- CDN SCRIPTS — deferred to unblock render -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
-  <script src="js/main.js" defer></script>
-
-
-  
-  <!-- WhatsApp Floating Button 
-<a href="https://wa.me/639458815792?text=Hello!%20I%20found%20you%20on%20khuncamp.com"
-   target="_blank"
-   rel="noopener"
-   aria-label="Chat on WhatsApp"
-   style="position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,0.25);text-decoration:none;transition:transform 0.15s ease;"
-   onmouseover="this.style.transform='scale(1.1)'"
-   onmouseout="this.style.transform='scale(1)'">
-  <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.61 1.832 6.5L4 29l7.697-1.812A12.94 12.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="#fff"/>
-    <path d="M22.406 19.594c-.297-.148-1.754-.867-2.027-.965-.273-.098-.472-.148-.672.148-.199.297-.773.965-.946 1.164-.174.199-.348.223-.645.074-.297-.148-1.254-.462-2.387-1.473-.883-.785-1.48-1.754-1.654-2.051-.173-.297-.018-.457.13-.605.135-.133.297-.348.446-.52.149-.173.198-.298.298-.496.099-.199.05-.372-.025-.52-.074-.149-.672-1.617-.921-2.215-.242-.582-.488-.503-.672-.512-.173-.008-.372-.01-.571-.01-.199 0-.522.074-.795.372-.273.297-1.04 1.016-1.04 2.476 0 1.46 1.065 2.871 1.213 3.07.149.198 2.096 3.2 5.077 4.487.71.307 1.263.49 1.695.626.712.227 1.36.195 1.873.118.571-.085 1.754-.718 2.002-1.41.248-.693.248-1.29.174-1.41-.074-.12-.273-.198-.571-.347z" fill="#25D366"/>
-  </svg>
-
-  
-</a> -->
-<!--<script src="//code.tidio.co/foqxe4dlsoqib33eipiiyhoga58t3b1z.js" defer></script>-->
-  <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 </html>
