@@ -103,11 +103,14 @@
     .desk-card p { font-size: 13px; color: var(--text-dim); line-height: 1.65; position: relative; z-index: 1; }
 
     /* HOW IT WORKS */
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-    .step { background: var(--bg-card); padding: 36px 28px; }
-    .step-num { font-family: var(--font-serif); font-size: 2.8rem; color: var(--gold); opacity: 0.35; line-height: 1; margin-bottom: 20px; }
-    .step h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
-    .step p { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .step { background: var(--bg-card); border: 1px solid rgba(201,168,76,0.15); border-radius: 8px; padding: 36px 28px; position: relative; overflow: hidden; transition: border-color 0.3s, box-shadow 0.3s; }
+    .step::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, transparent, var(--gold), transparent); opacity: 0.6; }
+    .step:hover { border-color: rgba(201,168,76,0.45); box-shadow: 0 0 32px rgba(201,168,76,0.1), 0 0 8px rgba(201,168,76,0.05); }
+    .step-glow { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 160px; height: 100px; background: radial-gradient(ellipse, rgba(201,168,76,0.18) 0%, transparent 70%); pointer-events: none; }
+    .step-num { font-family: var(--font-serif); font-size: 2.8rem; color: var(--gold); opacity: 0.25; line-height: 1; margin-bottom: 20px; position: relative; z-index: 1; }
+    .step h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; position: relative; z-index: 1; }
+    .step p { font-size: 14px; color: var(--text-dim); line-height: 1.65; position: relative; z-index: 1; }
 
     /* PROOF */
     .proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
@@ -180,7 +183,7 @@
       .section { padding: 48px 20px; }
       .marquee-outer::before, .marquee-outer::after { width: 40px; }
       .desk-card { width: 240px; padding: 24px 20px; }
-      .steps { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; gap: 12px; }
       .proof-grid { grid-template-columns: 1fr; }
       .testi-grid { grid-template-columns: 1fr; }
       .offer-card { padding: 40px 24px; }
@@ -297,16 +300,19 @@
     <p class="section-label">How it works</p>
     <div class="steps">
       <div class="step">
+        <div class="step-glow"></div>
         <div class="step-num">01</div>
         <h3>We learn your brand properly</h3>
         <p>One recorded call, real questions, no generic form. Voice guide and audience avatar come back for sign-off before anything gets made.</p>
       </div>
       <div class="step">
+        <div class="step-glow"></div>
         <div class="step-num">02</div>
         <h3>We build the system</h3>
         <p>Pillars, templates, the 90-day plan, analytics tracking. This is the one-time build everything else runs on.</p>
       </div>
       <div class="step">
+        <div class="step-glow"></div>
         <div class="step-num">03</div>
         <h3>We run it every month</h3>
         <p>Content, report, and a call to decide what changes next. You film when we ask. We handle everything else.</p>
