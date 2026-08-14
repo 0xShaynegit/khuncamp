@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#227a6e"/>
+  <!-- Vertical bar -->
+  <rect x="18" y="14" width="14" height="72" fill="white"/>
+  <!-- Gap line separating bar from arms -->
+  <rect x="32" y="14" width="2" height="72" fill="#227a6e"/>
+  <!-- Upper arm -->
+  <polygon points="34,14 80,14 80,38 34,48" fill="white"/>
+  <!-- Lower arm -->
+  <polygon points="34,52 80,62 80,86 34,86" fill="white"/>
+</svg>
