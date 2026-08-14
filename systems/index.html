@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khun Collective | Never miss another call</title>
+  <meta name="description" content="The call that goes to voicemail doesn't wait. Book a call and we'll show you what it's costing you.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/jpeg" sizes="128x128" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #2a9d8f;
+      --gold-border: rgba(42,157,143,0.3);
+      --bg: #0d0f0f;
+      --bg-card: #111515;
+      --bg-lift: #151a1a;
+      --bg-feature: #0f1414;
+      --text: #ffffff;
+      --text-dim: #888888;
+      --text-muted: #333333;
+      --font: 'DM Sans', system-ui, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --max: 860px;
+      --r: 4px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #1a1a1a; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; max-width: var(--max); margin: 0 auto; }
+    .nav-logo img { height: 32px; width: auto; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #0a0a0a; font-weight: 900; font-size: 14px; letter-spacing: 0.04em; padding: 12px 32px; border-radius: var(--r); transition: opacity 0.15s, transform 0.15s; border: none; cursor: pointer; font-family: var(--font); }
+    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* LAYOUT */
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 40px; }
+    .section { padding: 72px 0; border-bottom: 1px solid #1a1a1a; }
+    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+    .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); }
+
+    /* HERO */
+    .hero { padding: 88px 0 72px; border-bottom: 1px solid #1a1a1a; }
+    .hero h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 5.5vw, 3.8rem); line-height: 1.1; color: var(--text); margin-bottom: 24px; max-width: 720px; }
+    .hero-sub { font-size: 18px; color: var(--text-dim); max-width: 580px; line-height: 1.7; margin-bottom: 16px; }
+
+    /* DIFFERENTIATION PLACEHOLDER */
+    .diff-placeholder { background: #001a18; border: 1px dashed #2a9d8f; padding: 20px 24px; margin-bottom: 36px; max-width: 580px; border-radius: var(--r); }
+    .diff-placeholder p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .diff-placeholder span { font-size: 14px; color: #888; font-style: italic; }
+
+    /* COST NARRATIVE */
+    .cost-bucket { padding: 48px 0; border-bottom: 1px solid #1a1a1a; }
+    .cost-bucket:last-child { border-bottom: none; }
+    .bucket-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; }
+    .bucket-lead { font-family: var(--font-serif); font-size: clamp(1.3rem, 2.8vw, 1.8rem); color: var(--text); line-height: 1.3; margin-bottom: 16px; max-width: 640px; }
+    .bucket-body { font-size: 16px; color: var(--text-dim); max-width: 600px; line-height: 1.75; }
+    .bucket-body p + p { margin-top: 14px; }
+    .bucket-data { display: inline-block; margin-top: 20px; font-size: 12px; color: var(--text-muted); font-style: italic; border-left: 2px solid #222; padding-left: 14px; line-height: 1.5; }
+
+    /* WHAT STOPS HAPPENING */
+    .stops-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 32px; }
+    .stop-item { background: var(--bg-card); padding: 28px; }
+    .stop-before { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+    .stop-item h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .stop-item p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+
+    /* FOUNDER PROMO */
+    .promo { background: var(--bg-feature); border: 1px solid var(--gold-border); padding: 40px 40px; margin-top: 0; }
+    .promo-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .promo p { font-size: 16px; color: var(--text); line-height: 1.65; max-width: 580px; }
+    .promo p + p { margin-top: 10px; color: var(--text-dim); font-size: 14px; }
+
+    /* QUALIFIER */
+    .qualifier { background: var(--bg-card); padding: 48px 40px; }
+    .qualifier h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 2rem); color: var(--text); margin-bottom: 8px; line-height: 1.2; }
+    .qualifier-sub { font-size: 15px; color: var(--text-dim); margin-bottom: 36px; line-height: 1.65; }
+    .form-field { margin-bottom: 24px; }
+    .form-label { display: block; font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 8px; letter-spacing: 0.02em; }
+    .form-label span { font-weight: 400; color: var(--text-muted); margin-left: 6px; }
+    select, textarea, input[type="text"] {
+      width: 100%; background: var(--bg); border: 1px solid #222; color: var(--text); font-family: var(--font); font-size: 15px; padding: 13px 16px; border-radius: var(--r); appearance: none; transition: border-color 0.15s; line-height: 1.5;
+    }
+    select:focus, textarea:focus, input[type="text"]:focus { outline: none; border-color: var(--gold); }
+    select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; cursor: pointer; }
+    textarea { resize: vertical; min-height: 88px; }
+    .form-note { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+    .submit-area { margin-top: 32px; }
+    .submit-note { font-size: 13px; color: var(--text-muted); margin-top: 12px; line-height: 1.6; }
+
+    /* SOCIAL PROOF BAR */
+    .proof-bar { display: flex; gap: 32px; flex-wrap: wrap; padding: 32px 0; border-bottom: 1px solid #1a1a1a; }
+    .proof-bar-item { font-size: 13px; color: var(--text-dim); display: flex; align-items: center; gap: 8px; }
+    .proof-bar-item::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* FOOTER */
+    footer { padding: 28px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 12px; color: var(--text-muted); transition: color 0.15s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* MOBILE */
+    @media (max-width: 680px) {
+      .nav-inner { padding: 0 20px; }
+      .wrap { padding: 0 20px; }
+      .hero { padding: 56px 0 48px; }
+      .hero h1 { font-size: 2rem; }
+      .hero-sub { font-size: 16px; }
+      .section { padding: 48px 0; }
+      .stops-grid { grid-template-columns: 1fr; }
+      .promo { padding: 28px 24px; }
+      .qualifier { padding: 32px 24px; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/"><img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Collective" height="32"></a>
+      <a href="#book" class="btn-gold">Book a Call</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="wrap">
+    <div class="hero">
+
+      <h1>The call that went to voicemail already went somewhere else.</h1>
+
+      <!-- ⚠️ DIFFERENTIATION PLACEHOLDER — DO NOT SHIP EMPTY -->
+      <div class="diff-placeholder">
+        <p>Differentiation — blocked, needs Shawn + Art</p>
+        <span>One sentence, provable, that a prospect can repeat to a partner. Not a values statement. Goes here and again above the feature block. Owner: Art and Shawn before copy is final.</span>
+      </div>
+
+      <p class="hero-sub">You already know the missed calls are costing you. This page is about knowing exactly how much, before you decide whether to fix it.</p>
+      <a href="#book" class="btn-gold">Book a Call</a>
+
+    </div>
+
+    <!-- PROOF BAR -->
+    <div class="proof-bar">
+      <div class="proof-bar-item">78% of consumers who couldn't reach a business didn't call back</div>
+      <div class="proof-bar-item">82% went straight to a competitor instead</div>
+      <div class="proof-bar-item">Source: CallRail, 2025</div>
+    </div>
+  </div>
+
+  <!-- COST NARRATIVE -->
+  <div class="wrap">
+
+    <div class="cost-bucket">
+      <p class="bucket-label">The first cost</p>
+      <p class="bucket-lead">The phone rings while you are with someone. Nobody picks up.</p>
+      <div class="bucket-body">
+        <p>Whoever called decided in that moment. Not later, not after leaving a message. In that moment. Voicemail does not hold a lead. It holds a recording that requires someone to remember to check it, find the time to call back, and reach the person on the second try.</p>
+        <p>Most service businesses lose between one and three calls a day to this. Not to a bad product. Not to a better competitor. To nobody picking up. That is the baseline you are starting from before anything else is counted.</p>
+      </div>
+      <span class="bucket-data">78% of consumers who called a business and couldn't get through did not try again. CallRail State of the Call 2025, survey of 1,000 US consumers.</span>
+    </div>
+
+    <div class="cost-bucket">
+      <p class="bucket-label">The second cost</p>
+      <p class="bucket-lead">The follow-up that happens when someone remembers.</p>
+      <div class="bucket-body">
+        <p>Someone on your team is supposed to call leads back within the hour. Sometimes they do. Sometimes the note is in the wrong place. Sometimes they get pulled onto something else and the callback happens the next morning, or the morning after that.</p>
+        <p>This is not a people problem. It is a process that was never built for the volume you are running at. The friction already exists. It is already happening, every week, inside your business. You are already paying for it in hours and in leads that quietly disappear.</p>
+        <p>The reactivation text that should have gone out to last month's enquiries. The calendar back-and-forth that costs twenty minutes of someone's day. The no-show that nobody had time to follow up with. These are not edge cases. They are the normal week.</p>
+      </div>
+    </div>
+
+    <div class="cost-bucket" style="border-bottom: none;">
+      <p class="bucket-label">The third cost</p>
+      <p class="bucket-lead">The people who already said yes once and then heard nothing.</p>
+      <div class="bucket-body">
+        <p>Most businesses have a list. Past customers, old enquiries, people who came in once and never got a reason to come back. Nobody has messaged them in months. Not because the business forgot they exist, but because there was never a system that did it automatically and nobody had the spare hours to do it manually.</p>
+        <p>This is the bucket worth spending the most time on, because it is yours. You earned those relationships. They already trust you. The only thing between them and a rebooking or a referral is a message that went unsent.</p>
+        <p>Add up the number in your head. Past customers in the last two years. A rough conversion rate if you reached out. An average job value. That is the number the call is going to open on.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WHAT STOPS HAPPENING -->
+  <div class="wrap">
+    <div class="section">
+
+      <!-- ⚠️ DIFFERENTIATION — REPEAT PLACEMENT -->
+      <div class="diff-placeholder" style="margin-bottom: 32px;">
+        <p>Differentiation — repeat placement</p>
+        <span>Same sentence as hero subhead. Goes here as the frame above the feature block. Do not write filler.</span>
+      </div>
+
+      <p class="section-label">What stops happening</p>
+      <div class="stops-grid">
+        <div class="stop-item">
+          <p class="stop-before">Instead of</p>
+          <h3>Calls going to voicemail</h3>
+          <p>Every inbound call gets picked up and handled, even when you are with someone. The caller gets a response. You get a record.</p>
+        </div>
+        <div class="stop-item">
+          <p class="stop-before">Instead of</p>
+          <h3>Manual follow-up that slips</h3>
+          <p>Follow-up goes out within minutes, not when someone remembers. The same message every time, in the right order, without anyone having to track it.</p>
+        </div>
+        <div class="stop-item">
+          <p class="stop-before">Instead of</p>
+          <h3>Leads going cold in the gap</h3>
+          <p>An enquiry that doesn't get a reply in the first few minutes usually doesn't convert. That gap closes.</p>
+        </div>
+        <div class="stop-item">
+          <p class="stop-before">Instead of</p>
+          <h3>A database nobody has messaged</h3>
+          <p>Past customers get reached. Not manually. Not when someone has a spare hour. On a schedule, in your voice, with a reason to respond.</p>
+        </div>
+        <div class="stop-item">
+          <p class="stop-before">Instead of</p>
+          <h3>Calendar back-and-forth</h3>
+          <p>Booking happens in the conversation. No hand-off, no email thread, no link sent and forgotten. The call gets booked before they move on.</p>
+        </div>
+        <div class="stop-item">
+          <p class="stop-before">Instead of</p>
+          <h3>No record of what happened</h3>
+          <p>Every call, every reply, every no-show is logged. You can see what is working and what is leaking, without asking anyone to compile it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOUNDER PROMO -->
+  <div class="wrap">
+    <div class="section" style="padding-bottom: 0; border-bottom: none;">
+      <div class="promo">
+        <p class="promo-label">Founding accounts</p>
+        <p>The first ten businesses we set up lock in a founding rate that does not change as pricing moves. We are keeping the cap real, which means once those spots are filled they are filled.</p>
+        <p>If you are reading this and the call is not booked yet, that is the only thing between you and the founding rate.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUALIFIER + BOOKING -->
+  <div class="wrap" id="book">
+    <div class="section" style="border-bottom: none; padding-top: 48px;">
+      <div class="qualifier">
+        <h2>Tell us a little before we talk</h2>
+        <p class="qualifier-sub">Four questions. The call opens with your situation, not our pitch. Knowing this in advance means we skip the basics and get to the number in the first few minutes.</p>
+
+        <form name="systems-qualifier" method="POST" data-netlify="true" action="/systems/thankyou/">
+
+          <div class="form-field">
+            <label class="form-label" for="business-type">What kind of business do you run?</label>
+            <select id="business-type" name="business_type" required>
+              <option value="" disabled selected>Select one</option>
+              <option>Trade or home services (plumbing, HVAC, electrical, landscaping)</option>
+              <option>Healthcare or allied health (clinic, physio, dental, chiro)</option>
+              <option>Auto or mobile services (mechanic, detailing, roadside)</option>
+              <option>Professional services (legal, accounting, consulting, real estate)</option>
+              <option>Fitness or wellness (gym, studio, personal training)</option>
+              <option>Hospitality or events</option>
+              <option>Other local or service business</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="call-volume">Roughly how many inbound calls or leads does your business get each month?</label>
+            <select id="call-volume" name="call_volume" required>
+              <option value="" disabled selected>Select a range</option>
+              <option>Fewer than 20</option>
+              <option>20 to 50</option>
+              <option>50 to 150</option>
+              <option>150 to 400</option>
+              <option>More than 400</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="budget-readiness">Is this a spend your business is in a position to make this quarter?</label>
+            <select id="budget-readiness" name="budget_readiness" required>
+              <option value="" disabled selected>Select one</option>
+              <option>Yes, we have budget allocated and a decision can be made quickly</option>
+              <option>Probably, budget is available but needs sign-off</option>
+              <option>Not this quarter, but I want to understand what this looks like</option>
+              <option>I am not sure yet</option>
+            </select>
+            <p class="form-note">We ask this so we don't waste your time or ours. If it's not the right quarter, that's fine — we'll tell you what to expect and when to come back.</p>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="what-fixes">What are you hoping this fixes? <span>One or two sentences is enough.</span></label>
+            <textarea id="what-fixes" name="what_fixes" placeholder="e.g. We miss calls constantly when the team is on jobs and leads go cold before anyone calls back." required></textarea>
+          </div>
+
+          <div class="submit-area">
+            <!-- ⚠️ JERIC: Replace this form action and the button below with the GHL calendar embed or redirect. The four fields above feed to the closer before the call. -->
+            <button type="submit" class="btn-gold">Book a Call</button>
+            <p class="submit-note">After you submit, you will go straight to the calendar to pick a time. The call is 30 minutes. It opens with your situation, not a demo.</p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="wrap">
+    <footer>
+      <p class="footer-copy">&copy; 2026 Khun Collective</p>
+      <div class="footer-links">
+        <a href="/terms-of-service.html">Terms</a>
+        <a href="/privacy-policy.html">Privacy</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
