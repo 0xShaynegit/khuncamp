@@ -16,15 +16,15 @@
 
     :root {
       --gold: #2a9d8f;
-      --gold-dim: rgba(42,157,143,0.12);
+      --gold-dim: rgba(42,157,143,0.08);
       --gold-border: rgba(42,157,143,0.3);
-      --bg: #0d0f0f;
-      --bg-card: #111515;
-      --bg-lift: #151a1a;
-      --bg-feature: #0f1414;
-      --text: #ffffff;
-      --text-dim: #888888;
-      --text-muted: #333333;
+      --bg: #e8ede6;
+      --bg-card: #dce6d8;
+      --bg-lift: #d0dccc;
+      --bg-feature: #e0e8dc;
+      --text: #1e2a1c;
+      --text-dim: #4a5e46;
+      --text-muted: #6b7d6e;
       --font: 'DM Sans', system-ui, sans-serif;
       --font-serif: 'Playfair Display', Georgia, serif;
       --max: 900px;
@@ -37,36 +37,36 @@
     img { max-width: 100%; display: block; }
 
     /* NAV */
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #1a1a1a; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(232,237,230,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #c8d5c4; }
     .nav-top { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; }
     .nav-logo img { height: 36px; width: auto; }
-    .nav-cta { background: var(--gold); color: #0a0a0a; font-weight: 700; font-size: 13px; letter-spacing: 0.05em; padding: 10px 22px; border-radius: var(--r); transition: opacity 0.15s; }
+    .nav-cta { background: var(--gold); color: #ffffff; font-weight: 700; font-size: 13px; letter-spacing: 0.05em; padding: 10px 22px; border-radius: var(--r); transition: opacity 0.15s; }
     .nav-cta:hover { opacity: 0.85; }
-    .sub-nav { border-top: 1px solid #1a1a1a; display: flex; justify-content: center; padding: 0 40px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .sub-nav { border-top: 1px solid #c8d5c4; display: flex; justify-content: center; padding: 0 40px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
     .sub-nav::-webkit-scrollbar { display: none; }
     .sub-nav a { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); padding: 12px 20px; transition: color 0.15s; position: relative; }
     .sub-nav a:hover { color: var(--gold); }
     .sub-nav a.active { color: var(--gold); }
     .sub-nav a.active::after { content: ''; position: absolute; bottom: 0; left: 20px; right: 20px; height: 2px; background: var(--gold); }
-    .sub-nav-div { width: 1px; background: #1e1e1e; margin: 10px 0; }
+    .sub-nav-div { width: 1px; background: #c8d5c4; margin: 10px 0; }
 
     /* HERO */
-    .hero { padding: 80px 40px 64px; border-bottom: 1px solid #1a1a1a; max-width: var(--max); margin: 0 auto; }
+    .hero { padding: 80px 40px 64px; border-bottom: 1px solid #c8d5c4; max-width: var(--max); margin: 0 auto; }
     .eyebrow { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold-border); padding: 5px 14px; border-radius: 99px; margin-bottom: 24px; }
     .hero h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.1; color: var(--text); margin-bottom: 16px; }
     .hero p { font-size: 17px; color: var(--text-dim); max-width: 560px; line-height: 1.65; }
 
     /* SCOPE BLOCK */
-    .scope { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; }
+    .scope { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #c8d5c4; }
     .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
     .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); }
     .scope-text { font-size: 19px; color: var(--text); line-height: 1.65; max-width: 640px; font-weight: 500; }
     .scope-text em { color: var(--gold); font-style: normal; }
 
     /* PRICING */
-    .pricing { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; }
+    .pricing { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #c8d5c4; }
     .offer-card { background: var(--bg-feature); border: 1px solid var(--gold-border); padding: 52px 48px; position: relative; }
-    .offer-card-badge { position: absolute; top: -1px; left: 48px; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; background: var(--gold); color: #0a0a0a; padding: 5px 16px; border-radius: 0 0 4px 4px; }
+    .offer-card-badge { position: absolute; top: -1px; left: 48px; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; background: var(--gold); color: #ffffff; padding: 5px 16px; border-radius: 0 0 4px 4px; }
     .offer-card-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
     .offer-left h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--text); margin-bottom: 8px; line-height: 1.2; }
     .offer-left p { font-size: 14px; color: var(--text-dim); line-height: 1.6; margin-top: 12px; max-width: 36ch; }
@@ -78,19 +78,19 @@
     .price-pay { font-size: 12px; font-weight: 700; color: var(--gold); letter-spacing: 0.04em; margin-top: 6px; display: inline-block; transition: opacity 0.15s; }
     .price-pay:hover { opacity: 0.7; }
     .offer-cta { margin-top: 32px; }
-    .btn-gold { display: inline-block; background: var(--gold); color: #0a0a0a; font-weight: 900; font-size: 15px; letter-spacing: 0.04em; padding: 16px 40px; border-radius: var(--r); transition: opacity 0.15s, transform 0.15s; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #ffffff; font-weight: 900; font-size: 15px; letter-spacing: 0.04em; padding: 16px 40px; border-radius: var(--r); transition: opacity 0.15s, transform 0.15s; }
     .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
     .offer-note { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
 
     /* WHAT'S INCLUDED */
-    .included { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; }
+    .included { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #c8d5c4; }
     .included-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 32px; }
     .included-item { background: var(--bg-card); padding: 28px 28px; }
     .included-item h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .included-item p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 
     /* HOW IT WORKS */
-    .how { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; }
+    .how { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #c8d5c4; }
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 32px; }
     .step { background: var(--bg-card); padding: 32px 28px; }
     .step-num { font-family: var(--font-serif); font-size: 2.4rem; color: var(--gold); opacity: 0.4; line-height: 1; margin-bottom: 16px; }
@@ -98,7 +98,7 @@
     .step p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 
     /* FAQ */
-    .faq { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #1a1a1a; }
+    .faq { max-width: var(--max); margin: 0 auto; padding: 56px 40px; border-bottom: 1px solid #c8d5c4; }
     .faq-list { margin-top: 8px; display: flex; flex-direction: column; gap: 2px; }
     .faq-item { background: var(--bg-card); padding: 28px 32px; }
     .faq-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
@@ -110,7 +110,7 @@
     .cta p { font-size: 16px; color: var(--text-dim); max-width: 44ch; margin: 0 auto 32px; line-height: 1.65; }
 
     /* FOOTER */
-    footer { border-top: 1px solid #1a1a1a; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    footer { border-top: 1px solid #c8d5c4; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .footer-links { display: flex; gap: 24px; }
     .footer-links a { font-size: 12px; color: var(--text-muted); transition: color 0.15s; }
     .footer-links a:hover { color: var(--gold); }
