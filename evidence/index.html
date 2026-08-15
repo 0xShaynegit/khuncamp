@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -51,13 +51,13 @@
     .page-inner { max-width: var(--max); margin: 0 auto; padding: 0 40px; }
 
     /* HERO */
-    .hero { padding: 80px 40px 64px; border-bottom: 1px solid #c8d5c4; max-width: var(--max); margin: 0 auto; }
+    .hero { padding: 80px 40px 64px; border-bottom: 2px solid var(--gold); position: relative; max-width: var(--max); margin: 0 auto; }
     .eyebrow { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold-border); padding: 5px 14px; border-radius: 99px; margin-bottom: 24px; }
     .hero h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.1; color: var(--text); margin-bottom: 16px; }
     .hero p { font-size: 17px; color: var(--text-dim); max-width: 560px; }
 
     /* STATS */
-    .stats-section { padding: 64px 40px; border-bottom: 1px solid #c8d5c4; max-width: var(--max); margin: 0 auto; }
+    .stats-section { padding: 64px 40px; border-bottom: 2px solid var(--gold); position: relative; max-width: var(--max); margin: 0 auto; }
     .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 32px; }
     .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); }
     .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
@@ -67,7 +67,7 @@
     .stat-note { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
 
     /* TESTIMONIALS */
-    .testimonials-section { padding: 64px 40px; border-bottom: 1px solid #c8d5c4; max-width: var(--max); margin: 0 auto; }
+    .testimonials-section { padding: 64px 40px; border-bottom: 2px solid var(--gold); position: relative; max-width: var(--max); margin: 0 auto; }
     .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 8px; }
     .testimonial-card { background: var(--bg-card); padding: 32px; position: relative; }
     .testimonial-card.placeholder { opacity: 0.4; }
@@ -80,7 +80,7 @@
     .placeholder-badge { position: absolute; top: 16px; right: 16px; font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); border: 1px solid #222; padding: 3px 8px; border-radius: 3px; }
 
     /* CASE STUDIES */
-    .cases-section { padding: 64px 40px; border-bottom: 1px solid #c8d5c4; max-width: var(--max); margin: 0 auto; }
+    .cases-section { padding: 64px 40px; border-bottom: 2px solid var(--gold); position: relative; max-width: var(--max); margin: 0 auto; }
     .case-list { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; }
     .case-card { background: var(--bg-card); padding: 36px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: start; }
     .case-card.placeholder { opacity: 0.4; }
@@ -131,6 +131,8 @@
       .cta { padding: 48px 20px; }
       footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
     }
+  
+    .stats-section::after, .testimonials-section::after, .cases-section::after, .hero::after, .section::after, .cta-section::after, .founder-section::after, .events-section::after, .offer-section::after, .systems-section::after, [class*='-section']::after { content: 'K'; position: absolute; bottom: -10px; right: 40px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; color: var(--gold); background: var(--bg); padding: 0 8px; }
   </style>
 </head>
 <body>
