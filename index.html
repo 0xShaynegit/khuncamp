@@ -83,12 +83,17 @@
     .section-h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--text); line-height: 1.15; margin-bottom: 12px; }
     .section-intro { font-size: 16px; color: var(--text-dim); max-width: 560px; line-height: 1.65; margin-bottom: 40px; }
 
-    /* WHAT WE TAKE OFF YOUR DESK — GRID */
-    .desk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .desk-card { background: var(--bg-card); border: 1px solid rgba(47,158,143,0.25); border-radius: 8px; padding: 32px 28px; position: relative; transition: border-color 0.3s; }
+    /* WHAT WE TAKE OFF YOUR DESK — SPLIT LAYOUT */
+    .desk-split { display: grid; grid-template-columns: 1fr 400px; gap: 0; border-radius: 12px; overflow: hidden; border: 1px solid rgba(47,158,143,0.18); }
+    .desk-cards { padding: 48px 44px; display: flex; flex-direction: column; gap: 10px; }
+    .desk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .desk-card { background: var(--bg-card); border: 1px solid rgba(47,158,143,0.25); border-radius: 8px; padding: 28px 24px; position: relative; transition: border-color 0.3s; }
     .desk-card:hover { border-color: rgba(47,158,143,0.55); }
     .desk-card-icon { font-size: 20px; color: var(--gold); margin-bottom: 16px; }
     .desk-card h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .desk-photo { position: relative; min-height: 520px; overflow: hidden; }
+    .desk-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .desk-photo-overlay { position: absolute; inset: 0; background: rgba(30,42,28,0.62); }
     .desk-card p { font-size: 13px; color: var(--text-dim); line-height: 1.65; }
 
     /* HOW IT WORKS */
@@ -173,8 +178,11 @@
       .hero-proof { gap: 16px; margin-top: 36px; }
       .hero-proof-item { font-size: 10px; }
       .section { padding: 48px 20px; }
+      .desk-split { grid-template-columns: 1fr; }
+      .desk-photo { min-height: 280px; }
       .desk-grid { grid-template-columns: 1fr; }
       .desk-card { padding: 24px 20px; }
+      .desk-cards { padding: 32px 20px; }
       .steps { grid-template-columns: 1fr; gap: 12px; }
       .proof-grid { grid-template-columns: 1fr; }
       .testi-grid { grid-template-columns: 1fr; }
@@ -226,31 +234,39 @@
   <!-- WHAT WE TAKE OFF YOUR DESK -->
   <div class="section">
     <p class="section-label">What we take off your desk</p>
-    <div class="desk-grid">
-      <div class="desk-card">
-        <div class="desk-card-icon">◈</div>
-        <h3>Strategy and content pillars</h3>
-        <p>We work out what you should be talking about, then build a 90-day plan around it. Your audience, your offer, your angles — mapped before anything gets made.</p>
+    <div class="desk-split">
+      <div class="desk-cards">
+        <div class="desk-grid">
+          <div class="desk-card">
+            <div class="desk-card-icon">◈</div>
+            <h3>Strategy and content pillars</h3>
+            <p>We work out what you should be talking about, then build a 90-day plan around it. Your audience, your offer, your angles — mapped before anything gets made.</p>
+          </div>
+          <div class="desk-card">
+            <div class="desk-card-icon">◈</div>
+            <h3>Scripts and filming direction</h3>
+            <p>You get the shot list and the words. If you have never filmed before, we walk you through it on a call first. No wasted weekends on footage that cannot be used.</p>
+          </div>
+          <div class="desk-card">
+            <div class="desk-card-icon">◈</div>
+            <h3>Editing and production</h3>
+            <p>Footage comes back finished, cut to your look, captioned, ready to go out. Every piece follows your brand rules without needing a brief each round.</p>
+          </div>
+          <div class="desk-card">
+            <div class="desk-card-icon">◈</div>
+            <h3>Posting and scheduling</h3>
+            <p>Everything goes out on time across your platforms. You do not touch a scheduler.</p>
+          </div>
+          <div class="desk-card">
+            <div class="desk-card-icon">◈</div>
+            <h3>Community replies</h3>
+            <p>Comments and DMs answered in your voice, not a corporate one. We build a reply guide in month one so responses sound like you.</p>
+          </div>
+        </div>
       </div>
-      <div class="desk-card">
-        <div class="desk-card-icon">◈</div>
-        <h3>Scripts and filming direction</h3>
-        <p>You get the shot list and the words. If you have never filmed before, we walk you through it on a call first. No wasted weekends on footage that cannot be used.</p>
-      </div>
-      <div class="desk-card">
-        <div class="desk-card-icon">◈</div>
-        <h3>Editing and production</h3>
-        <p>Footage comes back finished, cut to your look, captioned, ready to go out. Every piece follows your brand rules without needing a brief each round.</p>
-      </div>
-      <div class="desk-card">
-        <div class="desk-card-icon">◈</div>
-        <h3>Posting and scheduling</h3>
-        <p>Everything goes out on time across your platforms. You do not touch a scheduler.</p>
-      </div>
-      <div class="desk-card">
-        <div class="desk-card-icon">◈</div>
-        <h3>Community replies</h3>
-        <p>Comments and DMs answered in your voice, not a corporate one. We build a reply guide in month one so responses sound like you.</p>
+      <div class="desk-photo">
+        <img src="/images/desk-strategy.jpg" alt="Strategy session — team at whiteboard and laptops" loading="lazy">
+        <div class="desk-photo-overlay"></div>
       </div>
     </div>
   </div>
