@@ -77,8 +77,8 @@
     .hero-proof-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold); opacity: 0.5; flex-shrink: 0; }
 
     /* SECTIONS */
-    .section { max-width: var(--max); margin: 0 auto; padding: 72px 40px; border-bottom: 2px solid var(--gold); position: relative; }
-    .section::after { content: 'K'; position: absolute; bottom: -10px; right: 40px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; color: var(--gold); background: var(--bg); padding: 0 8px; }
+    .section { max-width: var(--max); margin: 0 auto; padding: 72px 40px; border-bottom: none; position: relative; }
+    .section::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1.5px; background: linear-gradient(to right, transparent, #2f9e8f 28%, #2f9e8f 72%, transparent); }
     .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
     .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); }
     .section-h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--text); line-height: 1.15; margin-bottom: 12px; }
