@@ -84,14 +84,16 @@
     .section-intro { font-size: 16px; color: var(--text-dim); max-width: 560px; line-height: 1.65; margin-bottom: 40px; }
 
     /* WHAT WE TAKE OFF YOUR DESK — SPLIT LAYOUT */
-    .desk-split { display: grid; grid-template-columns: 1fr 400px; gap: 0; border-radius: 12px; overflow: hidden; border: 1px solid rgba(47,158,143,0.18); }
-    .desk-cards { padding: 48px 44px; display: flex; flex-direction: column; gap: 10px; }
+    .section-desk { max-width: 100%; padding-left: 0; padding-right: 0; }
+    .section-desk .section-label { padding: 0 40px; }
+    .desk-split { display: grid; grid-template-columns: 1fr 480px; gap: 0; overflow: hidden; }
+    .desk-cards { padding: 40px 40px 48px; display: flex; flex-direction: column; gap: 10px; max-width: var(--max); }
     .desk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .desk-card { background: var(--bg-card); border: 1px solid rgba(47,158,143,0.25); border-radius: 8px; padding: 28px 24px; position: relative; transition: border-color 0.3s; }
     .desk-card:hover { border-color: rgba(47,158,143,0.55); }
     .desk-card-icon { font-size: 20px; color: var(--gold); margin-bottom: 16px; }
     .desk-card h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
-    .desk-photo { position: relative; min-height: 520px; overflow: hidden; }
+    .desk-photo { position: relative; min-height: 560px; overflow: hidden; }
     .desk-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
     .desk-photo-overlay { position: absolute; inset: 0; background: rgba(30,42,28,0.62); }
     .desk-card p { font-size: 13px; color: var(--text-dim); line-height: 1.65; }
@@ -183,6 +185,7 @@
       .desk-grid { grid-template-columns: 1fr; }
       .desk-card { padding: 24px 20px; }
       .desk-cards { padding: 32px 20px; }
+      .section-desk .section-label { padding: 0 20px; }
       .steps { grid-template-columns: 1fr; gap: 12px; }
       .proof-grid { grid-template-columns: 1fr; }
       .testi-grid { grid-template-columns: 1fr; }
@@ -232,7 +235,7 @@
   </div>
 
   <!-- WHAT WE TAKE OFF YOUR DESK -->
-  <div class="section">
+  <div class="section section-desk">
     <p class="section-label">What we take off your desk</p>
     <div class="desk-split">
       <div class="desk-cards">
