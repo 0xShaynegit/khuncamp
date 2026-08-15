@@ -87,17 +87,21 @@
     /* WHAT WE TAKE OFF YOUR DESK — SPLIT LAYOUT */
     .section-desk { max-width: 100%; padding: 0; }
     .section-desk > .section-label { padding: 40px 40px 0; }
-    .desk-split { display: grid; grid-template-columns: 55% 45%; min-height: 580px; }
-    .desk-cards { padding: 36px 40px 48px; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+    .desk-split { display: grid; grid-template-columns: 1fr 360px; align-items: center; gap: 0; padding: 36px 40px 52px; max-width: var(--max); margin: 0 auto; }
+    .desk-cards { display: flex; flex-direction: column; gap: 10px; padding-right: 40px; }
     .desk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .desk-card { background: var(--bg-card); border: 1px solid rgba(47,158,143,0.25); border-radius: 8px; padding: 24px 22px; transition: border-color 0.3s; }
+    .desk-card { background: var(--bg-card); border: 1px solid rgba(47,158,143,0.25); border-radius: 8px; padding: 22px 20px; transition: border-color 0.3s; }
     .desk-card:hover { border-color: rgba(47,158,143,0.55); }
-    .desk-card-icon { font-size: 18px; color: var(--gold); margin-bottom: 12px; }
-    .desk-card h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .desk-card-icon { font-size: 18px; color: var(--gold); margin-bottom: 10px; }
+    .desk-card h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .desk-card p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
-    .desk-photo { position: relative; overflow: hidden; }
-    .desk-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-    .desk-photo-overlay { position: absolute; inset: 0; background: rgba(20,30,20,0.72); }
+    /* Photo — framed */
+    .desk-photo-wrap { position: relative; padding: 12px 0 12px 12px; }
+    .desk-photo-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 24px; bottom: 0; border: 2px solid var(--gold); border-radius: 12px; opacity: 0.4; pointer-events: none; z-index: 2; }
+    .desk-photo-wrap::after { content: ''; position: absolute; top: 20px; left: 20px; right: 4px; bottom: -8px; background: var(--bg-card); border-radius: 10px; z-index: 0; }
+    .desk-photo { position: relative; height: 420px; border-radius: 10px; overflow: hidden; z-index: 1; }
+    .desk-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+    .desk-photo-overlay { position: absolute; inset: 0; background: rgba(20,30,20,0.58); }
 
     /* HOW IT WORKS */
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -192,11 +196,12 @@
       .section-desk > .section-label { padding: 28px 20px 0; }
 
       /* desk split — stack vertically */
-      .desk-split { grid-template-columns: 1fr; min-height: auto; }
-      .desk-cards { padding: 24px 20px 28px; }
+      .desk-split { grid-template-columns: 1fr; padding: 24px 20px 32px; }
+      .desk-cards { padding-right: 0; }
       .desk-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
       .desk-card { padding: 16px 14px; }
-      .desk-photo { min-height: 260px; }
+      .desk-photo-wrap { padding: 10px 0 10px 10px; margin-top: 24px; }
+      .desk-photo { height: 260px; }
 
       .steps { grid-template-columns: 1fr; gap: 12px; }
       .proof-grid { grid-template-columns: 1fr 1fr; }
@@ -288,9 +293,11 @@
           </div>
         </div>
       </div>
+      <div class="desk-photo-wrap">
       <div class="desk-photo">
         <img src="/images/desk-strategy.jpg" alt="Strategy session — team at whiteboard and laptops" loading="lazy">
         <div class="desk-photo-overlay"></div>
+      </div>
       </div>
     </div>
   </div>
