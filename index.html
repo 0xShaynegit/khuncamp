@@ -225,6 +225,21 @@
       
     }
   
+    /* -- Watch & Listen -- */
+    .media-cards { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; align-items: start; }
+    .media-card { background: var(--bg-card); border: 1px solid rgba(47,158,143,0.2); border-radius: 8px; overflow: hidden; }
+    .media-embed { position: relative; padding-bottom: 56.25%; background: #1a2419; }
+    .media-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .media-card-body { padding: 18px 20px 20px; }
+    .media-ep-type { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(47,158,143,0.35); padding: 3px 10px; border-radius: 99px; margin-bottom: 8px; }
+    .media-card-body h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.4; }
+    .media-card-body p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+    .media-card-soon { display: flex; flex-direction: column; justify-content: center; padding: 28px 24px; gap: 10px; min-height: 180px; }
+    .media-card-soon h3 { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.4; }
+    .media-card-soon p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+    .media-soon-icon { margin-bottom: 4px; }
+    @media (max-width: 640px) { .media-cards { grid-template-columns: 1fr; } }
+
     /* -- Footer -- */
     footer { background: var(--bg,#e8ede6); border-top: 1px solid #c8d5c4; padding: 48px 40px 32px; }
     .footer-inner { max-width: 900px; margin: 0 auto; }
@@ -258,6 +273,7 @@
         <a href="/evidence/">Evidence</a>
         <a href="/events/">Events</a>
         <a href="/founder/">Founder</a>
+        <a href="/media/">Watch &amp; Listen</a>
         <a href="/offer/">The Offer</a>
       </div>
       <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="nav-cta">Book a Call</a>
@@ -496,6 +512,36 @@
     </div>
   </div>
 
+  <!-- WATCH & LISTEN -->
+  <div class="section">
+    <p class="section-label">Watch &amp; Listen</p>
+    <h2 class="section-h2">Shawn <em style="color:var(--gold);font-style:normal;">on air</em></h2>
+    <p class="section-intro">Podcast appearances and video interviews — how Shawn thinks about content, business, and building online from Southeast Asia.</p>
+    <div class="media-cards">
+      <div class="media-card media-card-featured">
+        <div class="media-embed">
+          <iframe src="https://www.youtube.com/embed/0zun44iclDY?si=tM_b2IAQmwxzNnex" title="Shawn Arrington interview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="media-card-body">
+          <span class="media-ep-type">Video Interview</span>
+          <h3>Shawn Arrington — Building Khun Camp</h3>
+          <p>How Shawn built a content growth company from Southeast Asia — the systems, the failures, and why most brands are doing content backwards.</p>
+        </div>
+      </div>
+      <div class="media-card media-card-soon">
+        <div class="media-soon-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#2f9e8f" opacity="0.35"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <span class="media-ep-type">Podcast</span>
+        <h3>More episodes coming</h3>
+        <p>New podcast appearances and interviews dropping soon. Subscribe on YouTube or Spotify to get notified.</p>
+      </div>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="/media/" class="btn-outline">See all episodes &rarr;</a>
+    </div>
+  </div>
+
   <!-- BOTTOM CTA -->
   <div class="bottom-cta">
     <h2>Ready to hand off the channel?</h2>
@@ -535,6 +581,7 @@
           <a href="/services/">Services</a>
           <a href="/about/">About</a>
           <a href="/founder/">Founder</a>
+          <a href="/media/">Watch &amp; Listen</a>
           <a href="/blog.html">Blog</a>
           <a href="/events.html">Events</a>
           <a href="/contact/">Contact</a>
