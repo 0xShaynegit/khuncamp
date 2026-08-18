@@ -1,6 +1,28 @@
-/med-spas  /med-spas/  301
-/websites  /websites/  301
-/services  /services/  301
-/ai-receptionist  /ai-receptionist/  301
-/automated-booking  /automated-booking/  301
+# Trailing-slash normaliser for live pages
 /contact  /contact/  301
+
+# Retired offers -> current offer (2026-08-18)
+# Med spa vertical closed 2026-07-28. Diesel closed 2026-08-12.
+# AI receptionist / automated booking / services / websites all superseded
+# by the single content-growth offer at /offer/ ($3,000 build + $1,500/mo).
+/med-spas            /offer/  301
+/med-spas/           /offer/  301
+/ai-receptionist     /offer/  301
+/ai-receptionist/    /offer/  301
+/automated-booking   /offer/  301
+/automated-booking/  /offer/  301
+/services            /offer/  301
+/services/           /offer/  301
+/diesel              /offer/  301
+/diesel/             /offer/  301
+/websites            /offer/  301
+/websites/           /offer/  301
+
+# Superseded AI-voice pricing page -> current Khun Collective page
+/ai-voice   /systems/  301
+/ai-voice/  /systems/  301
+
+# Removed demo sandboxes (fictional businesses, publicly indexable)
+/demo       /offer/  301
+/demo/      /offer/  301
+/demos/*    /offer/  301
