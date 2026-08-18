@@ -121,231 +121,105 @@
     }
 
     /* ── HERO ── */
-    .hero {
-      padding: 96px 40px 72px;
-      border-bottom: 1px solid #c8d5c4;
-      max-width: var(--max);
-      margin: 0 auto;
-    }
+    .hero { padding: 80px 40px 64px; max-width: 960px; margin: 0 auto; }
+    .eyebrow { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold-border); padding: 5px 14px; border-radius: 99px; margin-bottom: 28px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 320px; gap: 64px; align-items: center; }
+    .hero h1 { font-family: var(--font-serif); font-size: clamp(3rem, 6vw, 4.8rem); line-height: 1.04; color: var(--text); margin-bottom: 8px; }
+    .hero-title { font-size: 14px; color: var(--text-muted); margin-bottom: 28px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .social-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .social-links a { font-size: 12px; font-weight: 700; color: var(--gold); border: 1px solid var(--gold-border); padding: 6px 14px; border-radius: 99px; transition: background 0.15s, color 0.15s; }
+    .social-links a:hover { background: var(--gold); color: #fff; }
+    .photo-wrap { position: relative; }
+    .photo-box { width: 100%; aspect-ratio: 3/4; background: var(--bg-card); border-radius: 10px; overflow: hidden; }
+    .photo-box::before { content: ''; position: absolute; top: 12px; left: 12px; right: -12px; bottom: -12px; border: 2px solid var(--gold); border-radius: 10px; opacity: 0.2; z-index: 0; }
+    .photo-box img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; position: relative; z-index: 1; }
 
-    .eyebrow {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      border: 1px solid var(--gold-border);
-      padding: 5px 14px;
-      border-radius: 99px;
-      margin-bottom: 28px;
-    }
+    /* ── DIVIDER ── */
+    .sec-divider { height: 1.5px; background: linear-gradient(to right, transparent, #2f9e8f 28%, #2f9e8f 72%, transparent); max-width: 960px; margin: 0 auto; }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 260px;
-      gap: 56px;
-      align-items: start;
-    }
+    /* ── INTRO SPLIT ── */
+    .intro { max-width: 960px; margin: 0 auto; padding: 64px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .intro-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+    .intro-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); }
+    .intro-headline { font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15; color: var(--text); }
+    .intro-headline em { color: var(--gold); font-style: normal; }
+    .intro-body p { font-size: 16px; color: var(--text-dim); line-height: 1.85; margin-bottom: 16px; }
+    .intro-body p:last-child { margin-bottom: 0; }
+    .intro-body strong { color: var(--text); }
 
-    .hero h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(2.8rem, 6vw, 4.2rem);
-      line-height: 1.05;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
+    /* ── STATS ROW ── */
+    .stats { background: var(--bg-card); border-top: 1px solid #c8d5c4; border-bottom: 1px solid #c8d5c4; }
+    .stats-inner { max-width: 960px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat { padding: 36px 24px; border-right: 1px solid #c8d5c4; }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); color: var(--gold); line-height: 1; font-style: italic; margin-bottom: 8px; }
+    .stat-label { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
 
-    .hero-title {
-      font-size: 14px;
-      color: var(--text-dim);
-      margin-bottom: 28px;
-      letter-spacing: 0.03em;
-    }
+    /* ── ACHIEVEMENTS ── */
+    .achievements { max-width: 960px; margin: 0 auto; padding: 64px 40px; }
+    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); }
+    .achievements-headline { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--text); margin-bottom: 36px; line-height: 1.2; }
+    .ach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .ach-item { background: var(--bg-card); border: 1px solid rgba(47,158,143,0.2); border-radius: 8px; padding: 22px 24px; display: flex; gap: 16px; align-items: flex-start; transition: border-color 0.2s; }
+    .ach-item:hover { border-color: rgba(47,158,143,0.5); }
+    .ach-check { width: 22px; height: 22px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .ach-check svg { width: 12px; height: 12px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .ach-text h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.3; }
+    .ach-text p { font-size: 13px; color: var(--text-dim); line-height: 1.55; }
 
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    /* ── MILESTONES ── */
+    .milestones { background: #1e2a1c; }
+    .milestones-inner { max-width: 960px; margin: 0 auto; padding: 64px 40px; }
+    .milestones-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .milestones-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); }
+    .milestones-headline { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 36px; }
+    .mile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .mile-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 28px 24px; }
+    .mile-icon { font-size: 24px; margin-bottom: 16px; }
+    .mile-card h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .mile-card p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    .mile-year { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; color: var(--gold); border: 1px solid rgba(47,158,143,0.4); padding: 3px 10px; border-radius: 99px; margin-bottom: 12px; }
 
-    .social-links a {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--gold);
-      border: 1px solid var(--gold-border);
-      padding: 6px 14px;
-      border-radius: 99px;
-      transition: background 0.15s, color 0.15s;
-      letter-spacing: 0.03em;
-    }
+    /* ── WHAT I DO ── */
+    .what { max-width: 960px; margin: 0 auto; padding: 64px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .what-left .section-label { margin-bottom: 16px; }
+    .what-left h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--text); line-height: 1.2; margin-bottom: 20px; }
+    .what-left p { font-size: 15px; color: var(--text-dim); line-height: 1.8; }
+    .what-right { display: flex; flex-direction: column; gap: 16px; }
+    .what-item { border-left: 2px solid var(--gold); padding-left: 20px; }
+    .what-item h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .what-item p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 
-    .social-links a:hover {
-      background: var(--gold);
-      color: #ffffff;
-    }
-
-    .photo-wrap {
-      position: sticky;
-      top: 120px;
-    }
-
-    .photo-box {
-      width: 100%;
-      aspect-ratio: 4/5;
-      background: var(--bg-card);
-      border: 1px solid #1e1e1e;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .photo-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
-    }
-
-    .photo-placeholder {
-      font-size: 12px;
-      color: var(--text-muted);
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* ── BIO ── */
-    .bio {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 36px 40px;
-    }
-
-    .bio-section {
-      margin-bottom: 56px;
-    }
-
-    .bio-section:last-child { margin-bottom: 0; }
-
-    .bio-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-
-    .bio-label::before {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .bio-section p {
-      font-size: 17px;
-      color: var(--text-dim);
-      line-height: 1.85;
-      margin-bottom: 18px;
-      max-width: 620px;
-    }
-
-    .bio-section p:last-child { margin-bottom: 0; }
-
-    .bio-section p strong {
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    .bio-divider {
-      border: none;
-      border-top: 1px solid #c8d5c4;
-      margin: 56px 0;
-    }
-
-    .bio-tagline {
-      font-family: var(--font-serif);
-      font-size: 1.5rem;
-      color: var(--text);
-      font-style: italic;
-      margin: 0;
-      max-width: 480px;
-    }
+    /* ── QUOTE ── */
+    .quote-section { border-top: 1px solid #c8d5c4; border-bottom: 1px solid #c8d5c4; background: var(--bg-card); padding: 64px 40px; text-align: center; }
+    .quote-text { font-family: var(--font-serif); font-size: clamp(1.6rem, 3.5vw, 2.4rem); color: var(--text); font-style: italic; max-width: 600px; margin: 0 auto 16px; line-height: 1.4; }
+    .quote-attr { font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
 
     /* ── CTA ── */
-    .cta {
-      border-top: 1px solid #c8d5c4;
-      padding: 36px 40px;
-      text-align: center;
-      max-width: var(--max);
-      margin: 0 auto;
-    }
-
-    .cta h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: var(--text);
-      margin-bottom: 16px;
-    }
-
-    .cta p {
-      font-size: 16px;
-      color: var(--text-dim);
-      max-width: 44ch;
-      margin: 0 auto 32px;
-      line-height: 1.65;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--gold);
-      color: #ffffff;
-      font-weight: 900;
-      font-size: 15px;
-      letter-spacing: 0.04em;
-      padding: 15px 36px;
-      border-radius: var(--r);
-      transition: opacity 0.15s, transform 0.15s;
-    }
-
+    .cta { padding: 80px 40px; text-align: center; max-width: 960px; margin: 0 auto; }
+    .cta h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--text); margin-bottom: 16px; }
+    .cta p { font-size: 16px; color: var(--text-dim); max-width: 44ch; margin: 0 auto 32px; line-height: 1.65; }
+    .btn { display: inline-block; background: var(--gold); color: #fff; font-weight: 900; font-size: 15px; letter-spacing: 0.04em; padding: 15px 40px; border-radius: 99px; transition: opacity 0.15s, transform 0.15s; }
     .btn:hover { opacity: 0.88; transform: translateY(-1px); }
 
-    /* ── FOOTER ── */
-    
-
-    
-
-    
-
-    
-
-    
-
     /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-            .nav-top { padding: 0 16px; gap: 12px; }
+    @media (max-width: 720px) {
+      .nav-top { padding: 0 16px; gap: 12px; }
       .nav-pill { display: none; }
       .nav-cta { padding: 9px 16px; font-size: 12px; }
       .hero { padding: 48px 20px 40px; }
-      .hero h1 { font-size: 2.4rem; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .photo-wrap { order: -1; max-width: 180px; position: static; }
-      .social-links a { font-size: 11px; padding: 5px 12px; }
-      .bio { padding: 40px 20px; }
-      .bio-section p { font-size: 16px; }
-      .bio-tagline { font-size: 1.2rem; }
-      .cta { padding: 48px 20px; }
-      
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .photo-wrap { max-width: 220px; }
+      .intro { grid-template-columns: 1fr; gap: 32px; padding: 40px 20px; }
+      .stats-inner { grid-template-columns: 1fr 1fr; }
+      .stat { border-right: none; border-bottom: 1px solid #c8d5c4; }
+      .ach-grid { grid-template-columns: 1fr; }
+      .mile-grid { grid-template-columns: 1fr; }
+      .what { grid-template-columns: 1fr; gap: 32px; padding: 40px 20px; }
+      .achievements, .milestones-inner, .cta { padding-left: 20px; padding-right: 20px; }
+      .quote-section { padding: 40px 20px; }
     }
-  
-    [class*='-section']::after, .section::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1.5px; background: linear-gradient(to right, transparent, #2f9e8f 28%, #2f9e8f 72%, transparent); }
   
     /* -- Footer -- */
     footer { background: var(--bg,#e8ede6); border-top: 1px solid #c8d5c4; padding: 48px 40px 32px; }
@@ -393,8 +267,8 @@
     <span class="eyebrow">Founder</span>
     <div class="hero-grid">
       <div>
-        <h1>Shawn Arrington</h1>
-        <p class="hero-title">Founder, Khun Camp</p>
+        <h1>Shawn<br>Arrington</h1>
+        <p class="hero-title">Founder &amp; CEO &nbsp;·&nbsp; Khun Camp</p>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/shawn-arrington-507801121/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://khunshawn.substack.com/" target="_blank" rel="noopener">Substack</a>
@@ -410,41 +284,178 @@
     </div>
   </div>
 
-  <!-- BIO -->
-  <div class="bio">
+  <div class="sec-divider"></div>
 
-    <div class="bio-section">
-      <p>I joined the US Army because my mother dared me to.</p>
-      <p>I was doing a science project with a friend, said it to get a rise out of her, and she gave me a look that meant <strong>you couldn't if you tried.</strong> I went to the recruiter the next day. Picked the Army over the Air Force because the Army recruiter showed up in combat boots and the Air Force guy showed up in dress blues. Picked 13J, fire control, mostly because I thought I was picking 13B.</p>
-      <p>That is the honest version. My whole reasoning was pride and a uniform.</p>
-      <p>I served from 2017 to February 2020 and was honorably discharged. Nine months of it in Korea. Most of my actual days were spent in a motor pool doing maintenance and waiting. The job itself was artillery fire control. Somebody runs the numbers before anything moves and the numbers have to be right the first time. I got out an E-4, specialist, junior enough that the numbers were rarely mine. I just watched how much rode on them.</p>
-      <p>I separated in February 2020, a few weeks before the world shut down. I planned to go to school. Then COVID closed the campuses. I do not learn well online. So I went to work at a friend's company instead, making money playing video games, and started building a channel on the side. <strong>That turned into 60,000 subscribers and, at the peak, nine videos a day.</strong></p>
-      <p>That taught me the thing most operators never get to learn: what actually makes a stranger stop, trust you, and act.</p>
-      <p>Now I run a content growth company out of Southeast Asia.</p>
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="stat-num">60K+</div>
+        <div class="stat-label">YouTube subscribers built from scratch</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">9/day</div>
+        <div class="stat-label">Videos published at peak production</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2×</div>
+        <div class="stat-label">YouTube Play Buttons earned (Gold &amp; Silver)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Countries rotating through Southeast Asia</div>
+      </div>
     </div>
+  </div>
 
-    <hr class="bio-divider">
-
-    <div class="bio-section">
-      <p class="bio-label">What I actually do</p>
-      <p>Most creators and business owners know they need to be putting out content. What they do not have is the system to do it without it consuming their week.</p>
-      <p>Khun Camp handles the whole thing. Strategy, scripts, filming direction, editing, posting, and community replies. You film when we ask. We handle everything else.</p>
-      <p><strong>The goal is content that actually converts, not just content that exists.</strong></p>
-      <p>If the math does not work for your situation, we say that on the call.</p>
+  <!-- INTRO SPLIT -->
+  <div class="intro">
+    <div>
+      <p class="intro-label">The story</p>
+      <h2 class="intro-headline">From artillery fire<br>control to <em>content<br>operating systems</em></h2>
     </div>
-
-    <hr class="bio-divider">
-
-    <div class="bio-section">
-      <p class="bio-label">Where I work from</p>
-      <p>Khun Camp was founded in Da Nang, Vietnam. I do not live there.</p>
-      <p>I rotate through Southeast Asia. Thailand, Vietnam, the Philippines right now, more countries coming. I have been traveling since I was two months old. This is not a lifestyle I picked up as an adult. It is just the shape my life has always had.</p>
+    <div class="intro-body">
+      <p>I joined the US Army because my mother dared me to. I went to the recruiter the next day. Served 2017–2020, nine months in Korea, honorably discharged as an E-4 specialist. My job was artillery fire control — someone runs the numbers before anything moves, and the numbers have to be right the first time.</p>
+      <p>I separated in February 2020, right before the world shut down. COVID closed the campuses. I started building a YouTube channel on the side. <strong>That turned into 60,000 subscribers and, at the peak, nine videos a day.</strong></p>
+      <p>That taught me the thing most operators never get to learn: what actually makes a stranger stop, trust you, and act. Now I run a content growth company out of Southeast Asia.</p>
     </div>
+  </div>
 
-    <hr class="bio-divider">
+  <div class="sec-divider"></div>
 
-    <p class="bio-tagline">"Remember to stay human."</p>
+  <!-- ACHIEVEMENTS -->
+  <div class="achievements">
+    <p class="section-label">What he's built</p>
+    <h2 class="achievements-headline">A track record earned in the field,<br>not on a whiteboard</h2>
+    <div class="ach-grid">
+      <div class="ach-item">
+        <div class="ach-check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <div class="ach-text">
+          <h4>US Army Veteran</h4>
+          <p>Served 2017–2020. Honorably discharged as E-4 Specialist. Nine months stationed in Korea.</p>
+        </div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <div class="ach-text">
+          <h4>60,000+ YouTube Subscribers</h4>
+          <p>Built from zero with no head start, no ad spend, and no existing audience.</p>
+        </div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <div class="ach-text">
+          <h4>Gold &amp; Silver YouTube Play Buttons</h4>
+          <p>Both earned through organic growth — not purchased, not inherited.</p>
+        </div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <div class="ach-text">
+          <h4>9 Videos a Day at Peak</h4>
+          <p>Built the systems to sustain that pace. Now those systems run client channels.</p>
+        </div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <div class="ach-text">
+          <h4>Founded Khun Camp in Da Nang</h4>
+          <p>Started in Vietnam, now operating across Southeast Asia with clients worldwide.</p>
+        </div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <div class="ach-text">
+          <h4>Lifelong International Base</h4>
+          <p>Rotating through Thailand, Vietnam, and the Philippines. Traveling since two months old.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- MILESTONES -->
+  <div class="milestones">
+    <div class="milestones-inner">
+      <p class="milestones-label">Timeline</p>
+      <h2 class="milestones-headline">How it happened</h2>
+      <div class="mile-grid">
+        <div class="mile-card">
+          <div class="mile-year">2017</div>
+          <h4>Enlisted in the US Army</h4>
+          <p>Picked 13J fire control. Served through 2020 including nine months in Korea.</p>
+        </div>
+        <div class="mile-card">
+          <div class="mile-year">2020</div>
+          <h4>Honorably Discharged</h4>
+          <p>Left as E-4 Specialist. COVID closed the campuses. Started a YouTube channel instead.</p>
+        </div>
+        <div class="mile-card">
+          <div class="mile-year">2021–22</div>
+          <h4>60K Subscribers, 9 Videos/Day</h4>
+          <p>Learned what makes a stranger stop, trust, and act. Earned both YouTube Play Buttons.</p>
+        </div>
+        <div class="mile-card">
+          <div class="mile-year">2023</div>
+          <h4>Founded Khun Camp in Da Nang</h4>
+          <p>Packaged the growth system for other creators and business owners.</p>
+        </div>
+        <div class="mile-card">
+          <div class="mile-year">2024</div>
+          <h4>Expanded Across Southeast Asia</h4>
+          <p>Rotates between Thailand, Vietnam, and the Philippines. Building the remote-first model.</p>
+        </div>
+        <div class="mile-card">
+          <div class="mile-year">Now</div>
+          <h4>Running Client Content Operations</h4>
+          <p>Full-service content OS for creators and businesses. Strategy through community replies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT I DO -->
+  <div class="what">
+    <div class="what-left">
+      <p class="section-label">What we actually do</p>
+      <h2>Content that converts,<br>not just content that exists</h2>
+      <p>Most creators and business owners know they need to be putting out content. What they don't have is the system to do it without it consuming their week. Khun Camp handles the whole operation. If the math doesn't work for your situation, we say that on the call.</p>
+    </div>
+    <div class="what-right">
+      <div class="what-item">
+        <h4>Strategy &amp; Direction</h4>
+        <p>We map what to post, when, and why — based on your audience and your goals.</p>
+      </div>
+      <div class="what-item">
+        <h4>Scripts &amp; Filming Direction</h4>
+        <p>You show up. We hand you exactly what to say and how to say it.</p>
+      </div>
+      <div class="what-item">
+        <h4>Editing &amp; Publishing</h4>
+        <p>Everything from raw footage to live post. Fast, consistent, on-brand.</p>
+      </div>
+      <div class="what-item">
+        <h4>Community &amp; Replies</h4>
+        <p>We manage the comments so you keep momentum without watching the feed all day.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-section">
+    <p class="quote-text">"Remember to stay human."</p>
+    <p class="quote-attr">— Shawn Arrington, Founder</p>
   </div>
 
   <!-- CTA -->
