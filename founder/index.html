@@ -174,9 +174,11 @@
     .milestones-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
     .milestones-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--gold); }
     .milestones-headline { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 36px; }
-    .mile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .mile-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 28px 24px; }
-    .mile-icon { font-size: 24px; margin-bottom: 16px; }
+    .mile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+    .mile-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; }
+    .mile-photo { width: 100%; aspect-ratio: 4/3; overflow: hidden; }
+    .mile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .mile-body { padding: 24px; }
     .mile-card h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
     .mile-card p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; }
     .mile-year { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; color: var(--gold); border: 1px solid rgba(47,158,143,0.4); padding: 3px 10px; border-radius: 99px; margin-bottom: 12px; }
@@ -290,20 +292,20 @@
   <div class="stats">
     <div class="stats-inner">
       <div class="stat">
-        <div class="stat-num">60K+</div>
-        <div class="stat-label">YouTube subscribers built from scratch</div>
+        <div class="stat-num">3M</div>
+        <div class="stat-label">Subscribers on channels he helped build</div>
       </div>
       <div class="stat">
-        <div class="stat-num">9/day</div>
-        <div class="stat-label">Videos published at peak production</div>
+        <div class="stat-num">60K+</div>
+        <div class="stat-label">Subscribers on his own channel</div>
       </div>
       <div class="stat">
         <div class="stat-num">2×</div>
         <div class="stat-label">YouTube Play Buttons earned (Gold &amp; Silver)</div>
       </div>
       <div class="stat">
-        <div class="stat-num">3+</div>
-        <div class="stat-label">Countries rotating through Southeast Asia</div>
+        <div class="stat-num">2025</div>
+        <div class="stat-label">Year Khun Camp was founded</div>
       </div>
     </div>
   </div>
@@ -315,9 +317,9 @@
       <h2 class="intro-headline">From artillery fire<br>control to <em>content<br>operating systems</em></h2>
     </div>
     <div class="intro-body">
-      <p>I joined the US Army because my mother dared me to. I went to the recruiter the next day. Served 2017–2020, nine months in Korea, honorably discharged as an E-4 specialist. My job was artillery fire control — someone runs the numbers before anything moves, and the numbers have to be right the first time.</p>
-      <p>I separated in February 2020, right before the world shut down. COVID closed the campuses. I started building a YouTube channel on the side. <strong>That turned into 60,000 subscribers and, at the peak, nine videos a day.</strong></p>
-      <p>That taught me the thing most operators never get to learn: what actually makes a stranger stop, trust you, and act. Now I run a content growth company out of Southeast Asia.</p>
+      <p>I joined the US Army because my mother dared me to. Served 2017–2020, nine months in Korea, honorably discharged as an E-4 Specialist. My job was artillery fire control — someone runs the numbers before anything moves, and the numbers have to be right the first time.</p>
+      <p>After discharge, I joined Gamer's Little Playground — a 3 million-subscriber YouTube channel. Spent three years learning what scale actually looks like inside a content operation. <strong>Earned both Gold and Silver YouTube Play Buttons along the way.</strong></p>
+      <p>Then I left to build my own channel from scratch. Hit 60,000 subscribers. In February 2025, I started Khun Camp to package that system for other creators and businesses.</p>
     </div>
   </div>
 
@@ -392,34 +394,31 @@
       <h2 class="milestones-headline">How it happened</h2>
       <div class="mile-grid">
         <div class="mile-card">
-          <div class="mile-year">2017</div>
-          <h4>Enlisted in the US Army</h4>
-          <p>Picked 13J fire control. Served through 2020 including nine months in Korea.</p>
+          <div class="mile-photo">
+            <img src="../images/army-shawn.jpg" alt="Shawn Arrington in the US Army" onerror="this.closest('.mile-photo').style.display='none'">
+          </div>
+          <div class="mile-body">
+            <div class="mile-year">2017</div>
+            <h4>Enlisted in the US Army</h4>
+            <p>Picked 13J fire control. Served through 2020 including nine months stationed in Korea. Honorably discharged as E-4 Specialist.</p>
+          </div>
         </div>
         <div class="mile-card">
-          <div class="mile-year">2020</div>
-          <h4>Honorably Discharged</h4>
-          <p>Left as E-4 Specialist. COVID closed the campuses. Started a YouTube channel instead.</p>
+          <div class="mile-photo">
+            <img src="../images/KhunCamp -Shawn.jpg" alt="Shawn with YouTube Play Buttons" onerror="this.closest('.mile-photo').style.display='none'">
+          </div>
+          <div class="mile-body">
+            <div class="mile-year">2020 – 2023</div>
+            <h4>Gamer's Little Playground</h4>
+            <p>Joined a 3M-subscriber YouTube channel as a content creator. Helped drive production at scale and earned Gold &amp; Silver YouTube Play Buttons.</p>
+          </div>
         </div>
         <div class="mile-card">
-          <div class="mile-year">2021–22</div>
-          <h4>60K Subscribers, 9 Videos/Day</h4>
-          <p>Learned what makes a stranger stop, trust, and act. Earned both YouTube Play Buttons.</p>
-        </div>
-        <div class="mile-card">
-          <div class="mile-year">2023</div>
-          <h4>Founded Khun Camp in Da Nang</h4>
-          <p>Packaged the growth system for other creators and business owners.</p>
-        </div>
-        <div class="mile-card">
-          <div class="mile-year">2024</div>
-          <h4>Expanded Across Southeast Asia</h4>
-          <p>Rotates between Thailand, Vietnam, and the Philippines. Building the remote-first model.</p>
-        </div>
-        <div class="mile-card">
-          <div class="mile-year">Now</div>
-          <h4>Running Client Content Operations</h4>
-          <p>Full-service content OS for creators and businesses. Strategy through community replies.</p>
+          <div class="mile-body">
+            <div class="mile-year">2023 – 2025</div>
+            <h4>60K on His Own Channel</h4>
+            <p>Left to build his own brand from scratch. Grew to 60,000 subscribers. Started Khun Camp in February 2025 to package the system for other creators.</p>
+          </div>
         </div>
       </div>
     </div>
