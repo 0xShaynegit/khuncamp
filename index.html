@@ -227,19 +227,31 @@
     }
   
     /* -- Watch & Listen -- */
-    .media-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
-    .media-card { background: var(--bg-card); border: 1px solid rgba(47,158,143,0.2); border-radius: 8px; overflow: hidden; }
-    .media-embed { position: relative; padding-bottom: 56.25%; background: #1a2419; }
-    .media-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-    .media-card-body { padding: 18px 20px 20px; }
-    .media-ep-type { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(47,158,143,0.35); padding: 3px 10px; border-radius: 99px; margin-bottom: 8px; }
-    .media-card-body h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.4; }
-    .media-card-body p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
-    .media-card-soon { display: flex; flex-direction: column; justify-content: center; padding: 28px 24px; gap: 10px; min-height: 180px; }
-    .media-card-soon h3 { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.4; }
-    .media-card-soon p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
-    .media-soon-icon { margin-bottom: 4px; }
-    @media (max-width: 840px) { .media-cards { grid-template-columns: 1fr; } }
+    .vc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .vc-featured { grid-column: 1 / -1; }
+    .vc { position: relative; border-radius: 12px; overflow: hidden; cursor: pointer; background: #1e2a1c; display: block; }
+    .vc-featured .vc { aspect-ratio: 16/7; }
+    .vc-sm { aspect-ratio: 16/10; }
+    .vc-thumb { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94); }
+    .vc:hover .vc-thumb { transform: scale(1.04); }
+    .vc-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.15) 55%, transparent 100%); }
+    .vc-badge { position: absolute; top: 14px; left: 14px; background: var(--gold); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 12px; border-radius: 99px; }
+    .vc-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1.5px solid rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.2s; }
+    .vc:hover .vc-play { background: var(--gold); transform: translate(-50%,-50%) scale(1.1); border-color: var(--gold); }
+    .vc-play svg { width: 18px; height: 18px; fill: #fff; margin-left: 3px; }
+    .vc-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 18px 18px; }
+    .vc-featured .vc-body { padding: 28px 24px 22px; }
+    .vc-ep { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-bottom: 6px; }
+    .vc-title { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.3; }
+    .vc-featured .vc-title { font-size: 20px; }
+    .vc-meta { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 6px; }
+    .vc-iframe-wrap { display: none; position: relative; padding-bottom: 56.25%; }
+    .vc-iframe-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; border-radius: 12px; }
+    .vc-iframe-wrap.active { display: block; }
+    .vc.hidden { display: none; }
+    .spotify-card { border-radius: 12px; overflow: hidden; }
+    .spotify-card iframe { display: block; width: 100%; border: none; }
+    @media (max-width: 840px) { .vc-grid { grid-template-columns: 1fr; } .vc-featured { grid-column: 1; } }
 
     /* -- Footer -- */
     footer { background: var(--bg,#e8ede6); border-top: 1px solid #c8d5c4; padding: 48px 40px 32px; }
@@ -518,29 +530,42 @@
     <p class="section-label">Watch &amp; Listen</p>
     <h2 class="section-h2">Shawn <em style="color:var(--gold);font-style:normal;">on air</em></h2>
     <p class="section-intro">Podcast appearances and video interviews — how Shawn thinks about content, business, and building online from Southeast Asia.</p>
-    <div class="media-cards">
-      <div class="media-card media-card-featured">
-        <div class="media-embed">
-          <iframe src="https://www.youtube.com/embed/0zun44iclDY?si=tM_b2IAQmwxzNnex" title="Shawn Arrington interview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    <div class="vc-grid">
+      <div class="vc-featured">
+        <div class="vc" onclick="playVC(this,'0zun44iclDY')">
+          <img class="vc-thumb" src="https://img.youtube.com/vi/0zun44iclDY/maxresdefault.jpg" alt="Shawn Arrington — Building Khun Camp" loading="lazy">
+          <div class="vc-overlay"></div>
+          <div class="vc-badge">Latest</div>
+          <div class="vc-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="vc-body">
+            <div class="vc-ep">Episode 1</div>
+            <div class="vc-title">Shawn Arrington — Building Khun Camp</div>
+            <div class="vc-meta">YouTube · @StillKhunShawn</div>
+          </div>
         </div>
-        <div class="media-card-body">
-          <span class="media-ep-type">Video Interview</span>
-          <h3>Shawn Arrington — Building Khun Camp</h3>
-          <p>How Shawn built a content growth company from Southeast Asia — the systems, the failures, and why most brands are doing content backwards.</p>
-        </div>
-      </div>
-      <div class="media-card media-card-featured">
-        <div class="media-embed">
-          <iframe src="https://www.youtube.com/embed/GgoDW-2HuF0?si=v3hRvsdxl9dPjVth" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="media-card-body">
-          <span class="media-ep-type">Video Interview</span>
-          <h3>Khun Camp — Episode 2</h3>
-          <p>Another conversation from Shawn on content, growth, and what it really takes to build online.</p>
+        <div class="vc-iframe-wrap" id="vc-0zun44iclDY">
+          <iframe src="" title="Shawn Arrington — Building Khun Camp" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="media-card" style="overflow:hidden;">
-        <iframe style="border-radius:10px;width:100%;height:100%;min-height:232px;display:block;" src="https://open.spotify.com/embed/show/28YnxS2iW68mr2uvBIWHCb/video?utm_source=generator&si=4ceb7b2d9e754df5" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Khun Camp Podcast on Spotify"></iframe>
+      <div>
+        <div class="vc vc-sm" onclick="playVC(this,'GgoDW-2HuF0')">
+          <img class="vc-thumb" src="https://img.youtube.com/vi/GgoDW-2HuF0/maxresdefault.jpg" alt="Episode 2" loading="lazy">
+          <div class="vc-overlay"></div>
+          <div class="vc-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="vc-body">
+            <div class="vc-ep">Episode 2</div>
+            <div class="vc-title">Khun Camp — Episode 2</div>
+            <div class="vc-meta">YouTube · @StillKhunShawn</div>
+          </div>
+        </div>
+        <div class="vc-iframe-wrap" id="vc-GgoDW-2HuF0">
+          <iframe src="" title="Episode 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div>
+        <div class="spotify-card">
+          <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/show/28YnxS2iW68mr2uvBIWHCb/video?utm_source=generator&si=4ceb7b2d9e754df5" width="100%" height="232" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Khun Camp Podcast on Spotify"></iframe>
+        </div>
       </div>
     </div>
     <div style="margin-top:28px;">
@@ -610,6 +635,15 @@
 
 
 <script>
+  function playVC(card, id) {
+    var wrap = document.getElementById('vc-' + id);
+    if (!wrap) return;
+    wrap.querySelector('iframe').src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+    wrap.classList.add('active');
+    card.classList.add('hidden');
+    wrap.scrollIntoView({behavior: 'smooth', block: 'center'});
+  }
+
   (function(){
     var nav = document.querySelector('nav');
     function update(){ nav.classList.toggle('nav-scrolled', window.scrollY > 80); }
