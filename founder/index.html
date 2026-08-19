@@ -193,6 +193,17 @@
     .what-item h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .what-item p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 
+    /* ── LIFE SECTION ── */
+    .life { max-width: 960px; margin: 0 auto; padding: 64px 40px; }
+    .life .section-label { margin-bottom: 12px; }
+    .life h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--text); margin-bottom: 36px; line-height: 1.2; }
+    .life-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .life-card { position: relative; border-radius: 10px; overflow: hidden; aspect-ratio: 3/4; }
+    .life-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+    .life-card:hover img { transform: scale(1.04); }
+    .life-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 16px 16px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%); color: #fff; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; }
+    @media (max-width: 720px) { .life { padding: 40px 20px; } .life-grid { grid-template-columns: 1fr; } .life-card { aspect-ratio: 4/3; } }
+
     /* ── QUOTE ── */
     .quote-section { border-top: 1px solid #c8d5c4; border-bottom: 1px solid #c8d5c4; background: var(--bg-card); padding: 64px 40px; text-align: center; }
     .quote-text { font-family: var(--font-serif); font-size: clamp(1.6rem, 3.5vw, 2.4rem); color: var(--text); font-style: italic; max-width: 600px; margin: 0 auto 16px; line-height: 1.4; }
@@ -447,6 +458,26 @@
       <div class="what-item">
         <h4>Community &amp; Replies</h4>
         <p>We manage the comments so you keep momentum without watching the feed all day.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIFE -->
+  <div class="life">
+    <p class="section-label">Life outside the work</p>
+    <h2>The world is the office.<br>The rest is living.</h2>
+    <div class="life-grid">
+      <div class="life-card">
+        <img src="../images/shawn-scuba.jpg" alt="Shawn scuba diving">
+        <div class="life-caption">Underwater somewhere in Southeast Asia</div>
+      </div>
+      <div class="life-card">
+        <img src="../images/shawn-sea.jpg" alt="Shawn in Southeast Asia">
+        <div class="life-caption">River crossing, Southeast Asia</div>
+      </div>
+      <div class="life-card">
+        <img src="../images/shawn-paris.jpg" alt="Shawn in Paris">
+        <div class="life-caption">Paris, France</div>
       </div>
     </div>
   </div>
