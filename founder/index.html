@@ -199,9 +199,18 @@
     .life h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--text); margin-bottom: 36px; line-height: 1.2; }
     .life-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .life-card { position: relative; border-radius: 10px; overflow: hidden; aspect-ratio: 3/4; }
-    .life-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
-    .life-card:hover img { transform: scale(1.04); }
-    .life-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 16px 16px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%); color: #fff; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; }
+    .life-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94); }
+    .life-card:hover img { transform: scale(1.05); }
+    .life-caption {
+      position: absolute; inset: 0;
+      background: rgba(47,158,143,0.92);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 24px; text-align: center;
+      opacity: 0; transform: translateY(100%);
+      transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.34,1.2,0.64,1);
+    }
+    .life-card:hover .life-caption { opacity: 1; transform: translateY(0); }
+    .life-caption span { font-size: 14px; font-weight: 700; color: #fff; letter-spacing: 0.03em; }
     @media (max-width: 720px) { .life { padding: 40px 20px; } .life-grid { grid-template-columns: 1fr; } .life-card { aspect-ratio: 4/3; } }
 
     /* ── QUOTE ── */
@@ -469,15 +478,15 @@
     <div class="life-grid">
       <div class="life-card">
         <img src="../images/shawn-scuba.jpg" alt="Shawn scuba diving">
-        <div class="life-caption">Underwater somewhere in Southeast Asia</div>
+        <div class="life-caption"><span>Underwater somewhere in Southeast Asia</span></div>
       </div>
       <div class="life-card">
         <img src="../images/shawn-sea.jpg" alt="Shawn in Southeast Asia">
-        <div class="life-caption">River crossing, Southeast Asia</div>
+        <div class="life-caption"><span>River crossing, Southeast Asia</span></div>
       </div>
       <div class="life-card">
         <img src="../images/shawn-paris.jpg" alt="Shawn in Paris">
-        <div class="life-caption">Paris, France</div>
+        <div class="life-caption"><span>Paris, France</span></div>
       </div>
     </div>
   </div>
