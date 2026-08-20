@@ -23,10 +23,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css?v=20260740">
-  <link rel="stylesheet" href="../css/booking-modal.css">
 
   <style>
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.96); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-top { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 68px; gap: 24px; }
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-pill { display: flex; align-items: center; background: #2b3a4a; border-radius: 40px; padding: 6px; gap: 2px; overflow-x: auto; scrollbar-width: none; flex-shrink: 1; }
+    .nav-pill::-webkit-scrollbar { display: none; }
+    .nav-pill a { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); padding: 11px 22px; border-radius: 40px; white-space: nowrap; transition: color 0.15s, background 0.15s; text-decoration: none; }
+    .nav-pill a:hover { color: rgba(255,255,255,0.85); }
+    .nav-pill a.active { background: #2a9d8f; color: #fff; }
+    .nav-cta { background: #2a9d8f; color: #fff; font-weight: 700; font-size: 14px; letter-spacing: 0.05em; padding: 13px 28px; border-radius: 40px; transition: opacity 0.15s; white-space: nowrap; flex-shrink: 0; text-decoration: none; }
+    .nav-cta:hover { opacity: 0.85; }
+    @media (max-width: 720px) { .nav-top { padding: 0 16px; gap: 12px; } .nav-pill { display: none; } .nav-cta { padding: 9px 16px; font-size: 12px; } }
+
     .contact-hero {
       padding: 160px 0 60px;
       text-align: center;
@@ -217,50 +228,20 @@
 </head>
 <body>
 
-  <div id="cursor-dot"></div>
-  <div id="cursor-ring"></div>
-
   <!-- NAV -->
-  <header id="site-header">
-    <nav id="floating-nav">
-      <div class="fnav-pill">
-        <a href="../" class="fnav-logo">
-          <img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" height="30" loading="eager" fetchpriority="high">
-        </a>
-        <div class="fnav-links">
-          <a href="../" class="fnav-link">Home</a>
-          <div class="fnav-dropdown">
-            <button class="fnav-dropdown-btn" aria-expanded="false">Services &#9660;</button>
-            <div class="fnav-dropdown-menu">
-              <a href="../services/" class="fnav-dropdown-item">AI Installation</a>
-              <a href="../websites/" class="fnav-dropdown-item">Web Install</a>
-            </div>
-          </div>
-          <a href="../blog.html" class="fnav-link">Blog</a>
-          <a href="../events.html" class="fnav-link">Events</a>
-          <a href="../program.html" class="fnav-link">Program</a>
-          <a href="../contact/" class="fnav-link active">Contact</a>
-        </div>
-        <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="fnav-cta">Free Audit</a>
-        <button class="fnav-ham" id="ham-btn" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+  <nav>
+    <div class="nav-top">
+      <a href="/" class="nav-logo"><img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" width="140" height="46" loading="eager"></a>
+      <div class="nav-pill">
+        <a href="/">Who We Are</a>
+        <a href="/media/">Watch &amp; Listen</a>
+        <a href="/founder/">Founder</a>
+        <a href="/offer/">The Offer</a>
+        <a href="/contact/" class="active">Contact</a>
       </div>
-    </nav>
-
-    <div id="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu-links">
-        <a href="../" class="mob-menu-link" tabindex="-1"><span class="mob-num">01</span><span class="mob-name">Home</span><div class="mob-bar"></div></a>
-        <a href="../services/" class="mob-menu-link" tabindex="-1"><span class="mob-num">02</span><span class="mob-name">AI Installation</span><div class="mob-bar"></div></a>
-        <a href="../websites/" class="mob-menu-link" tabindex="-1"><span class="mob-num">03</span><span class="mob-name">Web Install</span><div class="mob-bar"></div></a>
-        <a href="../blog.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">04</span><span class="mob-name">Blog</span><div class="mob-bar"></div></a>
-        <a href="../events.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">05</span><span class="mob-name">Events</span><div class="mob-bar"></div></a>
-        <a href="../program.html" class="mob-menu-link" tabindex="-1"><span class="mob-num">06</span><span class="mob-name">Program</span><div class="mob-bar"></div></a>
-        <a href="../contact/" class="mob-menu-link" tabindex="-1"><span class="mob-num">07</span><span class="mob-name">Contact</span><div class="mob-bar"></div></a>
-      <a href="../demo/" class="mob-menu-link" tabindex="-1"><span class="mob-num">08</span><span class="mob-name">Try the AI</span><div class="mob-bar"></div></a>      </div>
-      <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="mob-menu-cta" tabindex="-1">Free Missed-Call Audit &rarr;</a>
+      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="nav-cta">Book a Call</a>
     </div>
-  </header>
+  </nav>
 
   <main>
 
