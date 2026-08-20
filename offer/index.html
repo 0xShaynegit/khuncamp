@@ -102,6 +102,13 @@
     .faq-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
     .faq-a { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
 
+    /* BOOKING */
+    .booking-section { max-width: var(--max); margin: 0 auto; padding: 56px 40px; }
+    .booking-sub { font-size: 15px; color: var(--text-dim); max-width: 560px; margin: 0 auto 32px; text-align: center; line-height: 1.65; }
+    .booking-frame-wrap { border: 1px solid var(--gold-border); border-radius: var(--r); overflow: hidden; background: #fff; }
+    .booking-fallback { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 12px; }
+    .booking-fallback a { color: var(--gold); }
+
     /* BOTTOM CTA */
     .cta { max-width: var(--max); margin: 0 auto; padding: 40px 40px; text-align: center; }
     .cta h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--text); margin-bottom: 16px; }
@@ -332,11 +339,21 @@
     </div>
   </div>
 
+  <!-- BOOKING EMBED -->
+  <div class="booking-section">
+    <p class="section-label" style="max-width:var(--max);margin:0 auto 24px;padding:0 40px;">Schedule a call</p>
+    <p class="booking-sub">Pick a time that works. We will look at your current content, your offer, and your audience on the call.</p>
+    <div class="booking-frame-wrap">
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3RbWQ8zqBq1yEH1PnFKgO5UEZdGQYm0_APpV36SQiGzXi_iH7ZTqG5tJ2w8TqUVGXLZKA2e56t?gv=true" style="border:0;width:100%;height:600px;" frameborder="0" title="Book a call with Khun Camp"></iframe>
+    </div>
+    <p class="booking-fallback">Can't see the calendar? <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" target="_blank" rel="noopener">Open booking page &rarr;</a></p>
+  </div>
+
   <!-- BOTTOM CTA -->
   <div class="cta">
-    <h2>Ready to hand off the channel?</h2>
-    <p>Book a call. We will look at your current content, your offer, and your audience, and tell you exactly how we would run it.</p>
-    <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-gold">Book a Call</a>
+    <h2>Any questions before you book?</h2>
+    <p>Email us directly and a real person replies — not an auto-responder.</p>
+    <a href="mailto:Shawn@getkhuncamp.com" class="btn-gold">Email Shawn</a>
   </div>
 
     <footer>

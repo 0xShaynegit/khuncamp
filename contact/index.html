@@ -141,6 +141,47 @@
     }
     .social-link:hover { border-color: #2a9d8f; color: #2a9d8f; }
 
+    /* INTAKE FORM */
+    .intake-wrap {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 48px;
+      max-width: 860px;
+      margin: 0 auto 40px;
+      align-items: start;
+    }
+    @media (max-width: 860px) { .intake-wrap { grid-template-columns: 1fr; } .intake-sidebar { display: none; } }
+    .intake-form { display: flex; flex-direction: column; gap: 20px; }
+    .intake-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 600px) { .intake-row { grid-template-columns: 1fr; } }
+    .intake-field { display: flex; flex-direction: column; gap: 7px; }
+    .intake-field label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #999;
+    }
+    .intake-field input,
+    .intake-field select,
+    .intake-field textarea {
+      background: #111; border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px; padding: 14px 16px;
+      font-size: 0.92rem; color: #fff; font-family: inherit;
+      transition: border-color 0.2s; outline: none; resize: vertical;
+    }
+    .intake-field input::placeholder,
+    .intake-field textarea::placeholder { color: #444; }
+    .intake-field input:focus,
+    .intake-field select:focus,
+    .intake-field textarea:focus { border-color: #2a9d8f; }
+    .intake-field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+    .intake-field select option { background: #111; }
+    .intake-submit {
+      background: #2a9d8f; color: #000; font-size: 0.88rem; font-weight: 900;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 36px;
+      border: none; border-radius: 999px; cursor: pointer; width: fit-content;
+      transition: opacity 0.2s;
+    }
+    .intake-submit:hover { opacity: 0.88; }
+
     /* RESPONSE PROMISE */
     .response-promise {
       text-align: center; padding: 60px 0 0;
@@ -227,8 +268,8 @@
     <section class="contact-hero">
       <div class="container">
         <span class="contact-eyebrow">Get In Touch</span>
-        <h1>Let's find out what<br>you're <span>leaving on the table.</span></h1>
-        <p class="contact-hero-sub">Book a free 15-minute Missed-Call Audit, email us directly, or find us on social. We respond to every message.</p>
+        <h1>Tell us about<br>your <span>content goals.</span></h1>
+        <p class="contact-hero-sub">Fill out the form below and we'll reach back out within one business day to see if we're a fit.</p>
       </div>
     </section>
 
@@ -236,36 +277,64 @@
     <section class="contact-section">
       <div class="container">
 
-        <div class="contact-grid">
+        <!-- Intake Form -->
+        <div class="intake-wrap">
+          <form class="intake-form" action="https://formspree.io/f/xbgrqqbr" method="POST">
+            <div class="intake-row">
+              <div class="intake-field">
+                <label for="f-name">Your name</label>
+                <input type="text" id="f-name" name="name" placeholder="First and last" required autocomplete="name">
+              </div>
+              <div class="intake-field">
+                <label for="f-email">Email address</label>
+                <input type="email" id="f-email" name="email" placeholder="you@company.com" required autocomplete="email">
+              </div>
+            </div>
+            <div class="intake-row">
+              <div class="intake-field">
+                <label for="f-budget">Monthly budget</label>
+                <select id="f-budget" name="budget" required>
+                  <option value="" disabled selected>Select a range</option>
+                  <option value="under-1500">Under $1,500 / mo</option>
+                  <option value="1500-3000">$1,500 – $3,000 / mo</option>
+                  <option value="3000-5000">$3,000 – $5,000 / mo</option>
+                  <option value="5000+">$5,000+ / mo</option>
+                </select>
+              </div>
+              <div class="intake-field">
+                <label for="f-volume">Content volume goal</label>
+                <select id="f-volume" name="content_volume" required>
+                  <option value="" disabled selected>Select a target</option>
+                  <option value="1-2-wk">1–2 pieces / week</option>
+                  <option value="3-5-wk">3–5 pieces / week</option>
+                  <option value="daily">Daily posting</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="intake-field">
+              <label for="f-pain">What's the biggest challenge with your content right now?</label>
+              <textarea id="f-pain" name="pain_point" rows="5" placeholder="Describe what's not working or what you want to change…" required></textarea>
+            </div>
+            <button type="submit" class="intake-submit">Send &rarr;</button>
+          </form>
 
-          <!-- Primary: Book the audit -->
-          <div class="contact-card contact-card--primary">
-            <div class="contact-card-icon">&#128197;</div>
-            <p class="contact-card-tag">Fastest way to start</p>
-            <h2>Book a free Missed-Call Audit</h2>
-            <p>A 15-minute call where we track your missed calls, calculate your lost-revenue number, and show you exactly what you're losing. No pitch. No commitment. Just your data.</p>
-            <a href="https://api.leadconnectorhq.com/widget/bookings/khun-camp-demo-call-7043" class="btn-gold">Book My Free Audit &rarr;</a>
+          <div class="intake-sidebar">
+            <div class="contact-card" style="background:transparent;border:none;padding:0;gap:20px;">
+              <div>
+                <p class="contact-card-tag">Email us directly</p>
+                <h2 style="font-size:1.1rem;">Prefer to write first?</h2>
+                <p style="font-size:0.85rem;color:#666;margin:8px 0 16px;">A real person replies — not an auto-responder.</p>
+                <a href="mailto:Shawn@getkhuncamp.com" class="contact-email-value" style="font-size:0.9rem;">Shawn@getkhuncamp.com</a>
+              </div>
+              <div>
+                <p class="contact-card-tag">Book a call</p>
+                <h2 style="font-size:1.1rem;">Ready to talk now?</h2>
+                <p style="font-size:0.85rem;color:#666;margin:8px 0 16px;">Skip the form — pick a time directly.</p>
+                <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" target="_blank" rel="noopener" class="btn-gold" style="font-size:0.78rem;padding:12px 24px;">Book a Call &rarr;</a>
+              </div>
+            </div>
           </div>
-
-          <!-- Email -->
-          <div class="contact-card">
-            <div class="contact-card-icon">&#9993;</div>
-            <p class="contact-card-tag">Email us directly</p>
-            <h2>Prefer to write first?</h2>
-            <p>Send us a message and a real person will reply, not an auto-responder. We typically respond within one business day.</p>
-            <a href="mailto:Shawn@getkhuncamp.com" class="contact-email-value">Shawn@getkhuncamp.com</a>
-            <a href="mailto:Shawn@getkhuncamp.com" class="btn-outline-gold">Send an Email &rarr;</a>
-          </div>
-
-          <!-- General questions -->
-          <div class="contact-card">
-            <div class="contact-card-icon">&#128172;</div>
-            <p class="contact-card-tag">General questions</p>
-            <h2>Not sure where to start?</h2>
-            <p>If you're not sure the system is right for your business, email us and describe what you're dealing with. We'll tell you honestly whether we can help.</p>
-            <a href="mailto:Shawn@getkhuncamp.com" class="btn-outline-gold">Ask a Question &rarr;</a>
-          </div>
-
         </div>
 
         <!-- Social -->
