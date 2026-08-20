@@ -168,6 +168,31 @@
     .bottom-cta h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--text); margin-bottom: 16px; }
     .bottom-cta p { font-size: 16px; color: var(--text-dim); max-width: 44ch; margin: 0 auto 32px; line-height: 1.65; }
 
+    /* HOME CONTACT FORM */
+    .home-contact { background: #0a0a0a; padding: 80px 40px; }
+    .home-contact-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
+    @media (max-width: 800px) { .home-contact-inner { grid-template-columns: 1fr; gap: 40px; } .home-contact { padding: 60px 20px; } }
+    .home-contact-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #2a9d8f; margin-bottom: 16px; display: block; }
+    .home-contact-h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: #fff; line-height: 1.15; margin-bottom: 16px; }
+    .home-contact-sub { font-size: 15px; color: #666; line-height: 1.65; margin-bottom: 32px; }
+    .home-contact-alts p { font-size: 13px; color: #444; margin-bottom: 12px; }
+    .home-contact-alts a { color: #2a9d8f; }
+    .home-contact-book { font-size: 13px; font-weight: 700; color: #2a9d8f; letter-spacing: 0.04em; }
+    .home-intake-form { display: flex; flex-direction: column; gap: 16px; }
+    .home-intake-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 500px) { .home-intake-row { grid-template-columns: 1fr; } }
+    .home-intake-field { display: flex; flex-direction: column; gap: 6px; }
+    .home-intake-field label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #555; }
+    .home-intake-field input,
+    .home-intake-field select,
+    .home-intake-field textarea { background: #111; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 13px 15px; font-size: 14px; color: #fff; font-family: inherit; outline: none; resize: vertical; transition: border-color 0.2s; }
+    .home-intake-field input::placeholder, .home-intake-field textarea::placeholder { color: #444; }
+    .home-intake-field input:focus, .home-intake-field select:focus, .home-intake-field textarea:focus { border-color: #2a9d8f; }
+    .home-intake-field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+    .home-intake-field select option { background: #111; }
+    .home-intake-submit { background: #2a9d8f; color: #000; font-size: 13px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 32px; border: none; border-radius: 999px; cursor: pointer; width: fit-content; transition: opacity 0.2s; }
+    .home-intake-submit:hover { opacity: 0.88; }
+
     /* FOOTER */
     
     
@@ -578,6 +603,60 @@
     <h2>Ready to hand off the channel?</h2>
     <p>Book a call. We will look at your content, your offer, and your audience, and tell you exactly how we would run it.</p>
     <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="btn-gold">Book a Call</a>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="home-contact">
+    <div class="home-contact-inner">
+      <div class="home-contact-left">
+        <p class="home-contact-eyebrow">Get in touch</p>
+        <h2 class="home-contact-h2">Tell us about your content goals.</h2>
+        <p class="home-contact-sub">Fill out the form and we'll reach back out within one business day to see if we're a fit.</p>
+        <div class="home-contact-alts">
+          <p>Or reach us directly — <a href="mailto:Shawn@getkhuncamp.com">Shawn@getkhuncamp.com</a></p>
+          <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" target="_blank" rel="noopener" class="home-contact-book">Book a call instead &rarr;</a>
+        </div>
+      </div>
+      <form class="home-intake-form" action="https://formspree.io/f/xbgrqqbr" method="POST">
+        <div class="home-intake-row">
+          <div class="home-intake-field">
+            <label for="hf-name">Name</label>
+            <input type="text" id="hf-name" name="name" placeholder="First and last" required autocomplete="name">
+          </div>
+          <div class="home-intake-field">
+            <label for="hf-email">Email</label>
+            <input type="email" id="hf-email" name="email" placeholder="you@company.com" required autocomplete="email">
+          </div>
+        </div>
+        <div class="home-intake-row">
+          <div class="home-intake-field">
+            <label for="hf-budget">Monthly budget</label>
+            <select id="hf-budget" name="budget" required>
+              <option value="" disabled selected>Select a range</option>
+              <option value="under-1500">Under $1,500 / mo</option>
+              <option value="1500-3000">$1,500 – $3,000 / mo</option>
+              <option value="3000-5000">$3,000 – $5,000 / mo</option>
+              <option value="5000+">$5,000+ / mo</option>
+            </select>
+          </div>
+          <div class="home-intake-field">
+            <label for="hf-volume">Content volume goal</label>
+            <select id="hf-volume" name="content_volume" required>
+              <option value="" disabled selected>Select a target</option>
+              <option value="1-2-wk">1–2 pieces / week</option>
+              <option value="3-5-wk">3–5 pieces / week</option>
+              <option value="daily">Daily posting</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="home-intake-field">
+          <label for="hf-pain">Biggest challenge with your content right now?</label>
+          <textarea id="hf-pain" name="pain_point" rows="4" placeholder="Describe what's not working or what you want to change…" required></textarea>
+        </div>
+        <button type="submit" class="home-intake-submit">Send &rarr;</button>
+      </form>
+    </div>
   </div>
 
     <footer>
