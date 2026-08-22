@@ -730,6 +730,24 @@
     update();
   })();
 </script>
+<script>
+  document.querySelector('.home-intake-form').addEventListener('submit', function(e) {
+    var data = {
+      name: this.name.value,
+      email: this.email.value,
+      budget: this.budget.value,
+      content_volume: this.content_volume.value,
+      pain_point: this.pain_point.value,
+      source: 'website',
+      submitted_date: new Date().toISOString()
+    };
+    fetch('https://directory-skeptic-activist.ngrok-free.dev/webhook/formspree-intake', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).catch(function() {});
+  });
+</script>
 </body>
 </html>
 
