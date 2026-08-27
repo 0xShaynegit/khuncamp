@@ -3,8 +3,7 @@
 > Content system for real-estate agent YouTubers who post consistently but have no funnel turning viewers into clients. We build the strategy, production, and conversion layer, then run it monthly.
 
 ## Offer
-- $4,000 one-time build + $2,500/month retainer
-- One package, no tiers
+- One package, no tiers — pricing discussed on a call
 - For: real-estate agents already posting on YouTube 2x/week or more, with no booking link, lead magnet, or CTA structure between a viewer and a client
 - Not for: agents who want virality/views without a sales goal
 
