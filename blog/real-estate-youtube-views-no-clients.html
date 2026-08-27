@@ -63,6 +63,14 @@
     .post-cta a { display: inline-block; background: var(--gold); color: #fff; font-weight: 900; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; padding: 15px 36px; border-radius: 999px; transition: opacity 0.15s; }
     .post-cta a:hover { opacity: 0.85; }
     @media (max-width: 600px) { .post-wrap { padding: 40px 20px 80px; } .post-cta { padding: 36px 24px; } }
+    .related-posts { margin-top: 64px; padding-top: 40px; border-top: 1px solid #c8d5c4; }
+    .related-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .related-card { background: #dce6d8; border-radius: 4px; padding: 20px; display: flex; flex-direction: column; gap: 8px; transition: background 0.15s; }
+    .related-card:hover { background: #d0dccc; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+    .related-title { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.35; }
+    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -122,6 +130,24 @@
       <p>The instinct most agents have when their channel isn't producing clients is to post more. More videos, more topics, more consistency. That compounds a broken system. If each video sends people nowhere, more videos just means more people going nowhere faster.</p>
       <p>The fix is building the layer between the video and the client. Once that's in place, every video you've ever posted starts working harder. The library you've already built becomes a lead generation machine instead of a portfolio that nobody acts on.</p>
       <p>Views without a funnel are just views. The agents winning on YouTube aren't the ones with the most subscribers. They're the ones who built a system that turns a viewer into a conversation.</p>
+    </div>
+
+    <div class="related-posts">
+      <p class="related-label">Keep reading</p>
+      <div class="related-grid">
+        <a href="/blog/real-estate-agent-youtube-content-system" class="related-card">
+          <span class="related-tag">For Real Estate Agents</span>
+          <span class="related-title">The Real Estate Content System: What to Post on YouTube to Get Clients</span>
+        </a>
+        <a href="/blog/how-to-get-real-estate-clients-youtube" class="related-card">
+          <span class="related-tag">For Real Estate Agents</span>
+          <span class="related-title">How to Get Real Estate Clients from YouTube Without Paid Ads</span>
+        </a>
+        <a href="/offer/" class="related-card">
+          <span class="related-tag">Khun Camp</span>
+          <span class="related-title">See how we build content systems for real estate agents →</span>
+        </a>
+      </div>
     </div>
 
     <div class="post-cta">

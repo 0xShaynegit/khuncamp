@@ -63,6 +63,14 @@
     .post-cta a { display: inline-block; background: var(--gold); color: #fff; font-weight: 900; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; padding: 15px 36px; border-radius: 999px; transition: opacity 0.15s; }
     .post-cta a:hover { opacity: 0.85; }
     @media (max-width: 600px) { .post-wrap { padding: 40px 20px 80px; } .post-cta { padding: 36px 24px; } }
+    .related-posts { margin-top: 64px; padding-top: 40px; border-top: 1px solid #c8d5c4; }
+    .related-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .related-card { background: #dce6d8; border-radius: 4px; padding: 20px; display: flex; flex-direction: column; gap: 8px; transition: background 0.15s; }
+    .related-card:hover { background: #d0dccc; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+    .related-title { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.35; }
+    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -116,6 +124,24 @@
 
       <h2>The simplest niche formula</h2>
       <p>If you're stuck, use this: <strong>[your city] + [your ideal client's biggest question]</strong>. "Is it a good time to buy in [city]?" "How much house can I afford in [city]?" "Best neighborhoods in [city] for families?" Pick the intersection that matches the client you actually want to work with, and build the first 10 videos around it. The niche will get clearer as you go.</p>
+    </div>
+
+    <div class="related-posts">
+      <p class="related-label">Keep reading</p>
+      <div class="related-grid">
+        <a href="/blog/real-estate-agent-youtube-content-system" class="related-card">
+          <span class="related-tag">For Real Estate Agents</span>
+          <span class="related-title">The Real Estate Content System: What to Post on YouTube to Get Clients</span>
+        </a>
+        <a href="/blog/real-estate-youtube-channel-growth" class="related-card">
+          <span class="related-tag">The Breakdown</span>
+          <span class="related-title">What Makes a Real Estate YouTube Channel Actually Grow</span>
+        </a>
+        <a href="/offer/" class="related-card">
+          <span class="related-tag">Khun Camp</span>
+          <span class="related-title">See how we build content systems for real estate agents →</span>
+        </a>
+      </div>
     </div>
 
     <div class="post-cta">

@@ -63,6 +63,14 @@
     .post-cta a { display: inline-block; background: var(--gold); color: #fff; font-weight: 900; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; padding: 15px 36px; border-radius: 999px; transition: opacity 0.15s; }
     .post-cta a:hover { opacity: 0.85; }
     @media (max-width: 600px) { .post-wrap { padding: 40px 20px 80px; } .post-cta { padding: 36px 24px; } }
+    .related-posts { margin-top: 64px; padding-top: 40px; border-top: 1px solid #c8d5c4; }
+    .related-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .related-card { background: #dce6d8; border-radius: 4px; padding: 20px; display: flex; flex-direction: column; gap: 8px; transition: background 0.15s; }
+    .related-card:hover { background: #d0dccc; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+    .related-title { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.35; }
+    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -113,6 +121,24 @@
       <h2>What separates growing channels from stuck ones</h2>
       <p>Growing channels treat YouTube like a search engine and build content with specific queries in mind. Stuck channels treat YouTube like a social feed and post what feels relevant that week. Growing channels audit their analytics monthly and double down on what's working. Stuck channels post and move on without ever looking at the data.</p>
       <p>The simplest version of the growth formula: post consistently, target real search queries, optimize your thumbnails and titles, and go deep in your niche before going wide. The agents who follow this consistently almost always see growth. The ones who post randomly and expect the algorithm to do the work almost never do.</p>
+    </div>
+
+    <div class="related-posts">
+      <p class="related-label">Keep reading</p>
+      <div class="related-grid">
+        <a href="/blog/why-real-estate-agents-quit-youtube" class="related-card">
+          <span class="related-tag">The Take</span>
+          <span class="related-title">Why Most Real Estate Agents Quit YouTube Before It Works</span>
+        </a>
+        <a href="/blog/real-estate-youtube-niche" class="related-card">
+          <span class="related-tag">The Breakdown</span>
+          <span class="related-title">How to Pick Your Real Estate YouTube Niche</span>
+        </a>
+        <a href="/offer/" class="related-card">
+          <span class="related-tag">Khun Camp</span>
+          <span class="related-title">See how we build content systems for real estate agents →</span>
+        </a>
+      </div>
     </div>
 
     <div class="post-cta">
