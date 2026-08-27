@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're In | Khun Camp</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/jpeg" sizes="128x128" href="../images/KhunCamp-Logo-favicon-solid.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0a0a0a; color: #fff; font-family: 'DM Sans', system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+
+    nav { background: rgba(10,10,10,0.96); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-top { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 68px; }
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-cta { background: #2f9e8f; color: #fff; font-weight: 700; font-size: 14px; letter-spacing: 0.05em; padding: 13px 28px; border-radius: 40px; transition: opacity 0.15s; }
+    .nav-cta:hover { opacity: 0.85; }
+    @media (max-width: 600px) { .nav-top { padding: 0 20px; } .nav-cta { padding: 9px 16px; font-size: 12px; } }
+
+    .hero { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 24px 40px; }
+    .check { width: 64px; height: 64px; background: rgba(47,158,143,0.12); border: 1px solid rgba(47,158,143,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px; font-size: 28px; }
+    .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #2f9e8f; margin-bottom: 16px; }
+    h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin-bottom: 16px; max-width: 560px; }
+    .sub { font-size: 1.05rem; color: #666; line-height: 1.7; max-width: 440px; margin: 0 auto 48px; }
+
+    .calendar-wrap { width: 100%; max-width: 820px; margin: 0 auto 24px; background: #111; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; overflow: hidden; }
+    .calendar-wrap iframe { display: block; width: 100%; height: 600px; border: 0; }
+    .calendar-fallback { font-size: 13px; color: #444; margin-bottom: 60px; }
+    .calendar-fallback a { color: #2f9e8f; }
+
+    footer { text-align: center; padding: 32px 20px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; color: #333; }
+    footer a { color: #2f9e8f; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-top">
+      <a href="/"><img src="../images/KhunCamp-Logo-nav.webp" alt="Khun Camp" height="40" loading="eager"></a>
+      <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7" class="nav-cta">Book a Call</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="check">✓</div>
+    <p class="eyebrow">Got it</p>
+    <h1>We received your submission.</h1>
+    <p class="sub">Shawn will review it and reach out within 24 hours. If you'd rather move faster, pick a time below and get it on the calendar now.</p>
+
+    <div class="calendar-wrap">
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3RbWQ8zqBq1yEH1PnFKgO5UEZdGQYm0_APpV36SQiGzXi_iH7ZTqG5tJ2w8TqUVGXLZKA2e56t?gv=true" style="border:0;width:100%;height:600px;" frameborder="0" title="Book a call with Khun Camp"></iframe>
+    </div>
+    <p class="calendar-fallback">Can't see the calendar? <a href="https://calendar.app.google/1PVSKsN8UGwQiG3g7">Open booking page →</a></p>
+  </div>
+
+  <footer>
+    <a href="/">← Back to Khun Camp</a>
+  </footer>
+
+</body>
+</html>
